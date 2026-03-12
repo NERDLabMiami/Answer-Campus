@@ -19,7 +19,7 @@ namespace VNEngine
 
     public enum Choice_Condition { Bool_Stat_Requirement, Float_Stat_Requirement, String_Stat_Requirement, Object_Is_Null };
 
-    public enum Select_Default_Choice { None, Top_Choice, Bottom_Choice };
+
 
     // Displays the choices outlined. Does not continue to the next node.
     // Each choice leads to a prescribed conversation.
@@ -54,8 +54,7 @@ namespace VNEngine
         public bool[] Show_Choice_Was_Selected_Before = new bool[max_number_of_buttons];
         [HideInInspector]
         public bool[] Choice_Been_Clicked_Before = new bool[max_number_of_buttons];
-        [HideInInspector]
-        public Select_Default_Choice default_selection = Select_Default_Choice.Top_Choice;
+
 
 
 
@@ -91,11 +90,9 @@ namespace VNEngine
 
         public void Start()
         {
-            //            Debug.Log(UIManager.ui_manager.choice_buttons.Length);
+            Debug.Log(UIManager.ui_manager.choice_buttons.Length);
 
-            //           default_button_flexible_height = UIManager.ui_manager.choice_buttons[0].GetComponent<LayoutElement>().preferredHeight;
-            default_selection = Select_Default_Choice.Top_Choice;
-    }
+        }
 
 
     public override void Run_Node()
@@ -265,43 +262,7 @@ namespace VNEngine
             if (randomize_choices_order)
                 RandomizeButtonOrder();
 
-//SET DEFAULT
-            // Set which choice should be select by default
-            if (default_selection == Select_Default_Choice.Top_Choice
-                || default_selection == Select_Default_Choice.Bottom_Choice)
-            {
-                int lowest_sibling = 0;
-                int topmost_sibling = 999;
-                Button topmost_choice = null;
-                Button lowest_choice = null;
 
-                // Loop through each choice, finding the top and bottom
-                foreach (Button b in UIManager.ui_manager.choice_buttons)
-                {
-                    if (b.IsActive() && b.interactable)
-                    {
-                        int index = b.transform.GetSiblingIndex();
-                        if (index >= lowest_sibling)
-                        {
-                            lowest_choice = b;
-                            lowest_sibling = index;
-                        }
-                        if (index <= topmost_sibling)
-                        {
-                            topmost_choice = b;
-                            topmost_sibling = index;
-                        }
-                    }
-                }
-
-
-                if (default_selection == Select_Default_Choice.Top_Choice 
-                    && topmost_choice != null)
-                    SelectChoice(topmost_choice.gameObject);
-                else if (default_selection == Select_Default_Choice.Bottom_Choice
-                    && lowest_choice != null)
-                    SelectChoice(lowest_choice.gameObject);
-            }
             if(GetComponent<TimedChoiceNode>())
             {
                 GetComponent<TimedChoiceNode>().Run_Node();
@@ -318,12 +279,7 @@ namespace VNEngine
 
 // Animate them
             UIManager.ui_manager.AnimateChoiceButtons(activeButtons);
-            if (activeButtons.Count > 0)
-            {
-                EventSystem.current.SetSelectedGameObject(null);
-                EventSystem.current.SetSelectedGameObject(activeButtons[0].gameObject);
-            }
-
+      
         }
 
 

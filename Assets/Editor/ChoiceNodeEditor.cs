@@ -45,7 +45,6 @@ namespace VNEngine
             choices.use_image_native_size_for_buttons = EditorGUILayout.Toggle("Use image button native size:", choices.use_image_native_size_for_buttons);
 
             EditorGUIUtility.labelWidth = 180;
-            choices.default_selection = (Select_Default_Choice)EditorGUILayout.EnumPopup("Default Selected Choiced:", choices.default_selection);
 
             EditorGUILayout.LabelField("");
 

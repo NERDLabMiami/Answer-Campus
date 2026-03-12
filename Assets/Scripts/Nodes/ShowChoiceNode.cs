@@ -88,11 +88,11 @@ namespace VNEngine
 
             // Animate & focus first active
             UIManager.ui_manager.AnimateChoiceButtons(_activeButtons);               // existing helper :contentReference[oaicite:6]{index=6}
-            if (_activeButtons.Count > 0)
-            {
-                EventSystem.current.SetSelectedGameObject(null);
-                EventSystem.current.SetSelectedGameObject(_activeButtons[0].gameObject);
-            }
+            //if (_activeButtons.Count > 0)
+            //{
+            //    EventSystem.current.SetSelectedGameObject(null);
+            //    EventSystem.current.SetSelectedGameObject(_activeButtons[0].gameObject);
+           // }
         }
 private bool MeetsAllRequirements(Choice c)
 {
