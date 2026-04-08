@@ -152,6 +152,13 @@ public class MatchSequence
 {
     public CheerLeader cheerleader;  // Reference to the Cheer controller
 }
+
+[Serializable]
+public class CheerCharacterEntry
+{
+    public Character character;  // From Friend.cs enum
+    public Cheer follower;       // Cheer component on a pre-placed scene GameObject
+}
 [Serializable]
 public struct CheerLeader
 {
@@ -203,6 +210,8 @@ public class CheerGameManager : MonoBehaviour
     public TextMeshProUGUI scoreboardAwayTeamText;
     public TextMeshProUGUI quarterText;
     [SerializeField] public List<MatchSequence> matchSequences;
+    [SerializeField] private List<CheerCharacterEntry> characterFollowers = new();
+    private List<Cheer> _activeFollowers = new();
 
     [Header("Crowd Feedback")]
     public float amplification = 0f;
@@ -401,6 +410,15 @@ public class CheerGameManager : MonoBehaviour
         Debug.Log($"No game this week, going home...faking it");
         }
         
+        foreach (var entry in characterFollowers)
+        {
+            if (entry.follower == null) continue;
+            bool isFriend = StatsManager.Get_Boolean_Stat(entry.character.ToString().ToLower() + "_is_friend");
+//            entry.follower.gameObject.SetActive(isFriend);
+            if (isFriend) _activeFollowers.Add(entry.follower);
+            _activeFollowers.Add(entry.follower);
+        }
+
         StartCoroutine(GameFlowRoutine());
     }
 // Add/replace inside CheerGameManager
@@ -466,6 +484,9 @@ private void ResetAllLeadersVisuals()
         if (cl.cheer) cl.cheer.SetCombo(CheerCombo.Default);
         activeDirections.Remove(i);
     }
+
+    foreach (var f in _activeFollowers)
+        if (f) f.SetCombo(CheerCombo.Default);
 
     UnhighlightAll();
 }
@@ -585,7 +606,8 @@ for (int q = 1; q <= 4; q++)
     StartGlyphFade(glyphImgA, inputWindowSeconds);
 
     if (leaderCheer) leaderCheer.SetCombo(AnticipationForDir(dirA));
-    yield return null; 
+    SetFollowersCombo(AnticipationForDir(dirA));
+    yield return null;
     // Open window #1
     if (inputBridge == null)
     {
@@ -617,6 +639,7 @@ for (int q = 1; q <= 4; q++)
     {
         SetGlyphSpriteAndColor(leaderIdx, true, dirA, successColor);
         if (leaderCheer) leaderCheer.SetCombo(PoseForDir(dirA));
+        SetFollowersCombo(PoseForDir(dirA));
         amplification += amplificationPerSuccess; // your crowd amp
         combosMade++;                             // your scoring
         //leader.countdownBar?.CompleteSuccess();
@@ -634,7 +657,8 @@ for (int q = 1; q <= 4; q++)
     SetGlyphVisible(leaderIdx, true, true); // show both now
     SetGlyphSpriteAndColor(leaderIdx, false,  dirB, highlightColor);
 
-    if (leaderCheer) leaderCheer.SetCombo(AnticipationForDir(dirB)); 
+    if (leaderCheer) leaderCheer.SetCombo(AnticipationForDir(dirB));
+    SetFollowersCombo(AnticipationForDir(dirB));
     if (inputBridge != null) inputBridge.Clear();
 
     opportunitiesThisRound++;
@@ -660,6 +684,7 @@ for (int q = 1; q <= 4; q++)
     {
         SetGlyphSpriteAndColor(leaderIdx, false, dirB, successColor);
         if (leaderCheer) leaderCheer.SetCombo(PoseForDir(dirB));
+        SetFollowersCombo(PoseForDir(dirB));
         amplification += amplificationPerSuccess;
         combosMade++;
       //  leader.countdownBar?.CompleteSuccess();
@@ -671,6 +696,7 @@ for (int q = 1; q <= 4; q++)
    //     leader.countdownBar?.CompleteFail();
 
         if (leaderCheer) leaderCheer.SetCombo(CheerCombo.Default);
+        SetFollowersCombo(CheerCombo.Default);
         yield return new WaitForSecondsRealtime(fadeAfterFail);
     }
 
@@ -678,6 +704,7 @@ for (int q = 1; q <= 4; q++)
     SetGlyphVisible(leaderIdx, false, false);
     UnhighlightAll();
     if (leaderCheer) leaderCheer.SetCombo(CheerCombo.Default);
+    SetFollowersCombo(CheerCombo.Default);
     // Keep the Cheer pose in sync with what the leader “did”
     // (optional; you already have SetCombo for two-direction combos)
     matchSequences[leaderIdx].cheerleader.cheer.SetCombo(CheerCombo.Default);
@@ -685,6 +712,12 @@ for (int q = 1; q <= 4; q++)
     _markerBusy = false;
     Debug.Log($"[CHEER] {combosMade} combos made");
 }
+    private void SetFollowersCombo(CheerCombo combo)
+    {
+        foreach (var f in _activeFollowers)
+            if (f) f.SetCombo(combo);
+    }
+
     private CheerCombo PoseForDir(CheerDirection dir)
     {
         switch (dir)

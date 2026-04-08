@@ -30,6 +30,7 @@ public class Cheer : MonoBehaviour
             if (comboSprites[i].combo == combo)
             {
                 characterImage.sprite = comboSprites[i].sprite;
+                characterImage.SetNativeSize();
                 return;
             }
         }
