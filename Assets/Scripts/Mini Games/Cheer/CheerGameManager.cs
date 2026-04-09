@@ -649,6 +649,7 @@ for (int q = 1; q <= 4; q++)
     {
         // set fail-colored version of the same dir
         SetGlyphSpriteAndColor(leaderIdx, true, dirA, failColor);
+        ShowFollowersFail();
       //  leader.countdownBar?.CompleteFail();
         yield return new WaitForSecondsRealtime(fadeAfterFail);
     }
@@ -696,7 +697,7 @@ for (int q = 1; q <= 4; q++)
    //     leader.countdownBar?.CompleteFail();
 
         if (leaderCheer) leaderCheer.SetCombo(CheerCombo.Default);
-        SetFollowersCombo(CheerCombo.Default);
+        ShowFollowersFail();
         yield return new WaitForSecondsRealtime(fadeAfterFail);
     }
 
@@ -716,6 +717,12 @@ for (int q = 1; q <= 4; q++)
     {
         foreach (var f in _activeFollowers)
             if (f) f.SetCombo(combo);
+    }
+
+    private void ShowFollowersFail()
+    {
+        foreach (var f in _activeFollowers)
+            if (f) f.ShowFail();
     }
 
     private CheerCombo PoseForDir(CheerDirection dir)

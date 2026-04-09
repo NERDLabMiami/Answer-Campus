@@ -19,6 +19,9 @@ public class Cheer : MonoBehaviour
     [Tooltip("Make sure your assets are imported as 'Sprite (2D and UI)'")]
     [SerializeField] private ComboSprite[] comboSprites;
 
+    [Header("Fail State")]
+    [SerializeField] private Sprite failSprite;
+
     /// <summary>
     /// Call this at runtime to pick which combo to show.
     /// </summary>
@@ -36,6 +39,11 @@ public class Cheer : MonoBehaviour
         }
         Debug.LogWarning($"[Cheer] No sprite assigned for combo {combo}");
     }
-    
-    
+
+    public void ShowFail()
+    {
+        if (failSprite == null) return;
+        characterImage.sprite = failSprite;
+        characterImage.SetNativeSize();
+    }
 }

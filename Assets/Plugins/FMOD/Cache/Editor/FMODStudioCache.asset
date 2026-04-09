@@ -237,7 +237,7 @@ MonoBehaviour:
   Path: FMODProject2.03.09/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639096899854675230
+  lastModified: 639096935854675230
   FileSizes:
   - Name: Desktop
     Value: 3783872
@@ -416,7 +416,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 9191128576490739263}
   cacheVersion: 131849
-  cacheTime: 639096899854692907
+  cacheTime: 639096935854692907
   SerializableEventsDict:
   - key: event:/AMB_Outdoors
     index: 0
@@ -493,7 +493,7 @@ MonoBehaviour:
   Path: FMODProject2.03.09/Build/Desktop/MX.bank
   Name: MX
   StudioPath: bank:/MX
-  lastModified: 639096899854637859
+  lastModified: 639096935854637859
   FileSizes:
   - Name: Desktop
     Value: 15539808
@@ -839,7 +839,7 @@ MonoBehaviour:
   Path: FMODProject2.03.09/Build/Desktop/AMB.bank
   Name: AMB
   StudioPath: bank:/AMB
-  lastModified: 639096899854520820
+  lastModified: 639096935854520820
   FileSizes:
   - Name: Desktop
     Value: 6412832
@@ -859,7 +859,7 @@ MonoBehaviour:
   Path: FMODProject2.03.09/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639096899854692907
+  lastModified: 639096935854692907
   FileSizes:
   - Name: Desktop
     Value: 1730
