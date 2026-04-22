@@ -334,6 +334,167 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
+--- !u!1 &10762791
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 10762792}
+  - component: {fileID: 10762794}
+  - component: {fileID: 10762793}
+  m_Layer: 0
+  m_Name: Dialogue (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &10762792
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 10762791}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1811389681}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &10762793
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 10762791}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &10762794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 10762791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b40beeb965e5d9419bf817d6f7d59bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  go_to_next_node: 1
+  executed_from_load: 0
+  actor_name_from: 0
+  actor: Professor Blanche
+  speaker_name_from: 0
+  textbox_title: Professor
+  fetch_localized_stat_value: 0
+  dialogue_from: 0
+  localized_key: 
+  text: A triumph of freedom, though seldom in taste.
+  talking_beeps: {fileID: 0}
+  darken_all_other_characters: 1
+  bring_speaker_to_front: 1
+  clear_text_after: 0
+  log_text: 1
+  log_category: Default
+  done_printing: 0
+  no_voice_playing: 0
+  done_voice_clip: 0
 --- !u!1 &18255889
 GameObject:
   m_ObjectHideFlags: 0
@@ -674,6 +835,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 75fa20bb22eebc3429081baf24c967cd, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -774,6 +937,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 75fa20bb22eebc3429081baf24c967cd, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -810,7 +975,7 @@ Transform:
   - {fileID: 1579178875}
   - {fileID: 847847305}
   - {fileID: 1860495498}
-  - {fileID: 2063921091}
+  - {fileID: 1193824698}
   m_Father: {fileID: 561909551}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &33998213
@@ -830,167 +995,6 @@ MonoBehaviour:
   cur_node: 0
   active: 0
   finished_conversation: 0
---- !u!1 &36208515
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 36208516}
-  - component: {fileID: 36208518}
-  - component: {fileID: 36208517}
-  m_Layer: 0
-  m_Name: Dialogue (4)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &36208516
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 36208515}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2005466471}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &36208517
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 36208515}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
---- !u!114 &36208518
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 36208515}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b40beeb965e5d9419bf817d6f7d59bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  go_to_next_node: 1
-  executed_from_load: 0
-  actor_name_from: 0
-  actor: Professor Blanche
-  speaker_name_from: 0
-  textbox_title: Professor
-  fetch_localized_stat_value: 0
-  dialogue_from: 0
-  localized_key: 
-  text: We'll be reading <i>To Kill a Mockingbird</i> this semester.
-  talking_beeps: {fileID: 0}
-  darken_all_other_characters: 1
-  bring_speaker_to_front: 1
-  clear_text_after: 0
-  log_text: 1
-  log_category: Default
-  done_printing: 0
-  no_voice_playing: 0
-  done_voice_clip: 0
 --- !u!1001 &36445263
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1069,167 +1073,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 446614, guid: bfcea6cf3b0ee4790b1614a5c7e7a78e, type: 3}
   m_PrefabInstance: {fileID: 36445263}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &41775825
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 41775826}
-  - component: {fileID: 41775828}
-  - component: {fileID: 41775827}
-  m_Layer: 0
-  m_Name: Dialogue (3)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &41775826
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 41775825}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 804537323}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &41775827
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 41775825}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
---- !u!114 &41775828
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 41775825}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b40beeb965e5d9419bf817d6f7d59bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  go_to_next_node: 1
-  executed_from_load: 0
-  actor_name_from: 0
-  actor: Professor Blanche
-  speaker_name_from: 0
-  textbox_title: Professor
-  fetch_localized_stat_value: 0
-  dialogue_from: 0
-  localized_key: 
-  text: Harper Lee's classic <i>To Kill a Mockingbird</i>.
-  talking_beeps: {fileID: 0}
-  darken_all_other_characters: 1
-  bring_speaker_to_front: 1
-  clear_text_after: 0
-  log_text: 1
-  log_category: Default
-  done_printing: 0
-  no_voice_playing: 0
-  done_voice_clip: 0
 --- !u!1 &43151148
 GameObject:
   m_ObjectHideFlags: 0
@@ -1740,6 +1583,167 @@ MonoBehaviour:
   dialogue_from: 0
   localized_key: 
   text: Communities are very good at producing distance.
+  talking_beeps: {fileID: 0}
+  darken_all_other_characters: 1
+  bring_speaker_to_front: 1
+  clear_text_after: 0
+  log_text: 1
+  log_category: Default
+  done_printing: 0
+  no_voice_playing: 0
+  done_voice_clip: 0
+--- !u!1 &53161820
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 53161821}
+  - component: {fileID: 53161823}
+  - component: {fileID: 53161822}
+  m_Layer: 0
+  m_Name: Dialogue (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &53161821
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 53161820}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1698236181}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &53161822
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 53161820}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &53161823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 53161820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b40beeb965e5d9419bf817d6f7d59bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  go_to_next_node: 1
+  executed_from_load: 0
+  actor_name_from: 0
+  actor: Professor Blanche
+  speaker_name_from: 0
+  textbox_title: Professor
+  fetch_localized_stat_value: 0
+  dialogue_from: 0
+  localized_key: 
+  text: Sit down.
   talking_beeps: {fileID: 0}
   darken_all_other_characters: 1
   bring_speaker_to_front: 1
@@ -3628,6 +3632,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 75fa20bb22eebc3429081baf24c967cd, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -5806,7 +5812,7 @@ MonoBehaviour:
   fetch_localized_stat_value: 0
   dialogue_from: 0
   localized_key: 
-  text: We're going to read something a bit more grounded this semester.
+  text: They just learned new manners.
   talking_beeps: {fileID: 0}
   darken_all_other_characters: 1
   bring_speaker_to_front: 1
@@ -5943,6 +5949,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 75fa20bb22eebc3429081baf24c967cd, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -6451,6 +6459,7 @@ Transform:
   m_Children:
   - {fileID: 1147971679}
   - {fileID: 679551996}
+  - {fileID: 316818005}
   m_Father: {fileID: 457831268}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &98724395
@@ -6968,6 +6977,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 4e4bb958f8373e54ea1fa5a0b13142c7, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -7175,7 +7186,7 @@ MonoBehaviour:
   fetch_localized_stat_value: 0
   dialogue_from: 0
   localized_key: 
-  text: Or are you just trying to be clever?
+  text: Go on.
   talking_beeps: {fileID: 0}
   darken_all_other_characters: 1
   bring_speaker_to_front: 1
@@ -7338,6 +7349,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 08546d42c5bfce74aa5f4550671f9a0d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -9406,6 +9419,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 4e4bb958f8373e54ea1fa5a0b13142c7, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -10225,6 +10240,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Matthew
   new_image: {fileID: 21300000, guid: ecedeb6931c397844b574e8366ec160d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -10666,6 +10683,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 75fa20bb22eebc3429081baf24c967cd, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -10879,6 +10898,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 4e4bb958f8373e54ea1fa5a0b13142c7, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -11092,6 +11113,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 75fa20bb22eebc3429081baf24c967cd, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -12100,58 +12123,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Leilani
   new_image: {fileID: 21300000, guid: b3c8a8fea65b38347a6181091d4bcea2, type: 3}
-  fade_in_new_image: 0
-  lighten_actor: 0
-  bring_actor_to_front: 0
---- !u!1 &175989934
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 175989935}
-  - component: {fileID: 175989936}
-  m_Layer: 0
-  m_Name: Change Actor Image (9)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &175989935
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 175989934}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -472.5, y: -265.78125, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 804537323}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &175989936
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 175989934}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44973f879676fe646a5d712c3f31e15a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  go_to_next_node: 1
-  executed_from_load: 0
-  actor_name_from: 0
-  actor_name: Professor Blanche
-  new_image: {fileID: 21300000, guid: 75fa20bb22eebc3429081baf24c967cd, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -12204,6 +12177,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 8924711cf5f4a704899db7c2dc93127d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -12556,58 +12531,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5275582187492880113, guid: c87e9d001b140b24e93b21ae3617e89b, type: 3}
   m_PrefabInstance: {fileID: 191958510}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &193340858
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 193340859}
-  - component: {fileID: 193340860}
-  m_Layer: 0
-  m_Name: Change Actor Image (7)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &193340859
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 193340858}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -472.5, y: -265.78125, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2005466471}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &193340860
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 193340858}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44973f879676fe646a5d712c3f31e15a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  go_to_next_node: 1
-  executed_from_load: 0
-  actor_name_from: 0
-  actor_name: Professor Blanche
-  new_image: {fileID: 21300000, guid: 75fa20bb22eebc3429081baf24c967cd, type: 3}
-  fade_in_new_image: 0
-  lighten_actor: 0
-  bring_actor_to_front: 0
 --- !u!1 &203227049
 GameObject:
   m_ObjectHideFlags: 0
@@ -13186,7 +13109,7 @@ MonoBehaviour:
   fetch_localized_stat_value: 0
   dialogue_from: 0
   localized_key: 
-  text: "Well, this semester\u2019s book is a little messier, a little heavier."
+  text: Anways, this semester we'll be diving into a classic.
   talking_beeps: {fileID: 0}
   darken_all_other_characters: 1
   bring_speaker_to_front: 1
@@ -14101,6 +14024,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 75fa20bb22eebc3429081baf24c967cd, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -14666,6 +14591,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 75fa20bb22eebc3429081baf24c967cd, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -14879,6 +14806,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 4e4bb958f8373e54ea1fa5a0b13142c7, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -15466,6 +15395,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 08546d42c5bfce74aa5f4550671f9a0d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -15741,6 +15672,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 8924711cf5f4a704899db7c2dc93127d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -16243,6 +16176,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 08546d42c5bfce74aa5f4550671f9a0d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -16903,6 +16838,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 75fa20bb22eebc3429081baf24c967cd, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -16955,6 +16892,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 7352e1374b0d13a41b44565039240836, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -17492,6 +17431,7 @@ Transform:
   - {fileID: 1009014463}
   - {fileID: 1906161337}
   - {fileID: 643698090}
+  - {fileID: 1150043725}
   - {fileID: 1091705022}
   - {fileID: 862676597}
   - {fileID: 1111306952}
@@ -17507,6 +17447,167 @@ Transform:
   - {fileID: 1214996016}
   m_Father: {fileID: 457831268}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &316818004
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 316818005}
+  - component: {fileID: 316818007}
+  - component: {fileID: 316818006}
+  m_Layer: 0
+  m_Name: Dialogue (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &316818005
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 316818004}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -472.5, y: -265.78125, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 91132977}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &316818006
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 316818004}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!114 &316818007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 316818004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b40beeb965e5d9419bf817d6f7d59bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  go_to_next_node: 1
+  executed_from_load: 0
+  actor_name_from: 0
+  actor: Leilani
+  speaker_name_from: 0
+  textbox_title: Leilani
+  fetch_localized_stat_value: 0
+  dialogue_from: 0
+  localized_key: 
+  text: Around here, that's not even subtle.
+  talking_beeps: {fileID: 0}
+  darken_all_other_characters: 0
+  bring_speaker_to_front: 1
+  clear_text_after: 0
+  log_text: 1
+  log_category: Default
+  done_printing: 0
+  no_voice_playing: 0
+  done_voice_clip: 0
 --- !u!1 &319116159
 GameObject:
   m_ObjectHideFlags: 0
@@ -17556,6 +17657,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 4e4bb958f8373e54ea1fa5a0b13142c7, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -17608,6 +17711,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 75fa20bb22eebc3429081baf24c967cd, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -19026,6 +19131,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 75fa20bb22eebc3429081baf24c967cd, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -19653,7 +19760,7 @@ MonoBehaviour:
   fetch_localized_stat_value: 0
   dialogue_from: 0
   localized_key: 
-  text: Just promise me it's not some manifesto with a sword on the cover.
+  text: Blanche heard that and got sick immediately.
   talking_beeps: {fileID: 0}
   darken_all_other_characters: 0
   bring_speaker_to_front: 1
@@ -19862,8 +19969,7 @@ MonoBehaviour:
   fetch_localized_stat_value: 0
   dialogue_from: 0
   localized_key: 
-  text: Ah, the indie scene. Always 60% brilliant, 40% absolutely unreadable. I respect
-    the gamble.
+  text: Self-published, online?
   talking_beeps: {fileID: 0}
   darken_all_other_characters: 1
   bring_speaker_to_front: 1
@@ -20133,6 +20239,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 08546d42c5bfce74aa5f4550671f9a0d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -21229,6 +21337,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 75fa20bb22eebc3429081baf24c967cd, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -22048,6 +22158,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 08546d42c5bfce74aa5f4550671f9a0d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -22310,6 +22422,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 4e4bb958f8373e54ea1fa5a0b13142c7, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -22523,6 +22637,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Leilani
   new_image: {fileID: 21300000, guid: 9d44005f00cada7439863219eea3bef1, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -23833,9 +23949,172 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 08546d42c5bfce74aa5f4550671f9a0d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
+--- !u!1 &497278110
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 497278111}
+  - component: {fileID: 497278113}
+  - component: {fileID: 497278112}
+  m_Layer: 0
+  m_Name: Dialogue (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &497278111
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 497278110}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2005466471}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &497278112
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 497278110}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &497278113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 497278110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b40beeb965e5d9419bf817d6f7d59bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  go_to_next_node: 1
+  executed_from_load: 0
+  actor_name_from: 0
+  actor: Professor Blanche
+  speaker_name_from: 0
+  textbox_title: Professor
+  fetch_localized_stat_value: 0
+  dialogue_from: 0
+  localized_key: 
+  text: Now it mostly lives in my shoulders.
+  talking_beeps: {fileID: 0}
+  darken_all_other_characters: 1
+  bring_speaker_to_front: 1
+  clear_text_after: 0
+  log_text: 1
+  log_category: Default
+  done_printing: 0
+  no_voice_playing: 0
+  done_voice_clip: 0
 --- !u!1 &503014659
 GameObject:
   m_ObjectHideFlags: 0
@@ -24206,9 +24485,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1897718650}
-  - {fileID: 1275451401}
   - {fileID: 2114683204}
+  - {fileID: 1275451401}
+  - {fileID: 1897718650}
   m_Father: {fileID: 457831268}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &510473663
@@ -24590,6 +24869,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Leilani
   new_image: {fileID: 21300000, guid: 461cc3d8d0b3ed34f876ab0713865708, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -25016,6 +25297,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 75fa20bb22eebc3429081baf24c967cd, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -25356,6 +25639,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 08546d42c5bfce74aa5f4550671f9a0d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -27749,7 +28034,7 @@ MonoBehaviour:
   fetch_localized_stat_value: 0
   dialogue_from: 0
   localized_key: 
-  text: Fantasy novels. Full of dragons and endless plotlines.
+  text: Perhaps you're worried the world is moving backwards?
   talking_beeps: {fileID: 0}
   darken_all_other_characters: 1
   bring_speaker_to_front: 1
@@ -30462,6 +30747,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 75fa20bb22eebc3429081baf24c967cd, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -30738,6 +31025,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 4e4bb958f8373e54ea1fa5a0b13142c7, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -31092,6 +31381,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 4e4bb958f8373e54ea1fa5a0b13142c7, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -31679,6 +31970,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 8924711cf5f4a704899db7c2dc93127d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -31731,6 +32024,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 08546d42c5bfce74aa5f4550671f9a0d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -31841,6 +32136,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Leilani
   new_image: {fileID: 21300000, guid: 72bf5e4959b73f343aeb88b23b824d2d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -32271,6 +32568,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 75fa20bb22eebc3429081baf24c967cd, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -32425,7 +32724,7 @@ MonoBehaviour:
   fetch_localized_stat_value: 0
   dialogue_from: 0
   localized_key: 
-  text: But hey... I like political chaos, that's why I'm studying it.
+  text: First day and you already know what's up.
   talking_beeps: {fileID: 0}
   darken_all_other_characters: 0
   bring_speaker_to_front: 1
@@ -32484,6 +32783,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 4e4bb958f8373e54ea1fa5a0b13142c7, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -32678,6 +32979,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Leilani
   new_image: {fileID: 21300000, guid: 461cc3d8d0b3ed34f876ab0713865708, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -33375,6 +33678,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 75fa20bb22eebc3429081baf24c967cd, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -33427,6 +33732,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 4e4bb958f8373e54ea1fa5a0b13142c7, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -33698,8 +34005,7 @@ MonoBehaviour:
   fetch_localized_stat_value: 0
   dialogue_from: 0
   localized_key: 
-  text: Alright, Katniss. Let's just hope you're better at coal-smudged rebellion
-    speeches.
+  text: Hunger Games? Yeah... some people got sponsors in real life.
   talking_beeps: {fileID: 0}
   darken_all_other_characters: 0
   bring_speaker_to_front: 1
@@ -33758,6 +34064,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 08546d42c5bfce74aa5f4550671f9a0d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -33912,6 +34220,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 4e4bb958f8373e54ea1fa5a0b13142c7, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -34688,6 +34998,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 4e4bb958f8373e54ea1fa5a0b13142c7, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -35226,6 +35538,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Matthew
   new_image: {fileID: 21300000, guid: 6c4b643ac8c3ce444bc6f1c40baed7ac, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -35278,6 +35592,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 08546d42c5bfce74aa5f4550671f9a0d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -35498,7 +35814,7 @@ MonoBehaviour:
   fetch_localized_stat_value: 0
   dialogue_from: 0
   localized_key: 
-  text: Ah, yes. The dystopian teenage drama.
+  text: Interesting. Do you feel like you're being sacrificed to a broken system?
   talking_beeps: {fileID: 0}
   darken_all_other_characters: 1
   bring_speaker_to_front: 1
@@ -36160,6 +36476,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Matthew
   new_image: {fileID: 21300000, guid: 6c4b643ac8c3ce444bc6f1c40baed7ac, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -36212,6 +36530,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Matthew
   new_image: {fileID: 21300000, guid: ecedeb6931c397844b574e8366ec160d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -36527,7 +36847,7 @@ MonoBehaviour:
   fetch_localized_stat_value: 0
   dialogue_from: 0
   localized_key: 
-  text: Remind me not to leave you alone near the archives.
+  text: Very well. Keep your mysteries while they still impress people.
   talking_beeps: {fileID: 0}
   darken_all_other_characters: 1
   bring_speaker_to_front: 1
@@ -36586,6 +36906,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 08546d42c5bfce74aa5f4550671f9a0d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -37226,6 +37548,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 4e4bb958f8373e54ea1fa5a0b13142c7, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -37331,6 +37655,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 90084ef2712cf8b48b294dd04ca40b95, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -37383,6 +37709,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: bf4f3c41ef386174fba5ac6f5acd09f0, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -37397,7 +37725,7 @@ GameObject:
   - component: {fileID: 804537323}
   - component: {fileID: 804537324}
   m_Layer: 0
-  m_Name: Game of Thrones
+  m_Name: Handmaid's Tale
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37423,8 +37751,6 @@ Transform:
   - {fileID: 1382164973}
   - {fileID: 177422131}
   - {fileID: 73305862}
-  - {fileID: 175989935}
-  - {fileID: 41775826}
   m_Father: {fileID: 457831268}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &804537324
@@ -37440,7 +37766,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroy_when_finished: 0
-  start_conversation_when_done: {fileID: 316104222}
+  start_conversation_when_done: {fileID: 853518127}
   cur_node: 0
   active: 0
   finished_conversation: 0
@@ -37559,6 +37885,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 75fa20bb22eebc3429081baf24c967cd, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -37938,6 +38266,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 08546d42c5bfce74aa5f4550671f9a0d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -37990,6 +38320,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 4e4bb958f8373e54ea1fa5a0b13142c7, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -38176,6 +38508,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Leilani
   new_image: {fileID: 21300000, guid: 461cc3d8d0b3ed34f876ab0713865708, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -38228,6 +38562,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 75fa20bb22eebc3429081baf24c967cd, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -38493,6 +38829,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 90084ef2712cf8b48b294dd04ca40b95, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -38784,7 +39122,7 @@ GameObject:
   - component: {fileID: 853518126}
   - component: {fileID: 853518127}
   m_Layer: 0
-  m_Name: 'Unknown '
+  m_Name: Assigned Book
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39308,6 +39646,8 @@ Transform:
   - {fileID: 1646107616}
   - {fileID: 283029747}
   - {fileID: 1691588457}
+  - {fileID: 1014475830}
+  - {fileID: 1015527700}
   m_Father: {fileID: 457831268}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &865371936
@@ -39537,6 +39877,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 75fa20bb22eebc3429081baf24c967cd, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -39589,6 +39931,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 4e4bb958f8373e54ea1fa5a0b13142c7, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -39641,6 +39985,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 75fa20bb22eebc3429081baf24c967cd, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -39693,6 +40039,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 4e4bb958f8373e54ea1fa5a0b13142c7, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -40955,6 +41303,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 75fa20bb22eebc3429081baf24c967cd, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -42068,6 +42418,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 4e4bb958f8373e54ea1fa5a0b13142c7, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -42411,6 +42763,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 08546d42c5bfce74aa5f4550671f9a0d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -42837,6 +43191,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 08546d42c5bfce74aa5f4550671f9a0d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -43313,6 +43669,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 08546d42c5bfce74aa5f4550671f9a0d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -43897,6 +44255,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Leilani
   new_image: {fileID: 21300000, guid: fb368e9b3e90fd34c8cff29334b18b36, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -44615,6 +44975,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Leilani
   new_image: {fileID: 21300000, guid: 0aa868885fbbc6443901067037715a83, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -44696,6 +45058,167 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2791172980301604336, guid: a4d4f071e94b44724b9720b619dc07bf, type: 3}
   m_PrefabInstance: {fileID: 1009014462}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1014475829
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1014475830}
+  - component: {fileID: 1014475832}
+  - component: {fileID: 1014475831}
+  m_Layer: 0
+  m_Name: Dialogue (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1014475830
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1014475829}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 865371935}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1014475831
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1014475829}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &1014475832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1014475829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b40beeb965e5d9419bf817d6f7d59bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  go_to_next_node: 1
+  executed_from_load: 0
+  actor_name_from: 0
+  actor: Professor Blanche
+  speaker_name_from: 0
+  textbox_title: Professor
+  fetch_localized_stat_value: 0
+  dialogue_from: 0
+  localized_key: 
+  text: With feelings, misreadings, and each anxious heart.
+  talking_beeps: {fileID: 0}
+  darken_all_other_characters: 1
+  bring_speaker_to_front: 1
+  clear_text_after: 0
+  log_text: 1
+  log_category: Default
+  done_printing: 0
+  no_voice_playing: 0
+  done_voice_clip: 0
 --- !u!1 &1014609446
 GameObject:
   m_ObjectHideFlags: 0
@@ -44903,9 +45426,170 @@ MonoBehaviour:
   fetch_localized_stat_value: 0
   dialogue_from: 0
   localized_key: 
-  text: That's a long read with a short payoff.
+  text: Handmaid's Tale? Respect.
   talking_beeps: {fileID: 0}
   darken_all_other_characters: 0
+  bring_speaker_to_front: 1
+  clear_text_after: 0
+  log_text: 1
+  log_category: Default
+  done_printing: 0
+  no_voice_playing: 0
+  done_voice_clip: 0
+--- !u!1 &1015527699
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1015527700}
+  - component: {fileID: 1015527702}
+  - component: {fileID: 1015527701}
+  m_Layer: 0
+  m_Name: Dialogue (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1015527700
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1015527699}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 865371935}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1015527701
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1015527699}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &1015527702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1015527699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b40beeb965e5d9419bf817d6f7d59bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  go_to_next_node: 1
+  executed_from_load: 0
+  actor_name_from: 0
+  actor: Professor Blanche
+  speaker_name_from: 0
+  textbox_title: Professor
+  fetch_localized_stat_value: 0
+  dialogue_from: 0
+  localized_key: 
+  text: That's people and reading, the hazardous part.
+  talking_beeps: {fileID: 0}
+  darken_all_other_characters: 1
   bring_speaker_to_front: 1
   clear_text_after: 0
   log_text: 1
@@ -45412,6 +46096,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Leilani
   new_image: {fileID: 21300000, guid: 68b94801af5587f4380bde6616a93256, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -45836,6 +46522,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Matthew
   new_image: {fileID: 21300000, guid: ecedeb6931c397844b574e8366ec160d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -46107,6 +46795,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: bf4f3c41ef386174fba5ac6f5acd09f0, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -46159,6 +46849,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Leilani
   new_image: {fileID: 21300000, guid: dc61f442af4be9c4cbd0e815d689a861, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -46635,7 +47327,7 @@ GameObject:
   - component: {fileID: 1072278686}
   - component: {fileID: 1072278685}
   m_Layer: 0
-  m_Name: Leilani - Fire and Ice
+  m_Name: Leilani - Handmaid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47017,6 +47709,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 75fa20bb22eebc3429081baf24c967cd, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -47674,6 +48368,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 08546d42c5bfce74aa5f4550671f9a0d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -47939,6 +48635,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 75fa20bb22eebc3429081baf24c967cd, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -48192,6 +48890,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 75fa20bb22eebc3429081baf24c967cd, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -48244,6 +48944,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 08546d42c5bfce74aa5f4550671f9a0d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -48296,6 +48998,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 75fa20bb22eebc3429081baf24c967cd, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -48501,6 +49205,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Leilani
   new_image: {fileID: 21300000, guid: 68b94801af5587f4380bde6616a93256, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -48553,6 +49259,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 75fa20bb22eebc3429081baf24c967cd, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -49262,6 +49970,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Leilani
   new_image: {fileID: 21300000, guid: 461cc3d8d0b3ed34f876ab0713865708, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -49323,6 +50033,116 @@ MonoBehaviour:
   cur_node: 0
   active: 0
   finished_conversation: 0
+--- !u!1001 &1150043724
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 316104223}
+    m_Modifications:
+    - target: {fileID: -5143952188114400212, guid: 0f3abc4b5d99b424eb1a504fb2b92c1b, type: 3}
+      propertyPath: showAfterWeek
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -5143952188114400212, guid: 0f3abc4b5d99b424eb1a504fb2b92c1b, type: 3}
+      propertyPath: textMessage.body
+      value: What's up? Wanna meet up?
+      objectReference: {fileID: 0}
+    - target: {fileID: -5143952188114400212, guid: 0f3abc4b5d99b424eb1a504fb2b92c1b, type: 3}
+      propertyPath: textMessage.from
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: -5143952188114400212, guid: 0f3abc4b5d99b424eb1a504fb2b92c1b, type: 3}
+      propertyPath: textMessage.location
+      value: Green
+      objectReference: {fileID: 0}
+    - target: {fileID: -5143952188114400212, guid: 0f3abc4b5d99b424eb1a504fb2b92c1b, type: 3}
+      propertyPath: textMessage.unlockWeek
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -5143952188114400212, guid: 0f3abc4b5d99b424eb1a504fb2b92c1b, type: 3}
+      propertyPath: textMessage.quickReplies.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -5143952188114400212, guid: 0f3abc4b5d99b424eb1a504fb2b92c1b, type: 3}
+      propertyPath: textMessage.quickReplies.Array.data[0].label
+      value: Sure!
+      objectReference: {fileID: 0}
+    - target: {fileID: -5143952188114400212, guid: 0f3abc4b5d99b424eb1a504fb2b92c1b, type: 3}
+      propertyPath: textMessage.quickReplies.Array.data[1].label
+      value: Maybe later
+      objectReference: {fileID: 0}
+    - target: {fileID: -5143952188114400212, guid: 0f3abc4b5d99b424eb1a504fb2b92c1b, type: 3}
+      propertyPath: textMessage.quickReplies.Array.data[0].iconKey
+      value: thumbsup
+      objectReference: {fileID: 0}
+    - target: {fileID: -5143952188114400212, guid: 0f3abc4b5d99b424eb1a504fb2b92c1b, type: 3}
+      propertyPath: textMessage.quickReplies.Array.data[0].payload
+      value: accept
+      objectReference: {fileID: 0}
+    - target: {fileID: -5143952188114400212, guid: 0f3abc4b5d99b424eb1a504fb2b92c1b, type: 3}
+      propertyPath: textMessage.quickReplies.Array.data[1].iconKey
+      value: thumbsdown
+      objectReference: {fileID: 0}
+    - target: {fileID: -5143952188114400212, guid: 0f3abc4b5d99b424eb1a504fb2b92c1b, type: 3}
+      propertyPath: textMessage.quickReplies.Array.data[1].payload
+      value: decline
+      objectReference: {fileID: 0}
+    - target: {fileID: 5932124337953696973, guid: 0f3abc4b5d99b424eb1a504fb2b92c1b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 269.38885
+      objectReference: {fileID: 0}
+    - target: {fileID: 5932124337953696973, guid: 0f3abc4b5d99b424eb1a504fb2b92c1b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 307.4441
+      objectReference: {fileID: 0}
+    - target: {fileID: 5932124337953696973, guid: 0f3abc4b5d99b424eb1a504fb2b92c1b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5932124337953696973, guid: 0f3abc4b5d99b424eb1a504fb2b92c1b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5932124337953696973, guid: 0f3abc4b5d99b424eb1a504fb2b92c1b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5932124337953696973, guid: 0f3abc4b5d99b424eb1a504fb2b92c1b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5932124337953696973, guid: 0f3abc4b5d99b424eb1a504fb2b92c1b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5932124337953696973, guid: 0f3abc4b5d99b424eb1a504fb2b92c1b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5932124337953696973, guid: 0f3abc4b5d99b424eb1a504fb2b92c1b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5932124337953696973, guid: 0f3abc4b5d99b424eb1a504fb2b92c1b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7760023181145495739, guid: 0f3abc4b5d99b424eb1a504fb2b92c1b, type: 3}
+      propertyPath: m_Name
+      value: Text Message
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0f3abc4b5d99b424eb1a504fb2b92c1b, type: 3}
+--- !u!4 &1150043725 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5932124337953696973, guid: 0f3abc4b5d99b424eb1a504fb2b92c1b, type: 3}
+  m_PrefabInstance: {fileID: 1150043724}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1151200290
 GameObject:
   m_ObjectHideFlags: 0
@@ -49372,6 +50192,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Leilani
   new_image: {fileID: 21300000, guid: 461cc3d8d0b3ed34f876ab0713865708, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -49992,6 +50814,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 08546d42c5bfce74aa5f4550671f9a0d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -51016,6 +51840,74 @@ Transform:
   - {fileID: 291281163}
   m_Father: {fileID: 561909551}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1193824697
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1193824698}
+  - component: {fileID: 1193824699}
+  m_Layer: 0
+  m_Name: Show Choice
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1193824698
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1193824697}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 33998212}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1193824699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1193824697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b53734dc413e348579dd61685c53ee9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VNEngine.ShowChoiceNode
+  go_to_next_node: 1
+  executed_from_load: 0
+  choices:
+  - text: Sure!
+    nextConversation: {fileID: 513813004}
+    useTraits: 0
+    useEvents: 0
+    useGame: 0
+    traitRequirements: []
+    eventRequirements: []
+    footballRequirement:
+      check: 0
+      threshold: 0
+  - text: I'd rather sit alone.
+    nextConversation: {fileID: 164206200}
+    useTraits: 0
+    useEvents: 0
+    useGame: 0
+    traitRequirements: []
+    eventRequirements: []
+    footballRequirement:
+      check: 0
+      threshold: 0
+  hideDialogueUI: 1
 --- !u!1 &1196628314
 GameObject:
   m_ObjectHideFlags: 0
@@ -51227,6 +52119,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 75fa20bb22eebc3429081baf24c967cd, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -51648,6 +52542,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 08546d42c5bfce74aa5f4550671f9a0d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -52293,6 +53189,7 @@ Transform:
   m_Children:
   - {fileID: 1523318149}
   - {fileID: 1811379385}
+  - {fileID: 1943487924}
   m_Father: {fileID: 457831268}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1233831950
@@ -52558,6 +53455,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 75fa20bb22eebc3429081baf24c967cd, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -53447,167 +54346,6 @@ MonoBehaviour:
   cur_node: 0
   active: 0
   finished_conversation: 0
---- !u!1 &1251186478
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1251186479}
-  - component: {fileID: 1251186481}
-  - component: {fileID: 1251186480}
-  m_Layer: 0
-  m_Name: Dialogue (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1251186479
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1251186478}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2005466471}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &1251186480
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1251186478}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
---- !u!114 &1251186481
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1251186478}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b40beeb965e5d9419bf817d6f7d59bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  go_to_next_node: 1
-  executed_from_load: 0
-  actor_name_from: 0
-  actor: Professor Blanche
-  speaker_name_from: 0
-  textbox_title: Professor
-  fetch_localized_stat_value: 0
-  dialogue_from: 0
-  localized_key: 
-  text: Got a lot of people reading again, so I'll give it that.
-  talking_beeps: {fileID: 0}
-  darken_all_other_characters: 1
-  bring_speaker_to_front: 1
-  clear_text_after: 0
-  log_text: 1
-  log_category: Default
-  done_printing: 0
-  no_voice_playing: 0
-  done_voice_clip: 0
 --- !u!1 &1252328709
 GameObject:
   m_ObjectHideFlags: 0
@@ -54336,6 +55074,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 08546d42c5bfce74aa5f4550671f9a0d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -54388,6 +55128,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 08546d42c5bfce74aa5f4550671f9a0d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -54517,7 +55259,9 @@ MonoBehaviour:
   executed_from_load: 0
   actor_name_from: 0
   actor_name: Professor Blanche
-  new_image: {fileID: 21300000, guid: 9d44005f00cada7439863219eea3bef1, type: 3}
+  new_image: {fileID: 21300000, guid: b3c8a8fea65b38347a6181091d4bcea2, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -54625,6 +55369,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 75fa20bb22eebc3429081baf24c967cd, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -54677,6 +55423,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 75fa20bb22eebc3429081baf24c967cd, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -54943,6 +55691,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 08546d42c5bfce74aa5f4550671f9a0d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -55262,6 +56012,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 4e4bb958f8373e54ea1fa5a0b13142c7, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -55314,6 +56066,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Leilani
   new_image: {fileID: 21300000, guid: b3c8a8fea65b38347a6181091d4bcea2, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -55522,6 +56276,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 75fa20bb22eebc3429081baf24c967cd, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -55574,6 +56330,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 08546d42c5bfce74aa5f4550671f9a0d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -55795,6 +56553,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 4e4bb958f8373e54ea1fa5a0b13142c7, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -55847,6 +56607,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 8924711cf5f4a704899db7c2dc93127d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -56578,7 +57340,7 @@ MonoBehaviour:
   fetch_localized_stat_value: 0
   dialogue_from: 0
   localized_key: 
-  text: Literature with a lot of lore, but not a lot of soul if you ask me.
+  text: I once believed the old rules were dying.
   talking_beeps: {fileID: 0}
   darken_all_other_characters: 1
   bring_speaker_to_front: 1
@@ -56851,6 +57613,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 75fa20bb22eebc3429081baf24c967cd, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -57277,6 +58041,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 08546d42c5bfce74aa5f4550671f9a0d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -57380,6 +58146,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 609455da617ef43478416ba53f1ab05f, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -58126,7 +58894,9 @@ MonoBehaviour:
   executed_from_load: 0
   actor_name_from: 0
   actor_name: Leilani
-  new_image: {fileID: 21300000, guid: b3c8a8fea65b38347a6181091d4bcea2, type: 3}
+  new_image: {fileID: 21300000, guid: 461cc3d8d0b3ed34f876ab0713865708, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -58281,7 +59051,7 @@ MonoBehaviour:
   fetch_localized_stat_value: 0
   dialogue_from: 0
   localized_key: 
-  text: Great choice! We'll be reading that book this semester.
+  text: Really? That's what we'll be studying this semester.
   talking_beeps: {fileID: 0}
   darken_all_other_characters: 1
   bring_speaker_to_front: 1
@@ -60306,6 +61076,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 08546d42c5bfce74aa5f4550671f9a0d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -60519,6 +61291,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Leilani
   new_image: {fileID: 21300000, guid: 461cc3d8d0b3ed34f876ab0713865708, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -60733,6 +61507,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 75fa20bb22eebc3429081baf24c967cd, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -61364,6 +62140,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 75fa20bb22eebc3429081baf24c967cd, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -61468,6 +62246,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 4e4bb958f8373e54ea1fa5a0b13142c7, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -61520,6 +62300,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 4e4bb958f8373e54ea1fa5a0b13142c7, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -61686,6 +62468,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 08546d42c5bfce74aa5f4550671f9a0d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -62475,6 +63259,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 75fa20bb22eebc3429081baf24c967cd, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -62688,6 +63474,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 4e4bb958f8373e54ea1fa5a0b13142c7, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -62740,6 +63528,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Leilani
   new_image: {fileID: 21300000, guid: dc61f442af4be9c4cbd0e815d689a861, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -63378,7 +64168,7 @@ MonoBehaviour:
   fetch_localized_stat_value: 0
   dialogue_from: 0
   localized_key: 
-  text: Dangerous taste. I like that.
+  text: Classified, top secret?
   talking_beeps: {fileID: 0}
   darken_all_other_characters: 1
   bring_speaker_to_front: 1
@@ -63872,6 +64662,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 08546d42c5bfce74aa5f4550671f9a0d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -64136,6 +64928,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 75fa20bb22eebc3429081baf24c967cd, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -64636,6 +65430,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 08546d42c5bfce74aa5f4550671f9a0d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -65054,167 +65850,6 @@ MonoBehaviour:
   cur_node: 0
   active: 0
   finished_conversation: 0
---- !u!1 &1627862454
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1627862455}
-  - component: {fileID: 1627862457}
-  - component: {fileID: 1627862456}
-  m_Layer: 0
-  m_Name: Dialogue (3)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1627862455
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1627862454}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2005466471}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &1627862456
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1627862454}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
---- !u!114 &1627862457
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1627862454}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b40beeb965e5d9419bf817d6f7d59bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  go_to_next_node: 1
-  executed_from_load: 0
-  actor_name_from: 0
-  actor: Professor Blanche
-  speaker_name_from: 0
-  textbox_title: Professor
-  fetch_localized_stat_value: 0
-  dialogue_from: 0
-  localized_key: 
-  text: But we're going to step back a few decades.
-  talking_beeps: {fileID: 0}
-  darken_all_other_characters: 1
-  bring_speaker_to_front: 1
-  clear_text_after: 0
-  log_text: 1
-  log_category: Default
-  done_printing: 0
-  no_voice_playing: 0
-  done_voice_clip: 0
 --- !u!1 &1628110955
 GameObject:
   m_ObjectHideFlags: 0
@@ -65264,6 +65899,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 4e4bb958f8373e54ea1fa5a0b13142c7, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -66255,6 +66892,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 08546d42c5bfce74aa5f4550671f9a0d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -66777,6 +67416,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 75fa20bb22eebc3429081baf24c967cd, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -66829,6 +67470,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 75fa20bb22eebc3429081baf24c967cd, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -67322,6 +67965,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 08546d42c5bfce74aa5f4550671f9a0d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -67771,7 +68416,7 @@ MonoBehaviour:
   fetch_localized_stat_value: 0
   dialogue_from: 0
   localized_key: 
-  text: Dr. Seuss, a timeless classic. Very well.
+  text: A cat in a hat? Then the semester may start.
   talking_beeps: {fileID: 0}
   darken_all_other_characters: 1
   bring_speaker_to_front: 1
@@ -67991,6 +68636,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 75fa20bb22eebc3429081baf24c967cd, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -68029,6 +68676,7 @@ Transform:
   - {fileID: 1540908227}
   - {fileID: 1132031535}
   - {fileID: 757708089}
+  - {fileID: 53161821}
   m_Father: {fileID: 457831268}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1698236182
@@ -68150,6 +68798,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 4e4bb958f8373e54ea1fa5a0b13142c7, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -68202,6 +68852,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 08546d42c5bfce74aa5f4550671f9a0d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -68685,6 +69337,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 75fa20bb22eebc3429081baf24c967cd, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -69483,7 +70137,7 @@ MonoBehaviour:
   fetch_localized_stat_value: 0
   dialogue_from: 0
   localized_key: 
-  text: Because nothing says literature like children fighting to the death.
+  text: When I was your age, I felt history leaning on my neck.
   talking_beeps: {fileID: 0}
   darken_all_other_characters: 1
   bring_speaker_to_front: 1
@@ -70103,6 +70757,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Leilani
   new_image: {fileID: 21300000, guid: 69e10f2ce41fce642ace2ca26d1ef11d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -70555,6 +71211,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 4e4bb958f8373e54ea1fa5a0b13142c7, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -71080,8 +71738,7 @@ MonoBehaviour:
   fetch_localized_stat_value: 0
   dialogue_from: 0
   localized_key: 
-  text: You got state secrets <i>and</i> literary taste? You're going to keep things
-    interesting.
+  text: <i>Classified?</i>
   talking_beeps: {fileID: 0}
   darken_all_other_characters: 0
   bring_speaker_to_front: 1
@@ -71236,6 +71893,7 @@ Transform:
   - {fileID: 1368909457}
   - {fileID: 1827985667}
   - {fileID: 366122797}
+  - {fileID: 10762792}
   m_Father: {fileID: 457831268}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1811389682
@@ -71355,6 +72013,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 4e4bb958f8373e54ea1fa5a0b13142c7, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -71568,6 +72228,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 8924711cf5f4a704899db7c2dc93127d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -72610,7 +73272,7 @@ MonoBehaviour:
   fetch_localized_stat_value: 0
   dialogue_from: 0
   localized_key: 
-  text: Hey! I forgot you said you were in this class. Come sit beside me.
+  text: Hey, you're in this class too? Come sit beside me.
   talking_beeps: {fileID: 0}
   darken_all_other_characters: 0
   bring_speaker_to_front: 1
@@ -74689,8 +75351,7 @@ MonoBehaviour:
   fetch_localized_stat_value: 0
   dialogue_from: 0
   localized_key: 
-  text: I always like to start this class with an icebreaker. Tell me your favorite
-    book.
+  text: Let's start with an icebreaker. What's your favorite book.
   talking_beeps: {fileID: 0}
   darken_all_other_characters: 1
   bring_speaker_to_front: 1
@@ -74749,6 +75410,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 75fa20bb22eebc3429081baf24c967cd, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -75261,7 +75924,7 @@ MonoBehaviour:
   fetch_localized_stat_value: 0
   dialogue_from: 0
   localized_key: 
-  text: That book made me want to study politics.
+  text: You trying to get extra credit already, or was that an accident?
   talking_beeps: {fileID: 0}
   darken_all_other_characters: 0
   bring_speaker_to_front: 1
@@ -75773,6 +76436,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Matthew
   new_image: {fileID: 21300000, guid: ecedeb6931c397844b574e8366ec160d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -75827,58 +76492,6 @@ MonoBehaviour:
   slide_out: 0
   fade_out: 1
   fade_out_time: 0.1
---- !u!1 &1920921188
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1920921189}
-  - component: {fileID: 1920921190}
-  m_Layer: 0
-  m_Name: Change Actor Image (8)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1920921189
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1920921188}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -472.5, y: -265.78125, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2005466471}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1920921190
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1920921188}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44973f879676fe646a5d712c3f31e15a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  go_to_next_node: 1
-  executed_from_load: 0
-  actor_name_from: 0
-  actor_name: Professor Blanche
-  new_image: {fileID: 21300000, guid: 08546d42c5bfce74aa5f4550671f9a0d, type: 3}
-  fade_in_new_image: 0
-  lighten_actor: 0
-  bring_actor_to_front: 0
 --- !u!1 &1921407970
 GameObject:
   m_ObjectHideFlags: 0
@@ -75928,6 +76541,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 4e4bb958f8373e54ea1fa5a0b13142c7, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -76278,6 +76893,167 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+--- !u!1 &1943487923
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1943487924}
+  - component: {fileID: 1943487926}
+  - component: {fileID: 1943487925}
+  m_Layer: 0
+  m_Name: Leilani - Classified (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1943487924
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1943487923}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -472.5, y: -265.78125, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1233671188}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1943487925
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1943487923}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!114 &1943487926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1943487923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b40beeb965e5d9419bf817d6f7d59bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  go_to_next_node: 1
+  executed_from_load: 0
+  actor_name_from: 0
+  actor: Leilani
+  speaker_name_from: 0
+  textbox_title: Leilani
+  fetch_localized_stat_value: 0
+  dialogue_from: 0
+  localized_key: 
+  text: You gave him nothing and he still made it about himself.
+  talking_beeps: {fileID: 0}
+  darken_all_other_characters: 0
+  bring_speaker_to_front: 1
+  clear_text_after: 0
+  log_text: 1
+  log_category: Default
+  done_printing: 0
+  no_voice_playing: 0
+  done_voice_clip: 0
 --- !u!1 &1943580065
 GameObject:
   m_ObjectHideFlags: 0
@@ -76327,6 +77103,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 08546d42c5bfce74aa5f4550671f9a0d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -76541,6 +77319,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 75fa20bb22eebc3429081baf24c967cd, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -76856,7 +77636,7 @@ MonoBehaviour:
   fetch_localized_stat_value: 0
   dialogue_from: 0
   localized_key: 
-  text: Okay indie lit. I see you.
+  text: Indie author online?
   talking_beeps: {fileID: 0}
   darken_all_other_characters: 0
   bring_speaker_to_front: 1
@@ -77273,6 +78053,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 75fa20bb22eebc3429081baf24c967cd, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -77325,6 +78107,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Leilani
   new_image: {fileID: 21300000, guid: 68b94801af5587f4380bde6616a93256, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -77377,6 +78161,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Leilani
   new_image: {fileID: 21300000, guid: b3c8a8fea65b38347a6181091d4bcea2, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -77641,6 +78427,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 08546d42c5bfce74aa5f4550671f9a0d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -78303,6 +79091,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Leilani
   new_image: {fileID: 21300000, guid: 68b94801af5587f4380bde6616a93256, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -78486,11 +79276,7 @@ Transform:
   - {fileID: 1739421092}
   - {fileID: 1759049245}
   - {fileID: 1335578071}
-  - {fileID: 1251186479}
-  - {fileID: 193340859}
-  - {fileID: 1627862455}
-  - {fileID: 1920921189}
-  - {fileID: 36208516}
+  - {fileID: 497278111}
   m_Father: {fileID: 457831268}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2005466472
@@ -78506,7 +79292,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroy_when_finished: 0
-  start_conversation_when_done: {fileID: 316104222}
+  start_conversation_when_done: {fileID: 853518127}
   cur_node: 0
   active: 0
   finished_conversation: 0
@@ -79476,7 +80262,7 @@ MonoBehaviour:
   Button_Text:
   - To Kill a Mocking Bird.
   - The Hunger Games Series.
-  - A Song of Fire and Ice.
+  - The Handmaid's Tale.
   - You've never heard of it.
   - 
   - 
@@ -79865,7 +80651,7 @@ MonoBehaviour:
   fetch_localized_stat_value: 0
   dialogue_from: 0
   localized_key: 
-  text: I can already tell this is going to be an excellent semester.
+  text: This is going to be an excellent semester!
   talking_beeps: {fileID: 0}
   darken_all_other_characters: 1
   bring_speaker_to_front: 1
@@ -79875,275 +80661,6 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
---- !u!1 &2063921090
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2063921091}
-  - component: {fileID: 2063921092}
-  m_Layer: 0
-  m_Name: Show Choices
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2063921091
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2063921090}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -472.5, y: -265.78125, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 33998212}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2063921092
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2063921090}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1156cefd0bdce0a428360bd86ae0f9bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  go_to_next_node: 1
-  executed_from_load: 0
-  randomizedOrder: 
-  Name_Of_Choice: 
-  Number_Of_Choices: 2
-  Hide_Dialogue_UI: 1
-  randomize_choices_order: 0
-  Localize_Choice_Text: 0
-  Button_Text:
-  - Sure!
-  - I'd rather sit alone.
-  - 
-  - 
-  - 
-  - 
-  Has_Requirements: 000000000000000000000000000000000000000000000000
-  Requirement_Not_Met_Actions: 000000000000000000000000000000000000000000000000
-  Disabled_Text:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  Show_Choice_Was_Selected_Before: 000000000000
-  Choice_Been_Clicked_Before: 000000000000
-  default_selection: 0
-  Stat_Name:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  Requirement_Type: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  Logic: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  Float_Stat_Is: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  Float_Compare_Value:
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  Bool_Compare_Value: 000000000000000000000000000000000000000000000000000000000000000000000000
-  String_Compare_Value:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  String_Is: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  Check_Null_Object:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  Button_Events:
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 513813004}
-        m_TargetAssemblyTypeName: VNEngine.ConversationManager, Assembly-CSharp
-        m_MethodName: Start_Conversation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 164206200}
-        m_TargetAssemblyTypeName: VNEngine.ConversationManager, Assembly-CSharp
-        m_MethodName: Start_Conversation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  - m_PersistentCalls:
-      m_Calls: []
-  - m_PersistentCalls:
-      m_Calls: []
-  - m_PersistentCalls:
-      m_Calls: []
-  - m_PersistentCalls:
-      m_Calls: []
-  use_image_native_size_for_buttons: 0
-  choice_button_images:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!1 &2064766586
 GameObject:
   m_ObjectHideFlags: 0
@@ -80193,6 +80710,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 08546d42c5bfce74aa5f4550671f9a0d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -80363,6 +80882,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Matthew
   new_image: {fileID: 21300000, guid: c93025b6473231247add9d028b463d6e, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -81218,6 +81739,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 08546d42c5bfce74aa5f4550671f9a0d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -81585,7 +82108,7 @@ MonoBehaviour:
   fetch_localized_stat_value: 0
   dialogue_from: 0
   localized_key: 
-  text: You might be deeper than I thought.
+  text: Teacher's favorite on the first day?
   talking_beeps: {fileID: 0}
   darken_all_other_characters: 0
   bring_speaker_to_front: 1
@@ -81860,7 +82383,7 @@ MonoBehaviour:
   fetch_localized_stat_value: 0
   dialogue_from: 0
   localized_key: 
-  text: Really? An obscure book? Enlighten me.
+  text: I do struggle to follow culture now that no one finishes a paragraph.
   talking_beeps: {fileID: 0}
   darken_all_other_characters: 1
   bring_speaker_to_front: 1
@@ -82146,6 +82669,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Matthew
   new_image: {fileID: 21300000, guid: 6c4b643ac8c3ce444bc6f1c40baed7ac, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -83305,6 +83830,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: ab35dd1fbaca5574d9aedeba1abe5523, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -83821,6 +84348,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Charli
   new_image: {fileID: 21300000, guid: 4f0404b7d59fae44fa5c4dc3a6be5e41, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -84191,6 +84720,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 047fcc33e7a299b4f9416a9f381317ee, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -84277,6 +84808,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 96b7804691a70cf4eb75bd0136ad442e, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -84297,6 +84830,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: da9aba289f5bd204bb99ca7a220ccaf6, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -84317,6 +84852,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: e5f6deeda3b4e934dbf61fd9d1ced5aa, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -84705,6 +85242,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Leilani
   new_image: {fileID: 21300000, guid: 461cc3d8d0b3ed34f876ab0713865708, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -84917,6 +85456,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: 4d9217bd3d9691e4b866fd1082aed8fd, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -85124,6 +85665,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 84c9a4d98d618b1428dc54abe7938aa9, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -85547,6 +86090,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: da9aba289f5bd204bb99ca7a220ccaf6, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -88226,6 +88771,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Charli
   new_image: {fileID: 21300000, guid: 4f0404b7d59fae44fa5c4dc3a6be5e41, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -88265,6 +88812,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 047fcc33e7a299b4f9416a9f381317ee, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -89109,6 +89658,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 8c39d5be82c8a27428117bce9bb5926d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -89441,6 +89992,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: d8f7cad2017b7834dac7c79b9a2486db, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -89747,6 +90300,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 9e63d90c726e87e43a3854e582d4803e, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -89767,6 +90322,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: b56335658f2c6ba41a064c14b1e8c87b, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -90030,6 +90587,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 8c39d5be82c8a27428117bce9bb5926d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -90346,6 +90905,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 7e464405efd56364b8222ffeee85b04b, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -90432,6 +90993,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 047fcc33e7a299b4f9416a9f381317ee, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -90549,6 +91112,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 3bf06708dff4b3649a7f247627bc0530, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -91270,6 +91835,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 96b7804691a70cf4eb75bd0136ad442e, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -94921,6 +95488,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Charli
   new_image: {fileID: 21300000, guid: 4f0404b7d59fae44fa5c4dc3a6be5e41, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -95478,6 +96047,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Leilani
   new_image: {fileID: 21300000, guid: 91727115fe03c65478e0e809a2e9bc5d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -96178,6 +96749,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Charli
   new_image: {fileID: 21300000, guid: 4f0404b7d59fae44fa5c4dc3a6be5e41, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -96234,6 +96807,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Leilani
   new_image: {fileID: 21300000, guid: a1293721b5baa034cb439e2d913bd7b1, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -96704,6 +97279,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: c9a211d11d2b7054cbcf2d8d890551d9, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -96871,6 +97448,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 7e464405efd56364b8222ffeee85b04b, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -96988,6 +97567,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Charli
   new_image: {fileID: 21300000, guid: 3248e1911d1c28040a01014bd1fdcbab, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -99235,6 +99816,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Charli
   new_image: {fileID: 21300000, guid: 418340026af91d844b0cb5f7ea54bc6d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -99754,6 +100337,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 7e464405efd56364b8222ffeee85b04b, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -99792,6 +100377,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: b56335658f2c6ba41a064c14b1e8c87b, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -99875,6 +100462,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Charli
   new_image: {fileID: 21300000, guid: d8089212e6674b64d9b60cf97a22d439, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -100363,6 +100952,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: b56335658f2c6ba41a064c14b1e8c87b, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -100506,6 +101097,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 96b7804691a70cf4eb75bd0136ad442e, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -101291,6 +101884,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: 4d9217bd3d9691e4b866fd1082aed8fd, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -101329,6 +101924,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: b56335658f2c6ba41a064c14b1e8c87b, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -101574,6 +102171,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Charli
   new_image: {fileID: 21300000, guid: 14474518f8cf949409e7d81429cfa947, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -101869,6 +102468,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 8c39d5be82c8a27428117bce9bb5926d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -102615,6 +103216,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 9e63d90c726e87e43a3854e582d4803e, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -103459,6 +104062,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: 4d9217bd3d9691e4b866fd1082aed8fd, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -103496,6 +104101,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Charli
   new_image: {fileID: 21300000, guid: 207c89c9c5acdf7418df69f0525c01fc, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -104255,6 +104862,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: d8f7cad2017b7834dac7c79b9a2486db, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -104389,6 +104998,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 9e63d90c726e87e43a3854e582d4803e, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -104859,6 +105470,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 047fcc33e7a299b4f9416a9f381317ee, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -104912,6 +105525,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: b56335658f2c6ba41a064c14b1e8c87b, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -105029,6 +105644,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Leilani
   new_image: {fileID: 21300000, guid: 461cc3d8d0b3ed34f876ab0713865708, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -105308,6 +105925,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 7e464405efd56364b8222ffeee85b04b, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -105814,6 +106433,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 9e63d90c726e87e43a3854e582d4803e, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -107061,6 +107682,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Leilani
   new_image: {fileID: 21300000, guid: 461cc3d8d0b3ed34f876ab0713865708, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -107490,6 +108113,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Leilani
   new_image: {fileID: 21300000, guid: a1293721b5baa034cb439e2d913bd7b1, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -107622,6 +108247,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: b56335658f2c6ba41a064c14b1e8c87b, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -108330,6 +108957,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: eb3f822d43724a942accc70eb0ae2084, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -109072,6 +109701,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: 4d9217bd3d9691e4b866fd1082aed8fd, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -109935,6 +110566,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: da9aba289f5bd204bb99ca7a220ccaf6, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -110038,6 +110671,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: da9aba289f5bd204bb99ca7a220ccaf6, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -110393,6 +111028,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Leilani
   new_image: {fileID: 21300000, guid: a1293721b5baa034cb439e2d913bd7b1, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -110572,6 +111209,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: 4d9217bd3d9691e4b866fd1082aed8fd, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -111124,6 +111763,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Charli
   new_image: {fileID: 21300000, guid: 3248e1911d1c28040a01014bd1fdcbab, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -111144,6 +111785,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 8c39d5be82c8a27428117bce9bb5926d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -111431,6 +112074,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Charli
   new_image: {fileID: 21300000, guid: 4f0404b7d59fae44fa5c4dc3a6be5e41, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -111451,6 +112096,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: e5f6deeda3b4e934dbf61fd9d1ced5aa, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -111506,6 +112153,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: ab35dd1fbaca5574d9aedeba1abe5523, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -111544,6 +112193,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: a7a948a6f69c9954aa7561743748c324, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -112053,6 +112704,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 7e464405efd56364b8222ffeee85b04b, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -112105,6 +112758,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 9e63d90c726e87e43a3854e582d4803e, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -113030,6 +113685,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Leilani
   new_image: {fileID: 21300000, guid: 461cc3d8d0b3ed34f876ab0713865708, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -113149,6 +113806,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: 58ac954cdc5107349b72ba462ee15912, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -113515,6 +114174,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: 4d9217bd3d9691e4b866fd1082aed8fd, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -113909,6 +114570,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Leilani
   new_image: {fileID: 21300000, guid: 68b94801af5587f4380bde6616a93256, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -114112,6 +114775,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: b56335658f2c6ba41a064c14b1e8c87b, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -114424,6 +115089,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 047fcc33e7a299b4f9416a9f381317ee, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -114705,6 +115372,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 047fcc33e7a299b4f9416a9f381317ee, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -115426,6 +116095,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Charli
   new_image: {fileID: 21300000, guid: 418340026af91d844b0cb5f7ea54bc6d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -115907,6 +116578,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 047fcc33e7a299b4f9416a9f381317ee, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -115927,6 +116600,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: 7f80153007d734b408103605110c1865, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -116124,6 +116799,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: ea6cf6f5929573248a7cacf07b9eb8c1, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -116253,6 +116930,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 047fcc33e7a299b4f9416a9f381317ee, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -116830,6 +117509,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: ab35dd1fbaca5574d9aedeba1abe5523, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -116850,6 +117531,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 9e63d90c726e87e43a3854e582d4803e, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -117631,6 +118314,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: c9a211d11d2b7054cbcf2d8d890551d9, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -117823,6 +118508,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Leilani
   new_image: {fileID: 21300000, guid: da364da1e4e30b749beb09dbc6af1ca2, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -117861,6 +118548,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Leilani
   new_image: {fileID: 21300000, guid: 68b94801af5587f4380bde6616a93256, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -118345,6 +119034,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Leilani
   new_image: {fileID: 21300000, guid: a1293721b5baa034cb439e2d913bd7b1, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -119203,6 +119894,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: ab35dd1fbaca5574d9aedeba1abe5523, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -119308,6 +120001,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: a33ae161e1aae09499bd1de5412bf03f, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -119766,6 +120461,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Charli
   new_image: {fileID: 21300000, guid: 3248e1911d1c28040a01014bd1fdcbab, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -119817,6 +120514,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 8c39d5be82c8a27428117bce9bb5926d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -120142,6 +120841,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 7e464405efd56364b8222ffeee85b04b, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -120404,6 +121105,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 8c39d5be82c8a27428117bce9bb5926d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -120610,6 +121313,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: 7f80153007d734b408103605110c1865, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -121241,6 +121946,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: 7f80153007d734b408103605110c1865, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -121456,6 +122163,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 047fcc33e7a299b4f9416a9f381317ee, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -121824,6 +122533,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: ea6cf6f5929573248a7cacf07b9eb8c1, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -121909,6 +122620,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 047fcc33e7a299b4f9416a9f381317ee, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -122104,6 +122817,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 047fcc33e7a299b4f9416a9f381317ee, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -122367,6 +123082,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 7e464405efd56364b8222ffeee85b04b, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -122615,6 +123332,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Leilani
   new_image: {fileID: 21300000, guid: b3c8a8fea65b38347a6181091d4bcea2, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -124926,6 +125645,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 047fcc33e7a299b4f9416a9f381317ee, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -125091,6 +125812,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: c9a211d11d2b7054cbcf2d8d890551d9, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -125562,6 +126285,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 7e464405efd56364b8222ffeee85b04b, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -125739,6 +126464,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Leilani
   new_image: {fileID: 21300000, guid: 91727115fe03c65478e0e809a2e9bc5d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -125759,6 +126486,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Charli
   new_image: {fileID: 21300000, guid: 418340026af91d844b0cb5f7ea54bc6d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0

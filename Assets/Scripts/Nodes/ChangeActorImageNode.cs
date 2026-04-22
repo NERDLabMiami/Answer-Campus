@@ -11,6 +11,8 @@ namespace VNEngine
         public string actor_name;   // Actor who is to change images
         private string actual_actor_name;
         public Sprite new_image;
+        public Sprite alt_idle_sprite;          // Second idle frame; leave null to disable animation
+        public float  idle_frame_interval = 3f; // Seconds per frame
         public bool fade_in_new_image = true;  // Whether or not to fade out the old image
         float fade_out_time = 0.4f;     // In seconds
         public bool lighten_actor;
@@ -28,6 +30,7 @@ namespace VNEngine
 
                 if (fade_in_new_image)
                 {
+                    actor.Stop_Idle_Animation();
                     Sprite old_sprite = actor.cur_image.overrideSprite;
 
                     if (lighten_actor)
@@ -53,7 +56,9 @@ namespace VNEngine
                 }
                 else
                 {
+                    actor.Stop_Idle_Animation();
                     actor.cur_image.overrideSprite = new_image;
+                    actor.Start_Idle_Animation(alt_idle_sprite, idle_frame_interval);
                     Finish_Node();
                 }
             }
@@ -70,6 +75,7 @@ namespace VNEngine
         {
             yield return new WaitForSeconds(how_long);
             actor.fading_child_image.gameObject.SetActive(false);
+            actor.Start_Idle_Animation(alt_idle_sprite, idle_frame_interval);
             Finish_Node();
         }
         IEnumerator Fade_In_Coroutine(float over_time, Image image)

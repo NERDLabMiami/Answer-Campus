@@ -30,6 +30,9 @@ namespace VNEngine
 
         private Sprite default_image;    // Image the prefab is saved with
 
+        private Coroutine idle_coroutine;
+        private Sprite    idle_primary_sprite;
+
 
         void Awake()
         {
@@ -59,8 +62,38 @@ namespace VNEngine
 
 
 
+        public void Start_Idle_Animation(Sprite alt_sprite, float interval)
+        {
+            Stop_Idle_Animation();
+            if (alt_sprite == null) return;
+            idle_primary_sprite = cur_image.overrideSprite;
+            idle_coroutine = StartCoroutine(Idle_Animation_Coroutine(alt_sprite, Mathf.Max(0.1f, interval)));
+        }
+        public void Stop_Idle_Animation()
+        {
+            if (idle_coroutine != null)
+            {
+                StopCoroutine(idle_coroutine);
+                idle_coroutine = null;
+            }
+            if (cur_image != null && idle_primary_sprite != null)
+                cur_image.overrideSprite = idle_primary_sprite;
+        }
+        IEnumerator Idle_Animation_Coroutine(Sprite alt_sprite, float interval)
+        {
+            bool show_alt = false;
+            while (true)
+            {
+                yield return new WaitForSeconds(interval);
+                show_alt = !show_alt;
+                cur_image.overrideSprite = show_alt ? alt_sprite : idle_primary_sprite;
+            }
+        }
+
+
         public void Reset()
         {
+            Stop_Idle_Animation();
             remove_when_out_of_sight = false;
             GetComponent<Image>().color = Color.white;
             GetComponent<Image>().sprite = default_image;

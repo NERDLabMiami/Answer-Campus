@@ -340,6 +340,17 @@ void OnGUI()
     {
         EditorGUILayout.Space();
 
+        if (GUILayout.Button("Clean Nodes (Remove Export Tags)", GUILayout.Height(24)))
+        {
+            if (isSingle)
+            {
+                CleanNodes(conversationRoot);
+            }
+            else if (isSet)
+            {
+                CleanAllChildConversations(conversationRoot);
+            }
+        }
         // Single-conversation tools (existing)
         using (new EditorGUI.DisabledScope(!isSingle))
         {
@@ -587,14 +598,77 @@ void OnGUI()
         // ==== EXPORT ==========================================================
         static void EnsureIds(GameObject root)
         {
-            foreach (Transform child in root.transform)
+            if (!root) return;
+
+            var rootCM = root.GetComponent<VNEngine.ConversationManager>();
+
+            IEnumerable<VNEngine.Node> nodes;
+
+            if (rootCM != null)
             {
-                if (!child.GetComponent<VNEngine.Node>()) continue;
-                if (!child.GetComponent<NodeExportTag>()) child.gameObject.AddComponent<NodeExportTag>();
+                nodes = root
+                    .GetComponentsInChildren<VNEngine.Node>(true)
+                    .Where(n => n && n.GetComponentInParent<VNEngine.ConversationManager>() == rootCM);
+            }
+            else
+            {
+                nodes = root.GetComponentsInChildren<VNEngine.Node>(true);
+            }
+
+            foreach (var node in nodes)
+            {
+                if (!node.GetComponent<NodeExportTag>())
+                    node.gameObject.AddComponent<NodeExportTag>();
             }
         }
-        
- 
+        static void CleanAllChildConversations(GameObject setRoot)
+        {
+            if (!setRoot) return;
+
+            Undo.RegisterFullObjectHierarchyUndo(setRoot, "Clean VN Nodes");
+
+            int conversationRootsFound = 0;
+            foreach (var cm in setRoot.GetComponentsInChildren<VNEngine.ConversationManager>(true))
+            {
+                if (cm != null)
+                    conversationRootsFound++;
+            }
+
+            int removed = CleanNodeExportTagsUnderRoot(setRoot);
+
+            UnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(setRoot.scene);
+            Debug.Log($"Conversation set clean complete. Found {conversationRootsFound} conversation root(s). Removed {removed} NodeExportTag component(s) under '{setRoot.name}'.");
+        }
+        static void CleanNodes(GameObject root)
+        {
+            if (!root) return;
+
+            Undo.RegisterFullObjectHierarchyUndo(root, "Clean VN Nodes");
+
+            int removed = CleanNodeExportTagsUnderRoot(root);
+
+            UnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(root.scene);
+            Debug.Log($"Cleaned nodes under '{root.name}'. Removed {removed} NodeExportTag component(s).");
+        }
+
+        static int CleanNodeExportTagsUnderRoot(GameObject root)
+        {
+            if (!root) return 0;
+
+            int removed = 0;
+            var tags = root.GetComponentsInChildren<NodeExportTag>(true);
+
+            foreach (var tag in tags)
+            {
+                if (tag == null) continue;
+
+                Undo.DestroyObjectImmediate(tag);
+                EditorUtility.SetDirty(tag.gameObject);
+                removed++;
+            }
+
+            return removed;
+        }
     static void ApplyIfNodePayload(VNEngine.IfNode n, IfNodePayload p)
 {
     // Enums

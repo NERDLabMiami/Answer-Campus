@@ -21,18 +21,10 @@ MonoBehaviour:
     location: {fileID: 11400000, guid: af469bbe3d0ae48228f9605b4b4ad02c, type: 2}
     stage: 1
     unlockWeek: 2
-  - character: 9
-    location: {fileID: 11400000, guid: 61c4b036abc3d411c87452e400441761, type: 2}
-    stage: 2
-    unlockWeek: 2
   - character: 4
     location: {fileID: 11400000, guid: 10c374189ea9e43938841b7044e774eb, type: 2}
     stage: 2
     unlockWeek: 3
-  - character: 9
-    location: {fileID: 11400000, guid: 13ecdb615fef44fa39beb0c740c54ec6, type: 2}
-    stage: 3
-    unlockWeek: 4
   - character: 4
     location: {fileID: 11400000, guid: 61c4b036abc3d411c87452e400441761, type: 2}
     stage: 3
@@ -41,18 +33,10 @@ MonoBehaviour:
     location: {fileID: 11400000, guid: 7dce9f1e28261451ba53c34a8e600155, type: 2}
     stage: 4
     unlockWeek: 7
-  - character: 9
-    location: {fileID: 11400000, guid: 10c374189ea9e43938841b7044e774eb, type: 2}
-    stage: 4
-    unlockWeek: 8
   - character: 4
     location: {fileID: 11400000, guid: d9d2fd6912399465ca8ea92a00d2b5bf, type: 2}
     stage: 5
     unlockWeek: 8
-  - character: 8
-    location: {fileID: 11400000, guid: 10c374189ea9e43938841b7044e774eb, type: 2}
-    stage: 1
-    unlockWeek: 5
   - character: 1
     location: {fileID: 11400000, guid: af469bbe3d0ae48228f9605b4b4ad02c, type: 2}
     stage: 2
@@ -61,10 +45,6 @@ MonoBehaviour:
     location: {fileID: 11400000, guid: 13ecdb615fef44fa39beb0c740c54ec6, type: 2}
     stage: 2
     unlockWeek: 9
-  - character: 9
-    location: {fileID: 11400000, guid: 13ecdb615fef44fa39beb0c740c54ec6, type: 2}
-    stage: 5
-    unlockWeek: 11
   - character: 1
     location: {fileID: 11400000, guid: af469bbe3d0ae48228f9605b4b4ad02c, type: 2}
     stage: 3
@@ -77,7 +57,3 @@ MonoBehaviour:
     location: {fileID: 11400000, guid: 13ecdb615fef44fa39beb0c740c54ec6, type: 2}
     stage: 6
     unlockWeek: 13
-  - character: 4
-    location: {fileID: 11400000, guid: 7dce9f1e28261451ba53c34a8e600155, type: 2}
-    stage: 7
-    unlockWeek: 14

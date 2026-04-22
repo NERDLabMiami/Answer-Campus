@@ -643,6 +643,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: a7a948a6f69c9954aa7561743748c324, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -1178,6 +1180,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Eric
   new_image: {fileID: 21300000, guid: 1ce4b469f42dfb64c99af4cc675ab512, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -1230,6 +1234,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Charli
   new_image: {fileID: 21300000, guid: 4f0404b7d59fae44fa5c4dc3a6be5e41, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -1689,6 +1695,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Brad
   new_image: {fileID: 21300000, guid: a1d6e609f55344199aed1bfec374f288, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -6747,6 +6755,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: 1c9a1eafce6eb8747b2bfa23d4eb6aa9, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -7220,59 +7230,6 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
---- !u!1 &187883899
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 187883901}
-  - component: {fileID: 187883900}
-  m_Layer: 0
-  m_Name: mockingbird - fast forward
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &187883900
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 187883899}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7598fdb9cbb025c4293438a58006c68f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destroy_when_finished: 0
-  start_conversation_when_done: {fileID: 6945323907806853987}
-  cur_node: 0
-  active: 0
-  finished_conversation: 0
---- !u!4 &187883901
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 187883899}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1016888352}
-  - {fileID: 549021771}
-  - {fileID: 1324941627}
-  - {fileID: 1848873067}
-  m_Father: {fileID: 5659185827725801742}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &195985997
 GameObject:
   m_ObjectHideFlags: 0
@@ -7617,6 +7574,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Brad
   new_image: {fileID: 21300000, guid: a1d6e609f55344199aed1bfec374f288, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -9359,6 +9318,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: 0dd79202585ff9345a7f479bf30a3ee9, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -9411,6 +9372,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Charli
   new_image: {fileID: 21300000, guid: 4f0404b7d59fae44fa5c4dc3a6be5e41, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -10112,6 +10075,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Brad
   new_image: {fileID: 21300000, guid: b51939535799243a093609f767fc3ec6, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -10269,6 +10234,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Brad
   new_image: {fileID: 21300000, guid: a1d6e609f55344199aed1bfec374f288, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -10482,6 +10449,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Brad
   new_image: {fileID: 21300000, guid: 64a85ee08d0554ffcb6615234a63ba2a, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -10534,6 +10503,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Brad
   new_image: {fileID: 21300000, guid: e21009e742f184ce4978248aebbe24d9, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -11477,6 +11448,84 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 446614, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
   m_PrefabInstance: {fileID: 343738104}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &349021906
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 349021907}
+  - component: {fileID: 349021908}
+  m_Layer: 0
+  m_Name: Show Choice
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &349021907
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 349021906}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1384190482608218195}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &349021908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 349021906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b53734dc413e348579dd61685c53ee9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VNEngine.ShowChoiceNode
+  go_to_next_node: 1
+  executed_from_load: 0
+  choices:
+  - text: He definitely likes hearing himself talk.
+    nextConversation: {fileID: 739959924324581423}
+    useTraits: 0
+    useEvents: 0
+    useGame: 0
+    traitRequirements: []
+    eventRequirements: []
+    footballRequirement:
+      check: 0
+      threshold: 0
+  - text: Class was fine, vibe got weird though.
+    nextConversation: {fileID: 8908875296095549762}
+    useTraits: 0
+    useEvents: 0
+    useGame: 0
+    traitRequirements: []
+    eventRequirements: []
+    footballRequirement:
+      check: 0
+      threshold: 0
+  - text: Everyone introduced themselves and nobody relaxed.
+    nextConversation: {fileID: 6401271778693332466}
+    useTraits: 0
+    useEvents: 0
+    useGame: 0
+    traitRequirements: []
+    eventRequirements: []
+    footballRequirement:
+      check: 0
+      threshold: 0
+  hideDialogueUI: 1
 --- !u!1 &349351341
 GameObject:
   m_ObjectHideFlags: 0
@@ -11573,6 +11622,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: cbcdfb4a2e874e24a8489b00a0153393, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -13836,6 +13887,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Brad
   new_image: {fileID: 21300000, guid: b51939535799243a093609f767fc3ec6, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -14222,6 +14275,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Charli
   new_image: {fileID: 21300000, guid: 3248e1911d1c28040a01014bd1fdcbab, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -14836,6 +14891,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Brad
   new_image: {fileID: 21300000, guid: a1d6e609f55344199aed1bfec374f288, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -15123,6 +15180,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: 5508a7a01a7b14c42a9181b9ad9ad4e1, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -15175,6 +15234,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Brad
   new_image: {fileID: 21300000, guid: 6f9c61ed862f24d70b112568c3299e8b, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -15942,6 +16003,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Charli
   new_image: {fileID: 21300000, guid: d8089212e6674b64d9b60cf97a22d439, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -16745,167 +16808,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 446614, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
   m_PrefabInstance: {fileID: 544692145}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &549021770
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 549021771}
-  - component: {fileID: 549021773}
-  - component: {fileID: 549021772}
-  m_Layer: 0
-  m_Name: Dialogue
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &549021771
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 549021770}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 187883901}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &549021772
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 549021770}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
---- !u!114 &549021773
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 549021770}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b40beeb965e5d9419bf817d6f7d59bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  go_to_next_node: 1
-  executed_from_load: 0
-  actor_name_from: 0
-  actor: Breanna
-  speaker_name_from: 0
-  textbox_title: Breanna
-  fetch_localized_stat_value: 0
-  dialogue_from: 0
-  localized_key: 
-  text: He had us cover that when I was in his class.
-  talking_beeps: {fileID: 0}
-  darken_all_other_characters: 1
-  bring_speaker_to_front: 1
-  clear_text_after: 0
-  log_text: 1
-  log_category: Default
-  done_printing: 0
-  no_voice_playing: 0
-  done_voice_clip: 0
 --- !u!1 &552064777
 GameObject:
   m_ObjectHideFlags: 0
@@ -16955,6 +16857,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: a7a948a6f69c9954aa7561743748c324, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -17315,6 +17219,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Brad
   new_image: {fileID: 21300000, guid: 30ea8f46ca8cc37499ad85869f2e9c3a, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -17684,6 +17590,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Brad
   new_image: {fileID: 21300000, guid: 9ae4f106701e24e49ac88a54e2abe3a6, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -18247,6 +18155,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Brad
   new_image: {fileID: 21300000, guid: 09b5767088e944d40b7e11b48361a2cd, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -23000,6 +22910,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Brad
   new_image: {fileID: 21300000, guid: 1fbe2e2184ae843289dbbcb12b361b22, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -23213,6 +23125,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Brad
   new_image: {fileID: 21300000, guid: 64a85ee08d0554ffcb6615234a63ba2a, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -26060,6 +25974,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Charli
   new_image: {fileID: 21300000, guid: 3248e1911d1c28040a01014bd1fdcbab, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -26250,6 +26166,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: 5a766990e52958a42b4c296e052e04ad, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -28763,6 +28681,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Brad
   new_image: {fileID: 21300000, guid: e21009e742f184ce4978248aebbe24d9, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -30211,6 +30131,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: cda8427221d0b054ea8e3e0e19804cdf, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -32177,6 +32099,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Brad
   new_image: {fileID: 21300000, guid: a1d6e609f55344199aed1bfec374f288, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -35818,6 +35742,167 @@ Transform:
   - {fileID: 2098111969}
   m_Father: {fileID: 321163484}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &937844039
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 937844040}
+  - component: {fileID: 937844042}
+  - component: {fileID: 937844041}
+  m_Layer: 0
+  m_Name: Dialogue (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &937844040
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937844039}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2547224248043820292}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &937844041
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937844039}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &937844042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937844039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b40beeb965e5d9419bf817d6f7d59bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  go_to_next_node: 1
+  executed_from_load: 0
+  actor_name_from: 0
+  actor: Breanna
+  speaker_name_from: 0
+  textbox_title: Breanna
+  fetch_localized_stat_value: 0
+  dialogue_from: 0
+  localized_key: 
+  text: I have extra tickets to the football game this weekend...
+  talking_beeps: {fileID: 0}
+  darken_all_other_characters: 1
+  bring_speaker_to_front: 1
+  clear_text_after: 0
+  log_text: 1
+  log_category: Default
+  done_printing: 0
+  no_voice_playing: 0
+  done_voice_clip: 0
 --- !u!1 &938554209
 GameObject:
   m_ObjectHideFlags: 0
@@ -38544,6 +38629,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: a7a948a6f69c9954aa7561743748c324, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -39348,6 +39435,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Brad
   new_image: {fileID: 21300000, guid: b51939535799243a093609f767fc3ec6, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -39981,6 +40070,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: c9a211d11d2b7054cbcf2d8d890551d9, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -40058,58 +40149,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 446614, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
   m_PrefabInstance: {fileID: 1015846471}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1016888351
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1016888352}
-  - component: {fileID: 1016888353}
-  m_Layer: 0
-  m_Name: Change Actor Image
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1016888352
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1016888351}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 187883901}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1016888353
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1016888351}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44973f879676fe646a5d712c3f31e15a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  go_to_next_node: 1
-  executed_from_load: 0
-  actor_name_from: 0
-  actor_name: Breanna
-  new_image: {fileID: 21300000, guid: 047fcc33e7a299b4f9416a9f381317ee, type: 3}
-  fade_in_new_image: 0
-  lighten_actor: 0
-  bring_actor_to_front: 0
 --- !u!1 &1026969927
 GameObject:
   m_ObjectHideFlags: 0
@@ -42644,6 +42683,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: cda8427221d0b054ea8e3e0e19804cdf, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -43162,6 +43203,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Brad
   new_image: {fileID: 21300000, guid: e21009e742f184ce4978248aebbe24d9, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -43826,6 +43869,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Charli
   new_image: {fileID: 21300000, guid: 4f0404b7d59fae44fa5c4dc3a6be5e41, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -46896,6 +46941,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: 1c9a1eafce6eb8747b2bfa23d4eb6aa9, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -47018,6 +47065,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: a7a948a6f69c9954aa7561743748c324, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -47231,6 +47280,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Brad
   new_image: {fileID: 21300000, guid: 9ae4f106701e24e49ac88a54e2abe3a6, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -47488,6 +47539,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: cda8427221d0b054ea8e3e0e19804cdf, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -47618,6 +47671,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Eric
   new_image: {fileID: 21300000, guid: 1c36de5d4cb23214e874523beb9ad59d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -51801,6 +51856,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Brad
   new_image: {fileID: 21300000, guid: 1fbe2e2184ae843289dbbcb12b361b22, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -51931,6 +51988,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Charli
   new_image: {fileID: 21300000, guid: 3248e1911d1c28040a01014bd1fdcbab, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -52703,171 +52762,11 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Brad
   new_image: {fileID: 21300000, guid: 1fbe2e2184ae843289dbbcb12b361b22, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
---- !u!1 &1324941626
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1324941627}
-  - component: {fileID: 1324941629}
-  - component: {fileID: 1324941628}
-  m_Layer: 0
-  m_Name: Dialogue (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1324941627
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1324941626}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 187883901}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &1324941628
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1324941626}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
---- !u!114 &1324941629
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1324941626}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b40beeb965e5d9419bf817d6f7d59bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  go_to_next_node: 1
-  executed_from_load: 0
-  actor_name_from: 0
-  actor: Breanna
-  speaker_name_from: 0
-  textbox_title: Breanna
-  fetch_localized_stat_value: 0
-  dialogue_from: 0
-  localized_key: 
-  text: We really got in depth, covered a lot of stuff. Like, he's good at covering
-    it, not gonna lie.
-  talking_beeps: {fileID: 0}
-  darken_all_other_characters: 1
-  bring_speaker_to_front: 1
-  clear_text_after: 0
-  log_text: 1
-  log_category: Default
-  done_printing: 0
-  no_voice_playing: 0
-  done_voice_clip: 0
 --- !u!1 &1326077610
 GameObject:
   m_ObjectHideFlags: 0
@@ -53474,6 +53373,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Brad
   new_image: {fileID: 21300000, guid: 7670f9f301ce44cac8bc46503ace404a, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -54208,6 +54109,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Brad
   new_image: {fileID: 21300000, guid: 09b5767088e944d40b7e11b48361a2cd, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -55280,6 +55183,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Brad
   new_image: {fileID: 21300000, guid: 09b5767088e944d40b7e11b48361a2cd, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -55641,6 +55546,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Charli
   new_image: {fileID: 21300000, guid: 4f0404b7d59fae44fa5c4dc3a6be5e41, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -56078,6 +55985,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Brad
   new_image: {fileID: 21300000, guid: a1d6e609f55344199aed1bfec374f288, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -56389,6 +56298,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Brad
   new_image: {fileID: 21300000, guid: 3a1b80d14d6264b2787d95a5882e9b0a, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -56653,6 +56564,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Brad
   new_image: {fileID: 21300000, guid: 9ae4f106701e24e49ac88a54e2abe3a6, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -57056,6 +56969,167 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 446614, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
   m_PrefabInstance: {fileID: 1531608382}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1534760001
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1534760002}
+  - component: {fileID: 1534760004}
+  - component: {fileID: 1534760003}
+  m_Layer: 0
+  m_Name: Dialogue (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1534760002
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1534760001}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2547224248043820292}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1534760003
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1534760001}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &1534760004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1534760001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b40beeb965e5d9419bf817d6f7d59bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  go_to_next_node: 1
+  executed_from_load: 0
+  actor_name_from: 0
+  actor: Breanna
+  speaker_name_from: 0
+  textbox_title: Breanna
+  fetch_localized_stat_value: 0
+  dialogue_from: 0
+  localized_key: 
+  text: If you'd want to go.
+  talking_beeps: {fileID: 0}
+  darken_all_other_characters: 1
+  bring_speaker_to_front: 1
+  clear_text_after: 0
+  log_text: 1
+  log_category: Default
+  done_printing: 0
+  no_voice_playing: 0
+  done_voice_clip: 0
 --- !u!1001 &1538599453
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -57958,6 +58032,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: 89a7ffa498c22ee4890eceff649913dc, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -60943,6 +61019,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Brad
   new_image: {fileID: 21300000, guid: 3a1b80d14d6264b2787d95a5882e9b0a, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -61581,6 +61659,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Brad
   new_image: {fileID: 21300000, guid: bc05938350ca04576a41f166860ef207, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -62315,6 +62395,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Eric
   new_image: {fileID: 21300000, guid: ab454a31d14b7554bb0936d8962ab729, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -62638,6 +62720,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: 7f80153007d734b408103605110c1865, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -63284,6 +63368,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: a7a948a6f69c9954aa7561743748c324, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -63546,10 +63632,10 @@ MonoBehaviour:
   go_to_next_node: 1
   executed_from_load: 0
   choices:
-  - text: Pretty good.
+  - text: Busy already. I'm trying to stay ahead.
     nextConversation: {fileID: 7716258692075213714}
-    useTraits: 1
-    useEvents: 1
+    useTraits: 0
+    useEvents: 0
     useGame: 0
     traitRequirements:
     - trait: 3
@@ -63561,39 +63647,25 @@ MonoBehaviour:
     footballRequirement:
       check: 1
       threshold: 0
-  - text: They've been okay.
+  - text: Classes are fine. People are harder.
     nextConversation: {fileID: 260186000736277717}
     useTraits: 0
-    useEvents: 1
+    useEvents: 0
     useGame: 0
     traitRequirements: []
-    eventRequirements:
-    - key: Go to Class
-      check: 0
+    eventRequirements: []
     footballRequirement:
       check: 0
       threshold: 0
-  - text: Hectic.
+  - text: Surviving, spiritually improvising.
     nextConversation: {fileID: 5429893507383357537}
     useTraits: 0
-    useEvents: 1
+    useEvents: 0
     useGame: 0
     traitRequirements: []
     eventRequirements:
     - key: Go to Class
       check: 0
-    footballRequirement:
-      check: 0
-      threshold: 0
-  - text: I haven't been to class yet.
-    nextConversation: {fileID: 1485723760}
-    useTraits: 0
-    useEvents: 1
-    useGame: 0
-    traitRequirements: []
-    eventRequirements:
-    - key: Go to Class
-      check: 1
     footballRequirement:
       check: 0
       threshold: 0
@@ -63949,6 +64021,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: cda8427221d0b054ea8e3e0e19804cdf, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -65188,6 +65262,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Brad
   new_image: {fileID: 21300000, guid: a1d6e609f55344199aed1bfec374f288, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -65588,167 +65664,6 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
---- !u!1 &1848873066
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1848873067}
-  - component: {fileID: 1848873069}
-  - component: {fileID: 1848873068}
-  m_Layer: 0
-  m_Name: Dialogue (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1848873067
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1848873066}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 187883901}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &1848873068
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1848873066}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
---- !u!114 &1848873069
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1848873066}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b40beeb965e5d9419bf817d6f7d59bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  go_to_next_node: 1
-  executed_from_load: 0
-  actor_name_from: 0
-  actor: Breanna
-  speaker_name_from: 0
-  textbox_title: Breanna
-  fetch_localized_stat_value: 0
-  dialogue_from: 0
-  localized_key: 
-  text: He's just... <i>old school<i>.
-  talking_beeps: {fileID: 0}
-  darken_all_other_characters: 1
-  bring_speaker_to_front: 1
-  clear_text_after: 0
-  log_text: 1
-  log_category: Default
-  done_printing: 0
-  no_voice_playing: 0
-  done_voice_clip: 0
 --- !u!1 &1850894911
 GameObject:
   m_ObjectHideFlags: 0
@@ -65798,6 +65713,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: cbcdfb4a2e874e24a8489b00a0153393, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -66358,6 +66275,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Brad
   new_image: {fileID: 21300000, guid: a1d6e609f55344199aed1bfec374f288, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -68603,6 +68522,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: cbcdfb4a2e874e24a8489b00a0153393, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -68655,6 +68576,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 047fcc33e7a299b4f9416a9f381317ee, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -68942,6 +68865,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Brad
   new_image: {fileID: 21300000, guid: 1fbe2e2184ae843289dbbcb12b361b22, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -70976,6 +70901,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Brad
   new_image: {fileID: 21300000, guid: 9ae4f106701e24e49ac88a54e2abe3a6, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -71402,6 +71329,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: cda8427221d0b054ea8e3e0e19804cdf, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -71454,6 +71383,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Brad
   new_image: {fileID: 21300000, guid: a1d6e609f55344199aed1bfec374f288, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -72844,6 +72775,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Brad
   new_image: {fileID: 21300000, guid: 9ae4f106701e24e49ac88a54e2abe3a6, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -73853,6 +73786,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 96b7804691a70cf4eb75bd0136ad442e, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -74371,6 +74306,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 3bf06708dff4b3649a7f247627bc0530, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -76395,7 +76332,7 @@ GameObject:
   - component: {fileID: 4353115577936776856}
   - component: {fileID: 260186000736277717}
   m_Layer: 0
-  m_Name: classesMeh
+  m_Name: Classes are fine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76813,7 +76750,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroy_when_finished: 0
-  start_conversation_when_done: {fileID: 0}
+  start_conversation_when_done: {fileID: 2162812304319789481}
   cur_node: 0
   active: 0
   finished_conversation: 0
@@ -76892,7 +76829,7 @@ GameObject:
   - component: {fileID: 7032225510472458095}
   - component: {fileID: 8908875296095549762}
   m_Layer: 0
-  m_Name: blancheMeh
+  m_Name: Class was fine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76991,6 +76928,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Charli
   new_image: {fileID: 21300000, guid: 4f0404b7d59fae44fa5c4dc3a6be5e41, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -77139,123 +77078,6 @@ MonoBehaviour:
   executed_from_load: 0
   waiting_for: 0
   wait_for_seconds: 0.5
---- !u!82 &579404133267813339
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5150090381797706408}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
---- !u!4 &581974308552991809
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5074703730716187566}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 5168037548344573617}
-  - {fileID: 3989490328091389348}
-  - {fileID: 2647664069708454136}
-  - {fileID: 4103820501975782313}
-  - {fileID: 8746581171861983090}
-  m_Father: {fileID: 5659185827725801742}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &603998636899448376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77334,6 +77156,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 7e464405efd56364b8222ffeee85b04b, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -77711,7 +77535,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroy_when_finished: 0
-  start_conversation_when_done: {fileID: 2252068740772408696}
+  start_conversation_when_done: {fileID: 6837738808958649906}
   cur_node: 0
   active: 0
   finished_conversation: 0
@@ -77743,7 +77567,7 @@ GameObject:
   - component: {fileID: 4557226540657172356}
   - component: {fileID: 4179689176467776721}
   m_Layer: 0
-  m_Name: After Class
+  m_Name: After First Class
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77795,103 +77619,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7951386871664937246}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &817612127972188899
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4207359793609517820}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1 &818194179185538452
 GameObject:
   m_ObjectHideFlags: 0
@@ -77903,7 +77630,7 @@ GameObject:
   - component: {fileID: 7951386871664937246}
   - component: {fileID: 739959924324581423}
   m_Layer: 0
-  m_Name: blancheGood
+  m_Name: He Likes Hearing Himself Talk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -78073,23 +77800,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &910722879669995567
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2085619164513980560}
-  - component: {fileID: 9193592506895093894}
-  m_Layer: 0
-  m_Name: Change Conversation
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!114 &921539322709143269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78107,6 +77817,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 96b7804691a70cf4eb75bd0136ad442e, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -78676,23 +78388,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2717956913499476799}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1102985257910481593
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3639514712061425778}
-  - component: {fileID: 1604447436858734205}
-  m_Layer: 0
-  m_Name: Change Conversation
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!114 &1110904994248974485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84362,6 +84057,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Brad
   new_image: {fileID: 21300000, guid: a1d6e609f55344199aed1bfec374f288, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -85545,6 +85242,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Charli
   new_image: {fileID: 21300000, guid: 4f0404b7d59fae44fa5c4dc3a6be5e41, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -85858,8 +85557,8 @@ Transform:
   m_Children:
   - {fileID: 7582135181445240254}
   - {fileID: 9084196797157498781}
-  - {fileID: 3148969717718113851}
-  m_Father: {fileID: 6594741186781830271}
+  - {fileID: 349021907}
+  m_Father: {fileID: 4533414472974448713}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1384427463802872341
 GameObject:
@@ -85993,6 +85692,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 03f0f0470e48a2b4e940c45a206494d2, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -86077,38 +85778,6 @@ MonoBehaviour:
   cur_node: 0
   active: 0
   finished_conversation: 0
---- !u!114 &1467381610263480162
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5150090381797706408}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b40beeb965e5d9419bf817d6f7d59bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  go_to_next_node: 1
-  executed_from_load: 0
-  actor_name_from: 0
-  actor: Breanna
-  speaker_name_from: 0
-  textbox_title: Breanna
-  fetch_localized_stat_value: 0
-  dialogue_from: 0
-  localized_key: 
-  text: I... personally, at least, I didn't have much of a problem with him... well,
-    a little but...
-  talking_beeps: {fileID: 0}
-  darken_all_other_characters: 1
-  bring_speaker_to_front: 1
-  clear_text_after: 0
-  log_text: 1
-  log_category: Default
-  done_printing: 0
-  no_voice_playing: 0
-  done_voice_clip: 0
 --- !u!114 &1490378783855369035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86304,7 +85973,7 @@ MonoBehaviour:
   Button_Events:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 187883900}
+      - m_Target: {fileID: 2976040590616834712}
         m_TargetAssemblyTypeName: VNEngine.ConversationManager, Assembly-CSharp
         m_MethodName: Start_Conversation
         m_Mode: 1
@@ -86318,7 +85987,7 @@ MonoBehaviour:
         m_CallState: 2
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 187883900}
+      - m_Target: {fileID: 2976040590616834712}
         m_TargetAssemblyTypeName: VNEngine.ConversationManager, Assembly-CSharp
         m_MethodName: Start_Conversation
         m_Mode: 1
@@ -86363,6 +86032,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: da9aba289f5bd204bb99ca7a220ccaf6, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -86513,6 +86184,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Charli
   new_image: {fileID: 21300000, guid: 4f0404b7d59fae44fa5c4dc3a6be5e41, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -86533,7 +86206,6 @@ Transform:
   - {fileID: 2536449683051683199}
   - {fileID: 6147918731354511003}
   - {fileID: 4678514735500951664}
-  - {fileID: 2085619164513980560}
   m_Father: {fileID: 5659185827725801742}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1581713405662330372
@@ -86567,21 +86239,6 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
---- !u!114 &1604447436858734205
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1102985257910481593}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4dba8ebeeac6fa14d90358a78deed2dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  go_to_next_node: 1
-  executed_from_load: 0
-  conversation_to_start: {fileID: 2162812304319789481}
 --- !u!4 &1616485350211256114
 Transform:
   m_ObjectHideFlags: 0
@@ -86700,6 +86357,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: c9a211d11d2b7054cbcf2d8d890551d9, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -87207,7 +86866,7 @@ MonoBehaviour:
         m_CallState: 2
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 187883900}
+      - m_Target: {fileID: 2976040590616834712}
         m_TargetAssemblyTypeName: VNEngine.ConversationManager, Assembly-CSharp
         m_MethodName: Start_Conversation
         m_Mode: 1
@@ -87593,6 +87252,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Charli
   new_image: {fileID: 21300000, guid: 3248e1911d1c28040a01014bd1fdcbab, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -87645,6 +87306,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: c9a211d11d2b7054cbcf2d8d890551d9, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -87694,7 +87357,7 @@ GameObject:
   - component: {fileID: 4903512555760700614}
   - component: {fileID: 6837738808958649906}
   m_Layer: 0
-  m_Name: blancheUpfront
+  m_Name: Blanche Warning
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -88072,6 +87735,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 96b7804691a70cf4eb75bd0136ad442e, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -88109,24 +87774,11 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Charli
   new_image: {fileID: 21300000, guid: 4f0404b7d59fae44fa5c4dc3a6be5e41, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
---- !u!4 &2085619164513980560
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 910722879669995567}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1567121572362871059}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2097231503795370789
 GameObject:
   m_ObjectHideFlags: 0
@@ -88343,8 +87995,7 @@ MonoBehaviour:
   fetch_localized_stat_value: 0
   dialogue_from: 0
   localized_key: 
-  text: That's good to hear! And Blanche, you're taking his literal-- <i>sorry</i>
-    literature course, right?
+  text: Sounds like we could use a break.
   talking_beeps: {fileID: 0}
   darken_all_other_characters: 1
   bring_speaker_to_front: 1
@@ -88502,6 +88153,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: ea6cf6f5929573248a7cacf07b9eb8c1, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -88520,23 +88173,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7032225510472458095}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2180318232474530435
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5168037548344573617}
-  - component: {fileID: 5914460210480342485}
-  m_Layer: 0
-  m_Name: Change Actor Image
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!82 &2181763919770043611
 AudioSource:
   m_ObjectHideFlags: 0
@@ -88844,21 +88480,6 @@ MonoBehaviour:
   cur_node: 0
   active: 0
   finished_conversation: 0
---- !u!4 &2259245305695341374
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5207120690885540518}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4353115577936776856}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2259912629219049131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -88975,6 +88596,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: da9aba289f5bd204bb99ca7a220ccaf6, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -89028,6 +88651,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 047fcc33e7a299b4f9416a9f381317ee, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -89048,6 +88673,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: da9aba289f5bd204bb99ca7a220ccaf6, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -89095,7 +88722,7 @@ GameObject:
   - component: {fileID: 4691460620719959636}
   - component: {fileID: 5429893507383357537}
   m_Layer: 0
-  m_Name: classesBad
+  m_Name: Surviving
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -89134,21 +88761,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2496537034425530001
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8959288206345771212}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2547224248043820292}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2499840532393845076
 Transform:
   m_ObjectHideFlags: 0
@@ -89410,6 +89022,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Charli
   new_image: {fileID: 21300000, guid: d8089212e6674b64d9b60cf97a22d439, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -89443,7 +89057,8 @@ Transform:
   m_Children:
   - {fileID: 4546923800446323374}
   - {fileID: 9063641439633190829}
-  - {fileID: 2496537034425530001}
+  - {fileID: 937844040}
+  - {fileID: 1534760002}
   m_Father: {fileID: 1816899691734162620}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2591035178516302111
@@ -89593,21 +89208,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!4 &2647664069708454136
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5150090381797706408}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 581974308552991809}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2652870736878569176
 GameObject:
   m_ObjectHideFlags: 0
@@ -91446,6 +91046,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Charli
   new_image: {fileID: 21300000, guid: 418340026af91d844b0cb5f7ea54bc6d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -91941,24 +91543,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!1 &2881826532424652795
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4103820501975782313}
-  - component: {fileID: 3282342725287275475}
-  - component: {fileID: 6694923752047825670}
-  m_Layer: 0
-  m_Name: Dialogue (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &2897523867362892959
 GameObject:
   m_ObjectHideFlags: 0
@@ -92120,7 +91704,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroy_when_finished: 0
-  start_conversation_when_done: {fileID: 0}
+  start_conversation_when_done: {fileID: 6837738808958649906}
   cur_node: 0
   active: 0
   finished_conversation: 0
@@ -92611,21 +92195,6 @@ Transform:
   - {fileID: 6452200284943284822}
   m_Father: {fileID: 3257481642817081603}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &3148969717718113851
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7738344308050862582}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1384190482608218195}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3149603507059631332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -92643,6 +92212,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 84c9a4d98d618b1428dc54abe7938aa9, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -92667,8 +92238,7 @@ MonoBehaviour:
   fetch_localized_stat_value: 0
   dialogue_from: 0
   localized_key: 
-  text: Heh, I see. I understand that. How about Blanche? You're taking his literal--
-    <i>sorry</i> literature course, right?
+  text: Heh, I see. I understand that.
   talking_beeps: {fileID: 0}
   darken_all_other_characters: 1
   bring_speaker_to_front: 1
@@ -92710,6 +92280,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Charli
   new_image: {fileID: 21300000, guid: 14474518f8cf949409e7d81429cfa947, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -92973,37 +92545,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4901270956121511163}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3282342725287275475
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2881826532424652795}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b40beeb965e5d9419bf817d6f7d59bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  go_to_next_node: 1
-  executed_from_load: 0
-  actor_name_from: 0
-  actor: Breanna
-  speaker_name_from: 0
-  textbox_title: Breanna
-  fetch_localized_stat_value: 0
-  dialogue_from: 0
-  localized_key: 
-  text: He's... not for everyone, let's just say. He's uh...
-  talking_beeps: {fileID: 0}
-  darken_all_other_characters: 1
-  bring_speaker_to_front: 1
-  clear_text_after: 0
-  log_text: 1
-  log_category: Default
-  done_printing: 0
-  no_voice_playing: 0
-  done_voice_clip: 0
 --- !u!4 &3301280260567456175
 Transform:
   m_ObjectHideFlags: 0
@@ -93288,6 +92829,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: ea6cf6f5929573248a7cacf07b9eb8c1, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -93564,23 +93107,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &3554240292456598715
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8746581171861983090}
-  - component: {fileID: 4136644823201572809}
-  m_Layer: 0
-  m_Name: Change Conversation
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!114 &3563454395608069468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93629,6 +93155,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 7e464405efd56364b8222ffeee85b04b, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -94153,21 +93681,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3639514712061425778
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1102985257910481593}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4691460620719959636}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3675981931382688810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -94233,6 +93746,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: da9aba289f5bd204bb99ca7a220ccaf6, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -94515,7 +94030,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4533414472974448713}
   m_Layer: 0
-  m_Name: After Class
+  m_Name: Lunch Date
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -94699,6 +94214,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Charli
   new_image: {fileID: 21300000, guid: 207c89c9c5acdf7418df69f0525c01fc, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -94915,21 +94432,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2717956913499476799}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &3989490328091389348
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4207359793609517820}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 581974308552991809}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &3998687749562074843
 AudioSource:
@@ -95150,7 +94652,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1816899691734162620}
   m_Layer: 0
-  m_Name: IntroS
+  m_Name: Intro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -95348,6 +94850,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 047fcc33e7a299b4f9416a9f381317ee, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -95465,21 +94969,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4103820501975782313
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2881826532424652795}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 581974308552991809}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4106592833078006978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95497,6 +94986,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: da9aba289f5bd204bb99ca7a220ccaf6, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -95517,21 +95008,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &4136644823201572809
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3554240292456598715}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4dba8ebeeac6fa14d90358a78deed2dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  go_to_next_node: 1
-  executed_from_load: 0
-  conversation_to_start: {fileID: 6837738808958649906}
 --- !u!82 &4150968126626921600
 AudioSource:
   m_ObjectHideFlags: 0
@@ -95646,6 +95122,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: da9aba289f5bd204bb99ca7a220ccaf6, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -95695,7 +95173,7 @@ GameObject:
   - component: {fileID: 1384190482608218195}
   - component: {fileID: 2162812304319789481}
   m_Layer: 0
-  m_Name: howWasBlanche
+  m_Name: How Was Blanche
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -95754,8 +95232,7 @@ MonoBehaviour:
   fetch_localized_stat_value: 0
   dialogue_from: 0
   localized_key: 
-  text: We really got in depth, covered a lot of stuff. Like, he's good at covering
-    it, not gonna lie.
+  text: Blanche has probably taught that book longer than I've been alive.
   talking_beeps: {fileID: 0}
   darken_all_other_characters: 1
   bring_speaker_to_front: 1
@@ -95765,24 +95242,6 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
---- !u!1 &4207359793609517820
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3989490328091389348}
-  - component: {fileID: 4959126731086546263}
-  - component: {fileID: 817612127972188899}
-  m_Layer: 0
-  m_Name: Dialogue
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!82 &4223306081170480706
 AudioSource:
   m_ObjectHideFlags: 0
@@ -96325,7 +95784,6 @@ Transform:
   m_Children:
   - {fileID: 5827182430780929337}
   - {fileID: 1654952083889971280}
-  - {fileID: 2259245305695341374}
   m_Father: {fileID: 1816899691734162620}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4355512385199944407
@@ -96725,8 +96183,10 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1816899691734162620}
+  - {fileID: 1384190482608218195}
   - {fileID: 6594741186781830271}
   - {fileID: 5659185827725801742}
+  - {fileID: 4903512555760700614}
   - {fileID: 8847238766941440497}
   - {fileID: 4898198440568332194}
   - {fileID: 2282653491486285461}
@@ -97064,7 +96524,6 @@ Transform:
   m_Children:
   - {fileID: 4726277314731435777}
   - {fileID: 7965210693119611685}
-  - {fileID: 3639514712061425778}
   m_Father: {fileID: 1816899691734162620}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &4691552475708291201
@@ -97343,6 +96802,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: ea6cf6f5929573248a7cacf07b9eb8c1, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -97493,6 +96954,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: da9aba289f5bd204bb99ca7a220ccaf6, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -97716,7 +97179,7 @@ Transform:
   - {fileID: 5498255975261476713}
   - {fileID: 6837178694295430492}
   - {fileID: 2031489077241968003}
-  m_Father: {fileID: 8847238766941440497}
+  m_Father: {fileID: 4533414472974448713}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &4909160718463724323
 PrefabInstance:
@@ -97921,37 +97384,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &4959126731086546263
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4207359793609517820}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b40beeb965e5d9419bf817d6f7d59bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  go_to_next_node: 1
-  executed_from_load: 0
-  actor_name_from: 0
-  actor: Breanna
-  speaker_name_from: 0
-  textbox_title: Breanna
-  fetch_localized_stat_value: 0
-  dialogue_from: 0
-  localized_key: 
-  text: I see. Yeah, he's... he's a character, heh.
-  talking_beeps: {fileID: 0}
-  darken_all_other_characters: 1
-  bring_speaker_to_front: 1
-  clear_text_after: 0
-  log_text: 1
-  log_category: Default
-  done_printing: 0
-  no_voice_playing: 0
-  done_voice_clip: 0
 --- !u!82 &4969385060459949375
 AudioSource:
   m_ObjectHideFlags: 0
@@ -98060,7 +97492,7 @@ GameObject:
   - component: {fileID: 4225933714187038697}
   - component: {fileID: 3216890841989553480}
   m_Layer: 0
-  m_Name: blancheHardass
+  m_Name: Hardass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -98270,6 +97702,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: ea6cf6f5929573248a7cacf07b9eb8c1, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -98308,23 +97742,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &5074703730716187566
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 581974308552991809}
-  - component: {fileID: 7658944169070776879}
-  m_Layer: 0
-  m_Name: whatBook2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!114 &5086195705263736838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -98338,7 +97755,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroy_when_finished: 0
-  start_conversation_when_done: {fileID: 0}
+  start_conversation_when_done: {fileID: 6837738808958649906}
   cur_node: 0
   active: 0
   finished_conversation: 0
@@ -98370,7 +97787,7 @@ GameObject:
   - component: {fileID: 2711078813033995771}
   - component: {fileID: 7680327038283829041}
   m_Layer: 0
-  m_Name: catinthehat2
+  m_Name: Cat in the Hat Keep Pressing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -98428,6 +97845,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 047fcc33e7a299b4f9416a9f381317ee, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -98509,24 +97928,6 @@ GameObject:
   - component: {fileID: 3179496851608676752}
   m_Layer: 0
   m_Name: Neutral Charli (4)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &5150090381797706408
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2647664069708454136}
-  - component: {fileID: 1467381610263480162}
-  - component: {fileID: 579404133267813339}
-  m_Layer: 0
-  m_Name: Dialogue (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -98629,21 +98030,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!4 &5168037548344573617
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2180318232474530435}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 581974308552991809}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5177953077781409445
 GameObject:
   m_ObjectHideFlags: 0
@@ -98679,23 +98065,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &5207120690885540518
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2259245305695341374}
-  - component: {fileID: 8311279254868936883}
-  m_Layer: 0
-  m_Name: Change Conversation
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!114 &5213578797090925417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -98713,6 +98082,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 047fcc33e7a299b4f9416a9f381317ee, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -98727,7 +98098,7 @@ GameObject:
   - component: {fileID: 1567121572362871059}
   - component: {fileID: 2976040590616834712}
   m_Layer: 0
-  m_Name: mockingbird
+  m_Name: To Kill a Mockingbird
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -99096,6 +98467,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Charli
   new_image: {fileID: 21300000, guid: 3248e1911d1c28040a01014bd1fdcbab, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -99116,6 +98489,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 047fcc33e7a299b4f9416a9f381317ee, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -99132,7 +98507,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroy_when_finished: 0
-  start_conversation_when_done: {fileID: 0}
+  start_conversation_when_done: {fileID: 2162812304319789481}
   cur_node: 0
   active: 0
   finished_conversation: 0
@@ -99185,6 +98560,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Charli
   new_image: {fileID: 21300000, guid: 4f0404b7d59fae44fa5c4dc3a6be5e41, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -99632,10 +99009,8 @@ Transform:
   m_Children:
   - {fileID: 2224554138572108648}
   - {fileID: 1567121572362871059}
-  - {fileID: 187883901}
   - {fileID: 2717956913499476799}
   - {fileID: 2711078813033995771}
-  - {fileID: 581974308552991809}
   m_Father: {fileID: 4533414472974448713}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &5668829182788698641
@@ -100072,6 +99447,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 96b7804691a70cf4eb75bd0136ad442e, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -100302,26 +99679,6 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
---- !u!114 &5914460210480342485
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2180318232474530435}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44973f879676fe646a5d712c3f31e15a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  go_to_next_node: 1
-  executed_from_load: 0
-  actor_name_from: 0
-  actor_name: Breanna
-  new_image: {fileID: 21300000, guid: da9aba289f5bd204bb99ca7a220ccaf6, type: 3}
-  fade_in_new_image: 0
-  lighten_actor: 0
-  bring_actor_to_front: 0
 --- !u!1 &5973411856601810254
 GameObject:
   m_ObjectHideFlags: 0
@@ -100485,6 +99842,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 9e63d90c726e87e43a3854e582d4803e, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -100652,6 +100011,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: da9aba289f5bd204bb99ca7a220ccaf6, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -100702,6 +100063,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 96b7804691a70cf4eb75bd0136ad442e, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -100966,6 +100329,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: da9aba289f5bd204bb99ca7a220ccaf6, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -101084,6 +100449,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: c9a211d11d2b7054cbcf2d8d890551d9, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -101232,7 +100599,7 @@ GameObject:
   - component: {fileID: 139047571961744513}
   - component: {fileID: 6401271778693332466}
   m_Layer: 0
-  m_Name: blancheBad
+  m_Name: Nobody relaxed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -101745,6 +101112,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 96b7804691a70cf4eb75bd0136ad442e, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -102032,6 +101401,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: c9a211d11d2b7054cbcf2d8d890551d9, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -102048,7 +101419,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1384190482608218195}
   - {fileID: 7951386871664937246}
   - {fileID: 7032225510472458095}
   - {fileID: 139047571961744513}
@@ -102117,6 +101487,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: da9aba289f5bd204bb99ca7a220ccaf6, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -102137,6 +101509,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 43bc67c789548904b9774ca0a866a445, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -102172,6 +101546,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: eb3f822d43724a942accc70eb0ae2084, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -102192,106 +101568,11 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: da9aba289f5bd204bb99ca7a220ccaf6, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
---- !u!82 &6694923752047825670
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2881826532424652795}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!114 &6702029260095810475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -102529,7 +101810,7 @@ GameObject:
   - component: {fileID: 2717956913499476799}
   - component: {fileID: 5086195705263736838}
   m_Layer: 0
-  m_Name: catinthehat
+  m_Name: Cat in the Hat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -102907,6 +102188,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Charli
   new_image: {fileID: 21300000, guid: 418340026af91d844b0cb5f7ea54bc6d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -102921,7 +102204,7 @@ GameObject:
   - component: {fileID: 2224554138572108648}
   - component: {fileID: 2252068740772408696}
   m_Layer: 0
-  m_Name: whatBook
+  m_Name: What book are you reading
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -103173,255 +102456,6 @@ Transform:
   - {fileID: 7234504042633467252}
   m_Father: {fileID: 896249154477259675}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6964940686989798354
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7738344308050862582}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1156cefd0bdce0a428360bd86ae0f9bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  go_to_next_node: 1
-  executed_from_load: 0
-  randomizedOrder: 
-  Name_Of_Choice: 
-  Number_Of_Choices: 6
-  Hide_Dialogue_UI: 1
-  randomize_choices_order: 0
-  Localize_Choice_Text: 0
-  Button_Text:
-  - Not bad, at least for me.
-  - Meh. It was whatever.
-  - Eeh... you know...
-  - 
-  - 
-  - 
-  Has_Requirements: 000000000000000000000000000000000000000000000000
-  Requirement_Not_Met_Actions: 000000000000000000000000000000000000000000000000
-  Disabled_Text:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  Show_Choice_Was_Selected_Before: 000000000000
-  Choice_Been_Clicked_Before: 000000000000
-  default_selection: 0
-  Stat_Name:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  Requirement_Type: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  Logic: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  Float_Stat_Is: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  Float_Compare_Value:
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  Bool_Compare_Value: 000000000000000000000000000000000000000000000000000000000000000000000000
-  String_Compare_Value:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  String_Is: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  Check_Null_Object:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  Button_Events:
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 739959924324581423}
-        m_TargetAssemblyTypeName: VNEngine.ConversationManager, Assembly-CSharp
-        m_MethodName: Start_Conversation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8908875296095549762}
-        m_TargetAssemblyTypeName: VNEngine.ConversationManager, Assembly-CSharp
-        m_MethodName: Start_Conversation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6401271778693332466}
-        m_TargetAssemblyTypeName: VNEngine.ConversationManager, Assembly-CSharp
-        m_MethodName: Start_Conversation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  - m_PersistentCalls:
-      m_Calls: []
-  - m_PersistentCalls:
-      m_Calls: []
-  - m_PersistentCalls:
-      m_Calls: []
-  use_image_native_size_for_buttons: 0
-  choice_button_images:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!82 &6978465201439530495
 AudioSource:
   m_ObjectHideFlags: 0
@@ -103829,21 +102863,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &7040978630964994247
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8959288206345771212}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4dba8ebeeac6fa14d90358a78deed2dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  go_to_next_node: 1
-  executed_from_load: 0
-  conversation_to_start: {fileID: 2162812304319789481}
 --- !u!1 &7047713972608818214
 GameObject:
   m_ObjectHideFlags: 0
@@ -104541,6 +103560,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 96b7804691a70cf4eb75bd0136ad442e, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -104561,6 +103582,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: da9aba289f5bd204bb99ca7a220ccaf6, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -104672,7 +103695,7 @@ GameObject:
   - component: {fileID: 6438253500440882118}
   - component: {fileID: 8661564884436910145}
   m_Layer: 0
-  m_Name: blancheNotBad
+  m_Name: Not Bad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -105339,23 +104362,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2224554138572108648}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7658944169070776879
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5074703730716187566}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7598fdb9cbb025c4293438a58006c68f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destroy_when_finished: 0
-  start_conversation_when_done: {fileID: 0}
-  cur_node: 0
-  active: 0
-  finished_conversation: 0
 --- !u!1 &7678843358631173185
 GameObject:
   m_ObjectHideFlags: 0
@@ -105505,6 +104511,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 96b7804691a70cf4eb75bd0136ad442e, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -105521,27 +104529,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroy_when_finished: 0
-  start_conversation_when_done: {fileID: 0}
+  start_conversation_when_done: {fileID: 2162812304319789481}
   cur_node: 0
   active: 0
   finished_conversation: 0
---- !u!1 &7738344308050862582
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3148969717718113851}
-  - component: {fileID: 6964940686989798354}
-  m_Layer: 0
-  m_Name: Show Choices
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!114 &7743325957703316973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -105702,6 +104693,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Charli
   new_image: {fileID: 21300000, guid: 3248e1911d1c28040a01014bd1fdcbab, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -105747,7 +104740,7 @@ GameObject:
   - component: {fileID: 2547224248043820292}
   - component: {fileID: 7716258692075213714}
   m_Layer: 0
-  m_Name: classesGood
+  m_Name: Busy Already
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -105867,6 +104860,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: da9aba289f5bd204bb99ca7a220ccaf6, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -106911,6 +105906,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: eb3f822d43724a942accc70eb0ae2084, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -107205,21 +106202,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6362666298126776712}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8311279254868936883
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5207120690885540518}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4dba8ebeeac6fa14d90358a78deed2dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  go_to_next_node: 1
-  executed_from_load: 0
-  conversation_to_start: {fileID: 2162812304319789481}
 --- !u!4 &8324914847981556980
 Transform:
   m_ObjectHideFlags: 0
@@ -107308,8 +106290,7 @@ MonoBehaviour:
   fetch_localized_stat_value: 0
   dialogue_from: 0
   localized_key: 
-  text: Well... I get it. Been there, heh. How about Blanche? You're taking his literal--
-    <i>sorry</i> literature course, right?
+  text: Honestly? Same.
   talking_beeps: {fileID: 0}
   darken_all_other_characters: 1
   bring_speaker_to_front: 1
@@ -107354,6 +106335,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 96b7804691a70cf4eb75bd0136ad442e, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -108234,21 +107217,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8746581171861983090
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3554240292456598715}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 581974308552991809}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8747466062531858864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108266,6 +107234,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Charli
   new_image: {fileID: 21300000, guid: 418340026af91d844b0cb5f7ea54bc6d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -108341,6 +107311,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: da9aba289f5bd204bb99ca7a220ccaf6, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -108357,7 +107329,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 4903512555760700614}
   - {fileID: 4225933714187038697}
   - {fileID: 6438253500440882118}
   m_Father: {fileID: 4533414472974448713}
@@ -108390,7 +107361,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroy_when_finished: 0
-  start_conversation_when_done: {fileID: 2252068740772408696}
+  start_conversation_when_done: {fileID: 6837738808958649906}
   cur_node: 0
   active: 0
   finished_conversation: 0
@@ -108427,23 +107398,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &8959288206345771212
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2496537034425530001}
-  - component: {fileID: 7040978630964994247}
-  m_Layer: 0
-  m_Name: Change Conversation
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!114 &9035577409738310663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108465,7 +107419,7 @@ MonoBehaviour:
   fetch_localized_stat_value: 0
   dialogue_from: 0
   localized_key: 
-  text: How was it?
+  text: You're in Blanche's class, right? How's that going?
   talking_beeps: {fileID: 0}
   darken_all_other_characters: 1
   bring_speaker_to_front: 1
@@ -108663,6 +107617,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: da9aba289f5bd204bb99ca7a220ccaf6, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -110000,6 +108956,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 84c9a4d98d618b1428dc54abe7938aa9, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -110035,6 +108993,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 3bf06708dff4b3649a7f247627bc0530, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -110151,6 +109111,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 43bc67c789548904b9774ca0a866a445, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -110526,6 +109488,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 43bc67c789548904b9774ca0a866a445, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -110740,6 +109704,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: da9aba289f5bd204bb99ca7a220ccaf6, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -110954,6 +109920,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: ea6cf6f5929573248a7cacf07b9eb8c1, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -111167,6 +110135,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: c9a211d11d2b7054cbcf2d8d890551d9, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -111542,6 +110512,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: da9aba289f5bd204bb99ca7a220ccaf6, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -111918,6 +110890,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: b56335658f2c6ba41a064c14b1e8c87b, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -113062,6 +112036,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 047fcc33e7a299b4f9416a9f381317ee, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -114079,6 +113055,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: b56335658f2c6ba41a064c14b1e8c87b, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -114729,6 +113707,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: b56335658f2c6ba41a064c14b1e8c87b, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -114781,6 +113761,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: da9aba289f5bd204bb99ca7a220ccaf6, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -115124,6 +114106,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 7e464405efd56364b8222ffeee85b04b, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -115176,6 +114160,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: ea6cf6f5929573248a7cacf07b9eb8c1, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -115853,6 +114839,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: c9a211d11d2b7054cbcf2d8d890551d9, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -116050,6 +115038,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 047fcc33e7a299b4f9416a9f381317ee, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -116281,6 +115271,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 7e464405efd56364b8222ffeee85b04b, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -116810,6 +115802,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 3bf06708dff4b3649a7f247627bc0530, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -117275,6 +116269,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 047fcc33e7a299b4f9416a9f381317ee, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -117786,6 +116782,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 7e464405efd56364b8222ffeee85b04b, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -117838,6 +116836,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: da9aba289f5bd204bb99ca7a220ccaf6, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -118051,6 +117051,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: c9a211d11d2b7054cbcf2d8d890551d9, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -118103,6 +117105,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: da9aba289f5bd204bb99ca7a220ccaf6, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -118155,6 +117159,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 96b7804691a70cf4eb75bd0136ad442e, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -119121,6 +118127,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 9e63d90c726e87e43a3854e582d4803e, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -119225,6 +118233,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: b56335658f2c6ba41a064c14b1e8c87b, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -119600,6 +118610,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 047fcc33e7a299b4f9416a9f381317ee, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -119702,6 +118714,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 8c39d5be82c8a27428117bce9bb5926d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -119737,6 +118751,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: da9aba289f5bd204bb99ca7a220ccaf6, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -119854,6 +118870,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 7e464405efd56364b8222ffeee85b04b, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -121015,6 +120033,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 8c39d5be82c8a27428117bce9bb5926d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -121050,6 +120070,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 7e464405efd56364b8222ffeee85b04b, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -121350,6 +120372,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 7e464405efd56364b8222ffeee85b04b, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -121564,6 +120588,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: ab35dd1fbaca5574d9aedeba1abe5523, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -121991,6 +121017,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: da9aba289f5bd204bb99ca7a220ccaf6, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -122204,6 +121232,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 3bf06708dff4b3649a7f247627bc0530, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -122417,6 +121447,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 7e464405efd56364b8222ffeee85b04b, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -123082,6 +122114,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: c9a211d11d2b7054cbcf2d8d890551d9, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -123166,6 +122200,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 7e464405efd56364b8222ffeee85b04b, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -123749,6 +122785,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 9e63d90c726e87e43a3854e582d4803e, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -124026,6 +123064,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 43bc67c789548904b9774ca0a866a445, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -124078,6 +123118,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: da9aba289f5bd204bb99ca7a220ccaf6, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -125206,6 +124248,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 047fcc33e7a299b4f9416a9f381317ee, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -125258,6 +124302,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 96b7804691a70cf4eb75bd0136ad442e, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -125696,6 +124742,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 96b7804691a70cf4eb75bd0136ad442e, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -125877,6 +124925,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: ea6cf6f5929573248a7cacf07b9eb8c1, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -125961,6 +125011,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 047fcc33e7a299b4f9416a9f381317ee, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -126157,6 +125209,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 84c9a4d98d618b1428dc54abe7938aa9, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -126801,6 +125855,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: da9aba289f5bd204bb99ca7a220ccaf6, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -127031,6 +126087,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: da9aba289f5bd204bb99ca7a220ccaf6, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -127083,6 +126141,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 96b7804691a70cf4eb75bd0136ad442e, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -127242,6 +126302,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 047fcc33e7a299b4f9416a9f381317ee, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -127886,6 +126948,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 7e464405efd56364b8222ffeee85b04b, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -127938,6 +127002,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: da9aba289f5bd204bb99ca7a220ccaf6, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -128615,6 +127681,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: da9aba289f5bd204bb99ca7a220ccaf6, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -128667,6 +127735,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 7e464405efd56364b8222ffeee85b04b, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 1
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -128805,6 +127875,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: ab35dd1fbaca5574d9aedeba1abe5523, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -129271,6 +128343,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: c9a211d11d2b7054cbcf2d8d890551d9, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -130409,6 +129483,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: da9aba289f5bd204bb99ca7a220ccaf6, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -130484,6 +129560,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: da9aba289f5bd204bb99ca7a220ccaf6, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -130627,6 +129705,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 3bf06708dff4b3649a7f247627bc0530, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -131279,6 +130359,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: ea6cf6f5929573248a7cacf07b9eb8c1, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -131476,6 +130558,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: ea6cf6f5929573248a7cacf07b9eb8c1, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -131545,6 +130629,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: b56335658f2c6ba41a064c14b1e8c87b, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -131759,6 +130845,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 96b7804691a70cf4eb75bd0136ad442e, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -132101,6 +131189,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: b56335658f2c6ba41a064c14b1e8c87b, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -132631,6 +131721,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: c9a211d11d2b7054cbcf2d8d890551d9, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -133038,6 +132130,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: ea6cf6f5929573248a7cacf07b9eb8c1, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -134212,6 +133306,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 3bf06708dff4b3649a7f247627bc0530, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -134494,6 +133590,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 96b7804691a70cf4eb75bd0136ad442e, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -134595,6 +133693,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: da9aba289f5bd204bb99ca7a220ccaf6, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -134615,6 +133715,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 9e63d90c726e87e43a3854e582d4803e, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -136557,6 +135659,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: ab35dd1fbaca5574d9aedeba1abe5523, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -136609,6 +135713,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 84c9a4d98d618b1428dc54abe7938aa9, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -136681,6 +135787,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 96b7804691a70cf4eb75bd0136ad442e, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -137806,6 +136914,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 43bc67c789548904b9774ca0a866a445, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -138071,6 +137181,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: c9a211d11d2b7054cbcf2d8d890551d9, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -138143,6 +137255,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 7e464405efd56364b8222ffeee85b04b, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -138888,6 +138002,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 047fcc33e7a299b4f9416a9f381317ee, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -139186,6 +138302,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: da9aba289f5bd204bb99ca7a220ccaf6, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -139221,6 +138339,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 96b7804691a70cf4eb75bd0136ad442e, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -140039,6 +139159,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: c9a211d11d2b7054cbcf2d8d890551d9, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -140372,6 +139494,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 047fcc33e7a299b4f9416a9f381317ee, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -140585,6 +139709,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 84c9a4d98d618b1428dc54abe7938aa9, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -140959,6 +140085,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 047fcc33e7a299b4f9416a9f381317ee, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -141280,6 +140408,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 3bf06708dff4b3649a7f247627bc0530, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -141654,6 +140784,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 7e464405efd56364b8222ffeee85b04b, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -141706,6 +140838,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 96b7804691a70cf4eb75bd0136ad442e, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -141887,6 +141021,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 96b7804691a70cf4eb75bd0136ad442e, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -143203,6 +142339,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: b56335658f2c6ba41a064c14b1e8c87b, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -143416,6 +142554,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 9e63d90c726e87e43a3854e582d4803e, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -143468,6 +142608,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 7e464405efd56364b8222ffeee85b04b, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -143650,6 +142792,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 047fcc33e7a299b4f9416a9f381317ee, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -143949,6 +143093,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 7e464405efd56364b8222ffeee85b04b, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -144380,6 +143526,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 9e63d90c726e87e43a3854e582d4803e, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -144432,6 +143580,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 96b7804691a70cf4eb75bd0136ad442e, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -144484,6 +143634,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 7e464405efd56364b8222ffeee85b04b, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -144805,6 +143957,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 96b7804691a70cf4eb75bd0136ad442e, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -144911,6 +144065,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 96b7804691a70cf4eb75bd0136ad442e, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -144963,6 +144119,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 047fcc33e7a299b4f9416a9f381317ee, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -145176,6 +144334,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: ea6cf6f5929573248a7cacf07b9eb8c1, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -145616,6 +144776,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 96b7804691a70cf4eb75bd0136ad442e, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -145724,6 +144886,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: b56335658f2c6ba41a064c14b1e8c87b, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -145776,6 +144940,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Breanna
   new_image: {fileID: 21300000, guid: 047fcc33e7a299b4f9416a9f381317ee, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -146584,21 +145750,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &9193592506895093894
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 910722879669995567}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4dba8ebeeac6fa14d90358a78deed2dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  go_to_next_node: 1
-  executed_from_load: 0
-  conversation_to_start: {fileID: 6837738808958649906}
 --- !u!1 &9207085729062066582
 GameObject:
   m_ObjectHideFlags: 0
