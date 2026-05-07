@@ -186,34 +186,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 3478004}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &3478002 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 446614, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
   m_PrefabInstance: {fileID: 3478001}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &3478003 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-  m_PrefabInstance: {fileID: 3478001}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &3478004
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3478003}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 261b7a093b1214409a89724144f422f3
 --- !u!1 &10861785
 GameObject:
   m_ObjectHideFlags: 0
@@ -600,7 +579,6 @@ GameObject:
   - component: {fileID: 40075143}
   - component: {fileID: 40075145}
   - component: {fileID: 40075144}
-  - component: {fileID: 40075146}
   m_Layer: 0
   m_Name: Dialogue - Breanna (3)
   m_TagString: Untagged
@@ -751,19 +729,6 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
---- !u!114 &40075146
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 40075142}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 2b3888c2d0d4d48c99e3a1452921eb26
 --- !u!1 &45176160
 GameObject:
   m_ObjectHideFlags: 0
@@ -936,7 +901,6 @@ GameObject:
   - component: {fileID: 48491537}
   - component: {fileID: 48491539}
   - component: {fileID: 48491538}
-  - component: {fileID: 48491540}
   m_Layer: 0
   m_Name: Dialogue - Breanna (7)
   m_TagString: Untagged
@@ -1087,19 +1051,6 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
---- !u!114 &48491540
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 48491536}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 58aa4595070a541b893f5fa7a18c2dc8
 --- !u!1 &50886143
 GameObject:
   m_ObjectHideFlags: 0
@@ -1482,7 +1433,6 @@ GameObject:
   - component: {fileID: 58076763}
   - component: {fileID: 58076765}
   - component: {fileID: 58076764}
-  - component: {fileID: 58076766}
   m_Layer: 0
   m_Name: Dialogue - Breanna
   m_TagString: Untagged
@@ -1633,19 +1583,6 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
---- !u!114 &58076766
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 58076762}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 1b61f385fe8be4b3a854a16d2c1e2e5b
 --- !u!1001 &60232264
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1713,34 +1650,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 60232267}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &60232265 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 446614, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
   m_PrefabInstance: {fileID: 60232264}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &60232266 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-  m_PrefabInstance: {fileID: 60232264}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &60232267
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 60232266}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 4222256dbf09a4b91a296415f2708211
 --- !u!1 &64970873
 GameObject:
   m_ObjectHideFlags: 0
@@ -1773,7 +1689,6 @@ Transform:
   m_Children:
   - {fileID: 589088375}
   - {fileID: 1177887168}
-  - {fileID: 706199816}
   m_Father: {fileID: 2066337908}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &64970875
@@ -2318,7 +2233,6 @@ GameObject:
   - component: {fileID: 88450417}
   - component: {fileID: 88450419}
   - component: {fileID: 88450418}
-  - component: {fileID: 88450420}
   m_Layer: 0
   m_Name: Dialogue - Breanna (4)
   m_TagString: Untagged
@@ -2470,19 +2384,6 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
---- !u!114 &88450420
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 88450416}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 563a8972b8b05473ba6bf2b2496d26c2
 --- !u!1 &94970832
 GameObject:
   m_ObjectHideFlags: 0
@@ -3292,34 +3193,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 149587777}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &149587775 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 446614, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
   m_PrefabInstance: {fileID: 149587774}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &149587776 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-  m_PrefabInstance: {fileID: 149587774}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &149587777
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 149587776}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 224c3ae5fcc094208a5018baed8ff3f9
 --- !u!1 &167147473
 GameObject:
   m_ObjectHideFlags: 0
@@ -3545,7 +3425,7 @@ GameObject:
   m_Component:
   - component: {fileID: 178533259}
   m_Layer: 0
-  m_Name: Study Hall
+  m_Name: Coffee After Midterm Blues
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3659,34 +3539,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 181129307}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &181129305 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 446614, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
   m_PrefabInstance: {fileID: 181129304}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &181129306 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-  m_PrefabInstance: {fileID: 181129304}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &181129307
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 181129306}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 195131b8da3f14f32990c7e8399ce4ed
 --- !u!1 &190636482
 GameObject:
   m_ObjectHideFlags: 0
@@ -3819,7 +3678,6 @@ GameObject:
   - component: {fileID: 225109912}
   - component: {fileID: 225109914}
   - component: {fileID: 225109913}
-  - component: {fileID: 225109915}
   m_Layer: 0
   m_Name: Dialogue - Breanna (6)
   m_TagString: Untagged
@@ -3970,19 +3828,6 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
---- !u!114 &225109915
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 225109911}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 3c47b253c52054bbbb7e59565f6c8031
 --- !u!1 &228802153
 GameObject:
   m_ObjectHideFlags: 0
@@ -4394,7 +4239,6 @@ GameObject:
   - component: {fileID: 240366670}
   - component: {fileID: 240366672}
   - component: {fileID: 240366671}
-  - component: {fileID: 240366673}
   m_Layer: 0
   m_Name: Dialogue - Breanna (8)
   m_TagString: Untagged
@@ -4545,19 +4389,6 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
---- !u!114 &240366673
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 240366669}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 53945a8a571fd4b5686b560b5feebf39
 --- !u!1 &241698606
 GameObject:
   m_ObjectHideFlags: 0
@@ -5463,7 +5294,6 @@ GameObject:
   - component: {fileID: 277519529}
   - component: {fileID: 277519531}
   - component: {fileID: 277519530}
-  - component: {fileID: 277519532}
   m_Layer: 0
   m_Name: Dialogue - Breanna (9)
   m_TagString: Untagged
@@ -5615,19 +5445,6 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
---- !u!114 &277519532
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 277519528}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: fb5cd6967ea77440c9439174f58dbcb5
 --- !u!1 &282285650
 GameObject:
   m_ObjectHideFlags: 0
@@ -5909,34 +5726,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 284627619}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &284627617 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 446614, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
   m_PrefabInstance: {fileID: 284627616}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &284627618 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-  m_PrefabInstance: {fileID: 284627616}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &284627619
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 284627618}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: e833706b599c143c985c3147c7e2731f
 --- !u!1 &293640273
 GameObject:
   m_ObjectHideFlags: 0
@@ -5948,7 +5744,6 @@ GameObject:
   - component: {fileID: 293640274}
   - component: {fileID: 293640276}
   - component: {fileID: 293640275}
-  - component: {fileID: 293640277}
   m_Layer: 0
   m_Name: Dialogue - Breanna (2)
   m_TagString: Untagged
@@ -6099,19 +5894,6 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
---- !u!114 &293640277
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 293640273}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 2f8f70ab467cb4eefb0d31a3cb6ba3f5
 --- !u!1001 &296979704
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6197,7 +5979,6 @@ GameObject:
   - component: {fileID: 300333413}
   - component: {fileID: 300333416}
   - component: {fileID: 300333415}
-  - component: {fileID: 300333414}
   m_Layer: 0
   m_Name: Dialogue - Leilani (9)
   m_TagString: Untagged
@@ -6220,19 +6001,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 583636746}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &300333414
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 300333412}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: e8252fa3d672b4f56a2d431c23d3a590
 --- !u!82 &300333415
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6726,7 +6494,6 @@ GameObject:
   - component: {fileID: 330990770}
   - component: {fileID: 330990773}
   - component: {fileID: 330990772}
-  - component: {fileID: 330990771}
   m_Layer: 0
   m_Name: Dialogue - Leilani (1)
   m_TagString: Untagged
@@ -6749,19 +6516,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 952600336}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &330990771
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 330990769}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: fc6a68171c3fc48d5a1e806baf6e44e8
 --- !u!82 &330990772
 AudioSource:
   m_ObjectHideFlags: 0
@@ -7249,34 +7003,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 343868952}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &343868950 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 446614, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
   m_PrefabInstance: {fileID: 343868949}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &343868951 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-  m_PrefabInstance: {fileID: 343868949}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &343868952
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 343868951}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: f5cb3b673c5b74f06b8fc4cc47c1a0c4
 --- !u!1 &379835630
 GameObject:
   m_ObjectHideFlags: 0
@@ -8665,34 +8398,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 459594628}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &459594626 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 446614, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
   m_PrefabInstance: {fileID: 459594625}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &459594627 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-  m_PrefabInstance: {fileID: 459594625}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &459594628
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 459594627}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: b0528a7d9f0b946b3b7137568e0fcdfa
 --- !u!1001 &462630710
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8879,7 +8591,6 @@ GameObject:
   m_Component:
   - component: {fileID: 490878798}
   - component: {fileID: 490878799}
-  - component: {fileID: 490878800}
   m_Layer: 0
   m_Name: Show Choices
   m_TagString: Untagged
@@ -10623,19 +10334,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
---- !u!114 &490878800
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 490878797}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: ab34600017984453aa1d017c54f4ff5a
 --- !u!1 &492427567
 GameObject:
   m_ObjectHideFlags: 0
@@ -10647,7 +10345,6 @@ GameObject:
   - component: {fileID: 492427568}
   - component: {fileID: 492427571}
   - component: {fileID: 492427570}
-  - component: {fileID: 492427569}
   m_Layer: 0
   m_Name: Dialogue - Leilani (7)
   m_TagString: Untagged
@@ -10670,19 +10367,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 952600336}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &492427569
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 492427567}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 8208a6fe2a31e4d50bfca83e73a4c56d
 --- !u!82 &492427570
 AudioSource:
   m_ObjectHideFlags: 0
@@ -11039,34 +10723,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 519650505}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &519650503 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 446614, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
   m_PrefabInstance: {fileID: 519650502}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &519650504 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-  m_PrefabInstance: {fileID: 519650502}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &519650505
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519650504}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: efab159bcad49445aac497baeed7f076
 --- !u!1 &523366398
 GameObject:
   m_ObjectHideFlags: 0
@@ -11405,7 +11068,6 @@ GameObject:
   - component: {fileID: 545861447}
   - component: {fileID: 545861449}
   - component: {fileID: 545861448}
-  - component: {fileID: 545861450}
   m_Layer: 0
   m_Name: Dialogue - Breanna (5)
   m_TagString: Untagged
@@ -11557,19 +11219,6 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
---- !u!114 &545861450
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 545861446}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: d8ce68d2b92054a68957604906b20fe6
 --- !u!1001 &549901979
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11994,6 +11643,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1838532533}
+  - {fileID: 2066337908}
   - {fileID: 8213363610275554605}
   - {fileID: 178533259}
   - {fileID: 282285651}
@@ -12013,7 +11663,6 @@ Transform:
   - {fileID: 218032573}
   - {fileID: 1468657207}
   - {fileID: 2235770250652465122}
-  - {fileID: 2066337908}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &563407768
@@ -12457,34 +12106,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 579872359}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &579872357 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 446614, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
   m_PrefabInstance: {fileID: 579872356}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &579872358 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-  m_PrefabInstance: {fileID: 579872356}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &579872359
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 579872358}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 58da52aea684a4bdfb9b14f40cd2ae3d
 --- !u!1 &580244595
 GameObject:
   m_ObjectHideFlags: 0
@@ -12495,7 +12123,6 @@ GameObject:
   m_Component:
   - component: {fileID: 580244596}
   - component: {fileID: 580244597}
-  - component: {fileID: 580244598}
   m_Layer: 0
   m_Name: Show Choices
   m_TagString: Untagged
@@ -14227,19 +13854,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
---- !u!114 &580244598
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 580244595}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 2dba39d5e6765423f86bcc2d9ce67834
 --- !u!1 &583636745
 GameObject:
   m_ObjectHideFlags: 0
@@ -14372,34 +13986,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 589088377}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &589088375 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 446614, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
   m_PrefabInstance: {fileID: 589088374}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &589088376 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-  m_PrefabInstance: {fileID: 589088374}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &589088377
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 589088376}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 0c1eb55839e344b6e8790bc64dfaadd0
 --- !u!1001 &589664892
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14467,34 +14060,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 589664895}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &589664893 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 446614, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
   m_PrefabInstance: {fileID: 589664892}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &589664894 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-  m_PrefabInstance: {fileID: 589664892}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &589664895
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 589664894}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: bfe44237dfc5c479fbc448622b05c064
 --- !u!1001 &592073667
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14562,34 +14134,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 592073670}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &592073668 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 446614, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
   m_PrefabInstance: {fileID: 592073667}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &592073669 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-  m_PrefabInstance: {fileID: 592073667}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &592073670
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 592073669}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 7e2b581146efb4277ace989dae27e299
 --- !u!1001 &597048084
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15280,34 +14831,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 622886197}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &622886195 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 446614, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
   m_PrefabInstance: {fileID: 622886194}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &622886196 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-  m_PrefabInstance: {fileID: 622886194}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &622886197
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 622886196}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: e6a7bb2bed0304bc6b8ac8eb8cff840e
 --- !u!1 &623962120
 GameObject:
   m_ObjectHideFlags: 0
@@ -15536,34 +15066,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 625134286}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &625134284 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 446614, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
   m_PrefabInstance: {fileID: 625134283}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &625134285 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-  m_PrefabInstance: {fileID: 625134283}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &625134286
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 625134285}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: bdc2db83e0ab14bf6a575f4f2fa92a96
 --- !u!1001 &626117369
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15649,7 +15158,6 @@ GameObject:
   - component: {fileID: 626863053}
   - component: {fileID: 626863055}
   - component: {fileID: 626863054}
-  - component: {fileID: 626863056}
   m_Layer: 0
   m_Name: Dialogue - Breanna (8)
   m_TagString: Untagged
@@ -15800,19 +15308,6 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
---- !u!114 &626863056
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 626863052}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 34fa6a2d420a64044b5414cda254b801
 --- !u!1001 &629139623
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15880,34 +15375,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 629139626}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &629139624 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 446614, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
   m_PrefabInstance: {fileID: 629139623}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &629139625 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-  m_PrefabInstance: {fileID: 629139623}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &629139626
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 629139625}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: e0ac72d11ce4b4b3d9a42457b27b32bb
 --- !u!1 &643054801
 GameObject:
   m_ObjectHideFlags: 0
@@ -16182,7 +15656,6 @@ GameObject:
   - component: {fileID: 678132168}
   - component: {fileID: 678132170}
   - component: {fileID: 678132169}
-  - component: {fileID: 678132171}
   m_Layer: 0
   m_Name: Dialogue - Breanna (4)
   m_TagString: Untagged
@@ -16334,19 +15807,6 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
---- !u!114 &678132171
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 678132167}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 73eda83d5a43d422d94e74ae5e419afa
 --- !u!1 &680554780
 GameObject:
   m_ObjectHideFlags: 0
@@ -16640,181 +16100,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 424250, guid: 02fa0947d6da04082ae770693640dc11, type: 3}
   m_PrefabInstance: {fileID: 689738690}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &706199815
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 706199816}
-  - component: {fileID: 706199819}
-  - component: {fileID: 706199818}
-  - component: {fileID: 706199817}
-  m_Layer: 0
-  m_Name: Dialogue - Leilani (8)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &706199816
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 706199815}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -472.5, y: -265.78125, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 64970874}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &706199817
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 706199815}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: eb13023cf60eb4f3c9378c440a90a263
---- !u!82 &706199818
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 706199815}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
---- !u!114 &706199819
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 706199815}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b40beeb965e5d9419bf817d6f7d59bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  go_to_next_node: 1
-  executed_from_load: 0
-  actor_name_from: 0
-  actor: Leilani
-  speaker_name_from: 0
-  textbox_title: Leilani
-  fetch_localized_stat_value: 0
-  dialogue_from: 0
-  localized_key: 
-  text: Awesome! I hope you feel welcome.
-  talking_beeps: {fileID: 0}
-  darken_all_other_characters: 1
-  bring_speaker_to_front: 1
-  clear_text_after: 0
-  log_text: 1
-  log_category: Default
-  done_printing: 0
-  no_voice_playing: 0
-  done_voice_clip: 0
 --- !u!1001 &716351034
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17664,34 +16949,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 749239207}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &749239205 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 446614, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
   m_PrefabInstance: {fileID: 749239204}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &749239206 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-  m_PrefabInstance: {fileID: 749239204}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &749239207
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 749239206}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: e7754cae3dcb3407b8d286ae07767de8
 --- !u!1 &755055952
 GameObject:
   m_ObjectHideFlags: 0
@@ -17803,21 +17067,6 @@ MonoBehaviour:
   fade_out: 0
   fade_in: 1
   wait_for_all_fading: 1
---- !u!115 &756777706
-MonoScript:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  serializedVersion: 7
-  m_DefaultReferences: {}
-  m_Icon: {fileID: 0}
-  m_Type: 0
-  m_ExecutionOrder: 0
-  m_ClassName: NodeExportTag
-  m_Namespace: VNEngine.EditorTools
-  m_AssemblyName: Assembly-CSharp-Editor
 --- !u!1 &757980560
 GameObject:
   m_ObjectHideFlags: 0
@@ -17940,34 +17189,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 763570872}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &763570870 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 446614, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
   m_PrefabInstance: {fileID: 763570869}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &763570871 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-  m_PrefabInstance: {fileID: 763570869}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &763570872
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 763570871}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 4cc8c106323734318a3ac7880e8fc879
 --- !u!1 &765886982
 GameObject:
   m_ObjectHideFlags: 0
@@ -19789,34 +19017,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 767699645}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &767699643 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 446614, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
   m_PrefabInstance: {fileID: 767699642}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &767699644 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-  m_PrefabInstance: {fileID: 767699642}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &767699645
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 767699644}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 55a3457234d524f57a636fe6ad996e0a
 --- !u!1 &781329788
 GameObject:
   m_ObjectHideFlags: 0
@@ -19828,7 +19035,6 @@ GameObject:
   - component: {fileID: 781329789}
   - component: {fileID: 781329791}
   - component: {fileID: 781329790}
-  - component: {fileID: 781329792}
   m_Layer: 0
   m_Name: Dialogue - Breanna (4)
   m_TagString: Untagged
@@ -19979,19 +19185,6 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
---- !u!114 &781329792
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 781329788}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 84c011a76c2bf46ba8fe41c5d26a0df8
 --- !u!1 &783001821 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8583522059737696776, guid: 64ec618914d13a84782e9657b0d1e11b, type: 3}
@@ -20008,7 +19201,6 @@ GameObject:
   - component: {fileID: 802191821}
   - component: {fileID: 802191824}
   - component: {fileID: 802191823}
-  - component: {fileID: 802191822}
   m_Layer: 0
   m_Name: Dialogue - Breanna (5)
   m_TagString: Untagged
@@ -20031,19 +19223,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1215098915}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &802191822
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 802191820}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: e84942b4293c845529edf012bb987d99
 --- !u!82 &802191823
 AudioSource:
   m_ObjectHideFlags: 0
@@ -20239,34 +19418,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 814046601}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &814046599 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 446614, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
   m_PrefabInstance: {fileID: 814046598}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &814046600 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-  m_PrefabInstance: {fileID: 814046598}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &814046601
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 814046600}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: b2822bb7db60f40ee85e7438a583d2f5
 --- !u!1001 &839039376
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20334,34 +19492,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 839039379}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &839039377 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 446614, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
   m_PrefabInstance: {fileID: 839039376}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &839039378 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-  m_PrefabInstance: {fileID: 839039376}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &839039379
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 839039378}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 98b77a7f9f945455faf5059fe005ba2d
 --- !u!1 &844302591
 GameObject:
   m_ObjectHideFlags: 0
@@ -20991,7 +20128,6 @@ GameObject:
   m_Component:
   - component: {fileID: 878167096}
   - component: {fileID: 878167097}
-  - component: {fileID: 878167098}
   m_Layer: 0
   m_Name: Show Choices
   m_TagString: Untagged
@@ -22735,19 +21871,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
---- !u!114 &878167098
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 878167095}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 1268f79b6423f4f8ba529b518386554b
 --- !u!1 &895846343
 GameObject:
   m_ObjectHideFlags: 0
@@ -22976,34 +22099,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 897368062}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &897368060 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 446614, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
   m_PrefabInstance: {fileID: 897368059}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &897368061 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-  m_PrefabInstance: {fileID: 897368059}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &897368062
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 897368061}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 7af59481543e84e85bfe2fb2d280a54f
 --- !u!1 &902615636
 GameObject:
   m_ObjectHideFlags: 0
@@ -23350,34 +22452,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 920697924}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &920697922 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 446614, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
   m_PrefabInstance: {fileID: 920697921}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &920697923 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-  m_PrefabInstance: {fileID: 920697921}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &920697924
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 920697923}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: e5dfa57cf507b446b89a6a41fadb2692
 --- !u!1 &934082512
 GameObject:
   m_ObjectHideFlags: 0
@@ -23389,7 +22470,6 @@ GameObject:
   - component: {fileID: 934082513}
   - component: {fileID: 934082515}
   - component: {fileID: 934082514}
-  - component: {fileID: 934082516}
   m_Layer: 0
   m_Name: Dialogue - Breanna (10)
   m_TagString: Untagged
@@ -23540,19 +22620,6 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
---- !u!114 &934082516
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 934082512}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 230571a2f2a424c0fbc698d4880f9416
 --- !u!1 &940795226
 GameObject:
   m_ObjectHideFlags: 0
@@ -23563,7 +22630,6 @@ GameObject:
   m_Component:
   - component: {fileID: 940795227}
   - component: {fileID: 940795228}
-  - component: {fileID: 940795229}
   m_Layer: 0
   m_Name: Show Choices
   m_TagString: Untagged
@@ -23823,19 +22889,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
---- !u!114 &940795229
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 940795226}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: cde6ab56cbd6249ab9ddcd1ddfb3d6a6
 --- !u!1 &952600335
 GameObject:
   m_ObjectHideFlags: 0
@@ -24340,34 +23393,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 966424746}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &966424744 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 446614, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
   m_PrefabInstance: {fileID: 966424743}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &966424745 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-  m_PrefabInstance: {fileID: 966424743}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &966424746
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 966424745}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 479c1e58b59af4e8f88150f9bf4130de
 --- !u!1 &969543640
 GameObject:
   m_ObjectHideFlags: 0
@@ -24433,7 +23465,6 @@ GameObject:
   - component: {fileID: 970034812}
   - component: {fileID: 970034814}
   - component: {fileID: 970034813}
-  - component: {fileID: 970034815}
   m_Layer: 0
   m_Name: Dialogue - Breanna (4)
   m_TagString: Untagged
@@ -24584,19 +23615,6 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
---- !u!114 &970034815
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 970034811}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 1b9802ad6f1d443e486e897112cdc9f1
 --- !u!1 &973206093
 GameObject:
   m_ObjectHideFlags: 0
@@ -25738,7 +24756,6 @@ GameObject:
   - component: {fileID: 1018129528}
   - component: {fileID: 1018129531}
   - component: {fileID: 1018129530}
-  - component: {fileID: 1018129529}
   m_Layer: 0
   m_Name: Dialogue - Leilani (8)
   m_TagString: Untagged
@@ -25761,19 +24778,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 583636746}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1018129529
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1018129527}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: e8252fa3d672b4f56a2d431c23d3a590
 --- !u!82 &1018129530
 AudioSource:
   m_ObjectHideFlags: 0
@@ -26345,7 +25349,6 @@ GameObject:
   - component: {fileID: 1044605016}
   - component: {fileID: 1044605018}
   - component: {fileID: 1044605017}
-  - component: {fileID: 1044605019}
   m_Layer: 0
   m_Name: Dialogue - Eric (9)
   m_TagString: Untagged
@@ -26496,19 +25499,6 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
---- !u!114 &1044605019
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1044605015}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 3e837d5bd42a3461b89167b9da953d96
 --- !u!1 &1045351581
 GameObject:
   m_ObjectHideFlags: 0
@@ -26790,34 +25780,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1060231819}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &1060231817 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 446614, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
   m_PrefabInstance: {fileID: 1060231816}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1060231818 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-  m_PrefabInstance: {fileID: 1060231816}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1060231819
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1060231818}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 6b7b9c0fad4a745baa448d44b73cc1ed
 --- !u!1 &1060610571
 GameObject:
   m_ObjectHideFlags: 0
@@ -26829,7 +25798,6 @@ GameObject:
   - component: {fileID: 1060610572}
   - component: {fileID: 1060610574}
   - component: {fileID: 1060610573}
-  - component: {fileID: 1060610575}
   m_Layer: 0
   m_Name: Fade in from Black (1)
   m_TagString: Untagged
@@ -26885,19 +25853,6 @@ MonoBehaviour:
   fade_out: 1
   fade_in: 0
   wait_for_all_fading: 1
---- !u!114 &1060610575
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1060610571}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: f14ab8ca509024f508aec402cb3f8f3d
 --- !u!1001 &1068391327
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26965,34 +25920,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1068391330}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &1068391328 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 446614, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
   m_PrefabInstance: {fileID: 1068391327}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1068391329 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-  m_PrefabInstance: {fileID: 1068391327}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1068391330
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1068391329}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: d5ac02e81cffc4417a5e8c5f6f0e6eb5
 --- !u!1 &1084392202
 GameObject:
   m_ObjectHideFlags: 0
@@ -27003,7 +25937,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1084392203}
   - component: {fileID: 1084392204}
-  - component: {fileID: 1084392205}
   m_Layer: 0
   m_Name: Show Choice
   m_TagString: Untagged
@@ -27062,19 +25995,6 @@ MonoBehaviour:
       check: 0
       threshold: 0
   hideDialogueUI: 1
---- !u!114 &1084392205
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1084392202}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 4be37c590409e4b63a3edeae78bd00ad
 --- !u!1 &1089140042
 GameObject:
   m_ObjectHideFlags: 0
@@ -27354,34 +26274,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1093193049}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &1093193047 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 446614, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
   m_PrefabInstance: {fileID: 1093193046}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1093193048 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-  m_PrefabInstance: {fileID: 1093193046}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1093193049
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1093193048}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: c21d6f04d0fdc4594affb1208e81cae7
 --- !u!1 &1105161223
 GameObject:
   m_ObjectHideFlags: 0
@@ -27393,7 +26292,6 @@ GameObject:
   - component: {fileID: 1105161224}
   - component: {fileID: 1105161226}
   - component: {fileID: 1105161225}
-  - component: {fileID: 1105161227}
   m_Layer: 0
   m_Name: Dialogue - Breanna (4)
   m_TagString: Untagged
@@ -27544,19 +26442,6 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
---- !u!114 &1105161227
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1105161223}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 91bce4067e23245fc89995b791b959a5
 --- !u!1 &1106346131
 GameObject:
   m_ObjectHideFlags: 0
@@ -27608,6 +26493,54 @@ MonoBehaviour:
   cur_node: 0
   active: 0
   finished_conversation: 0
+--- !u!1 &1106531592
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1106531593}
+  - component: {fileID: 1106531594}
+  m_Layer: 0
+  m_Name: Show Choice
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1106531593
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106531592}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 866259442171318469}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1106531594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106531592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b53734dc413e348579dd61685c53ee9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VNEngine.ShowChoiceNode
+  go_to_next_node: 1
+  executed_from_load: 0
+  choices: []
+  hideDialogueUI: 1
 --- !u!1 &1108616549
 GameObject:
   m_ObjectHideFlags: 0
@@ -27724,7 +26657,6 @@ GameObject:
   - component: {fileID: 1121420370}
   - component: {fileID: 1121420372}
   - component: {fileID: 1121420371}
-  - component: {fileID: 1121420373}
   m_Layer: 0
   m_Name: Dialogue - Breanna (5)
   m_TagString: Untagged
@@ -27875,19 +26807,6 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
---- !u!114 &1121420373
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1121420369}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 9a65d5b48a21f4d2d892d13b1a1dcdde
 --- !u!1 &1125943105
 GameObject:
   m_ObjectHideFlags: 0
@@ -27899,7 +26818,6 @@ GameObject:
   - component: {fileID: 1125943106}
   - component: {fileID: 1125943108}
   - component: {fileID: 1125943107}
-  - component: {fileID: 1125943109}
   m_Layer: 0
   m_Name: Dialogue - Breanna (4)
   m_TagString: Untagged
@@ -28050,19 +26968,6 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
---- !u!114 &1125943109
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1125943105}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: c01be500dbd184abeb3fab6f8888b13e
 --- !u!1 &1135030272
 GameObject:
   m_ObjectHideFlags: 0
@@ -28074,7 +26979,6 @@ GameObject:
   - component: {fileID: 1135030273}
   - component: {fileID: 1135030275}
   - component: {fileID: 1135030274}
-  - component: {fileID: 1135030276}
   m_Layer: 0
   m_Name: Dialogue - Breanna (2)
   m_TagString: Untagged
@@ -28225,19 +27129,6 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
---- !u!114 &1135030276
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1135030272}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 689f6c34e2e95420181d1cda0686d8d3
 --- !u!1 &1151540427
 GameObject:
   m_ObjectHideFlags: 0
@@ -28249,7 +27140,6 @@ GameObject:
   - component: {fileID: 1151540428}
   - component: {fileID: 1151540430}
   - component: {fileID: 1151540429}
-  - component: {fileID: 1151540431}
   m_Layer: 0
   m_Name: Dialogue - Breanna (5)
   m_TagString: Untagged
@@ -28400,19 +27290,6 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
---- !u!114 &1151540431
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1151540427}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 88205b298819e4d7aad04cc06f374858
 --- !u!1001 &1151643510
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28480,34 +27357,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1151643513}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &1151643511 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 446614, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
   m_PrefabInstance: {fileID: 1151643510}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1151643512 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-  m_PrefabInstance: {fileID: 1151643510}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1151643513
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1151643512}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: c545b1e62017c41f5a273e74ff5b8827
 --- !u!1 &1160830240
 GameObject:
   m_ObjectHideFlags: 0
@@ -28786,7 +27642,6 @@ GameObject:
   - component: {fileID: 1177887168}
   - component: {fileID: 1177887170}
   - component: {fileID: 1177887169}
-  - component: {fileID: 1177887171}
   m_Layer: 0
   m_Name: Dialogue - Leilani (7)
   m_TagString: Untagged
@@ -28937,19 +27792,6 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
---- !u!114 &1177887171
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1177887167}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: eb13023cf60eb4f3c9378c440a90a263
 --- !u!1 &1187534781
 GameObject:
   m_ObjectHideFlags: 0
@@ -28961,7 +27803,6 @@ GameObject:
   - component: {fileID: 1187534782}
   - component: {fileID: 1187534784}
   - component: {fileID: 1187534783}
-  - component: {fileID: 1187534785}
   m_Layer: 0
   m_Name: Dialogue - Eric (4)
   m_TagString: Untagged
@@ -29112,19 +27953,6 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
---- !u!114 &1187534785
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1187534781}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 731b1dc045e314eb28f4009a2c216ba3
 --- !u!1 &1206232417
 GameObject:
   m_ObjectHideFlags: 0
@@ -29136,7 +27964,6 @@ GameObject:
   - component: {fileID: 1206232418}
   - component: {fileID: 1206232420}
   - component: {fileID: 1206232419}
-  - component: {fileID: 1206232421}
   m_Layer: 0
   m_Name: Dialogue - Eric (2)
   m_TagString: Untagged
@@ -29287,19 +28114,6 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
---- !u!114 &1206232421
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1206232417}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 094b47f47c3714f95908470e84838a77
 --- !u!1 &1215098914
 GameObject:
   m_ObjectHideFlags: 0
@@ -29427,7 +28241,6 @@ GameObject:
   - component: {fileID: 1215983415}
   - component: {fileID: 1215983417}
   - component: {fileID: 1215983416}
-  - component: {fileID: 1215983418}
   m_Layer: 0
   m_Name: Dialogue - Eric (5)
   m_TagString: Untagged
@@ -29579,19 +28392,6 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
---- !u!114 &1215983418
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1215983414}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: ef2e1590d6d644c99874660e89f51f19
 --- !u!1001 &1219179431
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29659,34 +28459,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1219179434}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &1219179432 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 446614, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
   m_PrefabInstance: {fileID: 1219179431}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1219179433 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-  m_PrefabInstance: {fileID: 1219179431}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1219179434
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1219179433}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: dfac814cef1d4443ea6f721258e043b4
 --- !u!1 &1219317161
 GameObject:
   m_ObjectHideFlags: 0
@@ -29698,7 +28477,6 @@ GameObject:
   - component: {fileID: 1219317162}
   - component: {fileID: 1219317164}
   - component: {fileID: 1219317163}
-  - component: {fileID: 1219317165}
   m_Layer: 0
   m_Name: Dialogue - Breanna (2)
   m_TagString: Untagged
@@ -29849,19 +28627,6 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
---- !u!114 &1219317165
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1219317161}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 4a509fd57648f40018caab2b4389663b
 --- !u!1 &1224558675
 GameObject:
   m_ObjectHideFlags: 0
@@ -30355,34 +29120,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1248187130}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &1248187128 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 446614, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
   m_PrefabInstance: {fileID: 1248187127}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1248187129 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-  m_PrefabInstance: {fileID: 1248187127}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1248187130
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1248187129}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: bdd6dd62b509b49c5a8e0f7804f719db
 --- !u!1 &1252499585
 GameObject:
   m_ObjectHideFlags: 0
@@ -31345,7 +30089,6 @@ GameObject:
   - component: {fileID: 1273661850}
   - component: {fileID: 1273661852}
   - component: {fileID: 1273661851}
-  - component: {fileID: 1273661853}
   m_Layer: 0
   m_Name: Dialogue - Eric (6)
   m_TagString: Untagged
@@ -31496,19 +30239,6 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
---- !u!114 &1273661853
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1273661849}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: ca955c87979af45b284880250a9bb9d8
 --- !u!1 &1274580618
 GameObject:
   m_ObjectHideFlags: 0
@@ -31520,7 +30250,6 @@ GameObject:
   - component: {fileID: 1274580619}
   - component: {fileID: 1274580621}
   - component: {fileID: 1274580620}
-  - component: {fileID: 1274580622}
   m_Layer: 0
   m_Name: Dialogue - Breanna (3)
   m_TagString: Untagged
@@ -31671,19 +30400,6 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
---- !u!114 &1274580622
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1274580618}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 8c59735497ded4e368bb4dd547d9ccb3
 --- !u!1 &1282037791
 GameObject:
   m_ObjectHideFlags: 0
@@ -31695,7 +30411,6 @@ GameObject:
   - component: {fileID: 1282037792}
   - component: {fileID: 1282037794}
   - component: {fileID: 1282037793}
-  - component: {fileID: 1282037795}
   m_Layer: 0
   m_Name: Dialogue - Breanna (3)
   m_TagString: Untagged
@@ -31846,19 +30561,6 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
---- !u!114 &1282037795
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1282037791}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 4d8ba57650e3341019bab4bb291a56d2
 --- !u!1 &1287706443
 GameObject:
   m_ObjectHideFlags: 0
@@ -32267,7 +30969,6 @@ GameObject:
   - component: {fileID: 1302228957}
   - component: {fileID: 1302228959}
   - component: {fileID: 1302228958}
-  - component: {fileID: 1302228960}
   m_Layer: 0
   m_Name: Dialogue - Leilani (7)
   m_TagString: Untagged
@@ -32418,19 +31119,6 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
---- !u!114 &1302228960
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1302228956}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: e8252fa3d672b4f56a2d431c23d3a590
 --- !u!1 &1308157508
 GameObject:
   m_ObjectHideFlags: 0
@@ -32669,7 +31357,6 @@ GameObject:
   - component: {fileID: 1319937228}
   - component: {fileID: 1319937230}
   - component: {fileID: 1319937229}
-  - component: {fileID: 1319937231}
   m_Layer: 0
   m_Name: Dialogue - Breanna (6)
   m_TagString: Untagged
@@ -32820,19 +31507,6 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
---- !u!114 &1319937231
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1319937227}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: af77daf788f1846aab17cfec9563a2ad
 --- !u!1 &1332146199
 GameObject:
   m_ObjectHideFlags: 0
@@ -32844,7 +31518,6 @@ GameObject:
   - component: {fileID: 1332146200}
   - component: {fileID: 1332146202}
   - component: {fileID: 1332146201}
-  - component: {fileID: 1332146203}
   m_Layer: 0
   m_Name: Dialogue - Breanna (10)
   m_TagString: Untagged
@@ -32995,19 +31668,6 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
---- !u!114 &1332146203
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1332146199}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 5319030f2377f4f6481f1d8941536de8
 --- !u!1 &1335716872
 GameObject:
   m_ObjectHideFlags: 0
@@ -33180,7 +31840,6 @@ GameObject:
   - component: {fileID: 1337085819}
   - component: {fileID: 1337085821}
   - component: {fileID: 1337085820}
-  - component: {fileID: 1337085822}
   m_Layer: 0
   m_Name: Dialogue - Breanna (9)
   m_TagString: Untagged
@@ -33331,19 +31990,6 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
---- !u!114 &1337085822
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1337085818}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 9c8d70383e227455a95caa53415fc396
 --- !u!1001 &1338314836
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33411,34 +32057,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1338314839}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &1338314837 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 446614, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
   m_PrefabInstance: {fileID: 1338314836}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1338314838 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-  m_PrefabInstance: {fileID: 1338314836}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1338314839
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1338314838}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 0ab20830cf15641f3b2634057ad8d737
 --- !u!1 &1346471638
 GameObject:
   m_ObjectHideFlags: 0
@@ -33450,7 +32075,6 @@ GameObject:
   - component: {fileID: 1346471639}
   - component: {fileID: 1346471641}
   - component: {fileID: 1346471640}
-  - component: {fileID: 1346471642}
   m_Layer: 0
   m_Name: Dialogue - Breanna (2)
   m_TagString: Untagged
@@ -33601,19 +32225,6 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
---- !u!114 &1346471642
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1346471638}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 6a9f05f7862c741808cc3d459e9bb35e
 --- !u!1 &1350480095
 GameObject:
   m_ObjectHideFlags: 0
@@ -33625,7 +32236,6 @@ GameObject:
   - component: {fileID: 1350480096}
   - component: {fileID: 1350480098}
   - component: {fileID: 1350480097}
-  - component: {fileID: 1350480099}
   m_Layer: 0
   m_Name: Dialogue - Breanna (5)
   m_TagString: Untagged
@@ -33776,19 +32386,6 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
---- !u!114 &1350480099
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1350480095}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 06bcf5bad4df848a5b7f180c61d05d84
 --- !u!1 &1350725718
 GameObject:
   m_ObjectHideFlags: 0
@@ -34176,7 +32773,6 @@ GameObject:
   - component: {fileID: 1368738503}
   - component: {fileID: 1368738505}
   - component: {fileID: 1368738504}
-  - component: {fileID: 1368738506}
   m_Layer: 0
   m_Name: Dialogue - Eric (3)
   m_TagString: Untagged
@@ -34327,19 +32923,6 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
---- !u!114 &1368738506
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1368738502}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 1233dbf3801bd41f9aba2633c8d02cde
 --- !u!1001 &1372419889
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34407,34 +32990,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1372419892}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &1372419890 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 446614, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
   m_PrefabInstance: {fileID: 1372419889}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1372419891 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-  m_PrefabInstance: {fileID: 1372419889}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1372419892
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1372419891}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 7a466c4750044412291648f2a5769004
 --- !u!1 &1377083599
 GameObject:
   m_ObjectHideFlags: 0
@@ -34446,7 +33008,6 @@ GameObject:
   - component: {fileID: 1377083600}
   - component: {fileID: 1377083602}
   - component: {fileID: 1377083601}
-  - component: {fileID: 1377083603}
   m_Layer: 0
   m_Name: Dialogue - Breanna (3)
   m_TagString: Untagged
@@ -34597,19 +33158,6 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
---- !u!114 &1377083603
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1377083599}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 27dafb85857974de483862dfdb77c959
 --- !u!1 &1381011146
 GameObject:
   m_ObjectHideFlags: 0
@@ -35077,34 +33625,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1404855185}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &1404855183 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 446614, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
   m_PrefabInstance: {fileID: 1404855182}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1404855184 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-  m_PrefabInstance: {fileID: 1404855182}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1404855185
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1404855184}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 36d6f550450a14c478e241476f35f783
 --- !u!1 &1406608911
 GameObject:
   m_ObjectHideFlags: 0
@@ -35167,7 +33694,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1421949153}
   - component: {fileID: 1421949155}
-  - component: {fileID: 1421949154}
   m_Layer: 0
   m_Name: Enter Actor
   m_TagString: Untagged
@@ -35190,19 +33716,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1827139499}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1421949154
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1421949152}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 5d65fdc10b1cc42f8bebb55f89bb21e4
 --- !u!114 &1421949155
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35290,34 +33803,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1427253339}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &1427253337 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 446614, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
   m_PrefabInstance: {fileID: 1427253336}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1427253338 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-  m_PrefabInstance: {fileID: 1427253336}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1427253339
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1427253338}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 3ae3735c222e142199985266fbb748c2
 --- !u!1 &1441045238
 GameObject:
   m_ObjectHideFlags: 0
@@ -35329,7 +33821,6 @@ GameObject:
   - component: {fileID: 1441045239}
   - component: {fileID: 1441045241}
   - component: {fileID: 1441045240}
-  - component: {fileID: 1441045242}
   m_Layer: 0
   m_Name: Dialogue - Breanna (2)
   m_TagString: Untagged
@@ -35481,19 +33972,6 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
---- !u!114 &1441045242
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1441045238}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: ed9181ea03b8b4914ab874f538d0da81
 --- !u!1001 &1441587798
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35561,34 +34039,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1441587801}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &1441587799 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 446614, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
   m_PrefabInstance: {fileID: 1441587798}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1441587800 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-  m_PrefabInstance: {fileID: 1441587798}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1441587801
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1441587800}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 351400c6127df4bdaa1b0368566fa4e9
 --- !u!1 &1447093379
 GameObject:
   m_ObjectHideFlags: 0
@@ -36111,34 +34568,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1464762964}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &1464762962 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 446614, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
   m_PrefabInstance: {fileID: 1464762961}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1464762963 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-  m_PrefabInstance: {fileID: 1464762961}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1464762964
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1464762963}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: ef04ab702c09441b683d2266c31ecb6a
 --- !u!1 &1467312709
 GameObject:
   m_ObjectHideFlags: 0
@@ -36823,7 +35259,6 @@ GameObject:
   - component: {fileID: 1475892265}
   - component: {fileID: 1475892267}
   - component: {fileID: 1475892266}
-  - component: {fileID: 1475892268}
   m_Layer: 0
   m_Name: Dialogue - Leilani (5)
   m_TagString: Untagged
@@ -36974,19 +35409,6 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
---- !u!114 &1475892268
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1475892264}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: f90a44d2cca9c488b99d352fbb6c19f6
 --- !u!1 &1477084856
 GameObject:
   m_ObjectHideFlags: 0
@@ -37159,7 +35581,6 @@ GameObject:
   - component: {fileID: 1479852776}
   - component: {fileID: 1479852778}
   - component: {fileID: 1479852777}
-  - component: {fileID: 1479852779}
   m_Layer: 0
   m_Name: Dialogue - Leilani (6)
   m_TagString: Untagged
@@ -37310,19 +35731,6 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
---- !u!114 &1479852779
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1479852775}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 8208a6fe2a31e4d50bfca83e73a4c56d
 --- !u!1001 &1485144867
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37333,11 +35741,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -7185135663363208663, guid: 8f1670c9580104ce187ca494c92f827a, type: 3}
       propertyPath: week
-      value: 13
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: -7185135663363208663, guid: 8f1670c9580104ce187ca494c92f827a, type: 3}
       propertyPath: scene
-      value: Apartment
+      value: Dining Hall
       objectReference: {fileID: 0}
     - target: {fileID: -7185135663363208663, guid: 8f1670c9580104ce187ca494c92f827a, type: 3}
       propertyPath: character
@@ -37629,34 +36037,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1486700473}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &1486700471 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 446614, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
   m_PrefabInstance: {fileID: 1486700470}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1486700472 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-  m_PrefabInstance: {fileID: 1486700470}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1486700473
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1486700472}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 3d05aab26994c4120956b8baaf886c8c
 --- !u!1001 &1491216483
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37724,34 +36111,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1491216486}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &1491216484 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 446614, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
   m_PrefabInstance: {fileID: 1491216483}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1491216485 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-  m_PrefabInstance: {fileID: 1491216483}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1491216486
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1491216485}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 3ae3735c222e142199985266fbb748c2
 --- !u!1 &1497950241
 GameObject:
   m_ObjectHideFlags: 0
@@ -38054,34 +36420,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1514598370}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &1514598368 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 446614, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
   m_PrefabInstance: {fileID: 1514598367}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1514598369 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-  m_PrefabInstance: {fileID: 1514598367}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1514598370
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1514598369}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: e39d4235bd6954076a974c3e168e17bb
 --- !u!1 &1515580288
 GameObject:
   m_ObjectHideFlags: 0
@@ -38092,7 +36437,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1515580289}
   - component: {fileID: 1515580290}
-  - component: {fileID: 1515580291}
   m_Layer: 0
   m_Name: Exit Actor
   m_TagString: Untagged
@@ -38134,19 +36478,6 @@ MonoBehaviour:
   slide_out: 0
   fade_out: 1
   fade_out_time: 0.1
---- !u!114 &1515580291
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1515580288}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: d605278edab294a5d9f09c25c687c3e4
 --- !u!1001 &1521411323
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38214,34 +36545,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1521411326}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &1521411324 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 446614, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
   m_PrefabInstance: {fileID: 1521411323}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1521411325 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-  m_PrefabInstance: {fileID: 1521411323}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1521411326
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1521411325}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: b51cec08bf82c4dc6876b382ee0677bd
 --- !u!1 &1522691211
 GameObject:
   m_ObjectHideFlags: 0
@@ -38523,34 +36833,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1525600396}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &1525600394 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 446614, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
   m_PrefabInstance: {fileID: 1525600393}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1525600395 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-  m_PrefabInstance: {fileID: 1525600393}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1525600396
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1525600395}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: c29ba220bc99e432cb9627d568f3e197
 --- !u!1001 &1553367135
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38696,34 +36985,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3964208818591883344, guid: 9dc1d67c6796e3a4f9f4dc639d6c8a49, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1561840376}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9dc1d67c6796e3a4f9f4dc639d6c8a49, type: 3}
 --- !u!4 &1561840374 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3964208818591883345, guid: 9dc1d67c6796e3a4f9f4dc639d6c8a49, type: 3}
   m_PrefabInstance: {fileID: 1561840373}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1561840375 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3964208818591883344, guid: 9dc1d67c6796e3a4f9f4dc639d6c8a49, type: 3}
-  m_PrefabInstance: {fileID: 1561840373}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1561840376
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1561840375}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 721f9f5790feb44fcadd181609365359
 --- !u!1 &1567654610
 GameObject:
   m_ObjectHideFlags: 0
@@ -38734,7 +37002,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1567654611}
   - component: {fileID: 1567654612}
-  - component: {fileID: 1567654613}
   m_Layer: 0
   m_Name: Show Choices
   m_TagString: Untagged
@@ -40479,19 +38746,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
---- !u!114 &1567654613
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1567654610}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 3ba26447389234a4895ae9b7d324c000
 --- !u!1 &1571330437
 GameObject:
   m_ObjectHideFlags: 0
@@ -40503,7 +38757,6 @@ GameObject:
   - component: {fileID: 1571330438}
   - component: {fileID: 1571330440}
   - component: {fileID: 1571330439}
-  - component: {fileID: 1571330441}
   m_Layer: 0
   m_Name: Dialogue - Breanna (7)
   m_TagString: Untagged
@@ -40654,19 +38907,6 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
---- !u!114 &1571330441
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1571330437}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 93a13cc4293d24dc0ae28b61363e814b
 --- !u!1 &1573536455
 GameObject:
   m_ObjectHideFlags: 0
@@ -40732,7 +38972,6 @@ GameObject:
   - component: {fileID: 1579945446}
   - component: {fileID: 1579945448}
   - component: {fileID: 1579945447}
-  - component: {fileID: 1579945449}
   m_Layer: 0
   m_Name: Dialogue - Breanna (2)
   m_TagString: Untagged
@@ -40883,19 +39122,6 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
---- !u!114 &1579945449
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1579945445}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 4a64ce544a1204c7aa1f4466235bca02
 --- !u!1001 &1581698571
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41041,34 +39267,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1583391139}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &1583391137 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 446614, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
   m_PrefabInstance: {fileID: 1583391136}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1583391138 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-  m_PrefabInstance: {fileID: 1583391136}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1583391139
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1583391138}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: d8b67f8a293c64209a36548e74de24de
 --- !u!1001 &1583696427
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41156,7 +39361,7 @@ PrefabInstance:
     - target: {fileID: 1611349575936783945, guid: 0991620b818a844c8872842d42ccce09, type: 3}
       propertyPath: routes.Array.data[0].conversation
       value: 
-      objectReference: {fileID: 7653717930654532135}
+      objectReference: {fileID: 1447093381}
     - target: {fileID: 1611349575936783945, guid: 0991620b818a844c8872842d42ccce09, type: 3}
       propertyPath: 'fallbackConversations.Array.data[0]'
       value: 
@@ -41246,7 +39451,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1588004318}
   - component: {fileID: 1588004319}
-  - component: {fileID: 1588004320}
   m_Layer: 0
   m_Name: Show Choices
   m_TagString: Untagged
@@ -41506,19 +39710,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
---- !u!114 &1588004320
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1588004317}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 1bc8f6f51e33e41c5b0bc67143bc79ca
 --- !u!1 &1588176050
 GameObject:
   m_ObjectHideFlags: 0
@@ -41801,34 +39992,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1604344188}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &1604344186 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 446614, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
   m_PrefabInstance: {fileID: 1604344185}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1604344187 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-  m_PrefabInstance: {fileID: 1604344185}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1604344188
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1604344187}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 2428f3d44611e424b8ca8ff36a6b589a
 --- !u!1001 &1616966742
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41896,34 +40066,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1616966745}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &1616966743 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 446614, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
   m_PrefabInstance: {fileID: 1616966742}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1616966744 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-  m_PrefabInstance: {fileID: 1616966742}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1616966745
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1616966744}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 6c4502a5f3c0d4a1399730d441f3daa2
 --- !u!1001 &1634487558
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42091,7 +40240,6 @@ GameObject:
   - component: {fileID: 1637084198}
   - component: {fileID: 1637084200}
   - component: {fileID: 1637084199}
-  - component: {fileID: 1637084201}
   m_Layer: 0
   m_Name: Dialogue - Breanna (3)
   m_TagString: Untagged
@@ -42242,19 +40390,6 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
---- !u!114 &1637084201
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1637084197}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 37056421fddaa4880a3b0afa9d092d06
 --- !u!1 &1662040692
 GameObject:
   m_ObjectHideFlags: 0
@@ -42547,7 +40682,6 @@ GameObject:
   - component: {fileID: 1675296783}
   - component: {fileID: 1675296785}
   - component: {fileID: 1675296784}
-  - component: {fileID: 1675296786}
   m_Layer: 0
   m_Name: Dialogue - Eric (2)
   m_TagString: Untagged
@@ -42698,19 +40832,6 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
---- !u!114 &1675296786
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1675296782}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: a56256381be25496c9fd4b5aab61adca
 --- !u!1 &1676137480
 GameObject:
   m_ObjectHideFlags: 0
@@ -42993,34 +41114,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1681721301}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &1681721299 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 446614, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
   m_PrefabInstance: {fileID: 1681721298}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1681721300 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-  m_PrefabInstance: {fileID: 1681721298}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1681721301
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1681721300}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 89abf2e851f4c414b9bc4a95ad21c91c
 --- !u!1 &1685292402 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2493814459876607703, guid: 055d54775d5803f47a39dc9b66c29a8f, type: 3}
@@ -43037,7 +41137,6 @@ GameObject:
   - component: {fileID: 1691084644}
   - component: {fileID: 1691084646}
   - component: {fileID: 1691084645}
-  - component: {fileID: 1691084647}
   m_Layer: 0
   m_Name: Dialogue - Breanna (2)
   m_TagString: Untagged
@@ -43188,19 +41287,6 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
---- !u!114 &1691084647
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1691084643}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 49e585c7865734a1398cf7cb748659ab
 --- !u!1 &1691578574
 GameObject:
   m_ObjectHideFlags: 0
@@ -43212,7 +41298,6 @@ GameObject:
   - component: {fileID: 1691578575}
   - component: {fileID: 1691578577}
   - component: {fileID: 1691578576}
-  - component: {fileID: 1691578578}
   m_Layer: 0
   m_Name: Dialogue - Eric (3)
   m_TagString: Untagged
@@ -43363,19 +41448,6 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
---- !u!114 &1691578578
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1691578574}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 1d23fd82863cb4bcca78c4c805486d2f
 --- !u!1 &1701384152
 GameObject:
   m_ObjectHideFlags: 0
@@ -43387,7 +41459,6 @@ GameObject:
   - component: {fileID: 1701384153}
   - component: {fileID: 1701384156}
   - component: {fileID: 1701384155}
-  - component: {fileID: 1701384154}
   m_Layer: 0
   m_Name: Dialogue - Eric (4)
   m_TagString: Untagged
@@ -43410,19 +41481,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1240210965}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1701384154
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1701384152}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 094b47f47c3714f95908470e84838a77
 --- !u!82 &1701384155
 AudioSource:
   m_ObjectHideFlags: 0
@@ -43562,7 +41620,6 @@ GameObject:
   - component: {fileID: 1706457481}
   - component: {fileID: 1706457483}
   - component: {fileID: 1706457482}
-  - component: {fileID: 1706457484}
   m_Layer: 0
   m_Name: Dialogue - Eric (2)
   m_TagString: Untagged
@@ -43713,19 +41770,6 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
---- !u!114 &1706457484
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1706457480}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 3c9dcf136e0284dcfa92f6d53abc88eb
 --- !u!1 &1724857452
 GameObject:
   m_ObjectHideFlags: 0
@@ -44018,7 +42062,6 @@ GameObject:
   - component: {fileID: 1731823793}
   - component: {fileID: 1731823795}
   - component: {fileID: 1731823794}
-  - component: {fileID: 1731823796}
   m_Layer: 0
   m_Name: Dialogue - Breanna (4)
   m_TagString: Untagged
@@ -44170,19 +42213,6 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
---- !u!114 &1731823796
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1731823792}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 3aaae51405e884ab68125087fba776ae
 --- !u!1 &1744095891
 GameObject:
   m_ObjectHideFlags: 0
@@ -44194,7 +42224,6 @@ GameObject:
   - component: {fileID: 1744095892}
   - component: {fileID: 1744095894}
   - component: {fileID: 1744095893}
-  - component: {fileID: 1744095895}
   m_Layer: 0
   m_Name: Dialogue - Eric (8)
   m_TagString: Untagged
@@ -44345,19 +42374,6 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
---- !u!114 &1744095895
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1744095891}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 068b94f83f5b94d72a3a49aed0e5cb94
 --- !u!1 &1753629009
 GameObject:
   m_ObjectHideFlags: 0
@@ -44495,7 +42511,6 @@ GameObject:
   - component: {fileID: 1783789171}
   - component: {fileID: 1783789173}
   - component: {fileID: 1783789172}
-  - component: {fileID: 1783789174}
   m_Layer: 0
   m_Name: Dialogue - Breanna (4)
   m_TagString: Untagged
@@ -44646,19 +42661,6 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
---- !u!114 &1783789174
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1783789170}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: dfae014050aff4de681c391840fc111b
 --- !u!1 &1790260874
 GameObject:
   m_ObjectHideFlags: 0
@@ -44670,7 +42672,6 @@ GameObject:
   - component: {fileID: 1790260875}
   - component: {fileID: 1790260877}
   - component: {fileID: 1790260876}
-  - component: {fileID: 1790260878}
   m_Layer: 0
   m_Name: Dialogue - Breanna (2)
   m_TagString: Untagged
@@ -44821,19 +42822,6 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
---- !u!114 &1790260878
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1790260874}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: e84942b4293c845529edf012bb987d99
 --- !u!1 &1791241230
 GameObject:
   m_ObjectHideFlags: 0
@@ -45062,34 +43050,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1799009023}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &1799009021 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 446614, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
   m_PrefabInstance: {fileID: 1799009020}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1799009022 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-  m_PrefabInstance: {fileID: 1799009020}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1799009023
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1799009022}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: e089627767f194c5cb2560d0ee13979d
 --- !u!1001 &1799994482
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45157,34 +43124,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1799994485}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &1799994483 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 446614, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
   m_PrefabInstance: {fileID: 1799994482}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1799994484 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-  m_PrefabInstance: {fileID: 1799994482}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1799994485
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1799994484}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 94370b060afe84c8f9ea1d536853a807
 --- !u!1 &1803310868
 GameObject:
   m_ObjectHideFlags: 0
@@ -45477,7 +43423,6 @@ GameObject:
   - component: {fileID: 1810885213}
   - component: {fileID: 1810885215}
   - component: {fileID: 1810885214}
-  - component: {fileID: 1810885216}
   m_Layer: 0
   m_Name: Dialogue - Eric (2)
   m_TagString: Untagged
@@ -45628,19 +43573,6 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
---- !u!114 &1810885216
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1810885212}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 5c6615bfadd7d40b697aa341812571f9
 --- !u!1 &1812862368
 GameObject:
   m_ObjectHideFlags: 0
@@ -45784,7 +43716,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1824908604}
   - component: {fileID: 1824908605}
-  - component: {fileID: 1824908606}
   m_Layer: 0
   m_Name: Show Choices
   m_TagString: Untagged
@@ -47529,19 +45460,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
---- !u!114 &1824908606
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1824908603}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: c80416feace264ae5813214fdfe459d1
 --- !u!1 &1827139498
 GameObject:
   m_ObjectHideFlags: 0
@@ -47609,7 +45527,6 @@ GameObject:
   - component: {fileID: 1829882907}
   - component: {fileID: 1829882910}
   - component: {fileID: 1829882909}
-  - component: {fileID: 1829882908}
   m_Layer: 0
   m_Name: Dialogue - Leilani (10)
   m_TagString: Untagged
@@ -47632,19 +45549,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 583636746}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1829882908
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1829882906}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: e8252fa3d672b4f56a2d431c23d3a590
 --- !u!82 &1829882909
 AudioSource:
   m_ObjectHideFlags: 0
@@ -48172,11 +46076,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -7185135663363208663, guid: 8f1670c9580104ce187ca494c92f827a, type: 3}
       propertyPath: week
-      value: 13
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: -7185135663363208663, guid: 8f1670c9580104ce187ca494c92f827a, type: 3}
       propertyPath: scene
-      value: Apartment
+      value: Dining Hall
       objectReference: {fileID: 0}
     - target: {fileID: -7185135663363208663, guid: 8f1670c9580104ce187ca494c92f827a, type: 3}
       propertyPath: character
@@ -48657,7 +46561,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1912086572}
   - component: {fileID: 1912086573}
-  - component: {fileID: 1912086574}
   m_Layer: 0
   m_Name: Show Choices
   m_TagString: Untagged
@@ -50401,19 +48304,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
---- !u!114 &1912086574
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1912086571}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: d9e9c2175ace74cfcba29b0b3638dfd6
 --- !u!1001 &1913106475
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -50900,34 +48790,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1930962125}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &1930962123 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 446614, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
   m_PrefabInstance: {fileID: 1930962122}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1930962124 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-  m_PrefabInstance: {fileID: 1930962122}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1930962125
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1930962124}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: f84b0e3cc4a2746509e7bf8cdaec450c
 --- !u!1 &1933654682
 GameObject:
   m_ObjectHideFlags: 0
@@ -50939,7 +48808,6 @@ GameObject:
   - component: {fileID: 1933654683}
   - component: {fileID: 1933654685}
   - component: {fileID: 1933654684}
-  - component: {fileID: 1933654686}
   m_Layer: 0
   m_Name: Dialogue - Eric (3)
   m_TagString: Untagged
@@ -51090,19 +48958,6 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
---- !u!114 &1933654686
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1933654682}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 9279dac2fbfdd4fe7a629f86bbfa8d9b
 --- !u!114 &1935749007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51148,7 +49003,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1942602695}
   - component: {fileID: 1935749007}
-  - component: {fileID: 1942815768}
   m_Layer: 0
   m_Name: Enter Actor
   m_TagString: Untagged
@@ -51156,19 +49010,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1942815768
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1942815767}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 5d65fdc10b1cc42f8bebb55f89bb21e4
 --- !u!1 &1949319009
 GameObject:
   m_ObjectHideFlags: 0
@@ -51502,7 +49343,6 @@ GameObject:
   - component: {fileID: 1954864630}
   - component: {fileID: 1954864632}
   - component: {fileID: 1954864631}
-  - component: {fileID: 1954864633}
   m_Layer: 0
   m_Name: Dialogue - Breanna (3)
   m_TagString: Untagged
@@ -51653,19 +49493,6 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
---- !u!114 &1954864633
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1954864629}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 6929f6c3b0bae457da9c313bf9e740c3
 --- !u!1001 &1960646018
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -51733,34 +49560,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1960646021}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &1960646019 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 446614, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
   m_PrefabInstance: {fileID: 1960646018}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1960646020 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-  m_PrefabInstance: {fileID: 1960646018}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1960646021
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1960646020}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: ae6c5792d164c49cabd318cf404e13e4
 --- !u!1 &1976796202
 GameObject:
   m_ObjectHideFlags: 0
@@ -51934,7 +49740,6 @@ GameObject:
   - component: {fileID: 1980981045}
   - component: {fileID: 1980981047}
   - component: {fileID: 1980981046}
-  - component: {fileID: 1980981048}
   m_Layer: 0
   m_Name: Dialogue - Breanna (5)
   m_TagString: Untagged
@@ -52085,19 +49890,6 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
---- !u!114 &1980981048
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1980981044}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: a62bccd8496ef46d3a423993f2953268
 --- !u!1001 &1983114918
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52165,34 +49957,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1983114921}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &1983114919 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 446614, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
   m_PrefabInstance: {fileID: 1983114918}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1983114920 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-  m_PrefabInstance: {fileID: 1983114918}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1983114921
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1983114920}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 53e63b3db88954491a59beccd4b82a89
 --- !u!1001 &1984355641
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52260,34 +50031,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1984355644}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &1984355642 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 446614, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
   m_PrefabInstance: {fileID: 1984355641}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1984355643 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-  m_PrefabInstance: {fileID: 1984355641}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1984355644
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1984355643}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 621992a3b1db449ffa2946e18717595e
 --- !u!1 &1984451107
 GameObject:
   m_ObjectHideFlags: 0
@@ -52516,34 +50266,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1986530754}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &1986530752 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 446614, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
   m_PrefabInstance: {fileID: 1986530751}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1986530753 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-  m_PrefabInstance: {fileID: 1986530751}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1986530754
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1986530753}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 1277c449ea0414cc6b8af1b414ad1ebe
 --- !u!1 &1988529845
 GameObject:
   m_ObjectHideFlags: 0
@@ -52830,7 +50559,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroy_when_finished: 0
-  start_conversation_when_done: {fileID: 0}
+  start_conversation_when_done: {fileID: 1997937893}
   cur_node: 0
   active: 0
   finished_conversation: 0
@@ -52899,7 +50628,6 @@ GameObject:
   - component: {fileID: 2000713767}
   - component: {fileID: 2000713769}
   - component: {fileID: 2000713768}
-  - component: {fileID: 2000713770}
   m_Layer: 0
   m_Name: Dialogue - Breanna (4)
   m_TagString: Untagged
@@ -53050,19 +50778,6 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
---- !u!114 &2000713770
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2000713766}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 4583fbf6935be4736823f6a31a807891
 --- !u!1001 &2017977886
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -53130,34 +50845,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2017977889}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &2017977887 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 446614, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
   m_PrefabInstance: {fileID: 2017977886}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2017977888 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-  m_PrefabInstance: {fileID: 2017977886}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2017977889
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2017977888}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: fab8ec60426fd46a3997512daf07ded6
 --- !u!1 &2028795044
 GameObject:
   m_ObjectHideFlags: 0
@@ -53169,7 +50863,6 @@ GameObject:
   - component: {fileID: 2028795045}
   - component: {fileID: 2028795047}
   - component: {fileID: 2028795046}
-  - component: {fileID: 2028795048}
   m_Layer: 0
   m_Name: Dialogue - Breanna (4)
   m_TagString: Untagged
@@ -53320,19 +51013,6 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
---- !u!114 &2028795048
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2028795044}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: d9c39038c8641480381d4955203c891f
 --- !u!1001 &2033388481
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -53392,34 +51072,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 173630, guid: e5c3c4950667c5c439e2e15d412910f1, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2033388484}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5c3c4950667c5c439e2e15d412910f1, type: 3}
 --- !u!4 &2033388482 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 441770, guid: e5c3c4950667c5c439e2e15d412910f1, type: 3}
   m_PrefabInstance: {fileID: 2033388481}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2033388483 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 173630, guid: e5c3c4950667c5c439e2e15d412910f1, type: 3}
-  m_PrefabInstance: {fileID: 2033388481}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2033388484
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2033388483}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 812f0597ebfac4fdcbfb3f42c9af7921
 --- !u!1 &2039501216
 GameObject:
   m_ObjectHideFlags: 0
@@ -53479,7 +51138,6 @@ GameObject:
   - component: {fileID: 2058281010}
   - component: {fileID: 2058281012}
   - component: {fileID: 2058281011}
-  - component: {fileID: 2058281013}
   m_Layer: 0
   m_Name: Dialogue - Eric (7)
   m_TagString: Untagged
@@ -53631,19 +51289,6 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
---- !u!114 &2058281013
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2058281009}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: c9ad1a169864f478e908b4ff32faff0f
 --- !u!1001 &2066193366
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -53793,7 +51438,6 @@ GameObject:
   - component: {fileID: 2072425837}
   - component: {fileID: 2072425840}
   - component: {fileID: 2072425839}
-  - component: {fileID: 2072425838}
   m_Layer: 0
   m_Name: Dialogue - Breanna (4)
   m_TagString: Untagged
@@ -53816,19 +51460,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1588176051}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2072425838
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2072425836}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 6929f6c3b0bae457da9c313bf9e740c3
 --- !u!82 &2072425839
 AudioSource:
   m_ObjectHideFlags: 0
@@ -54030,7 +51661,6 @@ GameObject:
   - component: {fileID: 2102207008}
   - component: {fileID: 2102207010}
   - component: {fileID: 2102207009}
-  - component: {fileID: 2102207011}
   m_Layer: 0
   m_Name: Dialogue - Leilani (3)
   m_TagString: Untagged
@@ -54181,19 +51811,6 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
---- !u!114 &2102207011
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2102207007}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: fb8f1a7096db84cb98eefdffb4476b31
 --- !u!1 &2110971801
 GameObject:
   m_ObjectHideFlags: 0
@@ -54205,7 +51822,6 @@ GameObject:
   - component: {fileID: 2110971802}
   - component: {fileID: 2110971804}
   - component: {fileID: 2110971803}
-  - component: {fileID: 2110971805}
   m_Layer: 0
   m_Name: Dialogue - Breanna (7)
   m_TagString: Untagged
@@ -54356,19 +51972,6 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
---- !u!114 &2110971805
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2110971801}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: e7410fd13506e4fbbb146ebc04a8395d
 --- !u!1 &2113181172
 GameObject:
   m_ObjectHideFlags: 0
@@ -54597,34 +52200,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2114783139}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &2114783137 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 446614, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
   m_PrefabInstance: {fileID: 2114783136}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2114783138 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-  m_PrefabInstance: {fileID: 2114783136}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2114783139
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2114783138}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 05248d41dd0e24767beee0a4a2bea000
 --- !u!1001 &2115417495
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54692,34 +52274,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2115417498}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &2115417496 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 446614, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
   m_PrefabInstance: {fileID: 2115417495}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2115417497 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-  m_PrefabInstance: {fileID: 2115417495}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2115417498
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2115417497}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 53f9d6073e4d94d1b8c2cb7f66e35253
 --- !u!1001 &2117385549
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54787,34 +52348,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 126076, guid: 05eddae6a7ea19a4db7b140e5865f0ca, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2117385552}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05eddae6a7ea19a4db7b140e5865f0ca, type: 3}
 --- !u!4 &2117385550 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 403690, guid: 05eddae6a7ea19a4db7b140e5865f0ca, type: 3}
   m_PrefabInstance: {fileID: 2117385549}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2117385551 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 126076, guid: 05eddae6a7ea19a4db7b140e5865f0ca, type: 3}
-  m_PrefabInstance: {fileID: 2117385549}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2117385552
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2117385551}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 5e83ae506b4054609bee392094e5a21d
 --- !u!1 &2118029761
 GameObject:
   m_ObjectHideFlags: 0
@@ -54826,7 +52366,6 @@ GameObject:
   - component: {fileID: 2118029762}
   - component: {fileID: 2118029764}
   - component: {fileID: 2118029763}
-  - component: {fileID: 2118029765}
   m_Layer: 0
   m_Name: Dialogue - Eric (3)
   m_TagString: Untagged
@@ -54977,19 +52516,6 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
---- !u!114 &2118029765
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2118029761}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 63577e1b82edd438a8afe6aaaf08e456
 --- !u!1001 &2118780475
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -55057,34 +52583,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2118780478}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &2118780476 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 446614, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
   m_PrefabInstance: {fileID: 2118780475}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2118780477 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-  m_PrefabInstance: {fileID: 2118780475}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2118780478
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2118780477}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 13405367a349449e2b82384ecc8d3044
 --- !u!1 &2141930554
 GameObject:
   m_ObjectHideFlags: 0
@@ -55096,7 +52601,6 @@ GameObject:
   - component: {fileID: 2141930555}
   - component: {fileID: 2141930558}
   - component: {fileID: 2141930557}
-  - component: {fileID: 2141930556}
   m_Layer: 0
   m_Name: Dialogue - Breanna (5)
   m_TagString: Untagged
@@ -55119,19 +52623,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1588176051}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2141930556
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2141930554}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 6929f6c3b0bae457da9c313bf9e740c3
 --- !u!82 &2141930557
 AudioSource:
   m_ObjectHideFlags: 0
@@ -57053,34 +54544,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 816927175509026580}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &816927175509026578 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 446614, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
   m_PrefabInstance: {fileID: 816927175509026577}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &816927175509026579 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-  m_PrefabInstance: {fileID: 816927175509026577}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &816927175509026580
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 816927175509026579}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 95000b13a546140909b7172a28d53061
 --- !u!1001 &816927175728910889
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -57193,7 +54663,6 @@ GameObject:
   - component: {fileID: 816927175780766830}
   - component: {fileID: 816927175780766824}
   - component: {fileID: 816927175780766831}
-  - component: {fileID: 816927175780766832}
   m_Layer: 0
   m_Name: Dialogue - Leilani (4)
   m_TagString: Untagged
@@ -57313,19 +54782,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &816927175780766832
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 816927175780766829}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: f32159bb752ae41d889e0427fcc783ea
 --- !u!1 &816927175875858468
 GameObject:
   m_ObjectHideFlags: 0
@@ -57606,34 +55062,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 816927176115545566}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
 --- !u!4 &816927176115545564 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 446614, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
   m_PrefabInstance: {fileID: 816927176115545563}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &816927176115545565 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 154954, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
-  m_PrefabInstance: {fileID: 816927176115545563}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &816927176115545566
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 816927176115545565}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: 182c8eef3763d463c8a3d7076d5c77a8
 --- !u!82 &816927176396001096
 AudioSource:
   m_ObjectHideFlags: 0
@@ -57773,7 +55208,6 @@ GameObject:
   - component: {fileID: 816927176396001103}
   - component: {fileID: 816927176396001097}
   - component: {fileID: 816927176396001096}
-  - component: {fileID: 816927176396001104}
   m_Layer: 0
   m_Name: Dialogue - Leilani
   m_TagString: Untagged
@@ -57796,19 +55230,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1467312710}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &816927176396001104
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 816927176396001102}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 756777706}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::VNEngine.EditorTools.NodeExportTag
-  _id: fc6a68171c3fc48d5a1e806baf6e44e8
 --- !u!1001 &816927176932076935
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -58000,6 +55421,7 @@ Transform:
   - {fileID: 3996241379280855476}
   - {fileID: 6597959447936740839}
   - {fileID: 1023310562201069533}
+  - {fileID: 1106531593}
   m_Father: {fileID: 2235770250652465122}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &887022480865831158
@@ -70556,7 +67978,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &4852236475320282877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72692,7 +70114,7 @@ MonoBehaviour:
   fetch_localized_stat_value: 0
   dialogue_from: 0
   localized_key: 
-  text: That guy is like my favorite TikToker, he has like a million followers.
+  text: That guy is like my favorite YipYapper, he has like a million followers.
   talking_beeps: {fileID: 0}
   darken_all_other_characters: 1
   bring_speaker_to_front: 1
@@ -77124,7 +74546,7 @@ GameObject:
   - component: {fileID: 907521018258681351}
   - component: {fileID: 7653717930654532135}
   m_Layer: 0
-  m_Name: Start Study Hall
+  m_Name: Bad Study
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

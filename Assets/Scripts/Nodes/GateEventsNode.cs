@@ -69,7 +69,6 @@ namespace VNEngine
                 var req = eventRequirements[i];
                 if (req == null || string.IsNullOrEmpty(req.key))
                     continue;
-
                 bool completed = GameEvents.IsCustomEventCompleted(req.key);
 
                 if (req.check == EventCheckType.Completed && !completed)

@@ -662,8 +662,9 @@ void OnGUI()
             {
                 if (tag == null) continue;
 
+                var go = tag.gameObject;
                 Undo.DestroyObjectImmediate(tag);
-                EditorUtility.SetDirty(tag.gameObject);
+                EditorUtility.SetDirty(go);
                 removed++;
             }
 

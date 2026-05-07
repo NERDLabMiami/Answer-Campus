@@ -45,7 +45,7 @@ namespace VNEngine
 
         public override void Run_Node()
         {
-           // Debug.Log("Running Dialogue: " + gameObject.name);
+            Debug.Log("Running Dialogue: " + gameObject.name);
             actual_actor = VNSceneManager.GetStringFromSource(actor, actor_name_from);
 
             VNSceneManager.scene_manager.Show_UI(true);  // Ensure dialogue panel is visible

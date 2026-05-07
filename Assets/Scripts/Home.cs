@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;          // Optional, only used if you wire phoneButtonImage
@@ -7,6 +8,9 @@ public class Home : MonoBehaviour
 {
     [Header("Phone UI Root (inactive until opened)")]
     public GameObject phone;
+
+    [Header("Home Objects")]
+    public List<HomeObject> homeObjects;
 
     [Header("Menu Button Indicator")]
     public Animator phoneButtonAnimator;          // Animator on the MENU button, not the Phone GO
@@ -20,9 +24,20 @@ public class Home : MonoBehaviour
     private const string TRIG_DEFAULT = "default";
     private const string STAT_PHONE_HAS_NEW = "PhoneHasNewActivity";
 
+
     private void OnEnable()
     {
         RefreshPhoneButtonIndicator();
+        RefreshHomeObjects();
+    }
+
+    public void RefreshHomeObjects()
+    {
+        if (homeObjects == null) return;
+        foreach (var obj in homeObjects)
+        {
+            if (obj != null) obj.Refresh();
+        }
     }
 
     public void RefreshPhoneButtonIndicator()

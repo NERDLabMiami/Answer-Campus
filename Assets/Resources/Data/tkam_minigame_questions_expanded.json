@@ -249,24 +249,19 @@
       "week": "7",
       "questions": [
         {
-          "question": "Not loud; kept under control",
-          "answer": "quiet",
-          "definition": "Making little noise; restrained."
+          "question": "What is right",
+          "answer": "moral",
+          "definition": "Just in behavior"
         },
         {
-          "question": "A short break or hesitation",
-          "answer": "pause",
-          "definition": "A moment to stop and think."
+          "question": "After careful consideration",
+          "answer": "judge",
+          "definition": "To form an opinion"
         },
         {
           "question": "Without motion; calm and quiet",
-          "answer": "still",
+          "answer": "truth",
           "definition": "Not moving; calm."
-        },
-        {
-          "question": "To reduce the volume",
-          "answer": "lower",
-          "definition": "To make quieter; reduce intensity."
         }
       ]
     },

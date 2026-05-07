@@ -8671,6 +8671,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: 5508a7a01a7b14c42a9181b9ad9ad4e1, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -16349,6 +16351,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: a33ae161e1aae09499bd1de5412bf03f, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -17232,6 +17236,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: a33ae161e1aae09499bd1de5412bf03f, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -18139,6 +18145,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: cda8427221d0b054ea8e3e0e19804cdf, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -20866,6 +20874,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: 7f80153007d734b408103605110c1865, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -20918,6 +20928,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: a7a948a6f69c9954aa7561743748c324, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -29157,6 +29169,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: a33ae161e1aae09499bd1de5412bf03f, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -34315,6 +34329,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: cda8427221d0b054ea8e3e0e19804cdf, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -36116,6 +36132,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: a7a948a6f69c9954aa7561743748c324, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -36168,6 +36186,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: 222a42e60edf5f244baad63c9d246dc2, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -37249,6 +37269,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: 
   new_image: {fileID: 21300000, guid: e5f6deeda3b4e934dbf61fd9d1ced5aa, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -39456,6 +39478,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: 7f80153007d734b408103605110c1865, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -40783,6 +40807,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: 89a7ffa498c22ee4890eceff649913dc, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -43228,6 +43254,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: 7f80153007d734b408103605110c1865, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -43648,6 +43676,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: cbcdfb4a2e874e24a8489b00a0153393, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
@@ -45532,6 +45562,8 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Deepak
   new_image: {fileID: 21300000, guid: cda8427221d0b054ea8e3e0e19804cdf, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0

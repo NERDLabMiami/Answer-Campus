@@ -91,7 +91,7 @@ namespace VNEngine
             if (_activeButtons.Count > 0)
             {
                 EventSystem.current.SetSelectedGameObject(null);
-                EventSystem.current.SetSelectedGameObject(_activeButtons[0].gameObject);
+//                EventSystem.current.SetSelectedGameObject(_activeButtons[0].gameObject);
             }
         }
 private bool MeetsAllRequirements(Choice c)

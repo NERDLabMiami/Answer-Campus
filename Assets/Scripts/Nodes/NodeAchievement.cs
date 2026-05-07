@@ -12,7 +12,19 @@ namespace VNEngine
         // Called initially when the node is run, put most of your logic here
         public override void Run_Node()
         {
-/*            
+            string achievementKey = "Achievement_" + achievement;
+            if (!StatsManager.Get_Boolean_Stat(achievementKey))
+            {
+                StatsManager.Set_Boolean_Stat(achievementKey, true);
+                Debug.Log("Achievement Complete: " + achievementKey);
+            }
+            else
+            {
+                Debug.LogWarning("Achievement " + achievementKey + " already completed");
+            }
+
+            
+            /*            
             Steamworks.SteamUserStats.GetAchievement(achievement, out achievementCompleted);
 
             if(achievementCompleted == false)
