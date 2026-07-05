@@ -1,6 +1,5 @@
 using UnityEngine;
 using System.Collections.Generic;
-using FMOD.Studio;
 using FMODUnity;
 
 
@@ -11,8 +10,8 @@ namespace VNEngine
         [System.Serializable]
         public class StageConversation
         {
-            public Character character; // Exact match, e.g., "Breanna"
-            public int stage;
+            public Character character;
+            [HideInInspector] public int stage; // auto-synced from StageRouteIndex via OnValidate
             [Min(0)] public int unlockWeek = 0;
             public ConversationManager conversation;
         }
@@ -25,9 +24,7 @@ namespace VNEngine
         public EventReference musicFMODEventName;
         public List<ConversationManager> fallbackConversations;
         public ConversationManager repeatableFallback;
-        private bool hasAudioManager = false;
-        private EventInstance musicFMODEvent;
-        private EventInstance ambientFMODEvent;
+
 #if UNITY_EDITOR
         private void OnValidate()
         {
@@ -46,13 +43,13 @@ namespace VNEngine
             {
                 if (meta == null) continue;
 
-                // Try to find an existing row with same character + stage
+                // Match by character + unlockWeek (stage is auto-computed, unlockWeek is stable)
                 StageConversation existing = null;
                 if (routes != null)
                 {
                     existing = routes.Find(r =>
                         r.character == meta.character &&
-                        r.stage == meta.stage);
+                        r.unlockWeek == meta.unlockWeek);
                 }
 
                 var sc = existing ?? new StageConversation();
@@ -101,9 +98,7 @@ public override void Run_Node()
         if (loc.location == currentSceneName)
             pinsHere.Add(loc);
     }
-
-    Debug.Log($"[ROUTER] pinsHere={pinsHere.Count} @ '{currentSceneName}'");
-
+    
     // Try each pin (newest first) until we successfully route
     foreach (var loc in pinsHere)
     {
@@ -160,6 +155,8 @@ public override void Run_Node()
             PlayerPrefsExtra.SetList("characterLocations", pins);
             if (removed > 0)
                 Debug.Log($"[LocationRouter] Cleared invite for {loc.character} @ {currentSceneName} after routing.");
+
+            TextThreads.ClearInviteRepliesForLocation(loc.character, currentSceneName);
 
             route.conversation.Start_Conversation();
             go_to_next_node = false;

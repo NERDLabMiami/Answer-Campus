@@ -10,7 +10,7 @@ public class StageRouteIndex : ScriptableObject
     {
         public Character character;
         public LocationData location;
-        public int stage;
+        [HideInInspector] public int stage; // auto-assigned by OnValidate; do not set manually
         [Min(0)] public int unlockWeek;
     }
 
@@ -93,9 +93,26 @@ public class StageRouteIndex : ScriptableObject
 #if UNITY_EDITOR
     private void OnValidate()
     {
-        // Repair old assets that might have null here
         if (routes == null)
             routes = new List<StageRouteMeta>();
+
+        // Auto-assign stage as the 1-based ordinal within each (character, location) group,
+        // sorted by unlockWeek. Designers only need to set character, location, and unlockWeek.
+        var groups = new Dictionary<(Character, string), List<StageRouteMeta>>();
+        foreach (var meta in routes)
+        {
+            if (meta == null || meta.location == null) continue;
+            var key = (meta.character, meta.location.sceneName ?? meta.location.name ?? "");
+            if (!groups.ContainsKey(key)) groups[key] = new List<StageRouteMeta>();
+            groups[key].Add(meta);
+        }
+        foreach (var group in groups.Values)
+        {
+            group.Sort((a, b) => a.unlockWeek.CompareTo(b.unlockWeek));
+            for (int i = 0; i < group.Count; i++)
+                group[i].stage = i + 1;
+        }
+        UnityEditor.EditorUtility.SetDirty(this);
     }
     public void EditorReplaceRoutes(List<StageRouteMeta> newRoutes)
     {

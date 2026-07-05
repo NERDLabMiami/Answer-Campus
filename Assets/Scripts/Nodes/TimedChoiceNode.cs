@@ -12,11 +12,6 @@ namespace VNEngine
         private Coroutine timerCoroutine;
         private Button[] buttons;
 
-        private void Start()
-        {
-        }
-
-
         public override void Run_Node()
         {
             Debug.Log("Timed Choice: " + timer);
@@ -47,12 +42,9 @@ namespace VNEngine
 
         private IEnumerator Timer()
         {
-            Debug.Log("Timer Running...");
             StartCoroutine(DesaturateOverTime(timer));
             yield return new WaitForSeconds(timer);
             Finish_Node();
-//            UIManager.ui_manager.choice_panel.SetActive(false); // Assuming UIManager.ui_manager is a valid reference
-//            Debug.Log("Starting Next Conversation");
         }
 
         private IEnumerator DesaturateOverTime(float time)
@@ -65,8 +57,6 @@ namespace VNEngine
 
                 for (int i = 0; i < buttons.Length; i++)
                 {
-                    Debug.Log("Desaturation..." + i);
-
                     Color initialColor = buttons[i].targetGraphic.color;
                     float grayscale = initialColor.r * 0.299f + initialColor.g * 0.587f + initialColor.b * 0.114f;
                     Color desaturatedColor = Color.Lerp(initialColor, new Color(grayscale, grayscale, grayscale, initialColor.a), t);
@@ -81,8 +71,6 @@ namespace VNEngine
 
             for (int i = 0; i < buttons.Length; i++)
             {
-                Debug.Log("Desaturation2..." + i);
-
                 Color initialColor = buttons[i].targetGraphic.color;
                 // Ensure the final color is fully desaturated
                 float finalGrayscale = initialColor.r * 0.299f + initialColor.g * 0.587f + initialColor.b * 0.114f;
@@ -95,12 +83,17 @@ namespace VNEngine
 
         public override void Finish_Node()
         {
-            Debug.Log("Finishing Timed Choice Node");
-            choiceNode.Clear_Choices();        // Hide the UI
-            VNSceneManager.current_conversation.Finish_Conversation();
-//            default_choice.Start_Conversation();
-
-//            base.Finish_Node();     // Continue conversation
+            StopAllCoroutines();
+            if (choiceNode != null) choiceNode.Clear_Choices();
+            if (default_choice != null)
+            {
+                VNSceneManager.current_conversation.Finish_Conversation();
+                default_choice.Start_Conversation();
+            }
+            else
+            {
+                base.Finish_Node();
+            }
         }
 
     }

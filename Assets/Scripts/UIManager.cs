@@ -10,6 +10,9 @@ namespace VNEngine
     {
         public static UIManager ui_manager;
 
+        public static event System.Action OnNodeCompleted;
+        internal static void NotifyNodeCompleted() => OnNodeCompleted?.Invoke();
+
         // CSV to load so our UI can be put into the proper language
         public TextAsset Localized_UI_CSV;
         // Each language has a dictionary, then that dictionary is searched for a specific key

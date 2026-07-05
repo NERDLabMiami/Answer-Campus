@@ -62,19 +62,43 @@ public static class TextThreads
         playerMsg.unixTime = Now();
         playerMsg.isPlayer = true;
         playerMsg.quickReplies = null;
-
         all.Add(playerMsg);
 
         // Clear quick replies on the most recent NPC message for this thread.
         var lastNpcMsg = all.LastOrDefault(m => !m.isPlayer && m.from == to && m.quickReplies != null && m.quickReplies.Count > 0);
         if (lastNpcMsg != null) lastNpcMsg.quickReplies = null;
 
-        SaveAll(all);
+        // Append NPC response if the reply option has one.
+        if (!string.IsNullOrWhiteSpace(reply.npcResponse))
+        {
+            var npcMsg = new TextMessage(to, reply.npcResponse, location: null);
+            npcMsg.unixTime = Now() + 1; // one second later to keep ordering deterministic
+            npcMsg.isPlayer = false;
+            npcMsg.quickReplies = null;
+            all.Add(npcMsg);
+        }
 
-        // Optional: branch on reply.payload here
-        // VNEngine.StatsManager.Set_Boolean_Stat($"Replied_{to}_{reply.payload}", true);
+        SaveAll(all);
     }
     
+    public static void ClearInviteRepliesForLocation(Character character, string location)
+    {
+        var all = GetAll();
+        bool changed = false;
+        for (int i = all.Count - 1; i >= 0; i--)
+        {
+            var m = all[i];
+            if (!m.isPlayer && m.from == character && m.location == location
+                && m.quickReplies != null && m.quickReplies.Count > 0)
+            {
+                m.quickReplies = null;
+                changed = true;
+                break;
+            }
+        }
+        if (changed) SaveAll(all);
+    }
+
     static long Now() => DateTimeOffset.UtcNow.ToUnixTimeSeconds();
 }
 public class TextMessageList : MonoBehaviour
@@ -197,6 +221,6 @@ public class TextMessageList : MonoBehaviour
 
 
         Debug.Log("Going to " + location);
-        SceneManager.LoadScene(location);
+        HomeCutsceneController.NavigateOut(location);
     }
 }

@@ -254,6 +254,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -430,5 +431,7 @@ MonoBehaviour:
     unixTime: 0
     isPlayer: 0
     location: 
+    unlockWeek: 0
     quickReplies: []
   profile: {fileID: 212983704609868701}
+  threadProfileImage: {fileID: 0}

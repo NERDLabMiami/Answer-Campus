@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: Dining Hall
   m_EditorClassIdentifier: Assembly-CSharp::LocationData
   sceneName: Dining Hall
-  displayName: Dining Hall
+  displayName: Winchester Marketplace
+  buildingName: Winchester Residential College
   mapIcon: {fileID: 21300000, guid: 86fe68a9e9e52ad459aa5730c6108530, type: 3}
+  phoneIcon: {fileID: 0}

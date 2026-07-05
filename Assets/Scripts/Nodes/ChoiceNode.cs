@@ -407,8 +407,11 @@ namespace VNEngine
         public void AddListeners(int choice_number)
         {
             Button_Events[choice_number].AddListener(delegate { Choice_Clicked(choice_number); });
-            Button_Events[choice_number].AddListener(Clear_Choices); // Add call to finish this node and hide UI to event listener
-            UIManager.ui_manager.choice_buttons[choice_number].onClick = Button_Events[choice_number]; // Set events
+            Button_Events[choice_number].AddListener(Clear_Choices);
+            var timedNode = GetComponent<TimedChoiceNode>();
+            if (timedNode != null)
+                Button_Events[choice_number].AddListener(timedNode.StopTimer);
+            UIManager.ui_manager.choice_buttons[choice_number].onClick = Button_Events[choice_number];
         }
 
 

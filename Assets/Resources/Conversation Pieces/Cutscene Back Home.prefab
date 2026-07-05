@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2180574896097361886
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6029872425083904624}
+  - component: {fileID: 7776910701698501432}
+  m_Layer: 0
+  m_Name: Cutscene Back Home
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6029872425083904624
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2180574896097361886}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7776910701698501432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2180574896097361886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 838bb3af63d4e484ba62a29575ec95dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NodeCutscene
+  go_to_next_node: 1
+  executed_from_load: 0
+  dateText: 
+  descriptionText: 
+  holdDuration: 1.8
+  backgroundSprite: {fileID: 0}
+  targetScene: Home
+  overlayPrefab: {fileID: 3776360296441089303, guid: ec4d7450e32b341eb9aa56464e82352b, type: 3}
+  triggerSave: 1
+  saveMessagePrefab: {fileID: 9204127507081154870, guid: 3a8c864a3fca84fcbb7e2405b1f0979d, type: 3}

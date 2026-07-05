@@ -51,24 +51,6 @@ namespace VNEngine
         }
 
 
-        // outputs the content of a 2D array, useful for checking the importer
-        public static void DebugOutputGrid(string[,] grid)
-        {
-            string textOutput = "";
-            for (int y = 0; y < grid.GetUpperBound(1); y++)
-            {
-                for (int x = 0; x < grid.GetUpperBound(0); x++)
-                {
-
-                    textOutput += grid[x, y];
-                    textOutput += "|";
-                }
-                textOutput += "\n";
-            }
-            Debug.Log(textOutput);
-        }
-
-
         // Splits a CSV file into a 2D string array
         private static string[,] SplitCsvGrid(string csvText)
         {

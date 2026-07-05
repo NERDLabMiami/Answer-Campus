@@ -15,9 +15,9 @@ namespace VNEngine
 
         public override void Run_Node()
         {
-            if (sound_clip == null || !use_audiosource_on_this_object)
+            if (use_audiosource_on_this_object)
                 gameObject.GetComponent<AudioSource>().Play();
-            else
+            else if (sound_clip != null)
                 AudioManager.audio_manager.Play_Sound_Effect(sound_clip);
 
             Finish_Node();

@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: Green
   m_EditorClassIdentifier: Assembly-CSharp::LocationData
   sceneName: Green
-  displayName: Campus Green
+  displayName: Scholars Green
+  buildingName: 
   mapIcon: {fileID: 21300000, guid: 54ec17753359b284b871ac8f5402cd22, type: 3}
+  phoneIcon: {fileID: 0}

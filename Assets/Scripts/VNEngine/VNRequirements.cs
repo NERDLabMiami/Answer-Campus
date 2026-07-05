@@ -35,4 +35,19 @@ namespace VNEngine
         public FootballCheckType check = FootballCheckType.None;
         public float threshold = 0f;
     }
+
+    [Serializable]
+    public class AffinityRequirement
+    {
+        public Character character;
+        public NumberCompare compare;
+        public float value;
+    }
+
+    [Serializable]
+    public class AffinityDelta
+    {
+        public Character character;
+        public float amount;
+    }
 }

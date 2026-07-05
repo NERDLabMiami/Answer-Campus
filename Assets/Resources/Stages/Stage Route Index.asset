@@ -16,52 +16,52 @@ MonoBehaviour:
   - character: 2
     location: {fileID: 11400000, guid: 13ecdb615fef44fa39beb0c740c54ec6, type: 2}
     stage: 1
-    unlockWeek: 1
+    unlockWeek: 0
   - character: 4
     location: {fileID: 11400000, guid: 10c374189ea9e43938841b7044e774eb, type: 2}
-    stage: 2
-    unlockWeek: 3
+    stage: 1
+    unlockWeek: 2
   - character: 4
     location: {fileID: 11400000, guid: 61c4b036abc3d411c87452e400441761, type: 2}
-    stage: 3
+    stage: 1
     unlockWeek: 4
   - character: 4
     location: {fileID: 11400000, guid: 61c4b036abc3d411c87452e400441761, type: 2}
-    stage: 4
-    unlockWeek: 8
+    stage: 2
+    unlockWeek: 6
   - character: 4
     location: {fileID: 11400000, guid: d9d2fd6912399465ca8ea92a00d2b5bf, type: 2}
-    stage: 5
+    stage: 1
+    unlockWeek: 6
+  - character: 2
+    location: {fileID: 11400000, guid: af469bbe3d0ae48228f9605b4b4ad02c, type: 2}
+    stage: 1
+    unlockWeek: 7
+  - character: 2
+    location: {fileID: 11400000, guid: 13ecdb615fef44fa39beb0c740c54ec6, type: 2}
+    stage: 2
+    unlockWeek: 7
+  - character: 4
+    location: {fileID: 11400000, guid: 61c4b036abc3d411c87452e400441761, type: 2}
+    stage: 3
+    unlockWeek: 8
+  - character: 4
+    location: {fileID: 11400000, guid: 13ecdb615fef44fa39beb0c740c54ec6, type: 2}
+    stage: 1
     unlockWeek: 8
   - character: 1
     location: {fileID: 11400000, guid: af469bbe3d0ae48228f9605b4b4ad02c, type: 2}
     stage: 1
-    unlockWeek: 9
-  - character: 2
-    location: {fileID: 11400000, guid: 13ecdb615fef44fa39beb0c740c54ec6, type: 2}
-    stage: 2
-    unlockWeek: 9
+    unlockWeek: 10
   - character: 1
     location: {fileID: 11400000, guid: af469bbe3d0ae48228f9605b4b4ad02c, type: 2}
     stage: 2
     unlockWeek: 11
-  - character: 1
-    location: {fileID: 11400000, guid: af469bbe3d0ae48228f9605b4b4ad02c, type: 2}
-    stage: 3
-    unlockWeek: 12
   - character: 4
     location: {fileID: 11400000, guid: 61c4b036abc3d411c87452e400441761, type: 2}
-    stage: 6
-    unlockWeek: 11
-  - character: 4
-    location: {fileID: 11400000, guid: 13ecdb615fef44fa39beb0c740c54ec6, type: 2}
-    stage: 7
+    stage: 4
     unlockWeek: 12
-  - character: 4
-    location: {fileID: 11400000, guid: 61c4b036abc3d411c87452e400441761, type: 2}
-    stage: 8
-    unlockWeek: 14
   - character: 4
     location: {fileID: 11400000, guid: 10c374189ea9e43938841b7044e774eb, type: 2}
-    stage: 9
-    unlockWeek: 16
+    stage: 2
+    unlockWeek: 15

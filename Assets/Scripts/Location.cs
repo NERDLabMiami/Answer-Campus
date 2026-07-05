@@ -20,11 +20,6 @@ public static class LocationRegistry
             _byData.Remove(loc.data);
     }
 
-    public static Location Get(LocationData data)
-    {
-        _byData.TryGetValue(data, out var loc);
-        return loc;
-    }
 }
 
 public class Location : MonoBehaviour
@@ -50,11 +45,7 @@ public class Location : MonoBehaviour
     {
         FMODAudioManager.Instance.FadeOutAmbient(1f);
         FMODAudioManager.Instance.FadeOutMusic(1f);
-        LocationRouter.Go(scene);
-    }
-    public void ClearPlayerPrefs()
-    {
-        PlayerPrefs.DeleteAll();
+        HomeCutsceneController.NavigateOut(scene, data != null ? data.displayName : null);
     }
     public void SetTimestamp()
     {

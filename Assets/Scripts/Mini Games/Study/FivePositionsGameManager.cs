@@ -12,6 +12,7 @@ public class QuestionAnswerPair
     public string definition;
     public string answer; // Must be 5 letters
     public bool alreadyUsed = false;
+    public bool isPrimary = false;
 }
 
 public class FivePositionsGameManager : MonoBehaviour
@@ -22,7 +23,6 @@ public class FivePositionsGameManager : MonoBehaviour
     public SpawnMode spawnMode;    private int lastSpawnedColumn = -1;
     public int maxWrongGuesses = 3;
 
-    [Header("Word List")] public List<WordDefinition> possibleWords;
     public StudyQuestionLoader questionLoader;
 
     
@@ -63,7 +63,6 @@ public class FivePositionsGameManager : MonoBehaviour
     private string alphabet = "abcdefghijklmnopqrstuvwxyz";
 
     private int score = 0;
-    private AudioSource audioSource;
     [Header("Letter Timing")]
     public float preDropHangTime = 0.35f;
 
@@ -98,8 +97,6 @@ public class FivePositionsGameManager : MonoBehaviour
     public void LaunchExam()
     {
         Initialize();
-        // Ensure this does NOT auto-start elsewhere (remove any auto StartGame() in Initialize)
-        //SetMode(GameMode.Exam);
 
         if (pendingChallengeProfile != null)
             ConfigureChallenge(pendingChallengeProfile);
@@ -131,7 +128,6 @@ public class FivePositionsGameManager : MonoBehaviour
                 sr.sortingOrder = 100;
             }
 
-            Debug.Log($"Box visual {i} spawned at world Y = {worldPos.y:F2}");
         }
 
 
@@ -218,6 +214,8 @@ public class FivePositionsGameManager : MonoBehaviour
         if (questionLoader != null)
             questionLoader.currentMode = currentMode;
         questionLoader.LoadQuestionsForMode();
+        if (currentMode == GameMode.Exam && questionLoader.currentQuestions.Count > 0)
+            maxWordAttempts = questionLoader.currentQuestions.Count;
         // Start the first countdown
         StartCoroutine(CountdownCoroutine());
         
@@ -441,7 +439,6 @@ public class FivePositionsGameManager : MonoBehaviour
         preDropHangTime = profile.preDropHangTime;
         strikesPerWord = profile.strikesPerWord;
         maxWordAttempts = profile.maxWordAttempts;
-        // timers.SetActive(profile.showTimer);
         timers.SetActive(true);
 
         // Decide whether we're using definitions or questions
@@ -459,33 +456,6 @@ public class FivePositionsGameManager : MonoBehaviour
         }
 
         return questionLoader.GetRandomQuestion();
-    }
-
-    /// <summary>
-    /// Checks if all 5 boxes are filled.
-    /// </summary>
-    private void ClearAllBoxes()
-    {
-        for (int i = 0; i < boxFilled.Length; i++)
-        {
-            boxFilled[i] = false;
-        }
-    }
-    private void ResetAttemptUIAndState()
-    {
-        // Clear UI and correctness state
-        for (int i = 0; i < 5; i++)
-        {
-            boxFilled[i] = false;
-            if (boxLetterDisplays[i] != null)
-                boxLetterDisplays[i].text = " ";
-        }
-
-        // Clear in-flight letters + active columns
-        clearLeftoverLetters();           // NOTE: your existing method also destroys eraser/box visuals.
-        // If you want to keep eraser/box visuals between rounds,
-        // create a separate method that only clears letters.
-        activeColumns.Clear();
     }
 
 // Use this instead of clearLeftoverLetters() if you want to keep eraser/box visuals alive:
@@ -532,7 +502,6 @@ public class FivePositionsGameManager : MonoBehaviour
             if (!filled) return false;
             filledCount++;
         }
-        Debug.Log($"Boxes filled: {filledCount}/5");
         return true;
     }
 
@@ -561,11 +530,9 @@ public class FivePositionsGameManager : MonoBehaviour
             if (boxLetterDisplays[boxIndex] != null) {
                 boxLetterDisplays[boxIndex].text = arrivedLetter.ToString();
             }
-//            audioSource.PlayOneShot(correctClip);
             DestroyLettersOnSameX(letterObj.transform.position.x);
         } else {
             // Incorrect letter
-//            audioSource.PlayOneShot(incorrectClip);
             // Two different rule sets:
             // 1) Timer mode -> apply time penalty (and optional feedback)
             // 2) No-timer (Group/Exam) -> strikes-per-word; fail word => clear attempt + new word
@@ -664,33 +631,14 @@ public class FivePositionsGameManager : MonoBehaviour
                 }
                 boxFilled[i] = false;
             }
-            // Start the timer coroutine right away 
+            // Start the timer coroutine right away
             StartCoroutine(GameTimerCoroutine());
-            questionLoader.LoadQuestionsForMode();
             // Run another "3-2-1" countdown, which will unpause the timer again
             StartCoroutine(CountdownCoroutine(false));
             
             
             
         }
-    }
-
-    /// <summary>
-    /// Selects a random 5-letter word from 'possibleWords'.
-    /// </summary>
-    private WordDefinition SelectRandomFiveLetterWord() {
-        List<WordDefinition> validFiveLetterWords = new List<WordDefinition>();
-        foreach (WordDefinition wd in possibleWords) {
-            if (wd.word.Length == 5) {
-                validFiveLetterWords.Add(wd);
-            }
-        }
-
-        if (validFiveLetterWords.Count > 0) {
-            int randIndex = Random.Range(0, validFiveLetterWords.Count);
-            return validFiveLetterWords[randIndex];
-        }
-        return null;
     }
 
     /// <summary>
@@ -707,20 +655,38 @@ public class FivePositionsGameManager : MonoBehaviour
     /// </summary>
     private IEnumerator EndGame()
     {
-        Debug.Log("GAME END TRIGGERED");
-        Debug.Log($"Boxes Filled: {AllBoxesFilled()} Wrong Guess: {wrongGuessCount} Max Wrong {maxWrongGuesses} Time Left: {timeLeft}");
         gameIsOver = true;
         if (spawnRoutine != null)
             StopCoroutine(spawnRoutine);
         spawnRoutine = null;
         clearLeftoverLetters();
 
-        // Log score to StatsManager using a consistent key
-        StatsManager.Set_Numbered_Stat("StudyGameScore", score);
+        if (currentMode == GameMode.Exam)
+        {
+            StatsManager.Set_Numbered_Stat("ExamRawScore", score);
+        }
+        else
+        {
+            float existing = StatsManager.Get_Numbered_Stat("StudyGameScore");
+            if (score > existing)
+                StatsManager.Set_Numbered_Stat("StudyGameScore", score);
+
+            float studyRaw  = StatsManager.Get_Numbered_Stat("StudyGameScore");
+            float studyNorm = studyRaw >= 5 ? 4f : studyRaw >= 4 ? 3f : studyRaw >= 3 ? 2f : studyRaw >= 1 ? 1f : 0f;
+            float mid       = StatsManager.Get_Numbered_Stat("MidtermScore");
+            float fin       = StatsManager.Get_Numbered_Stat("FinalScore");
+            float grades    = fin > 0f ? (studyNorm + mid + fin) / 3f
+                            : mid > 0f ? (studyNorm + mid) / 2f
+                            : studyNorm;
+            StatsManager.Set_Numbered_Stat("Grades", Mathf.Clamp(grades, 0f, 4f));
+        }
+        // Mark exam event complete and clear the stale exam ID so non-exam study
+        // sessions don't accidentally re-complete a future exam.
         string examId = StatsManager.Get_String_Stat("CurrentExamId");
         if (!string.IsNullOrEmpty(examId))
         {
             GameEvents.MarkCustomEventCompleted(examId, true);
+            StatsManager.Set_String_Stat("CurrentExamId", "");
         }
 
         // Branch by context
@@ -731,17 +697,20 @@ public class FivePositionsGameManager : MonoBehaviour
             {
                 case GameMode.Exam:
                     VNSceneManager.scene_manager.Start_Conversation(pendingEndConversation);
-
                     break;
-                    case GameMode.Group:
+                case GameMode.Group:
                     VNSceneManager.scene_manager.Start_Conversation(conversationManager);
                     break;
+                case GameMode.Solo:
+                    HomeCutsceneController.Instance?.OnStudyComplete();
+                    yield break;
             }
         }
         else
         {
-            targetDefinitionText.text = $"Studied {score} word{(score == 1 ? "" : "s")}.";
-            yield return new WaitForSeconds(5f);
+            // Fallback: no VN manager present (Home.unity Solo context)
+            HomeCutsceneController.Instance?.OnStudyComplete();
+            yield break;
         }
 
         if (questionLoader != null && questionLoader.currentQuestions != null)
@@ -790,6 +759,7 @@ public class FivePositionsGameManager : MonoBehaviour
             case GameMode.Solo:
                 spawnMode = SpawnMode.Random;
                 useTimer = true;
+                if (questionLoader != null) questionLoader.useDefinitions = false;
                 break;
 
             case GameMode.Group:
@@ -797,6 +767,7 @@ public class FivePositionsGameManager : MonoBehaviour
                 conversationManager = groupStudyManager.conversationManager;
                 spawnMode = SpawnMode.Sequential;
                 useTimer = false;
+                if (questionLoader != null) questionLoader.useDefinitions = true;
                 break;
 
             case GameMode.Exam:

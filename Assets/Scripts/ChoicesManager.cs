@@ -20,21 +20,6 @@ namespace VNEngine
         }
 
 
-        public void Write(string conversation_to_switch_to)
-        {
-            Debug.Log("Test " + conversation_to_switch_to);
-        }
 
-
-        void Start()
-        {
-
-        }
-
-
-        void Update()
-        {
-
-        }
     }
 }

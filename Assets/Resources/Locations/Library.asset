@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: Library
   m_EditorClassIdentifier: Assembly-CSharp::LocationData
   sceneName: Library
-  displayName: Library
+  displayName: Learning Commons
+  buildingName: Wiseman Library
   mapIcon: {fileID: 21300000, guid: 457c6ab4222a4924f922ade44b56fa28, type: 3}
+  phoneIcon: {fileID: 0}

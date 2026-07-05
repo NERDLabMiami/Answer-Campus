@@ -8,6 +8,7 @@ using VNEngine;
 public class QuestionWeek
 {
     public string week;
+    public string examId;
     public List<QuestionAnswerPair> questions;
 }
 
@@ -62,25 +63,28 @@ public class StudyQuestionLoader : MonoBehaviour
         }
 
         int currentWeek = GetCurrentWeekStat();
-        IEnumerable<QuestionWeek> weeksToUse = all;
 
-        if (studyUsesUnlockedWeeksOnly && currentWeek > 0)
-            weeksToUse = all.Where(w => TryParseWeek(w.week) <= currentWeek);
-
-        currentQuestions = weeksToUse
-            .Where(w => w.questions != null)
-            .SelectMany(w => w.questions)
-            .Where(q => q != null)
-            .Where(q => IsValidAnswer(q.answer))
+        // Load only the current week's questions so the primary word is always the exam word for this week
+        var wk = all.FirstOrDefault(w => TryParseWeek(w.week) == currentWeek);
+        currentQuestions = (wk?.questions ?? new List<QuestionAnswerPair>())
+            .Where(q => q != null && IsValidAnswer(q.answer))
             .ToList();
 
+        // Fallback: if this week has no questions, load all unlocked weeks
+        if (currentQuestions.Count == 0)
+        {
+            var fallback = all.Where(w => TryParseWeek(w.week) <= currentWeek && TryParseWeek(w.week) > 0);
+            currentQuestions = fallback
+                .Where(w => w.questions != null)
+                .SelectMany(w => w.questions)
+                .Where(q => q != null && IsValidAnswer(q.answer))
+                .ToList();
+        }
+
         ResetAlreadyUsedFlags();
-        Debug.Log($"[StudyQuestionLoader] Loaded {currentQuestions.Count} study questions (mode={currentMode}, week={currentWeek}).");
+        Debug.Log($"[StudyQuestionLoader] Loaded {currentQuestions.Count} study questions (week={currentWeek}).");
     }
 
-    /// <summary>
-    /// Default exam behavior: only loads the current week. If you want midterm/final pools, use a separate JSON asset.
-    /// </summary>
     public void LoadQuestionsForExam()
     {
         var all = LoadAllWeeksFromJson();
@@ -90,42 +94,46 @@ public class StudyQuestionLoader : MonoBehaviour
             return;
         }
 
-        // 1) Prefer explicit exam id (e.g., "midterm", "final")
         string examId = StatsManager.Get_String_Stat("CurrentExamId");
+
+        // 1) Primary path: collect isPrimary questions from weeks tagged with this exam's ID
         if (!string.IsNullOrWhiteSpace(examId))
         {
+            var examWeeks = all.Where(w => string.Equals(w.examId, examId, StringComparison.OrdinalIgnoreCase));
+            currentQuestions = examWeeks
+                .Where(w => w.questions != null)
+                .SelectMany(w => w.questions)
+                .Where(q => q != null && q.isPrimary && IsValidAnswer(q.answer))
+                .ToList();
+
+            if (currentQuestions.Count > 0)
+            {
+                ResetAlreadyUsedFlags();
+                Debug.Log($"[StudyQuestionLoader] Exam '{examId}': {currentQuestions.Count} word(s) loaded.");
+                return;
+            }
+
+            // 2) Fallback: look for a week named exactly as the exam ID (old behavior)
             var byId = all.FirstOrDefault(w => string.Equals(w.week, examId.Trim(), StringComparison.OrdinalIgnoreCase));
             if (byId != null && byId.questions != null)
             {
-                currentQuestions = byId.questions.Where(q => q != null).Where(q => IsValidAnswer(q.answer)).ToList();
+                currentQuestions = byId.questions.Where(q => q != null && IsValidAnswer(q.answer)).ToList();
                 ResetAlreadyUsedFlags();
-                Debug.Log($"[StudyQuestionLoader] Loaded {currentQuestions.Count} exam questions for id='{examId}'.");
+                Debug.Log($"[StudyQuestionLoader] Loaded {currentQuestions.Count} exam questions for id='{examId}' (named week fallback).");
                 return;
             }
         }
 
-        // 2) Fallback: numeric week
+        // 3) Final fallback: current week number
         int currentWeek = GetCurrentWeekStat();
         if (currentWeek <= 0) currentWeek = 1;
-
         var wk = all.FirstOrDefault(w => TryParseWeek(w.week) == currentWeek);
         currentQuestions = (wk?.questions ?? new List<QuestionAnswerPair>())
-            .Where(q => q != null)
-            .Where(q => IsValidAnswer(q.answer))
+            .Where(q => q != null && IsValidAnswer(q.answer))
             .ToList();
 
-        // 3) Final fallback: week "1"
-        if (currentQuestions.Count == 0)
-        {
-            var wk1 = all.FirstOrDefault(w => w.week == "1");
-            currentQuestions = (wk1?.questions ?? new List<QuestionAnswerPair>())
-                .Where(q => q != null)
-                .Where(q => IsValidAnswer(q.answer))
-                .ToList();
-        }
-
         ResetAlreadyUsedFlags();
-        Debug.Log($"[StudyQuestionLoader] Loaded {currentQuestions.Count} exam questions (week={currentWeek}, id='{examId}').");
+        Debug.Log($"[StudyQuestionLoader] Loaded {currentQuestions.Count} exam questions (week fallback, week={currentWeek}).");
     }
 
     public QuestionAnswerPair GetRandomQuestion()
@@ -142,6 +150,18 @@ public class StudyQuestionLoader : MonoBehaviour
         }
 
         QuestionAnswerPair chosen;
+
+        // Study modes: always present the primary (exam) word first if it hasn't been used yet
+        if (currentMode != GameMode.Exam)
+        {
+            var primary = available.FirstOrDefault(q => q.isPrimary);
+            if (primary != null)
+            {
+                primary.alreadyUsed = true;
+                MarkSeen(primary.answer);
+                return primary;
+            }
+        }
 
         if (!preferUnseenOrUnmastered)
         {

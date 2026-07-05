@@ -7914,7 +7914,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 334b282356fbd6e4cb4d39205a666221, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: Cutscene
+  sceneToLoad: Home
   loadSceneOnStart: 0
 --- !u!1 &2075277419
 GameObject:
@@ -8675,6 +8675,10 @@ PrefabInstance:
     - target: {fileID: 2469794033408119251, guid: 156e6c4705f8bc747a7e780e51a69dbb, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2469794033408119255, guid: 156e6c4705f8bc747a7e780e51a69dbb, type: 3}
+      propertyPath: sceneToLoad
+      value: Home
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -75,20 +75,9 @@ public static class GameEvents
         var list = JsonUtility.FromJson<CustomEventList>(json);
         return list?.items ?? new();
     }
-    public static List<EventInfo> GetDueEventsForWeek(int week)
-    {
-        var all = GetWeekPreview(week);
-        if (all == null) return new List<EventInfo>();
 
-        // Finals/Midterms are Custom with ids; football uses played flag already.
-        all.RemoveAll(e =>
-            e.type == EventType.Custom && IsCustomEventCompleted(e.id)
-        );
 
-        return all;
-    }
-
-    public static void SaveCustomEvents(List<CustomEvent> items)
+    private static void SaveCustomEvents(List<CustomEvent> items)
     {
         var wrap = new CustomEventList { items = items ?? new() };
         string json = JsonUtility.ToJson(wrap);
@@ -107,7 +96,8 @@ public static class GameEvents
         if (!TryGetCustomEvent(key, out var ev)) return false;
         return ev.completed;
     }
-    public static bool TryGetCustomEvent(string key, out CustomEvent found)
+
+    private static bool TryGetCustomEvent(string key, out CustomEvent found)
     {
         found = null;
         if (string.IsNullOrEmpty(key)) return false;
@@ -194,7 +184,7 @@ public static class GameEvents
         // Custom unlocked events
         foreach (var ev in LoadCustomEvents())
         {
-            if (ev.unlocked && ev.week == week)
+            if (ev.unlocked && ev.week == week && !ev.completed)
             {
                 outList.Add(new EventInfo {
                     id = ev.id,

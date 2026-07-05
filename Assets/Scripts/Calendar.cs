@@ -22,21 +22,31 @@ public static class FootballScheduler
         new FootballTeam("Bayfront College", "Surge"),
         new FootballTeam("Riverside A&M", "Gators"),
         new FootballTeam("Highland University", "Stags"),
-        new FootballTeam("Wheatley", "Titans")
+        new FootballTeam("Wheatley", "Titans") { isRival = true }
     };
 
     public static void GenerateSchedule()
     {
         List<FootballGame> schedule = new List<FootballGame>();
-        List<int> possibleWeeks = new List<int> { 3, 5, 9, 13, 14, 15};
-        Shuffle(possibleWeeks);
+        // Every other week (odd weeks), skipping week 7 (Midterms) and week 16 (Finals)
+        List<int> possibleWeeks = new List<int> { 3, 5, 7, 9, 11, 13 };
+
+        // Shuffle opponents so matchups are random, but keep weeks sorted so that
+        // gamesPlayed scales correctly with when in the season each game occurs.
+        var shuffledOpponents = opponents.ToList();
+        Shuffle(shuffledOpponents);
 
         for (int i = 0; i < possibleWeeks.Count; i++)
         {
+            int gamesPlayed = Mathf.Clamp(i * 2, 0, 10);
+            int oppWins = UnityEngine.Random.Range(0, gamesPlayed + 1);
+            shuffledOpponents[i].wins   = oppWins;
+            shuffledOpponents[i].losses = gamesPlayed - oppWins;
+
             schedule.Add(new FootballGame
             {
                 week = possibleWeeks[i],
-                opponent = opponents[i],
+                opponent = shuffledOpponents[i],
                 isHome = true,
                 played = false
             });
@@ -62,6 +72,54 @@ public static class FootballScheduler
     }
 
 
+    public static (int wins, int losses) GetSeasonRecord(int currentWeek = 0)
+    {
+        if (!StatsManager.String_Stat_Exists("FootballSchedule")) return (0, 0);
+        string json = StatsManager.Get_String_Stat("FootballSchedule");
+        if (string.IsNullOrEmpty(json)) return (0, 0);
+        var wrapper = JsonUtility.FromJson<FootballGameListWrapper>(json);
+        if (wrapper?.games == null) return (0, 0);
+        int wins   = wrapper.games.Count(g => g.played && g.won);
+        int losses = wrapper.games.Count(g => (g.played && !g.won) ||
+                                              (currentWeek > 0 && g.week < currentWeek && !g.played));
+        return (wins, losses);
+    }
+
+    public static List<FootballGame> GetAllGames()
+    {
+        if (!StatsManager.String_Stat_Exists("FootballSchedule")) return new List<FootballGame>();
+        string json = StatsManager.Get_String_Stat("FootballSchedule");
+        if (string.IsNullOrEmpty(json)) return new List<FootballGame>();
+        var wrapper = JsonUtility.FromJson<FootballGameListWrapper>(json);
+        return wrapper?.games ?? new List<FootballGame>();
+    }
+
+    public static void SimulateUnplayedPastGames(int currentWeek)
+    {
+        if (!StatsManager.String_Stat_Exists("FootballSchedule")) return;
+        string json = StatsManager.Get_String_Stat("FootballSchedule");
+        if (string.IsNullOrEmpty(json)) return;
+        var wrapper = JsonUtility.FromJson<FootballGameListWrapper>(json);
+        if (wrapper?.games == null) return;
+
+        bool changed = false;
+        foreach (var game in wrapper.games)
+        {
+            if (game.week < currentWeek && !game.played)
+            {
+                game.played   = true;
+                game.won      = false;
+                // Deterministic scores seeded by week so values are stable across renders
+                game.homeScore = (game.week * 3) % 14;
+                game.awayScore = game.homeScore + 7 + (game.week % 14);
+                changed = true;
+            }
+        }
+
+        if (changed)
+            StatsManager.Set_String_Stat("FootballSchedule", JsonUtility.ToJson(wrapper));
+    }
+
     static void Shuffle<T>(List<T> list)
     {
         for (int i = 0; i < list.Count; i++)
@@ -83,58 +141,76 @@ public class FootballGameListWrapper
 
 public static class SemesterHelper
 {
-    public const int FinalsWeek = 16;
-    public const int MidtermsWeek = 7;
+    public const int FinalsWeek = 14;
+    public const int MidtermsWeek = 6;
     public const int MidtermsWarningStart = 4;
     public const int FinalsWarningStart = 5;
     public const int DaysPerWeek = 7;
 
+    // Set this at game start from a GameSettings component or HomeCutsceneController.
+    public static int SemesterYear = 2026;
+
+    // Returns the grid-Monday anchor date for a given week.
+    // All anchors are days {2,9,16,23} (or {16,23} for August) — always column 1 (grid-Monday).
+    // Adding dayOffset=5 stays within the same month and always lands on column 6 (grid-Saturday).
+    private static DateTime GetGridMonday(int week)
+    {
+        if (week <= 0) return new DateTime(SemesterYear, 8, 16);  // orientation week
+        if (week == 1) return new DateTime(SemesterYear, 8, 23);  // last Aug week (first class)
+        if (week >= 14) return new DateTime(SemesterYear, 12, 2); // finals
+        // Weeks 2–13: Sep/Oct/Nov, 4 weeks per month starting on day 2
+        int idx   = week - 2;
+        int month = 9 + idx / 4;        // 9=Sep, 10=Oct, 11=Nov
+        int day   = 2 + (idx % 4) * 7; // 2, 9, 16, 23
+        return new DateTime(SemesterYear, month, day);
+    }
+
+    // Week 0 = orientation (Aug 16 anchor; activities start at dayOffset=4 = Aug 20).
+    // Week 1 = first class week (Aug 23). Weeks 2–13: Sep/Oct/Nov. Week 14 = finals (Dec 2).
+    public static DateTime GetDate(int week, int dayOffset)
+    {
+        return GetGridMonday(week).AddDays(dayOffset);
+    }
+
+    public static string GetDateLabel(int week, int dayOffset = 0)
+    {
+        var date = GetDate(week, dayOffset);
+        return $"{date:MMMM} {date.Day}{OrdinalSuffix(date.Day)}, {SemesterYear}";
+    }
+
+    // Grid-based day names: column (day-1)%7 maps to these names (0=Sun…6=Sat).
+    private static readonly string[] _gridDayNames =
+        { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" };
+
+    // Returns the grid day name for a date based on its day-of-month column, not real DayOfWeek.
+    public static string GetGridDayName(DateTime date) =>
+        _gridDayNames[(date.Day - 1) % 7];
+
+    // Returns "Saturday" — just the day of the week (grid-column based).
+    public static string GetDayOfWeekLabel(int week, int dayOffset = 0)
+    {
+        return GetGridDayName(GetDate(week, dayOffset));
+    }
+
+    // Returns "Morning" (DayPhase 0) or "Afternoon" (DayPhase 1).
+    private static string GetTimeLabel(int dayPhase) =>
+        dayPhase == 1 ? "Afternoon" : "Morning";
+
+    // Returns "Saturday Morning" — day of week combined with time of day.
+    public static string GetDayAndTimeLabel(int week, int dayOffset, int dayPhase) =>
+        $"{GetDayOfWeekLabel(week, dayOffset)} {GetTimeLabel(dayPhase)}";
+
+    private static string OrdinalSuffix(int day)
+    {
+        if (day >= 11 && day <= 13) return "th";
+        return (day % 10) switch { 1 => "st", 2 => "nd", 3 => "rd", _ => "th" };
+    }
+
     public static string GetMonthForWeek(int week)
     {
-        if (week <= 2)
-            return "August";
-        else if (week is > 2 and <= 5)
-            return "September";
-        else if (week is >= 6 and <= 9)
-            return "October";
-        else if (week is >= 10 and <= 14)
-            return "November";
-        else if (week is >= 15 and <= 16)
-            return "December";
-        else
-            Debug.Log($"Week is {week}");
-        return "Unknown"; // Safety catch
+        return GetGridMonday(week).ToString("MMMM");
     }
-
-    public static int GetDaysToCrossOut(int week)
-    {
-        if (week <= 0) return 0;
-
-        int fullWeeks = Mathf.Min(week - 1, 4);
-        int days = fullWeeks * DaysPerWeek;
-
-        if (week <= 5)
-        {
-            string key = $"Week_{week}_PartialDays";
-            int partialDays;
-
-            if (StatsManager.Numbered_Stat_Exists(key))
-            {
-                partialDays = (int)StatsManager.Get_Numbered_Stat(key);
-            }
-            else
-            {
-                int max = Mathf.Min(35 - days, DaysPerWeek);
-                partialDays = UnityEngine.Random.Range(1, max + 1);
-                StatsManager.Set_Numbered_Stat(key, partialDays);
-            }
-
-            days += partialDays;
-        }
-
-        return days;
-    }
-
+    
     public static string GetStudyPrompt(int currentWeek)
     {
         int weeksUntilMidterms = MidtermsWeek - currentWeek;
@@ -212,6 +288,13 @@ public struct TimeImage
 public class Calendar : MonoBehaviour
 {
     public TimeImage[] timeImages;
+
+    [Header("Background")]
+    [Tooltip("Direct reference to the room background Image. Bypasses the struct array, which can silently drop object references at runtime.")]
+    public Image  backgroundImage;
+    public Sprite backgroundSpriteDay;
+    public Sprite backgroundSpriteNight;
+
     public TextMeshProUGUI month;
     public TextMeshProUGUI studyPrompt;
     public Transform calendarGrid;
@@ -269,15 +352,16 @@ public class Calendar : MonoBehaviour
             week = (int)StatsManager.Get_Numbered_Stat("Week");
             Debug.Log($"It's week {week}");
 
-            if (week <= 1)
+            if (week <= 0 && !StatsManager.String_Stat_Exists("FootballSchedule"))
             {
                 Debug.Log("New Game, generating football schedule and exam events");
                 FootballScheduler.GenerateSchedule();
             }
+            PopulateCalendarCheckmarks();
             TryRedirectToRequiredEvent();
         }
 
-        isDay = !CharacterProgressHelper.IsNight();
+        isDay = StatsManager.Get_Numbered_Stat("DayPhase") < 1f;
         ApplyTimeOfDayVisuals();
         string json = StatsManager.Get_String_Stat("FootballSchedule");
         Debug.Log($"[Schedule JSON] {json}");
@@ -296,6 +380,32 @@ public class Calendar : MonoBehaviour
             EndSemester();
         }
     }
+    private void PopulateCalendarCheckmarks()
+    {
+        for (int i = calendarGrid.childCount - 1; i >= 0; i--)
+            Destroy(calendarGrid.GetChild(i).gameObject);
+
+        int dayOffset = StatsManager.Numbered_Stat_Exists("DayOffset")
+            ? (int)StatsManager.Get_Numbered_Stat("DayOffset")
+            : 0;
+
+        var currentDate = SemesterHelper.GetDate(week, dayOffset);
+        int currentDay  = currentDate.Day;
+
+        for (int position = 1; position <= 35; position++)
+        {
+            if (position < currentDay)
+            {
+                Instantiate(checkmark, calendarGrid, false);
+            }
+            else
+            {
+                var placeholder = new GameObject("Placeholder", typeof(RectTransform));
+                placeholder.transform.SetParent(calendarGrid, false);
+            }
+        }
+    }
+
     private void TryRedirectToRequiredEvent()
     {
         if (_isRedirecting) return;
@@ -308,18 +418,20 @@ public class Calendar : MonoBehaviour
         bool hasChosen = false;
 
         int idx = due.FindIndex(e => e.id == GameEvents.FinalsEventId);
-        if (idx >= 0) { chosen = due[idx]; hasChosen = true; }
+        if (idx >= 0 && !GameEvents.IsCustomEventCompleted(GameEvents.FinalsEventId))
+            { chosen = due[idx]; hasChosen = true; }
 
         if (!hasChosen)
         {
             idx = due.FindIndex(e => e.id == GameEvents.MidtermsEventId);
-            if (idx >= 0) { chosen = due[idx]; hasChosen = true; }
+            if (idx >= 0 && !GameEvents.IsCustomEventCompleted(GameEvents.MidtermsEventId))
+                { chosen = due[idx]; hasChosen = true; }
         }
         
         if (hasChosen && !string.IsNullOrEmpty(chosen.location))
         {
             _isRedirecting = true;
-            LocationRouter.Go(chosen.location);
+            HomeCutsceneController.Instance?.QueueRequiredRedirect(chosen.location);
         }
     }
 
@@ -327,11 +439,28 @@ public class Calendar : MonoBehaviour
     public void ToggleDaytime()
     {
         isDay = !isDay;
-        CharacterProgressHelper.SetNight(!isDay);
+        StatsManager.Set_Numbered_Stat("DayPhase", isDay ? 0f : 1f);
         ApplyTimeOfDayVisuals();
     }
 
-    public static List<EventInfo> GetPreviewForWeek(int week) => GameEvents.GetWeekPreview(week);
+    // Re-reads DayPhase and re-applies sprites.
+    // Call this when DayPhase changes after Start() has already run.
+    public void SyncTimeOfDay()
+    {
+        isDay = StatsManager.Get_Numbered_Stat("DayPhase") < 1f;
+        ApplyTimeOfDayVisuals();
+    }
+
+    // Re-reads Week and DayOffset and refreshes the calendar grid and month label.
+    // Call this when DayOffset is set after Start() has already run (e.g. game-week Saturday).
+    public void SyncDate()
+    {
+        if (StatsManager.Numbered_Stat_Exists("Week"))
+            week = (int)StatsManager.Get_Numbered_Stat("Week");
+        month.text = SemesterHelper.GetMonthForWeek(week);
+        PopulateCalendarCheckmarks();
+    }
+
     private void ApplyTimeOfDayVisuals()
     {
         for (int i = 0; i < timeImages.Length; i++)
@@ -342,9 +471,13 @@ public class Calendar : MonoBehaviour
             if (timeImages[i].image != null)
                 timeImages[i].image.sprite = isDay ? timeImages[i].spriteDay : timeImages[i].spriteNight;
         }
+
+        // Direct background control — separate from the struct array to avoid serialization null issues.
+        if (backgroundImage != null)
+            backgroundImage.sprite = isDay ? backgroundSpriteDay : backgroundSpriteNight;
     }
 
-    public static Character ParseBestFriendEnum(string rawValue)
+    private static Character ParseBestFriendEnum(string rawValue)
     {
         // Normalize: lowercase, remove non-alphanumeric characters, then PascalCase it
         string cleaned = Regex.Replace(rawValue, @"[^a-zA-Z0-9]", ""); // Remove symbols
@@ -375,45 +508,8 @@ public class Calendar : MonoBehaviour
         var schedule = JsonUtility.FromJson<FootballGameListWrapper>(json);
         int wins = schedule.games.Count(g => g.played && g.won);
         int losses = schedule.games.Count(g => g.played && !g.won);
-        float midtermScore = StatsManager.Get_Numbered_Stat("MidtermScore");
-        float finalScore = StatsManager.Get_Numbered_Stat("FinalScore");
-        float studyBonus = StatsManager.Get_Numbered_Stat("StudyGameScore"); // number of words
-// Calculate final GPA
-        float examScore = Mathf.Max(midtermScore, finalScore);
-        float gpa = examScore; // base GPA
-        if (studyBonus > 0) gpa += 0.5f; // bonus bump for studying
-        gpa = Mathf.Clamp(gpa, 0f, 4f);
+        float gpa = StatsManager.Get_Numbered_Stat("Grades");
         string finalNarrative = $"{player_name}! Can you believe the semester is over already? You've been an incredible friend. ";
-/*
-        if (gpa > 3.5f)
-        {
-            finalNarrative += $"You crushed it this semester, {gpa} GPA? Legend. ";
-            if (wins > losses)
-            {
-                finalNarrative += $"And how about our team? I mean, they're talented but you brought the spirit. ";
-            }
-            else
-            {
-                finalNarrative += "But maybe find some time to work on that school spirit, our team could use it! ";
-            }
-
-        }
-        else
-        {
-            finalNarrative += $"Don't worry about grades too much, {gpa} is still passing, right? ";
-            if (wins > losses)
-            {
-                if (wins > losses)
-                {
-                    finalNarrative += $"You did crush it with team spirit. The coach owes you! ";
-                }
-                else
-                {
-                    finalNarrative += "And who cares about team spirit anyways? I'd rather go to the club. ";
-                }
-            }
-        }
-*/
         finalNarrative += "Can't wait to see what next semester brings.";
         finalText.text = finalNarrative;
         finalReport.SetActive(true);

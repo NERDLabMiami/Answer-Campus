@@ -13,5 +13,8 @@ MonoBehaviour:
   m_Name: Shuttle
   m_EditorClassIdentifier: Assembly-CSharp::LocationData
   sceneName: Cheer
-  displayName: Shuttle
+  displayName: Game Day
+  buildingName: Sentinel Stadium
   mapIcon: {fileID: 21300000, guid: 631fecc7eccb5d74db19b6bcf8756af2, type: 3}
+  phoneIcon: {fileID: 0}
+  morningOnly: 0

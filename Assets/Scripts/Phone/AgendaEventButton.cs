@@ -56,4 +56,21 @@ public void Bind(
             btn.interactable = !isPast;
         }
     }
+
+    public void BindInfo(string label, string value = null)
+    {
+        if (titleText) titleText.text = label ?? string.Empty;
+        if (timeText)
+        {
+            timeText.text = value ?? string.Empty;
+            timeText.gameObject.SetActive(!string.IsNullOrEmpty(value));
+        }
+
+        var btn = GetComponent<UnityEngine.UI.Button>();
+        if (btn)
+        {
+            btn.onClick.RemoveAllListeners();
+            btn.interactable = false;
+        }
+    }
 }

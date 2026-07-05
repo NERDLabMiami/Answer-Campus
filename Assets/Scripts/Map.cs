@@ -30,6 +30,7 @@ public static class MapAvailability
     public sealed class Context
     {
         public int currentWeek;
+        public int dayPhase;           // 0 = morning, 1 = afternoon
         public bool requireFriendToTrack;
 
         public IEnumerable<Location> lockableLocationsScene = Array.Empty<Location>();
@@ -42,18 +43,20 @@ public static class MapAvailability
         public Func<int, object> getThisWeeksGame;
         public Func<object, bool> isHomeGame;
         public Func<object, bool> gamePlayed;
+
+        public IEnumerable<Character> footballInvitees = Array.Empty<Character>();
     }
     // Main entry. Builds a per-location status table using the same logic your Map.Start() applies.
 public static Dictionary<string, Status> Build(Context ctx)
 {
     var result = new Dictionary<string, Status>(StringComparer.Ordinal);
 
-    // 0) Football weekly gating
+    // 0) Football weekly gating — only in afternoon (DayPhase=1)
     bool footballInteractable = false;
     if (ctx.getThisWeeksGame != null && ctx.isHomeGame != null && ctx.gamePlayed != null)
     {
         var g = ctx.getThisWeeksGame(ctx.currentWeek);
-        footballInteractable = (g != null && ctx.isHomeGame(g) && !ctx.gamePlayed(g));
+        footballInteractable = (g != null && ctx.isHomeGame(g) && !ctx.gamePlayed(g) && ctx.dayPhase == 1);
     }
 
     // --- Build a map from scene key -> displayName/icon from LocationData assets ---
@@ -62,6 +65,7 @@ public static Dictionary<string, Status> Build(Context ctx)
 
     // (a) From LocationData assets (authority)
     var allLocationAssets = Resources.LoadAll<LocationData>("");
+    var ldBySceneName = new Dictionary<string, LocationData>(StringComparer.Ordinal);
     foreach (var ld in allLocationAssets)
     {
         if (ld == null) continue;
@@ -73,6 +77,9 @@ public static Dictionary<string, Status> Build(Context ctx)
 
         if (ld.mapIcon && !iconByKey.ContainsKey(key))
             iconByKey[key] = ld.mapIcon;
+
+        if (!ldBySceneName.ContainsKey(key))
+            ldBySceneName[key] = ld;
     }
 
     // 1) Authoritative universe of keys (sceneName preferred)
@@ -193,14 +200,14 @@ public static Dictionary<string, Status> Build(Context ctx)
         }
     }
 
-    // 2b) Per-character, per-location unlockWeek lookup
-    // (CHARACTER, locationKey) -> earliest unlockWeek > 0 for that pairing
-    var unlockByCharLoc = new Dictionary<Tuple<Character, string>, int>();
+    // 2b) Per-character, per-location route lookup (all stage+unlockWeek pairs).
+    // Mirrors CharacterStageRouterNode's exact matching logic so map and router stay in sync.
+    var routesByCharLoc = new Dictionary<Tuple<Character, string>, List<(int stage, int unlockWeek)>>();
 
     foreach (var idx in ctx.npcRouteIndices ?? Array.Empty<StageRouteIndex>())
     {
         if (idx == null || idx.Routes == null) continue;
-        
+
         foreach (var r in idx.Routes)
         {
             if (r?.location == null) continue;
@@ -211,19 +218,13 @@ public static Dictionary<string, Status> Build(Context ctx)
                 : r.location.name;
             if (string.IsNullOrWhiteSpace(key)) continue;
 
-            var unlockWeek = r.unlockWeek; // <=0 means "no gate"
-
             var tuple = Tuple.Create(who, key);
-            if (!unlockByCharLoc.TryGetValue(tuple, out var existing))
+            if (!routesByCharLoc.TryGetValue(tuple, out var list))
             {
-                unlockByCharLoc[tuple] = unlockWeek;
+                list = new List<(int stage, int unlockWeek)>();
+                routesByCharLoc[tuple] = list;
             }
-            else
-            {
-                // keep earliest positive gate; allow 0 to mean "always"
-                if (unlockWeek > 0 && (existing <= 0 || unlockWeek < existing))
-                    unlockByCharLoc[tuple] = unlockWeek;
-            }
+            list.Add((r.stage, r.unlockWeek));
         }
     }
 
@@ -271,14 +272,34 @@ public static Dictionary<string, Status> Build(Context ctx)
         }
 
         // Football & Shuttle gating override
+        // "Cheer" is included because Shuttle.asset has sceneName = "Cheer"
         if (name.Equals("Football Game", StringComparison.OrdinalIgnoreCase) ||
-            name.Equals("Shuttle", StringComparison.OrdinalIgnoreCase))
+            name.Equals("Shuttle", StringComparison.OrdinalIgnoreCase) ||
+            name.Equals("Cheer", StringComparison.OrdinalIgnoreCase))
         {
             st.interactable = footballInteractable;
             st.lockReason   = st.interactable ? LockReason.None : LockReason.TimeGated;
+
+            if (footballInteractable && ctx.footballInvitees != null)
+            {
+                foreach (var c in ctx.footballInvitees)
+                {
+                    if (!st.friends.Contains(c))
+                        st.friends.Add(c);
+                }
+                st.hasFriendChip = st.friends.Count > 0;
+            }
         }
 
-        // Presence from pins, week-gated per character
+        // Morning-only location gate (e.g. Lecture Hall — set morningOnly on its LocationData)
+        if (ldBySceneName.TryGetValue(name, out var locData) && locData.morningOnly && ctx.dayPhase != 0)
+        {
+            st.interactable = false;
+            st.lockReason   = LockReason.TimeGated;
+        }
+
+        // Presence from pins, stage-and-week-gated per character.
+        // A character is shown only if the router would actually fire a route for them right now.
         if (pinsByLoc.TryGetValue(name, out var occupants))
         {
             var tracked = new List<Character>();
@@ -291,19 +312,34 @@ public static Dictionary<string, Status> Build(Context ctx)
 
                 var tuple = Tuple.Create(c, name);
 
-                // If we have a specific unlockWeek for (c, this location), enforce it.
-                if (unlockByCharLoc.TryGetValue(tuple, out var unlockWeek) &&
-                    unlockWeek > 0 &&
-                    ctx.currentWeek < unlockWeek)
+                if (routesByCharLoc.TryGetValue(tuple, out var charRoutes) && charRoutes.Count > 0)
                 {
-                    // Character's route for this location hasn't opened yet → don't show them
-                    continue;
+                    // Mirror the router: character's current stage stat must exactly match
+                    // a route, and that route's week must be unlocked.
+                    string statKey = $"{c} - {name} - Stage";
+                    int currentStage = Mathf.RoundToInt(StatsManager.Get_Numbered_Stat(statKey));
+
+                    bool hasEligibleRoute = false;
+                    foreach (var (routeStage, unlockWeek) in charRoutes)
+                    {
+                        if (routeStage == currentStage &&
+                            (unlockWeek <= 0 || ctx.currentWeek >= unlockWeek))
+                        {
+                            hasEligibleRoute = true;
+                            break;
+                        }
+                    }
+
+                    if (!hasEligibleRoute)
+                        continue; // No live route → hide portrait
                 }
+                // No entries in routesByCharLoc for (c, name): npcRouteIndices empty or
+                // this location has no route data → allow through (graceful degradation).
 
                 tracked.Add(c);
             }
 
-            st.friends      = tracked;
+            st.friends       = tracked;
             st.hasFriendChip = tracked.Count > 0;
         }
 
@@ -334,8 +370,18 @@ public class Map : MonoBehaviour
     characterLocations = PlayerPrefsExtra.GetList<CharacterLocation>("characterLocations", new List<CharacterLocation>());
     var allLocations = GetComponentsInChildren<Location>(true);
 
+    int dayPhase = Mathf.RoundToInt(StatsManager.Get_Numbered_Stat("DayPhase"));
+
+    var invitees = new List<Character>();
+    foreach (Character c in System.Enum.GetValues(typeof(Character)))
+    {
+        if (StatsManager.Get_Boolean_Stat(c.ToString().ToLower() + "_football_invite_accepted"))
+            invitees.Add(c);
+    }
+
     var ctx = new MapAvailability.Context {
         currentWeek = currentWeek,
+        dayPhase = dayPhase,
         requireFriendToTrack = requireFriendToTrack,
         lockableLocationsScene = lockableLocations,          // your array from the Inspector
         characterPins = characterLocations,
@@ -343,7 +389,8 @@ public class Map : MonoBehaviour
         npcRouteIndices = npcRouteIndices,
         getThisWeeksGame = FootballScheduler.GetThisWeeksGame,
         isHomeGame = g => ((FootballGame)g).isHome,
-        gamePlayed = g => ((FootballGame)g).played
+        gamePlayed = g => ((FootballGame)g).played,
+        footballInvitees = invitees
     };
 
     var snapshot = MapAvailability.Build(ctx);
@@ -371,7 +418,6 @@ foreach (var loc in allLocations)
     var friendsList = (st.friends == null || st.friends.Count == 0)
         ? "none"
         : string.Join(", ", st.friends.Select(c => c.ToString()));
-    Debug.Log($"[MAP] {name}: hasFriendChip={st.hasFriendChip}, friends=[{friendsList}], lock={st.lockReason}, interactable={st.interactable}, characterWaiting={(loc.characterWaiting ? "YES" : "NO")}");
 
     // Button interactable
     var btn = loc.GetComponent<Button>();
@@ -421,13 +467,11 @@ foreach (var loc in allLocations)
             if (who != Character.NONE)
             {
                 var profile = Array.Find(characters.profiles, p => p.character == who);
-                Debug.Log($"[MAP] Final icon for {name}: {who}, pictureLarge={(profile.pictureLarge != null)}");
                 loc.characterWaiting.sprite = profile.pictureLarge;
                 loc.characterWaiting.gameObject.SetActive(st.hasFriendChip);
             }
             else
             {
-                Debug.Log($"[MAP] No usable portrait for {name}, hiding icon.");
                 loc.characterWaiting.gameObject.SetActive(false);
             }
         }

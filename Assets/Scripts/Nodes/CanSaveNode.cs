@@ -3,7 +3,7 @@ using System.Collections;
 
 namespace VNEngine
 {
-    public class CanSaveNode : NodeTemplate
+    public class CanSaveNode : Node
     {
         public bool can_save = false;
 

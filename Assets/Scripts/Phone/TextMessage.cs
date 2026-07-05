@@ -7,6 +7,7 @@ public class QuickReply
     public string label;       // e.g., "Sounds good, see u there!"
     public string iconKey;     // e.g., "thumbs_up"  (map to sprite/emoji in UI)
     public string payload;     // optional: use if you need branching keys, stat deltas, etc.
+    public string npcResponse; // NPC's reply after the player picks this option (leave blank for none)
 }
 [Serializable]
 public class TextMessage : System.IEquatable<TextMessage>

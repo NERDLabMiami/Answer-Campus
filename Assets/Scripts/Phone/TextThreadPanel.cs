@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using VNEngine;
 public static class QuickReplyIconLibrary
 {
     static Dictionary<string, Sprite> cache;
@@ -37,6 +38,7 @@ public class TextThreadPanel : MonoBehaviour
     Character current;
     [SerializeField] private GameObject root;         // the panel GameObject
     [SerializeField] private CanvasGroup canvasGroup; // optional, if present
+    [HideInInspector] public bool allowReplies = true;
 
     public void Show(Character other)
     {
@@ -115,7 +117,7 @@ public void Render()
     }
 
     // Build quick replies below...
-    if (pending != null && pending.Length > 0)
+    if (pending != null && pending.Length > 0 && allowReplies)
     {
         foreach (var qr in pending)
         {
@@ -135,15 +137,21 @@ public void Render()
             {
                 TextThreads.SendPlayerResponse(current, qr);
 
-                // Convention: payload "decline" means stay in phone.
-                bool isDecline =
-                    !string.IsNullOrWhiteSpace(qr.payload) &&
-                    string.Equals(qr.payload.Trim(), "decline", StringComparison.OrdinalIgnoreCase);
+                // "advance_day": advance to next week morning and reload Home.
+                if (IsSpecialPayload(qr.payload, "advance_day"))
+                {
+                    Hide();
+                    AdvanceToNextMorning();
+                    return;
+                }
+
+                // "decline": stay in phone thread.
+                bool isDecline = IsSpecialPayload(qr.payload, "decline");
 
                 if (!isDecline && !string.IsNullOrWhiteSpace(pendingTargetScene))
                 {
                     Hide();
-                    LocationRouter.Go(pendingTargetScene);
+                    HomeCutsceneController.NavigateOut(pendingTargetScene);
                 }
                 else
                 {
@@ -161,6 +169,18 @@ public void Render()
     }
 }
 
+private static bool IsSpecialPayload(string payload, string value) =>
+    !string.IsNullOrWhiteSpace(payload) &&
+    string.Equals(payload.Trim(), value, StringComparison.OrdinalIgnoreCase);
 
+private static void AdvanceToNextMorning()
+{
+    int week = Mathf.RoundToInt(StatsManager.Get_Numbered_Stat("Week"));
+    int next = Mathf.Min(week + 1, SemesterHelper.FinalsWeek);
+    StatsManager.Set_Numbered_Stat("Week",      (float)next);
+    StatsManager.Set_Numbered_Stat("DayPhase",  0f);
+    StatsManager.Set_Numbered_Stat("DayOffset", 0f);
+    LocationRouter.Go("Home");
+}
 
 }

@@ -26,7 +26,7 @@ public class MapView : MonoBehaviour
             if (!lb) { Debug.LogError("LocationButton missing"); continue; }
 
             // Route by sceneName (same wiring as big map via LocationRouter)
-            System.Action onClick = () => LocationRouter.Go(st.locationName);
+            System.Action onClick = () => HomeCutsceneController.NavigateOut(st.locationName, st.displayName);
 
             // Bind: use the FRIENDLY name for the label (not the route key)
             lb.Bind(st.displayName ?? st.locationName, st.friends ?? new List<Character>(), onClick);

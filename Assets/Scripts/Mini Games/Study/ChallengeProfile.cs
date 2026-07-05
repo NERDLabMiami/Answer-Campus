@@ -11,11 +11,9 @@ public class ChallengeProfile : ScriptableObject
     public float minSpawnInterval = 1f;
     public float maxSpawnInterval = 2f;
     [Range(0f, 1f)] public float chanceOfCorrectLetter = 0.5f;
-    public bool showTimer = true;
-    public bool allowHints = false;
     public List<QuestionAnswerPair> customQuestions;
     public float timerDuration = 60f;
     [Header("No-Timer Rules")]
     public int strikesPerWord = 3;     // strikes allowed before that word fails
-    public int maxWordAttempts = 10;   // total words (success or fail) before game ends
+    public int maxWordAttempts = 5;    // total words (success or fail) before game ends; use 4 for exam profiles
     }

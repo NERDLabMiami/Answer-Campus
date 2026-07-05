@@ -16,6 +16,8 @@ public class FootballTeam
     public string schoolName;
     public string mascot;
     public bool isRival = false;
+    public int wins;
+    public int losses;
 
     public FootballTeam(string name, string mascot)
     {
@@ -30,8 +32,9 @@ public class FootballGame
     public FootballTeam opponent;
     public bool isHome;
     public bool played;
-    public bool won; // null = not played yet
-    
+    public bool won;
+    public int homeScore;
+    public int awayScore;
 }
 
 public static class CheerQuarterScoring
@@ -413,10 +416,8 @@ public class CheerGameManager : MonoBehaviour
         foreach (var entry in characterFollowers)
         {
             if (entry.follower == null) continue;
-            bool isFriend = StatsManager.Get_Boolean_Stat(entry.character.ToString().ToLower() + "_is_friend");
-//            entry.follower.gameObject.SetActive(isFriend);
-            if (isFriend) _activeFollowers.Add(entry.follower);
-            _activeFollowers.Add(entry.follower);
+            bool invited = StatsManager.Get_Boolean_Stat(entry.character.ToString().ToLower() + "_football_invite_accepted");
+            if (invited) _activeFollowers.Add(entry.follower);
         }
 
         StartCoroutine(GameFlowRoutine());
@@ -563,7 +564,7 @@ for (int q = 1; q <= 4; q++)
     // (next loop will show the next quarter intro scoreboard)
 }
 
-        EndGame();
+        EndGame(homeScore > awayScore);
     }
 
     private void OnMarker(string name, int positionMs)
@@ -870,7 +871,7 @@ private void FinalizeQuarterScore(int totalCombos, int combosMade)
     {
         yield return new WaitForSeconds(1f);
     }
-    public static void RecordGameResult(int week, bool didWin)
+    public static void RecordGameResult(int week, bool didWin, int home, int away)
     {
         string json = StatsManager.Get_String_Stat("FootballSchedule");
         var wrapper = JsonUtility.FromJson<FootballGameListWrapper>(json);
@@ -880,6 +881,8 @@ private void FinalizeQuarterScore(int totalCombos, int combosMade)
         {
             game.played = true;
             game.won = didWin;
+            game.homeScore = home;
+            game.awayScore = away;
 
             string updatedJson = JsonUtility.ToJson(wrapper);
             StatsManager.Set_String_Stat("FootballSchedule", updatedJson);
@@ -889,7 +892,8 @@ private void FinalizeQuarterScore(int totalCombos, int combosMade)
     void EndGame(bool won = false)
     {
         Debug.Log("Game Over - Final Routine Placeholder");
-        RecordGameResult(weekNumber, won);
+        RecordGameResult(weekNumber, won, homeScore, awayScore);
+        StatsManager.Set_Boolean_Stat("JustReturnedFromGame", true);
         SceneManager.LoadScene("Post Game");
     }
 

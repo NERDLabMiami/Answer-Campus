@@ -2,11 +2,13 @@
   "weeks": [
     {
       "week": "1",
+      "examId": "EXAM_MIDTERMS",
       "questions": [
         {
           "question": "What is the lesson the story teaches?",
           "answer": "moral",
-          "definition": "A lesson about right conduct; what a story teaches."
+          "definition": "A lesson about right conduct; what a story teaches.",
+          "isPrimary": true
         },
         {
           "question": "A particular way of looking at something",
@@ -42,11 +44,13 @@
     },
     {
       "week": "2",
+      "examId": "EXAM_MIDTERMS",
       "questions": [
         {
           "question": "To form an opinion too quickly",
           "answer": "judge",
-          "definition": "To decide without full evidence; to evaluate."
+          "definition": "To decide without full evidence; to evaluate.",
+          "isPrimary": true
         },
         {
           "question": "A formal examination in court",
@@ -82,11 +86,13 @@
     },
     {
       "week": "3",
+      "examId": "EXAM_MIDTERMS",
       "questions": [
         {
           "question": "Something that is factually correct",
           "answer": "truth",
-          "definition": "What is real or accurate."
+          "definition": "What is real or accurate.",
+          "isPrimary": true
         },
         {
           "question": "Evidence that supports a claim",
@@ -131,7 +137,8 @@
         {
           "question": "Showing courage in the face of fear",
           "answer": "brave",
-          "definition": "Willing to face danger or difficulty."
+          "definition": "Willing to face danger or difficulty.",
+          "isPrimary": true
         },
         {
           "question": "Boldness or courage to act",
@@ -171,7 +178,8 @@
         {
           "question": "To understand someone else's feelings",
           "answer": "heart",
-          "definition": "Compassion; understanding others."
+          "definition": "Compassion; understanding others.",
+          "isPrimary": true
         },
         {
           "question": "Compassion shown to someone in pain",
@@ -211,7 +219,8 @@
         {
           "question": "The ability to influence or control",
           "answer": "power",
-          "definition": "The capacity to act or affect outcomes."
+          "definition": "The capacity to act or affect outcomes.",
+          "isPrimary": true
         },
         {
           "question": "Great strength or force",
@@ -251,7 +260,8 @@
         {
           "question": "What is right",
           "answer": "moral",
-          "definition": "Just in behavior"
+          "definition": "Just in behavior",
+          "isPrimary": true
         },
         {
           "question": "After careful consideration",
@@ -267,11 +277,13 @@
     },
     {
       "week": "8",
+      "examId": "EXAM_FINALS",
       "questions": [
         {
           "question": "Without anyone else present",
           "answer": "alone",
-          "definition": "By yourself; without companionship."
+          "definition": "By yourself; without companionship.",
+          "isPrimary": true
         },
         {
           "question": "A person who keeps to themselves",
@@ -297,11 +309,13 @@
     },
     {
       "week": "9",
+      "examId": "EXAM_FINALS",
       "questions": [
         {
           "question": "High respect; doing what is right",
           "answer": "honor",
-          "definition": "Integrity and respect earned through actions."
+          "definition": "Integrity and respect earned through actions.",
+          "isPrimary": true
         },
         {
           "question": "A strong moral principle",
@@ -332,11 +346,13 @@
     },
     {
       "week": "10",
+      "examId": "EXAM_FINALS",
       "questions": [
         {
           "question": "To gain knowledge or skill",
           "answer": "learn",
-          "definition": "To understand through study or experience."
+          "definition": "To understand through study or experience.",
+          "isPrimary": true
         },
         {
           "question": "To help someone else learn",
@@ -367,11 +383,13 @@
     },
     {
       "week": "11",
+      "examId": "EXAM_FINALS",
       "questions": [
         {
           "question": "Look back and summarize what you learned",
           "answer": "recap",
-          "definition": "A summary; going over again."
+          "definition": "A summary; going over again.",
+          "isPrimary": true
         },
         {
           "question": "A moment that changes everything",

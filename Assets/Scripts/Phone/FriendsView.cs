@@ -12,6 +12,7 @@ public class FriendsView : MonoBehaviour
     public Transform listRoot;               // Container for friend buttons
     public GameObject threadButtonPrefab;    // Prefab with ViewTextMessage (name+icon+optional "message" text)
     public TextThreadPanel threadPanel;      // Right-side thread panel to show history & quick replies
+    public TextMeshProUGUI emptyLabel;       // Shown when the friends list is empty
 
     [Header("Data Mapping")]
 
@@ -29,68 +30,66 @@ public class FriendsView : MonoBehaviour
     // Call this whenever the phone opens Friends tab
     public void Render()
     {
-        // Clear list
         foreach (Transform c in listRoot) Destroy(c.gameObject);
-        // Build thread index from saved messages
-        var allMsgs = TextThreads.GetAll();                                   // stored in PlayerPrefs ("messages")
-        var threadsByCharacter = allMsgs
-            .GroupBy(m => m.from)
-            .ToDictionary(g => g.Key, g => g.OrderBy(m => m.unixTime).ToList()); // oldest->newest
 
-        var roster = threadsByCharacter.Keys.Distinct().OrderBy(c => c.ToString()).ToList();
-        // Current locations for “at X” label
+        var allMsgs = TextThreads.GetAll();
+        var threadsByChar = allMsgs
+            .GroupBy(m => m.from)
+            .ToDictionary(g => g.Key, g => g.OrderBy(m => m.unixTime).ToList());
+
+        // Union contacts added via NodeContact with characters who have messages.
+        var roster = Friend.GetAllFriends()
+            .Union(threadsByChar.Keys)
+            .Distinct()
+            .OrderBy(c => c.ToString())
+            .ToList();
+
         var charLocs = PlayerPrefsExtra.GetList<CharacterLocation>("characterLocations", new List<CharacterLocation>());
-        // map Character -> last known location
         var locByChar = charLocs
             .GroupBy(cl => cl.character)
             .ToDictionary(g => g.Key, g => g.Last().location);
-        
+
+        if (emptyLabel != null)
+        {
+            emptyLabel.text = "Your friends list is currently empty.";
+            emptyLabel.gameObject.SetActive(roster.Count == 0);
+        }
+
         foreach (var who in roster)
         {
             var go = Instantiate(threadButtonPrefab, listRoot);
-            var vm = go.GetComponent<ViewTextMessage>(); // re-use your list item script
-            if (vm == null)
-            {
-                Debug.LogError("threadButtonPrefab is missing ViewTextMessage.");
-                continue;
-            }
+            var vm = go.GetComponent<ViewTextMessage>();
 
-            // --- Name
+            bool hasMessages = threadsByChar.ContainsKey(who);
+
             if (vm.from) vm.from.text = who.ToString();
 
-            // --- Icon
             if (vm.profile)
             {
                 var pic = profiles.FirstOrDefault(p => p.character.Equals(who)).pictureLarge;
                 var threadPic = profiles.FirstOrDefault(p => p.character.Equals(who)).pictureSmall;
                 vm.threadProfileImage = threadPic;
-
                 if (pic) vm.profile.sprite = pic;
             }
 
-            // --- Location (if present)  -> put into vm.message for the row subtitle
             if (vm.message)
             {
-                if (locByChar.TryGetValue(who, out var where) && !string.IsNullOrWhiteSpace(where))
-                    vm.message.text = where;      // e.g., "Library" or "Stadium"
-                else
-                    vm.message.text = "";         // no location shown
+                vm.message.text = locByChar.TryGetValue(who, out var where)
+                    && !string.IsNullOrWhiteSpace(where) ? where : "";
             }
 
-            // --- Click => open thread
             var btn = go.GetComponent<Button>();
             if (btn != null)
             {
-                btn.onClick.RemoveAllListeners();
-                btn.onClick.AddListener(() =>
+                btn.interactable = hasMessages;
+                if (hasMessages)
                 {
-                    // Open the thread UI for this friend
-                    ShowThread(who);
-                });
+                    btn.onClick.RemoveAllListeners();
+                    btn.onClick.AddListener(() => ShowThread(who));
+                }
             }
         }
         ShowList();
-
     }
     public void ShowList()
     {

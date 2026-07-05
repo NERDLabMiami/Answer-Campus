@@ -1,6 +1,7 @@
 {
   "dependencies": {
-    "com.fieldday.opengamedata-unity": "1.0.13",
+    "com.fieldday.opengamedata-unity": "1.0.14",
+    "com.nonatomic.pkglnk": "https://www.pkglnk.dev/pkglnk-unity.git",
     "com.unity.2d.common": "13.0.1",
     "com.unity.ai.navigation": "2.0.11",
     "com.unity.feature.2d": "2.0.2",

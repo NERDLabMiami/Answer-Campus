@@ -4,7 +4,7 @@ using System.Collections;
 namespace VNEngine
 {
     // Base class of Nodes, which make up all conversations
-    // All nodes should inherit from this this class
+    // All nodes should inherit from this class
     // If you want to write your own nodes, copy NodeTemplate.cs, and change the class name and overwrite the virtual methods you need
     public class Node : MonoBehaviour
     {
@@ -29,6 +29,7 @@ namespace VNEngine
                 this.GetComponentInParent<ConversationManager>().Start_Next_Node();
 
             executed_from_load = false;
+            UIManager.NotifyNodeCompleted();
         }
 
 

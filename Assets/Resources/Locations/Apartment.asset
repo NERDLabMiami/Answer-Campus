@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: Apartment
   m_EditorClassIdentifier: Assembly-CSharp::LocationData
   sceneName: Apartment
-  displayName: Apartments
+  displayName: University Apartments
+  buildingName: 
   mapIcon: {fileID: 21300000, guid: 383a82952ff741b409c587bf24a74c38, type: 3}
+  phoneIcon: {fileID: 0}

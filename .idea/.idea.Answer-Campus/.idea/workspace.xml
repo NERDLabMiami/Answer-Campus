@@ -6,12 +6,22 @@
   <component name="ChangeListManager">
     <list default="true" id="9996ada3-4319-4fb7-8fe3-ae48058a1aa4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Answer-Campus/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Answer-Campus/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/AC-Logo-Stacked-Updated-with-Subtitle.svg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/AC-Logo-Stacked-Updated-with-Subtitle.svg.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/VNConversationIO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/VNConversationIO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Background.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Background.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/DialogueCanvas - Clean.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/DialogueCanvas - Clean.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Conversation Pieces/Gate Stat Node.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Conversation Pieces/Gate Stat Node.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Conversation Pieces/Simple Show Choices.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Conversation Pieces/Simple Show Choices.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Friends/Friend Thread Button.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Friends/Friend Thread Button.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Agenda Row.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Agenda Row.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Calendar X.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Calendar X.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Group Label.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Group Label.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Conversation Pieces/Text Message.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Conversation Pieces/Text Message.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/tkam_minigame_questions_expanded.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Data/tkam_minigame_questions_expanded.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Locations/Apartment.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Locations/Apartment.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Locations/Dining Hall.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Locations/Dining Hall.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Locations/Green.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Locations/Green.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Locations/Lecture Hall.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Locations/Lecture Hall.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Locations/Library.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Locations/Library.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Locations/Shuttle.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Locations/Shuttle.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Locations/Student Center.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Locations/Student Center.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Stages/Stage Route Index.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Stages/Stage Route Index.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Locations/Apartment.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Locations/Apartment.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Locations/Dining Hall.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Locations/Dining Hall.unity" afterDir="false" />
@@ -19,21 +29,65 @@
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Locations/Home.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Locations/Home.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Locations/Lecture Hall.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Locations/Lecture Hall.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Locations/Library.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Locations/Library.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Locations/Outside Class.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Locations/Outside Class.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Locations/Post Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Locations/Post Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Locations/Shuttle.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Locations/Shuttle.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Locations/Student Center.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Locations/Student Center.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini Games/Cheer.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Mini Games/Cheer.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CSVReader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CSVReader.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Calendar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Calendar.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CharacterProgressHelper.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CharacterProgressHelper.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CharacterStageRouterNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CharacterStageRouterNode.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ChoicesManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ChoicesManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FMODAudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FMODAudioManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameEvents.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameEvents.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Home.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Home.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HomeObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HomeObject.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/JsonUtilityHack.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/JsonUtilityHack.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Location.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Location.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LocationData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LocationData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Map.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Map.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Mini Games/Cheer/CheerGameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Mini Games/Cheer/CheerGameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Mini Games/MiniGameStatLoader.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Mini Games/MiniGameStatLoader.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Mini Games/Study/ChallengeProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Mini Games/Study/ChallengeProfile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Mini Games/Study/EnhancedFivePositionsGameManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Mini Games/Study/EnhancedFivePositionsGameManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Mini Games/Study/EnhancedStudyQuestionLoader.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Mini Games/Study/EnhancedStudyQuestionLoader.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Mini Games/Study/FivePositionsGameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Mini Games/Study/FivePositionsGameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Mini Games/Study/StudyQuestionLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Mini Games/Study/StudyQuestionLoader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Mini Games/Study/WordDefinition.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Mini Games/Study/WordDefinition.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MiniGameUIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MiniGameUIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Nodes/CanSaveNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Nodes/CanSaveNode.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Nodes/ChoiceNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Nodes/ChoiceNode.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Nodes/DialogueNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Nodes/DialogueNode.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Nodes/GateEventsNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Nodes/GateEventsNode.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Nodes/NodeAchievement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Nodes/NodeAchievement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Nodes/ShowChoiceNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Nodes/ShowChoiceNode.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Nodes/ExamResultsRouterNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Nodes/ExamResultsRouterNode.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Nodes/Node.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Nodes/Node.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Nodes/NodeCheckpoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Nodes/NodeCheckpoint.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Nodes/NodeMessage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Nodes/NodeMessage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Nodes/PlaySoundEffectNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Nodes/PlaySoundEffectNode.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Nodes/TimedChoiceNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Nodes/TimedChoiceNode.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Phone/AgendaEventButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Phone/AgendaEventButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Phone/AgendaView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Phone/AgendaView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Phone/FriendsView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Phone/FriendsView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Phone/MapView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Phone/MapView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Phone/Phone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Phone/Phone.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Phone/TextMessage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Phone/TextMessage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Phone/TextMessageList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Phone/TextMessageList.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Phone/TextThreadPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Phone/TextThreadPanel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StageRouteIndex.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StageRouteIndex.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StudyGameLogger.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StudyGameLogger.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TestABStudySystem.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TestABStudySystem.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Testing/StudyGameTester.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Testing/StudyGameTester.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fmod_editor.log" beforeDir="false" afterPath="$PROJECT_DIR$/fmod_editor.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +100,8 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Editor/AutoMarkVNNodesDirty.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/HomeObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.fieldday.opengamedata-unity@543d3ab14ada/FieldDay/Survey/OGD.Survey.asmdef" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.fieldday.opengamedata-unity@543d3ab14ada/FieldDay/Survey/_Code/OGDSurvey.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -131,6 +187,9 @@
       <workItem from="1777080968686" duration="2368000" />
       <workItem from="1777156020537" duration="8155000" />
       <workItem from="1777310914254" duration="3320000" />
+      <workItem from="1782162182884" duration="39449000" />
+      <workItem from="1782340592509" duration="18339000" />
+      <workItem from="1782418213467" duration="144819000" />
     </task>
     <servers />
   </component>

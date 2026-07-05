@@ -8,6 +8,8 @@ using UnityEngine.UI;
 using TMPro;
 using VNEngine;
 
+public enum PhoneMode { Home, Conversation }
+
 public class Phone : MonoBehaviour
 {
     public TextMeshProUGUI title;
@@ -15,13 +17,18 @@ public class Phone : MonoBehaviour
     public GameObject mapPanel;
     public GameObject friendsPanel;
     public GameObject agendaPanel;
-    
+
     [Header("Sub-Views")]
     public MapView mapView;
     public FriendsView friendsView;
     public AgendaView agendaView;
     [SerializeField] private GameObject[] overlayPanels;
+
+    [Header("Mode")]
+    [SerializeField] private GameObject mapNavButton;
+
     private Animator anim;
+    private PhoneMode _mode = PhoneMode.Home;
 
     void Start()
     {
@@ -31,10 +38,28 @@ public class Phone : MonoBehaviour
         friendsView.headerText = title;
     }
 
+    // ---- Mode ----
+    public void SetHomeMode()
+    {
+        _mode = PhoneMode.Home;
+        if (mapNavButton) mapNavButton.SetActive(true);
+        if (friendsView?.threadPanel != null)
+            friendsView.threadPanel.allowReplies = true;
+    }
+
+    public void SetConversationMode()
+    {
+        _mode = PhoneMode.Conversation;
+        if (mapNavButton) mapNavButton.SetActive(false);
+        if (friendsView?.threadPanel != null)
+            friendsView.threadPanel.allowReplies = false;
+    }
+
     // ---- Public tab actions (UI buttons) ----
     public void ShowMap()
     {
-        title.text = "Map";
+        if (_mode == PhoneMode.Conversation) return;
+        title.text = "Friend Finder";
         HideOverlays();
         TogglePanels(map: true);
 

@@ -249,6 +249,15 @@ public class FMODAudioManager : MonoBehaviour
         instance.release();
     }
 
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
+    private static void Bootstrap()
+    {
+        if (Instance != null) return;
+        var go = new GameObject("FMODAudioManager [Auto]");
+        go.AddComponent<FMODAudioManager>();
+        // Awake runs immediately, sets Instance and DontDestroyOnLoad
+    }
+
     void Awake()
     {
         if (Instance != null && Instance != this)

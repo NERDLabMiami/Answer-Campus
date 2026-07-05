@@ -9,6 +9,9 @@ public class Home : MonoBehaviour
     [Header("Phone UI Root (inactive until opened)")]
     public GameObject phone;
 
+    [Header("Scene-Load Cutscene")]
+    public HomeCutsceneController cutsceneController;
+
     [Header("Home Objects")]
     public List<HomeObject> homeObjects;
 
@@ -24,7 +27,6 @@ public class Home : MonoBehaviour
     private const string TRIG_DEFAULT = "default";
     private const string STAT_PHONE_HAS_NEW = "PhoneHasNewActivity";
 
-
     private void OnEnable()
     {
         RefreshPhoneButtonIndicator();
@@ -33,6 +35,7 @@ public class Home : MonoBehaviour
 
     public void RefreshHomeObjects()
     {
+        if (cutsceneController != null && cutsceneController.IsCutscenePlaying) return;
         if (homeObjects == null) return;
         foreach (var obj in homeObjects)
         {
@@ -40,7 +43,7 @@ public class Home : MonoBehaviour
         }
     }
 
-    public void RefreshPhoneButtonIndicator()
+    private void RefreshPhoneButtonIndicator()
     {
         // Source of truth is the stat set by NodeMessage/NodeEvent/NodeContact (not Phone/PhoneDataService)
         bool hasNew = StatsManager.Get_Boolean_Stat(STAT_PHONE_HAS_NEW);
@@ -67,7 +70,7 @@ public class Home : MonoBehaviour
             phone.SetActive(true);
     }
 
-    public void ClearPhoneButtonIndicator()
+    private void ClearPhoneButtonIndicator()
     {
         if (phoneButtonImage != null)
             phoneButtonImage.sprite = phoneNoNewMessages;

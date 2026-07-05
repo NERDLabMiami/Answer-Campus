@@ -29,6 +29,13 @@ namespace VNEngine
 
             [Header("Game Requirements (ALL must pass)")]
             public FootballRequirement footballRequirement = new FootballRequirement { check = FootballCheckType.None };
+
+            [Header("Affinity Requirements (ALL must pass)")]
+            public bool useAffinity = false;
+            public List<AffinityRequirement> affinityRequirements = new();
+
+            [Header("Affinity Changes (applied when chosen)")]
+            public List<AffinityDelta> affinityDeltas = new();
         }
 
         public List<Choice> choices = new List<Choice>();
@@ -150,6 +157,18 @@ private bool MeetsAllRequirements(Choice c)
         }
     }
 
+    // AFFINITY
+    if (c.useAffinity && c.affinityRequirements != null && c.affinityRequirements.Count > 0)
+    {
+        for (int i = 0; i < c.affinityRequirements.Count; i++)
+        {
+            var r = c.affinityRequirements[i];
+            float current = StatsManager.Get_Numbered_Stat(r.character.ToString() + "_affinity");
+            if (!CompareNumber(current, r.compare, r.value))
+                return false;
+        }
+    }
+
     return true;
 }
 
@@ -181,6 +200,17 @@ private (int wins, int losses, int played, float winRate) GetFootballRecord()
         private void OnChoice(int idx)
         {
             var c = choices[idx];
+
+            if (c.affinityDeltas != null)
+            {
+                for (int i = 0; i < c.affinityDeltas.Count; i++)
+                {
+                    var d = c.affinityDeltas[i];
+                    if (d.character == Character.NONE) continue;
+                    string key = d.character.ToString() + "_affinity";
+                    StatsManager.Set_Numbered_Stat(key, StatsManager.Get_Numbered_Stat(key) + d.amount);
+                }
+            }
 
             // Jump? End current conversation then start target (same as ChoicesManager.Change_Conversation)
             if (c.nextConversation != null)
