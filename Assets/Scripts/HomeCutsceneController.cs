@@ -166,18 +166,16 @@ public class HomeCutsceneController : MonoBehaviour
             ReadCheckpoint();
         if (StatsManager.Numbered_Stat_Exists("Week")) return;
 
-        // Fall back to VNEngine save file
-        SaveManager.LoadFromFile();
-        var saves = SaveManager.saved_games;
-        if (saves != null && saves.Count > 0)
+        // Fall back to the current slot's save file
+        var slotSave = VNEngine.SaveManager.GetSaveForSlot(VNEngine.SaveManager.current_slot);
+        if (slotSave != null)
         {
-            var latest = saves[saves.Count - 1];
-            if (latest.saved_numbered_stats != null)
-                StatsManager.numbered_stats = new Dictionary<string, float>(latest.saved_numbered_stats);
-            if (latest.saved_boolean_stats != null)
-                StatsManager.boolean_stats  = new Dictionary<string, bool>(latest.saved_boolean_stats);
-            if (latest.saved_string_stats != null)
-                StatsManager.string_stats   = new Dictionary<string, string>(latest.saved_string_stats);
+            if (slotSave.saved_numbered_stats != null)
+                StatsManager.numbered_stats = new Dictionary<string, float>(slotSave.saved_numbered_stats);
+            if (slotSave.saved_boolean_stats != null)
+                StatsManager.boolean_stats  = new Dictionary<string, bool>(slotSave.saved_boolean_stats);
+            if (slotSave.saved_string_stats != null)
+                StatsManager.string_stats   = new Dictionary<string, string>(slotSave.saved_string_stats);
         }
 
         // Sanitize impossible Week-0 states (e.g. stale checkpoint written by old buggy code).

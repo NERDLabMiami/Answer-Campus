@@ -90,11 +90,6 @@ namespace VNEngine
             }
         }
 
-        // Matches your logged JSON shape:
-        // {"games":[{"week":9,"opponent":{"schoolName":"Northport",...},"isHome":true,"played":false,"won":false}, ...]}
-        [Serializable] private class FootballGameListWrapper { public FootballGame[] games; }
-        [Serializable] private class FootballGame { public bool played; public bool won; }
-
         private (int wins, int losses, int played, float winRate) GetFootballRecord()
         {
             string json = StatsManager.Get_String_Stat("FootballSchedule");
@@ -104,7 +99,7 @@ namespace VNEngine
             try { wrapper = JsonUtility.FromJson<FootballGameListWrapper>(json); }
             catch { /* ignore */ }
 
-            if (wrapper?.games == null || wrapper.games.Length == 0)
+            if (wrapper?.games == null || wrapper.games.Count == 0)
                 return (0, 0, 0, 0f);
 
             int wins = wrapper.games.Count(g => g.played && g.won);

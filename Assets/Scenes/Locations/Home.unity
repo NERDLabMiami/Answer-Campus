@@ -5305,8 +5305,8 @@ MonoBehaviour:
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
-  m_ScreenMatchMode: 1
-  m_MatchWidthOrHeight: 0
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -15778,6 +15778,7 @@ GameObject:
   - component: {fileID: 1711911276}
   - component: {fileID: 1711911277}
   - component: {fileID: 1711911278}
+  - component: {fileID: 1711911279}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -15970,6 +15971,19 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1711911272}
   m_Enabled: 1
+--- !u!114 &1711911279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1711911272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc6dc339ebb5a40eda0827570a4b7913, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FixedAspectCamera
+  targetAspect: 1.7777778
 --- !u!1 &1713234621
 GameObject:
   m_ObjectHideFlags: 0
@@ -21647,23 +21661,6 @@ MonoBehaviour:
   useTimer: 1
   spawnMode: 1
   maxWrongGuesses: 6
-  possibleWords:
-  - word: flame
-    definition: The visible, glowing part of a fire.
-  - word: oasis
-    definition: A fertile spot in a desert where water is found.
-  - word: class
-    definition: A session of instruction at a school or university.
-  - word: major
-    definition: A student's chosen field of study.
-  - word: chair
-    definition: A piece of furniture for sitting.
-  - word: night
-    definition: 'The opposite of day. '
-  - word: plant
-    definition: ' A living thing that grows in soil.'
-  - word: young
-    definition: The opposite of old.
   questionLoader: {fileID: 5840799739247181715}
   boxPositions:
   - {fileID: 5840799738886202613}

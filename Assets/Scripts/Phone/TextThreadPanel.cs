@@ -108,11 +108,16 @@ public void Render()
             if (label) label.text = m.body ?? "";
         }
 
-        // If this NPC message offers quick replies, remember replies + its target scene
+        // If this NPC message offers quick replies that are now unlocked, remember them.
+        // unlockWeek=0 means immediately available; otherwise wait until that week.
         if (!m.isPlayer && m.quickReplies != null && m.quickReplies.Count > 0)
         {
-            pending = m.quickReplies.ToArray();
-            pendingTargetScene = m.location;
+            int week = UnityEngine.Mathf.RoundToInt(StatsManager.Get_Numbered_Stat("Week"));
+            if (m.unlockWeek <= 0 || week >= m.unlockWeek)
+            {
+                pending = m.quickReplies.ToArray();
+                pendingTargetScene = m.location;
+            }
         }
     }
 

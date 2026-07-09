@@ -10,33 +10,6 @@ using UnityEngine.SceneManagement;
 using VNEngine;
 using Random = UnityEngine.Random;
 
-[Serializable]
-public class FootballTeam
-{
-    public string schoolName;
-    public string mascot;
-    public bool isRival = false;
-    public int wins;
-    public int losses;
-
-    public FootballTeam(string name, string mascot)
-    {
-        this.schoolName = name;
-        this.mascot = mascot;
-    }
-}
-[Serializable]
-public class FootballGame
-{
-    public int week;
-    public FootballTeam opponent;
-    public bool isHome;
-    public bool played;
-    public bool won;
-    public int homeScore;
-    public int awayScore;
-}
-
 public static class CheerQuarterScoring
 {
     private const float pNoScore   = 0.62f; // most drives die
@@ -413,16 +386,21 @@ public class CheerGameManager : MonoBehaviour
         Debug.Log($"No game this week, going home...faking it");
         }
         
-        foreach (var entry in characterFollowers)
-        {
-            if (entry.follower == null) continue;
-            bool invited = StatsManager.Get_Boolean_Stat(entry.character.ToString().ToLower() + "_football_invite_accepted");
-            if (invited) _activeFollowers.Add(entry.follower);
-        }
+        RefreshFollowers();
 
         StartCoroutine(GameFlowRoutine());
     }
-// Add/replace inside CheerGameManager
+public void RefreshFollowers()
+{
+    _activeFollowers.Clear();
+    foreach (var entry in characterFollowers)
+    {
+        if (entry.follower == null) continue;
+        bool invited = StatsManager.Get_Boolean_Stat(entry.character.ToString().ToLower() + "_football_invite_accepted");
+        entry.follower.gameObject.SetActive(invited);
+        if (invited) _activeFollowers.Add(entry.follower);
+    }
+}
 
 private void CleanupCheerForQuarterEnd()
 {

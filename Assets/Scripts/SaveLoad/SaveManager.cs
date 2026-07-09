@@ -11,48 +11,83 @@ namespace VNEngine
     // Based on this tutorial: http://gamedevelopment.tutsplus.com/tutorials/how-to-save-and-load-your-players-progress-in-unity--cms-20934
     public static class SaveManager
     {
-        // All saved games
+        // All saved games (used by legacy UILoadSaveController)
         public static List<SaveFile> saved_games = new List<SaveFile>();
 
-        // Name of the save file we save and load to
+        // Which slot the current playthrough is using (0, 1, or 2)
+        public static int current_slot = 0;
+
+        // Legacy shared save file (kept for UILoadSaveController compatibility)
         private static string save_file_name = "saved_games.gd";
-        // Full path/file location of our save file
         private static string full_save_file_path = Application.persistentDataPath + "/" + save_file_name;
 
+        // Per-slot file paths — each slot is isolated so corruption in one never affects another
+        private static string SlotPath(int slot) =>
+            Application.persistentDataPath + "/save_slot_" + slot + ".gd";
 
-        // Adds the saved game to the saved_games list
+
+        // Returns the SaveFile for the given slot from its own file, or null if the slot is empty
+        public static SaveFile GetSaveForSlot(int slot)
+        {
+            string path = SlotPath(slot);
+            if (!File.Exists(path)) return null;
+            BinaryFormatter bf = new BinaryFormatter();
+            FileStream file = File.Open(path, FileMode.Open);
+            try
+            {
+                SaveFile save = (SaveFile)bf.Deserialize(file);
+                file.Close();
+                return save;
+            }
+            catch (Exception e)
+            {
+                Debug.LogError("Exception loading save slot " + slot + ", deleting: " + e);
+                file.Close();
+                File.Delete(path);
+                return null;
+            }
+        }
+
+        // Writes the save to the current slot's own file
         public static void AddNewSave(SaveFile current)
         {
-            // Load from disk so our file is up to date
+            current.slot_index = current_slot;
+
+            try
+            {
+                BinaryFormatter bf = new BinaryFormatter();
+                FileStream file = File.Create(SlotPath(current_slot));
+                bf.Serialize(file, current);
+                file.Close();
+                Debug.Log("Saved slot " + current_slot + " to: " + SlotPath(current_slot));
+            }
+            catch (Exception e)
+            {
+                Debug.LogError("Exception saving slot " + current_slot + ": " + e);
+            }
+
+            // Also maintain the legacy list so UILoadSaveController still works
             LoadFromFile();
-
-            // Add to the saved_games list
+            saved_games.RemoveAll(s => s.slot_index == current_slot);
             saved_games.Add(current);
-
-            // Save file to disk
             Save();
         }
-        // Saves the current saved_games list to a file
+
+        // Saves the legacy shared list to disk (used by UILoadSaveController)
         public static void Save()
         {
-            Debug.Log("Saving file: " + full_save_file_path);
-
-            // Open a file called saved_games.gd, and save our saved_games list into it
+            Debug.Log("Saving legacy file: " + full_save_file_path);
             BinaryFormatter bf = new BinaryFormatter();
             FileStream file = File.Create(full_save_file_path);
             bf.Serialize(file, SaveManager.saved_games);
             file.Close();
         }
 
-
-
-        // Loads a bunch of saves into the saved_games list from the save file
+        // Loads the legacy shared list from disk (used by UILoadSaveController)
         public static void LoadFromFile()
         {
             if (File.Exists(full_save_file_path))
             {
-                Debug.Log("Loading save file: " + full_save_file_path);
-
                 BinaryFormatter bf = new BinaryFormatter();
                 FileStream file = File.Open(full_save_file_path, FileMode.Open);
                 try
@@ -61,7 +96,7 @@ namespace VNEngine
                 }
                 catch (Exception e)
                 {
-                    Debug.LogError("Exception loading save file, deleting save file: " + e);
+                    Debug.LogError("Exception loading save file, deleting: " + e);
                     DeleteAllSaves();
                 }
                 file.Close();
@@ -70,25 +105,32 @@ namespace VNEngine
                 Debug.Log("Could not find save file: " + full_save_file_path);
         }
 
-
-
-        // Removes the specified save, then saves the remaining saves to file
+        // Deletes the slot's own file and removes it from the legacy list
         public static void DeleteSave(SaveFile save)
         {
+            string path = SlotPath(save.slot_index);
+            if (File.Exists(path))
+            {
+                File.Delete(path);
+                Debug.Log("Deleted save slot " + save.slot_index);
+            }
             saved_games.Remove(save);
             Save();
         }
 
-
-
         public static void DeleteAllSaves()
         {
-            if (File.Exists(Application.persistentDataPath + "/" + save_file_name))
+            for (int i = 0; i < 3; i++)
+            {
+                string path = SlotPath(i);
+                if (File.Exists(path)) File.Delete(path);
+            }
+            if (File.Exists(full_save_file_path))
             {
                 File.Delete(full_save_file_path);
-                saved_games.Clear();
-                Debug.Log("Save file deleted");
+                Debug.Log("All save files deleted");
             }
+            saved_games.Clear();
         }
 
 

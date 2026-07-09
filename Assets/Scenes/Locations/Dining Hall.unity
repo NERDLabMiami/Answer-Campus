@@ -1469,6 +1469,167 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6029872425083904624, guid: a9f805e163f0b450bafa7617ab1c41de, type: 3}
   m_PrefabInstance: {fileID: 73019427}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &74557963
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 74557964}
+  - component: {fileID: 74557966}
+  - component: {fileID: 74557965}
+  m_Layer: 0
+  m_Name: Dialogue (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &74557964
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 74557963}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 269.38885, y: 307.4441, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1346945434}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &74557965
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 74557963}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &74557966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 74557963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b40beeb965e5d9419bf817d6f7d59bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  go_to_next_node: 1
+  executed_from_load: 0
+  actor_name_from: 0
+  actor: Breanna
+  speaker_name_from: 0
+  textbox_title: Breanna
+  fetch_localized_stat_value: 0
+  dialogue_from: 0
+  localized_key: 
+  text: Oh, okay. Maybe some other time.
+  talking_beeps: {fileID: 0}
+  darken_all_other_characters: 1
+  bring_speaker_to_front: 1
+  clear_text_after: 0
+  log_text: 1
+  log_category: Default
+  done_printing: 0
+  no_voice_playing: 0
+  done_voice_clip: 0
 --- !u!1001 &77252006
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8611,6 +8772,22 @@ MonoBehaviour:
     footballRequirement:
       check: 0
       threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
+  - text: No thanks.
+    nextConversation: {fileID: 1346945435}
+    useTraits: 0
+    useEvents: 0
+    useGame: 0
+    traitRequirements: []
+    eventRequirements: []
+    footballRequirement:
+      check: 0
+      threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   hideDialogueUI: 1
 --- !u!1001 &222418615
 PrefabInstance:
@@ -12377,6 +12554,9 @@ MonoBehaviour:
     footballRequirement:
       check: 0
       threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   - text: Class was fine.
     nextConversation: {fileID: 8908875296095549762}
     useTraits: 0
@@ -12387,6 +12567,9 @@ MonoBehaviour:
     footballRequirement:
       check: 0
       threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   - text: Everyone introduced themselves and nobody relaxed.
     nextConversation: {fileID: 6401271778693332466}
     useTraits: 0
@@ -12397,6 +12580,9 @@ MonoBehaviour:
     footballRequirement:
       check: 0
       threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   hideDialogueUI: 1
 --- !u!1 &349351341
 GameObject:
@@ -14395,6 +14581,68 @@ MonoBehaviour:
   cur_node: 0
   active: 0
   finished_conversation: 0
+--- !u!1001 &379463393
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1346945434}
+    m_Modifications:
+    - target: {fileID: 5275582187492880113, guid: c87e9d001b140b24e93b21ae3617e89b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -477.54214
+      objectReference: {fileID: 0}
+    - target: {fileID: 5275582187492880113, guid: c87e9d001b140b24e93b21ae3617e89b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -261.92545
+      objectReference: {fileID: 0}
+    - target: {fileID: 5275582187492880113, guid: c87e9d001b140b24e93b21ae3617e89b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5275582187492880113, guid: c87e9d001b140b24e93b21ae3617e89b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5275582187492880113, guid: c87e9d001b140b24e93b21ae3617e89b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5275582187492880113, guid: c87e9d001b140b24e93b21ae3617e89b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5275582187492880113, guid: c87e9d001b140b24e93b21ae3617e89b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5275582187492880113, guid: c87e9d001b140b24e93b21ae3617e89b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5275582187492880113, guid: c87e9d001b140b24e93b21ae3617e89b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5275582187492880113, guid: c87e9d001b140b24e93b21ae3617e89b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8870558989146336016, guid: c87e9d001b140b24e93b21ae3617e89b, type: 3}
+      propertyPath: m_Name
+      value: Set Week
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c87e9d001b140b24e93b21ae3617e89b, type: 3}
+--- !u!4 &379463394 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5275582187492880113, guid: c87e9d001b140b24e93b21ae3617e89b, type: 3}
+  m_PrefabInstance: {fileID: 379463393}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &397666374
 GameObject:
   m_ObjectHideFlags: 0
@@ -17930,6 +18178,7 @@ Transform:
   - {fileID: 4533414472974448713}
   - {fileID: 7479983033805354652}
   - {fileID: 1627762961}
+  - {fileID: 1346945434}
   - {fileID: 2441957760931938726}
   - {fileID: 8367204903315048832}
   - {fileID: 95037231}
@@ -45518,6 +45767,60 @@ MonoBehaviour:
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
+--- !u!1 &1099591922
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1099591923}
+  - component: {fileID: 1099591924}
+  m_Layer: 0
+  m_Name: Change Actor Image (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1099591923
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1099591922}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 269.38885, y: 307.4441, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1346945434}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1099591924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1099591922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44973f879676fe646a5d712c3f31e15a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  go_to_next_node: 1
+  executed_from_load: 0
+  actor_name_from: 0
+  actor_name: Breanna
+  new_image: {fileID: 21300000, guid: ab35dd1fbaca5574d9aedeba1abe5523, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
+  fade_in_new_image: 0
+  lighten_actor: 0
+  bring_actor_to_front: 0
 --- !u!1 &1101341528
 GameObject:
   m_ObjectHideFlags: 0
@@ -45575,6 +45878,9 @@ MonoBehaviour:
     footballRequirement:
       check: 0
       threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   - text: No, he's doing To Kill a Mockingbird.
     nextConversation: {fileID: 2976040590616834712}
     useTraits: 0
@@ -45585,6 +45891,9 @@ MonoBehaviour:
     footballRequirement:
       check: 0
       threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   hideDialogueUI: 1
 --- !u!1 &1102653846
 GameObject:
@@ -47502,7 +47811,7 @@ PrefabInstance:
     - target: {fileID: 1611349575936783945, guid: 0991620b818a844c8872842d42ccce09, type: 3}
       propertyPath: 'fallbackConversations.Array.data[2]'
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1952798246198013278}
     - target: {fileID: 3964208818591883344, guid: 0991620b818a844c8872842d42ccce09, type: 3}
       propertyPath: m_Name
       value: Conversation Router
@@ -55447,6 +55756,58 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destroy_when_finished: 0
   start_conversation_when_done: {fileID: 0}
+  cur_node: 0
+  active: 0
+  finished_conversation: 0
+--- !u!1 &1346945433
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1346945434}
+  - component: {fileID: 1346945435}
+  m_Layer: 0
+  m_Name: Breanna Arc - Relationships Opt Out
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1346945434
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1346945433}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 379463394}
+  - {fileID: 1099591923}
+  - {fileID: 74557964}
+  m_Father: {fileID: 561909551}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1346945435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1346945433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7598fdb9cbb025c4293438a58006c68f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VNEngine.ConversationManager
+  destroy_when_finished: 0
+  start_conversation_when_done: {fileID: 282285652}
   cur_node: 0
   active: 0
   finished_conversation: 0
@@ -64281,6 +64642,9 @@ MonoBehaviour:
     footballRequirement:
       check: 0
       threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   - text: Not for everyone?
     nextConversation: {fileID: 8908875296095549762}
     useTraits: 0
@@ -64291,6 +64655,9 @@ MonoBehaviour:
     footballRequirement:
       check: 0
       threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   - text: Everyone introduced themselves and nobody relaxed.
     nextConversation: {fileID: 6401271778693332466}
     useTraits: 0
@@ -64301,6 +64668,9 @@ MonoBehaviour:
     footballRequirement:
       check: 0
       threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   hideDialogueUI: 1
 --- !u!1001 &1636507062
 PrefabInstance:
@@ -66065,6 +66435,9 @@ MonoBehaviour:
     footballRequirement:
       check: 0
       threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   - text: Let's use them.
     nextConversation: {fileID: 6166862922331065587}
     useTraits: 0
@@ -66075,6 +66448,9 @@ MonoBehaviour:
     footballRequirement:
       check: 0
       threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   - text: If you're too busy, I get it.
     nextConversation: {fileID: 8334105147486067987}
     useTraits: 0
@@ -66085,6 +66461,9 @@ MonoBehaviour:
     footballRequirement:
       check: 0
       threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   hideDialogueUI: 1
 --- !u!1001 &1758377441
 PrefabInstance:
@@ -66278,6 +66657,9 @@ MonoBehaviour:
     footballRequirement:
       check: 1
       threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   - text: Classes are fine. People are harder.
     nextConversation: {fileID: 260186000736277717}
     useTraits: 0
@@ -66288,6 +66670,9 @@ MonoBehaviour:
     footballRequirement:
       check: 0
       threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   - text: Surviving, spiritually improvising.
     nextConversation: {fileID: 5429893507383357537}
     useTraits: 0
@@ -66300,6 +66685,9 @@ MonoBehaviour:
     footballRequirement:
       check: 0
       threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   hideDialogueUI: 1
 --- !u!1001 &1775179619
 PrefabInstance:
@@ -68137,6 +68525,9 @@ MonoBehaviour:
     footballRequirement:
       check: 0
       threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   - text: Yeah, we started on To Kill a Mockingbird.
     nextConversation: {fileID: 2976040590616834712}
     useTraits: 0
@@ -68147,6 +68538,9 @@ MonoBehaviour:
     footballRequirement:
       check: 0
       threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   hideDialogueUI: 1
 --- !u!1 &1842233542
 GameObject:
@@ -71670,6 +72064,9 @@ MonoBehaviour:
     footballRequirement:
       check: 0
       threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   - text: That sounds like a careful way to say something.
     nextConversation: {fileID: 1066139969}
     useTraits: 0
@@ -71680,6 +72077,9 @@ MonoBehaviour:
     footballRequirement:
       check: 0
       threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   - text: So he's old school in a bad way?
     nextConversation: {fileID: 2129807865}
     useTraits: 0
@@ -71690,6 +72090,9 @@ MonoBehaviour:
     footballRequirement:
       check: 0
       threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   hideDialogueUI: 1
 --- !u!1001 &1920118604
 PrefabInstance:
@@ -81635,7 +82038,6 @@ Transform:
   - {fileID: 1019509401757629772}
   - {fileID: 4981486155486034321}
   - {fileID: 3317151292727821883}
-  - {fileID: 7991061061551851618}
   - {fileID: 2322875718507048535}
   m_Father: {fileID: 2441957760931938726}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -89370,37 +89772,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1359126714030499278
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4273505231058847675}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b40beeb965e5d9419bf817d6f7d59bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  go_to_next_node: 1
-  executed_from_load: 0
-  actor_name_from: 0
-  actor: Breanna
-  speaker_name_from: 0
-  textbox_title: Breanna
-  fetch_localized_stat_value: 0
-  dialogue_from: 0
-  localized_key: 
-  text: Take care! See you soon!
-  talking_beeps: {fileID: 0}
-  darken_all_other_characters: 1
-  bring_speaker_to_front: 1
-  clear_text_after: 0
-  log_text: 1
-  log_category: Default
-  done_printing: 0
-  no_voice_playing: 0
-  done_voice_clip: 0
 --- !u!4 &1362474619863183539
 Transform:
   m_ObjectHideFlags: 0
@@ -89707,21 +90078,6 @@ MonoBehaviour:
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
---- !u!4 &1521900236989641639
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5007459940067514900}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -472.5, y: -265.78125, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 7327419206273440169}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1523008572812870335
 GameObject:
   m_ObjectHideFlags: 0
@@ -89984,8 +90340,7 @@ MonoBehaviour:
   fetch_localized_stat_value: 0
   dialogue_from: 0
   localized_key: 
-  text: "I can just- I\u2019ll probably just text you or whatever and we can meet
-    up or do a video call or, you know."
+  text: If I can get through this without my brain melting, I might survive tomorrow.
   talking_beeps: {fileID: 0}
   darken_all_other_characters: 1
   bring_speaker_to_front: 1
@@ -96438,6 +96793,9 @@ MonoBehaviour:
     footballRequirement:
       check: 0
       threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   - text: I mean, it's just one bad grade. Don't worry about it.
     nextConversation: {fileID: 6335165126081140132}
     useTraits: 0
@@ -96448,6 +96806,9 @@ MonoBehaviour:
     footballRequirement:
       check: 0
       threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   hideDialogueUI: 1
 --- !u!4 &3111367654688447952
 Transform:
@@ -97468,37 +97829,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &3387721262282413754
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7112914965812386544}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b40beeb965e5d9419bf817d6f7d59bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  go_to_next_node: 1
-  executed_from_load: 0
-  actor_name_from: 0
-  actor: Breanna
-  speaker_name_from: 0
-  textbox_title: Breanna
-  fetch_localized_stat_value: 0
-  dialogue_from: 0
-  localized_key: 
-  text: "\u2013<i>and</i> I still have Organic Chemistry..."
-  talking_beeps: {fileID: 0}
-  darken_all_other_characters: 1
-  bring_speaker_to_front: 1
-  clear_text_after: 0
-  log_text: 1
-  log_category: Default
-  done_printing: 0
-  no_voice_playing: 0
-  done_voice_clip: 0
 --- !u!1 &3388949996033005667
 GameObject:
   m_ObjectHideFlags: 0
@@ -100345,24 +100675,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &4273505231058847675
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4806135516596209120}
-  - component: {fileID: 1359126714030499278}
-  - component: {fileID: 8857587314140924985}
-  m_Layer: 0
-  m_Name: Dialogue
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &4278196897490261755
 GameObject:
   m_ObjectHideFlags: 0
@@ -100577,7 +100889,6 @@ Transform:
   - {fileID: 4837335650586817041}
   - {fileID: 3009203440981886414}
   - {fileID: 5901959452055660482}
-  - {fileID: 4806135516596209120}
   - {fileID: 809481024663326257}
   - {fileID: 6505911568903589561}
   - {fileID: 2833641136898860826}
@@ -102707,21 +103018,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!4 &4806135516596209120
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4273505231058847675}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4299264259431309934}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4817900478536000444
 Transform:
   m_ObjectHideFlags: 0
@@ -102881,7 +103177,7 @@ GameObject:
   - component: {fileID: 2006201515454648588}
   - component: {fileID: 7054952096049945994}
   m_Layer: 0
-  m_Name: Is it The exam
+  m_Name: Is it The exam - Requirements Must Be met
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -103611,23 +103907,6 @@ GameObject:
   - component: {fileID: 1152319473672025493}
   m_Layer: 0
   m_Name: Neutral Charli (4)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &5007459940067514900
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1521900236989641639}
-  - component: {fileID: 8652790241086547063}
-  m_Layer: 0
-  m_Name: Alter Stats (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -104570,103 +104849,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
---- !u!82 &5281731223243682809
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7112914965812386544}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1 &5293513181093250728
 GameObject:
   m_ObjectHideFlags: 0
@@ -105595,6 +105777,9 @@ MonoBehaviour:
     footballRequirement:
       check: 0
       threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   - text: I think I did okay. I dunno.
     nextConversation: {fileID: 4309715486660323584}
     useTraits: 1
@@ -105608,6 +105793,9 @@ MonoBehaviour:
     footballRequirement:
       check: 0
       threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   - text: Not... the best.
     nextConversation: {fileID: 4309715486660323584}
     useTraits: 1
@@ -105621,6 +105809,9 @@ MonoBehaviour:
     footballRequirement:
       check: 0
       threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   hideDialogueUI: 1
 --- !u!1 &5709214520751486477
 GameObject:
@@ -106273,6 +106464,9 @@ MonoBehaviour:
     footballRequirement:
       check: 0
       threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   - text: Breanna, relax.
     nextConversation: {fileID: 2844697233737798336}
     useTraits: 0
@@ -106283,6 +106477,9 @@ MonoBehaviour:
     footballRequirement:
       check: 0
       threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   hideDialogueUI: 1
 --- !u!1 &5865954277776176538
 GameObject:
@@ -107609,6 +107806,9 @@ MonoBehaviour:
     footballRequirement:
       check: 0
       threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   - text: Which one feels the most honest?
     nextConversation: {fileID: 8666559830209811915}
     useTraits: 0
@@ -107619,6 +107819,9 @@ MonoBehaviour:
     footballRequirement:
       check: 0
       threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   hideDialogueUI: 1
 --- !u!114 &6465608207794685817
 MonoBehaviour:
@@ -110094,6 +110297,9 @@ MonoBehaviour:
     footballRequirement:
       check: 0
       threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   - text: Does this one still feel worth it?
     nextConversation: {fileID: 5215795646812419679}
     useTraits: 0
@@ -110104,6 +110310,9 @@ MonoBehaviour:
     footballRequirement:
       check: 0
       threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   hideDialogueUI: 1
 --- !u!114 &7109024138956697864
 MonoBehaviour:
@@ -110151,24 +110360,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4299264259431309934}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &7112914965812386544
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7991061061551851618}
-  - component: {fileID: 3387721262282413754}
-  - component: {fileID: 5281731223243682809}
-  m_Layer: 0
-  m_Name: Dialogue
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!82 &7123760294595587959
 AudioSource:
   m_ObjectHideFlags: 0
@@ -110937,7 +111128,7 @@ MonoBehaviour:
   fetch_localized_stat_value: 0
   dialogue_from: 0
   localized_key: 
-  text: "\u2013and with the exams going on,"
+  text: and with the exams going on, and I still have Organic Chemistry...
   talking_beeps: {fileID: 0}
   darken_all_other_characters: 1
   bring_speaker_to_front: 1
@@ -111043,7 +111234,6 @@ Transform:
   m_Children:
   - {fileID: 3990706767701249724}
   - {fileID: 3362338093828668011}
-  - {fileID: 1521900236989641639}
   - {fileID: 7761661432927662932}
   - {fileID: 4644689050147705764}
   m_Father: {fileID: 2441957760931938726}
@@ -112108,7 +112298,7 @@ MonoBehaviour:
   fetch_localized_stat_value: 0
   dialogue_from: 0
   localized_key: 
-  text: <i>Oh thank god-</i> thank you so much!
+  text: Honestly? Yes. Please.
   talking_beeps: {fileID: 0}
   darken_all_other_characters: 1
   bring_speaker_to_front: 1
@@ -113533,21 +113723,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8036305522228763652}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &7991061061551851618
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7112914965812386544}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1033907044244327497}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &8001968561938337826
 AudioSource:
@@ -115763,6 +115938,9 @@ MonoBehaviour:
     footballRequirement:
       check: 0
       threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   - text: You sounded like yourself.
     nextConversation: {fileID: 1274826613924478428}
     useTraits: 0
@@ -115773,6 +115951,9 @@ MonoBehaviour:
     footballRequirement:
       check: 0
       threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   hideDialogueUI: 1
 --- !u!82 &8465311713307451574
 AudioSource:
@@ -115896,6 +116077,9 @@ MonoBehaviour:
     footballRequirement:
       check: 0
       threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   - text: How about I quiz you?
     nextConversation: {fileID: 1565866360544838722}
     useTraits: 0
@@ -115906,6 +116090,9 @@ MonoBehaviour:
     footballRequirement:
       check: 0
       threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   - text: Is it the exam... or everything attached to it?
     nextConversation: {fileID: 7054952096049945994}
     useTraits: 0
@@ -115916,6 +116103,9 @@ MonoBehaviour:
     footballRequirement:
       check: 0
       threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   hideDialogueUI: 1
 --- !u!1 &8492183304394822699
 GameObject:
@@ -116128,6 +116318,9 @@ MonoBehaviour:
     footballRequirement:
       check: 0
       threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   - text: Is it more than the exam?
     nextConversation: {fileID: 7054952096049945994}
     useTraits: 0
@@ -116138,6 +116331,9 @@ MonoBehaviour:
     footballRequirement:
       check: 0
       threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   hideDialogueUI: 1
 --- !u!82 &8577174498139667343
 AudioSource:
@@ -116261,6 +116457,9 @@ MonoBehaviour:
     footballRequirement:
       check: 0
       threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   - text: Dude, relax.
     nextConversation: {fileID: 2844697233737798336}
     useTraits: 0
@@ -116271,6 +116470,9 @@ MonoBehaviour:
     footballRequirement:
       check: 0
       threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   hideDialogueUI: 1
 --- !u!1 &8590232425993548887
 GameObject:
@@ -116369,27 +116571,6 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
---- !u!114 &8652790241086547063
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5007459940067514900}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b537df8b41db71745ae8383c66199796, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  go_to_next_node: 1
-  executed_from_load: 0
-  print_all_stats_to_console: 0
-  stat_type: 0
-  stat_name: Breanna
-  set_number_to: 7
-  modify_number_amount: 0
-  set_bool_to: 0
-  set_string_to: 
 --- !u!114 &8666559830209811915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116637,6 +116818,19 @@ MonoBehaviour:
   go_to_next_node: 1
   executed_from_load: 0
   choices:
+  - text: I can help you study later tonight.
+    nextConversation: {fileID: 1565866360544838722}
+    useTraits: 0
+    useEvents: 0
+    useGame: 0
+    traitRequirements: []
+    eventRequirements: []
+    footballRequirement:
+      check: 0
+      threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   - text: When you mentioned film before... you sounded different.
     nextConversation: {fileID: 876117449266147078}
     useTraits: 0
@@ -116649,6 +116843,9 @@ MonoBehaviour:
     footballRequirement:
       check: 0
       threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   - text: Who are you doing this for?
     nextConversation: {fileID: 1602120690182301343}
     useTraits: 0
@@ -116661,30 +116858,9 @@ MonoBehaviour:
     footballRequirement:
       check: 0
       threshold: 0
-  - text: This path is wearing you down.
-    nextConversation: {fileID: 5761516146729699587}
-    useTraits: 0
-    useEvents: 1
-    useGame: 0
-    traitRequirements: []
-    eventRequirements:
-    - key: Help People
-      check: 0
-    footballRequirement:
-      check: 0
-      threshold: 0
-  - text: I can help you study later tonight.
-    nextConversation: {fileID: 1565866360544838722}
-    useTraits: 0
-    useEvents: 1
-    useGame: 0
-    traitRequirements: []
-    eventRequirements:
-    - key: Help People
-      check: 0
-    footballRequirement:
-      check: 0
-      threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   hideDialogueUI: 1
 --- !u!4 &8745904486981129244
 Transform:
@@ -117024,103 +117200,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6096978310975048915}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &8857587314140924985
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4273505231058847675}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!4 &8863340428083645156
 Transform:
   m_ObjectHideFlags: 0

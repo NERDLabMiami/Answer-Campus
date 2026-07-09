@@ -45,7 +45,7 @@ namespace VNEngine
         public bool continueCurrentOnFailure = true; 
         public override void Run_Node()
         {
-            bool passed = EvaluateTraitRequirements();
+            bool passed = EvaluateTraitRequirements() && EvaluateFootballRequirement();
 
             if (passed)
             {
@@ -141,12 +141,11 @@ namespace VNEngine
 
         private (int wins, int losses, int played, float winRate) GetFootballRecord()
         {
-            // FootballSchedule JSON stored in StatsManager (see Calendar.cs)
             string json = StatsManager.Get_String_Stat("FootballSchedule");
             if (string.IsNullOrEmpty(json))
                 return (0, 0, 0, 0f);
 
-         /*   FootballGameListWrapper wrapper = JsonUtility.FromJson<FootballGameListWrapper>(json);
+            FootballGameListWrapper wrapper = JsonUtility.FromJson<FootballGameListWrapper>(json);
             if (wrapper == null || wrapper.games == null)
                 return (0, 0, 0, 0f);
 
@@ -154,9 +153,7 @@ namespace VNEngine
             int losses = wrapper.games.Count(g => g.played && !g.won);
             int played = wins + losses;
             float winRate = (played > 0) ? (float)wins / played : 0f;
-           */
-//            return (wins, losses, played, winRate);
-            return (0, 0, 0, 0);
+            return (wins, losses, played, winRate);
         }
 
         private static bool CompareNumber(float current, NumberCompare op, float target)

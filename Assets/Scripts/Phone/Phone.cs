@@ -59,7 +59,7 @@ public class Phone : MonoBehaviour
     public void ShowMap()
     {
         if (_mode == PhoneMode.Conversation) return;
-        title.text = "Friend Finder";
+        title.text = "Finder";
         HideOverlays();
         TogglePanels(map: true);
 

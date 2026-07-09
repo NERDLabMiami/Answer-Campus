@@ -41789,6 +41789,9 @@ MonoBehaviour:
     footballRequirement:
       check: 0
       threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   - text: I really like reading... My parents keep asking what the plan is.
     nextConversation: {fileID: 5729851}
     useTraits: 0
@@ -41799,6 +41802,9 @@ MonoBehaviour:
     footballRequirement:
       check: 0
       threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   - text: Creative stuff. Design, media, I like making things.
     nextConversation: {fileID: 1229547583}
     useTraits: 0
@@ -41809,6 +41815,9 @@ MonoBehaviour:
     footballRequirement:
       check: 0
       threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   hideDialogueUI: 1
 --- !u!1 &470470027
 GameObject:
@@ -50407,6 +50416,9 @@ MonoBehaviour:
     footballRequirement:
       check: 0
       threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   - text: We met at the Sylly Party, don't you remember?
     nextConversation: {fileID: 1086534808}
     useTraits: 0
@@ -50417,6 +50429,9 @@ MonoBehaviour:
     footballRequirement:
       check: 0
       threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   hideDialogueUI: 1
 --- !u!1 &540302130
 GameObject:
@@ -54689,6 +54704,9 @@ MonoBehaviour:
     footballRequirement:
       check: 0
       threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   - text: If I can find the time...
     nextConversation: {fileID: 350822008}
     useTraits: 0
@@ -54699,6 +54717,9 @@ MonoBehaviour:
     footballRequirement:
       check: 0
       threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   hideDialogueUI: 1
 --- !u!1 &571606161
 GameObject:
@@ -55104,6 +55125,9 @@ MonoBehaviour:
     footballRequirement:
       check: 0
       threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   - text: I really like reading... My parents keep asking what the plan is.
     nextConversation: {fileID: 5729851}
     useTraits: 0
@@ -55114,6 +55138,9 @@ MonoBehaviour:
     footballRequirement:
       check: 0
       threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   - text: Creative stuff. Design, media, I like making things.
     nextConversation: {fileID: 1229547583}
     useTraits: 0
@@ -55124,6 +55151,9 @@ MonoBehaviour:
     footballRequirement:
       check: 0
       threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   hideDialogueUI: 1
 --- !u!1 &578892723
 GameObject:
@@ -65414,6 +65444,9 @@ MonoBehaviour:
     footballRequirement:
       check: 0
       threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   - text: Yeah, it's been good!
     nextConversation: {fileID: 2060101867}
     useTraits: 0
@@ -65424,6 +65457,9 @@ MonoBehaviour:
     footballRequirement:
       check: 0
       threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   - text: It's been kinda lame.
     nextConversation: {fileID: 1572503569}
     useTraits: 0
@@ -65434,6 +65470,9 @@ MonoBehaviour:
     footballRequirement:
       check: 0
       threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   hideDialogueUI: 1
 --- !u!1 &682747722
 GameObject:
@@ -67377,6 +67416,9 @@ MonoBehaviour:
     footballRequirement:
       check: 0
       threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   - text: Maybe later.
     nextConversation: {fileID: 1857534400}
     useTraits: 0
@@ -67387,6 +67429,9 @@ MonoBehaviour:
     footballRequirement:
       check: 0
       threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   hideDialogueUI: 1
 --- !u!1 &718230390
 GameObject:
@@ -68555,6 +68600,9 @@ MonoBehaviour:
     footballRequirement:
       check: 0
       threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   - text: That tends to happen at gyms.
     nextConversation: {fileID: 438793027}
     useTraits: 0
@@ -68565,6 +68613,9 @@ MonoBehaviour:
     footballRequirement:
       check: 0
       threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   hideDialogueUI: 1
 --- !u!1 &732025162
 GameObject:
@@ -76684,6 +76735,9 @@ MonoBehaviour:
     footballRequirement:
       check: 0
       threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   - text: Classic how?
     nextConversation: {fileID: 963429299}
     useTraits: 0
@@ -76694,6 +76748,9 @@ MonoBehaviour:
     footballRequirement:
       check: 0
       threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   - text: That sounded personal.
     nextConversation: {fileID: 1752904841}
     useTraits: 0
@@ -76704,6 +76761,9 @@ MonoBehaviour:
     footballRequirement:
       check: 0
       threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   hideDialogueUI: 1
 --- !u!1001 &849923486
 PrefabInstance:
@@ -98427,6 +98487,9 @@ MonoBehaviour:
     footballRequirement:
       check: 0
       threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   - text: You kind of lit up talking about film.
     nextConversation: {fileID: 1108183395}
     useTraits: 0
@@ -98437,6 +98500,9 @@ MonoBehaviour:
     footballRequirement:
       check: 0
       threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   - text: You know doctors aren't the only people who help people, right?
     nextConversation: {fileID: 1265644538}
     useTraits: 0
@@ -98447,6 +98513,9 @@ MonoBehaviour:
     footballRequirement:
       check: 0
       threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   hideDialogueUI: 1
 --- !u!1 &1111069689
 GameObject:
@@ -110112,6 +110181,9 @@ MonoBehaviour:
     footballRequirement:
       check: 0
       threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   - text: I'm sure he'll get "by" some how.
     nextConversation: {fileID: 1313732235}
     useTraits: 0
@@ -110122,6 +110194,9 @@ MonoBehaviour:
     footballRequirement:
       check: 0
       threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   hideDialogueUI: 1
 --- !u!1 &1264175822
 GameObject:
@@ -143134,6 +143209,9 @@ MonoBehaviour:
     footballRequirement:
       check: 0
       threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   - text: I really like reading... My parents keep asking what the plan is.
     nextConversation: {fileID: 5729851}
     useTraits: 0
@@ -143144,6 +143222,9 @@ MonoBehaviour:
     footballRequirement:
       check: 0
       threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   - text: Creative stuff. Design, media, I like making things.
     nextConversation: {fileID: 1229547583}
     useTraits: 0
@@ -143154,6 +143235,9 @@ MonoBehaviour:
     footballRequirement:
       check: 0
       threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   hideDialogueUI: 1
 --- !u!1 &1647992906
 GameObject:
@@ -147197,6 +147281,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1182532911147041019}
     m_Modifications:
+    - target: {fileID: -5143952188114400212, guid: 0f3abc4b5d99b424eb1a504fb2b92c1b, type: 3}
+      propertyPath: stageRouteIndex
+      value: 
+      objectReference: {fileID: 11400000, guid: 5e1ab10876ffd4e239ae0b865e8cede9, type: 2}
     - target: {fileID: -5143952188114400212, guid: 0f3abc4b5d99b424eb1a504fb2b92c1b, type: 3}
       propertyPath: textMessage.body
       value: Come hang out!
@@ -168768,6 +168856,9 @@ MonoBehaviour:
     footballRequirement:
       check: 0
       threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   - text: Brad? Yeah, totally.
     nextConversation: {fileID: 1660847999}
     useTraits: 0
@@ -168778,6 +168869,9 @@ MonoBehaviour:
     footballRequirement:
       check: 0
       threshold: 0
+    useAffinity: 0
+    affinityRequirements: []
+    affinityDeltas: []
   hideDialogueUI: 1
 --- !u!1 &1977803173
 GameObject:

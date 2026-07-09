@@ -10,7 +10,6 @@ namespace VNEngine
     {
         [System.Serializable] private class FootballGameListWrapper { public FootballGame[] games; }
         [System.Serializable] private class FootballGame { public bool played; public bool won; }
-
         [System.Serializable]
         public class Choice
         {
@@ -181,11 +180,11 @@ private (int wins, int losses, int played, float winRate) GetFootballRecord()
     try { wrapper = JsonUtility.FromJson<FootballGameListWrapper>(json); }
     catch { }
 
-    if (wrapper?.games == null || wrapper.games.Length == 0)
+    if (wrapper?.games == null || wrapper.games.Count == 0)
         return (0, 0, 0, 0f);
 
     int wins = 0, losses = 0;
-    for (int i = 0; i < wrapper.games.Length; i++)
+    for (int i = 0; i < wrapper.games.Count; i++)
     {
         var g = wrapper.games[i];
         if (!g.played) continue;

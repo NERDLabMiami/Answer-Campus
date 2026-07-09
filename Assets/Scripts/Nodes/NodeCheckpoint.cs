@@ -32,6 +32,11 @@ namespace VNEngine
             {
                 case HomeReturnState.SecondHalfOfWeek:
                     StatsManager.Set_Numbered_Stat("DayPhase", 1f);
+                    // Mark class as attended so OrchestrateSceneLoad()'s safety check
+                    // (DayPhase=1 without ClassAttended → reset to morning) doesn't fire
+                    // when loading a save taken in the afternoon.
+                    if (currentWeek >= 1)
+                        StatsManager.Set_Boolean_Stat("ClassAttendedThisWeek", true);
                     Debug.Log("[NodeCheckpoint] SecondHalfOfWeek — DayPhase=1, week unchanged.");
                     break;
 

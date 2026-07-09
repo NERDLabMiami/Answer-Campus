@@ -45,8 +45,16 @@ namespace VNEngine
         public List<string> saved_items;
 
 
+        public int slot_index = 0;
+
+        // PlayerPrefs game-state keys not covered by StatsManager
+        public string saved_messages;
+        public string saved_character_locations;
+        public string saved_lockable_locations;
+
         // Do not change
         const string feature_save_separation_character = ";;;;";
+
 
 
 
@@ -69,8 +77,9 @@ namespace VNEngine
             string active_scene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
 
             // UI is unresponsive if there are 2 event systems
-            if (UnityEngine.EventSystems.EventSystem.current.gameObject)
-                GameObject.Destroy(UnityEngine.EventSystems.EventSystem.current.gameObject);
+            var eventSystem = UnityEngine.EventSystems.EventSystem.current;
+            if (eventSystem != null && eventSystem.gameObject != null)
+                GameObject.Destroy(eventSystem.gameObject);
 
             // Load items
             StatsManager.items = saved_items;
@@ -80,15 +89,70 @@ namespace VNEngine
             // Load the scene that was saved
             UnityEngine.SceneManagement.SceneManager.LoadScene(current_scene, UnityEngine.SceneManagement.LoadSceneMode.Additive);
 
+            // Awake() runs synchronously during LoadScene, so scene_manager is already set.
+            // Null starting_conversation NOW — before yielding — so VNSceneManager.Start_Scene()
+            // cannot auto-start the wrong conversation in the very next frame.
+            if (VNSceneManager.scene_manager != null)
+                VNSceneManager.scene_manager.starting_conversation = null;
+
+            // Restore stats and PlayerPrefs BEFORE yielding so Start() methods in the loaded
+            // scene (Calendar, HomeCutsceneController, etc.) see the correct values on their
+            // first frame instead of the cleared state.
+            StatsManager.boolean_stats = saved_boolean_stats;
+            StatsManager.numbered_stats = saved_numbered_stats;
+            StatsManager.string_stats = saved_string_stats;
+            StatsManager.items = saved_items;
+            StatsManager.Print_All_Stats();
+
+            //<< MODIFY THIS SECTION TO LOAD THINGS SPECIFIC TO YOUR GAME >>//
+
+            if (!string.IsNullOrEmpty(saved_messages))
+                PlayerPrefs.SetString("messages", saved_messages);
+            if (!string.IsNullOrEmpty(saved_character_locations))
+                PlayerPrefs.SetString("characterLocations", saved_character_locations);
+            if (!string.IsNullOrEmpty(saved_lockable_locations))
+                PlayerPrefs.SetString("lockableLocationNames", saved_lockable_locations);
+            PlayerPrefs.Save();
+
+            //<< MODIFY THE ABOVE SECTION TO LOAD THINGS SPECIFIC TO YOUR GAME >>//
+
             // Must wait 1 frame before initializing the new scene
             yield return null;
 
-            // Unpause in case the game was paused before loading
-            Pause.pause.ResumeGame();
+            // Unpause in case the game was paused before loading.
+            // Guard with try-catch: Pause.pause may exist but have unassigned Inspector fields.
+            if (Pause.pause != null)
+            {
+                try { Pause.pause.ResumeGame(); }
+                catch (System.Exception) { }
+            }
 
-            // Stop the default things from happening
+            // Navigation save: current_conv is empty because NodeCutscene recorded the
+            // destination scene (e.g. Home), not a mid-conversation position.
+            // Stats are already restored above; let the scene initialize itself normally.
+            if (string.IsNullOrEmpty(current_conv))
+            {
+                UnityEngine.SceneManagement.SceneManager.SetActiveScene(
+                    UnityEngine.SceneManagement.SceneManager.GetSceneByName(current_scene));
+                UnityEngine.SceneManagement.SceneManager.UnloadSceneAsync(active_scene);
+                AudioListener.pause = false;
+                yield break;
+            }
+
+            // Resuming mid-conversation: VNSceneManager is required from here on.
+            if (VNSceneManager.scene_manager == null)
+            {
+                Debug.LogError("[SaveFile.Load] VNSceneManager.scene_manager is null after scene load. Scene '" + current_scene + "' may not be in Build Settings or has no VNSceneManager.");
+                yield break;
+            }
             VNSceneManager.scene_manager.starting_conversation = null;
-            ConversationManager cur_conv = GameObject.Find(current_conv).GetComponent<ConversationManager>();
+
+            ConversationManager cur_conv = GameObject.Find(current_conv)?.GetComponent<ConversationManager>();
+            if (cur_conv == null)
+            {
+                Debug.LogError("[SaveFile.Load] Could not find ConversationManager at path: " + current_conv);
+                yield break;
+            }
 
 
             // Set play time
@@ -112,7 +176,7 @@ namespace VNEngine
 
                 // We can figure out which node is executed by the Node component embedded in the string
                 if (node_parts.Length == 3)
-                {                    
+                {
                     GameObject go = GameObject.Find(node_parts[1]);
                     if (go == null)
                     {
@@ -135,7 +199,6 @@ namespace VNEngine
                     if (n != null)
                     {
                         n.executed_from_load = true;
-
                         n.Run_Node();
                     }
                     else
@@ -213,30 +276,9 @@ namespace VNEngine
                     GameObject.Destroy(c.gameObject);
             }
 
-            // Load stats
-            StatsManager.boolean_stats = saved_boolean_stats;
-            StatsManager.numbered_stats = saved_numbered_stats;
-            StatsManager.string_stats = saved_string_stats;
-            StatsManager.items = saved_items;
-            StatsManager.Print_All_Stats();
-
             // Load log text
             VNSceneManager.text_logs  = log_categories;
-            //VNSceneManager.scene_manager.Conversation_log = log_text;
-            // Set log
             VNSceneManager.scene_manager.Add_To_Log("", log_text);
-
-
-            //<< MODIFY THIS SECTION TO LOAD THINGS SPECIFIC TO YOUR GAME >>//
-
-
-
-
-
-
-
-            //<< MODIFY THE ABOVE SECTION TO LOAD THINGS SPECIFIC TO YOUR GAME >>//
-
 
             // Start the conversation
             cur_conv.Start_Conversation_Partway_Through(current_conv_node);
@@ -264,15 +306,16 @@ namespace VNEngine
         // Set save information
         public void Save()
         {
-            // Record game stats we must save (listed at top of file)
-            log_text = UIManager.ui_manager.log_text.text;
             current_scene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
 
-            current_conv = SaveManager.GetGameObjectPath(VNSceneManager.current_conversation.transform);
-            current_conv_node = VNSceneManager.current_conversation.cur_node;
+            if (VNSceneManager.current_conversation != null)
+            {
+                current_conv = SaveManager.GetGameObjectPath(VNSceneManager.current_conversation.transform);
+                current_conv_node = VNSceneManager.current_conversation.cur_node;
+            }
 
             time_saved = DateTime.Now;
-            time_played = VNSceneManager.scene_manager.play_time;
+            time_played = VNSceneManager.scene_manager != null ? VNSceneManager.scene_manager.play_time : 0f;
 
             // Record all remaining conversations (deleted ones will not be recorded)
             ConversationManager[] convs = (ConversationManager[])UnityEngine.Object.FindObjectsOfType(typeof(ConversationManager)) as ConversationManager[];
@@ -281,15 +324,19 @@ namespace VNEngine
                 remaining_conversations.Add(SaveManager.GetGameObjectPath(c.transform));
             }
 
-            // Save stats
-            saved_boolean_stats = StatsManager.boolean_stats;
-            saved_numbered_stats = StatsManager.numbered_stats;
-            saved_string_stats = StatsManager.string_stats;
-            saved_items = StatsManager.items;
+            // Save stats — copy dictionaries so Clear_All_Stats() can't wipe them via shared reference
+            saved_boolean_stats = new Dictionary<string, bool>(StatsManager.boolean_stats);
+            saved_numbered_stats = new Dictionary<string, float>(StatsManager.numbered_stats);
+            saved_string_stats = new Dictionary<string, string>(StatsManager.string_stats);
+            saved_items = new List<string>(StatsManager.items);
 
+            // Capture PlayerPrefs game-state keys not covered by StatsManager
+            saved_messages             = PlayerPrefs.GetString("messages", "");
+            saved_character_locations  = PlayerPrefs.GetString("characterLocations", "");
+            saved_lockable_locations   = PlayerPrefs.GetString("lockableLocationNames", "");
 
             // Features to save, like static images, background and foreground
-            if (UIManager.ui_manager.canvas != null)
+            if (UIManager.ui_manager != null && UIManager.ui_manager.canvas != null)
             {
                 FeatureToSave[] features = UIManager.ui_manager.canvas.GetComponentsInChildren<FeatureToSave>();
                 foreach (FeatureToSave f in features)
@@ -298,21 +345,15 @@ namespace VNEngine
                     Debug.Log(f.Node_to_Execute);
                 }
             }
-            else
-                Debug.LogError("UIManager.ui_manager.canvas is not set. Features to save not saved");
 
             // Save our log text
-            log_categories = VNSceneManager.text_logs;
-            log_text = VNSceneManager.scene_manager.Conversation_log;
+            if (VNSceneManager.scene_manager != null)
+            {
+                log_categories = VNSceneManager.text_logs;
+                log_text = VNSceneManager.scene_manager.Conversation_log;
+            }
 
             //<< MODIFY THIS SECTION TO SAVE THINGS SPECIFIC TO YOUR GAME >>//
-
-
-
-
-
-
-
 
 
 

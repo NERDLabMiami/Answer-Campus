@@ -30,12 +30,12 @@ public static class TextThreads
     }
     public static List<TextMessage> GetThread(Character other)
     {
-        int week = UnityEngine.Mathf.RoundToInt(VNEngine.StatsManager.Get_Numbered_Stat("Week"));
-
+        // Show all messages addressed to/from this character once they've been
+        // received. unlockWeek gates the quick-reply buttons (in TextThreadPanel),
+        // not the message itself — the player should always be able to read a
+        // message that was delivered to them.
         return GetAll()
-            .Where(m =>
-                ((m.from == other && !m.isPlayer) || (m.isPlayer && m.from == other)) &&
-                (m.unlockWeek <= 0 || week >= m.unlockWeek))
+            .Where(m => (m.from == other && !m.isPlayer) || (m.isPlayer && m.from == other))
             .OrderBy(m => m.unixTime)
             .ToList();
     }

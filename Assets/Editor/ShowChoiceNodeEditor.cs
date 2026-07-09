@@ -45,6 +45,12 @@ public class ShowChoiceNodeEditor : Editor
             if (el.FindPropertyRelative("useGame").boolValue)
                 h += EditorGUI.GetPropertyHeight(el.FindPropertyRelative("footballRequirement"), true) + 2f;
 
+            if (el.FindPropertyRelative("useAffinity").boolValue)
+            {
+                h += EditorGUI.GetPropertyHeight(el.FindPropertyRelative("affinityRequirements"), true) + 2f;
+                h += EditorGUI.GetPropertyHeight(el.FindPropertyRelative("affinityDeltas"), true) + 2f;
+            }
+
             h += 6f;
             return h;
         };
@@ -64,6 +70,10 @@ public class ShowChoiceNodeEditor : Editor
             var eventReqsProp = el.FindPropertyRelative("eventRequirements");
             var footballProp  = el.FindPropertyRelative("footballRequirement");
 
+            var useAffinityProp    = el.FindPropertyRelative("useAffinity");
+            var affinityReqsProp   = el.FindPropertyRelative("affinityRequirements");
+            var affinityDeltasProp = el.FindPropertyRelative("affinityDeltas");
+
             float line = EditorGUIUtility.singleLineHeight;
 
             rect.y += 2;
@@ -80,10 +90,11 @@ public class ShowChoiceNodeEditor : Editor
             EditorGUI.LabelField(new Rect(rect.x, rect.y, rect.width, line), "Enable Requirements");
             rect.y += line + 6;
 
-            float col = rect.width / 3f;
-            useTraitsProp.boolValue = EditorGUI.ToggleLeft(new Rect(rect.x, rect.y, col, line), "Traits", useTraitsProp.boolValue);
-            useEventsProp.boolValue = EditorGUI.ToggleLeft(new Rect(rect.x + col, rect.y, col, line), "Events", useEventsProp.boolValue);
-            useGameProp.boolValue   = EditorGUI.ToggleLeft(new Rect(rect.x + col * 2, rect.y, col, line), "Game",   useGameProp.boolValue);
+            float col = rect.width / 4f;
+            useTraitsProp.boolValue   = EditorGUI.ToggleLeft(new Rect(rect.x,           rect.y, col, line), "Traits",   useTraitsProp.boolValue);
+            useEventsProp.boolValue   = EditorGUI.ToggleLeft(new Rect(rect.x + col,     rect.y, col, line), "Events",   useEventsProp.boolValue);
+            useGameProp.boolValue     = EditorGUI.ToggleLeft(new Rect(rect.x + col * 2, rect.y, col, line), "Game",     useGameProp.boolValue);
+            useAffinityProp.boolValue = EditorGUI.ToggleLeft(new Rect(rect.x + col * 3, rect.y, col, line), "Affinity", useAffinityProp.boolValue);
             rect.y += line + 4;
 
             if (useTraitsProp.boolValue)
@@ -104,6 +115,17 @@ public class ShowChoiceNodeEditor : Editor
             {
                 float h = EditorGUI.GetPropertyHeight(footballProp, true);
                 EditorGUI.PropertyField(new Rect(rect.x, rect.y, rect.width, h), footballProp, true);
+                rect.y += h + 2;
+            }
+
+            if (useAffinityProp.boolValue)
+            {
+                float h = EditorGUI.GetPropertyHeight(affinityReqsProp, true);
+                EditorGUI.PropertyField(new Rect(rect.x, rect.y, rect.width, h), affinityReqsProp, true);
+                rect.y += h + 2;
+
+                h = EditorGUI.GetPropertyHeight(affinityDeltasProp, true);
+                EditorGUI.PropertyField(new Rect(rect.x, rect.y, rect.width, h), affinityDeltasProp, true);
                 rect.y += h + 2;
             }
         };

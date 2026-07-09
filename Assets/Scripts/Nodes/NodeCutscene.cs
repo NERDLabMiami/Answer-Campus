@@ -23,7 +23,23 @@ public class NodeCutscene : Node
     {
         if (triggerSave)
         {
-            SaveManager.Save();
+            try
+            {
+                SaveFile saveFile = new SaveFile();
+                saveFile.Save();
+                // Record the destination as the saved scene so loading always
+                // restores the player at the target, not the source scene.
+                if (!string.IsNullOrEmpty(targetScene))
+                {
+                    saveFile.current_scene = targetScene;
+                    saveFile.current_conv  = "";
+                    SaveManager.AddNewSave(saveFile);
+                }
+            }
+            catch (System.Exception e)
+            {
+                Debug.LogError("Save failed: " + e);
+            }
             yield return new WaitForSeconds(0.6f);
         }
 
