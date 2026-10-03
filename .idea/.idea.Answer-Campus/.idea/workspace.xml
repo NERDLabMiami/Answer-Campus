@@ -9,7 +9,18 @@
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Locations/Apartment.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Locations/Apartment.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Locations/Dining Hall.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Locations/Dining Hall.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Locations/Green.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Locations/Green.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Locations/Lecture Hall.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Locations/Lecture Hall.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Locations/Library.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Locations/Library.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Locations/Outside Class.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Locations/Outside Class.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Locations/Post Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Locations/Post Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Locations/Shuttle.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Locations/Shuttle.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Locations/Student Center.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Locations/Student Center.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/VNEngine Audit/Apartment.md" beforeDir="false" afterPath="$PROJECT_DIR$/Docs/VNEngine Audit/Apartment.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/VNEngine Audit/Dining Hall.md" beforeDir="false" afterPath="$PROJECT_DIR$/Docs/VNEngine Audit/Dining Hall.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/VNEngine Audit/Green.md" beforeDir="false" afterPath="$PROJECT_DIR$/Docs/VNEngine Audit/Green.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/VNEngine Audit/Lecture Hall.md" beforeDir="false" afterPath="$PROJECT_DIR$/Docs/VNEngine Audit/Lecture Hall.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/VNEngine Audit/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Docs/VNEngine Audit/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tools/audit_vn_conversations.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tools/audit_vn_conversations.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +127,7 @@
       <workItem from="1782418213467" duration="179926000" />
       <workItem from="1790355769469" duration="8146000" />
       <workItem from="1790633392743" duration="16907000" />
-      <workItem from="1790721562968" duration="76221000" />
+      <workItem from="1790721562968" duration="80119000" />
     </task>
     <servers />
   </component>

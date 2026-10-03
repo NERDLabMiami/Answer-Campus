@@ -1,0 +1,848 @@
+[
+  {
+    "scene": "Apartment.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Sylly Party/Breanna/Sweats/Show Choices",
+    "owner": "Sweats"
+  },
+  {
+    "scene": "Apartment.unity",
+    "node_name": "Show Choices (2)",
+    "hierarchy_path": "Conversations/Charli 5 - Hangout 2/Hangout #2 (3)/Show Choices (2)",
+    "owner": "Hangout #2 (3)"
+  },
+  {
+    "scene": "Apartment.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Deepak - 2 - Going Out/Deepak - Favor for Leilani/Still no/Show Choices",
+    "owner": "Still no"
+  },
+  {
+    "scene": "Apartment.unity",
+    "node_name": "Show Choices (3)",
+    "hierarchy_path": "Conversations/Charli 5 - Hangout 2/Hangout #2 (6)/stuff is cool/Show Choices (3)",
+    "owner": "stuff is cool"
+  },
+  {
+    "scene": "Apartment.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Deepak - 2 - Going Out/Deepak - Favor for Leilani/HowAmI/Show Choices",
+    "owner": "HowAmI"
+  },
+  {
+    "scene": "Apartment.unity",
+    "node_name": "Show Choices (1)",
+    "hierarchy_path": "Conversations/Charli 5 - Hangout 2/Counter Conversation - Bearings/Show Choices (1)",
+    "owner": "Counter Conversation - Bearings"
+  },
+  {
+    "scene": "Apartment.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Deepak - 2 - Going Out/Deepak - Favor for Leilani/LeilaniToldYou/Show Choices",
+    "owner": "LeilaniToldYou"
+  },
+  {
+    "scene": "Apartment.unity",
+    "node_name": "Show Choices (2)",
+    "hierarchy_path": "Conversations/Charli 5 - Hangout 2/Hangout #2 (5)/Show Choices (2)",
+    "owner": "Hangout #2 (5)"
+  },
+  {
+    "scene": "Apartment.unity",
+    "node_name": "Show Choices (4)",
+    "hierarchy_path": "Conversations/Charli 5 - Hangout 2/Hangout #2 (6)/wish i was/Show Choices (4)",
+    "owner": "wish i was"
+  },
+  {
+    "scene": "Apartment.unity",
+    "node_name": "Show Choices 1",
+    "hierarchy_path": "Conversations/Deepak - 2 - Going Out/Deepak - Favor for Leilani/Deepak - Opens Door/Show Choices 1",
+    "owner": "Deepak - Opens Door"
+  },
+  {
+    "scene": "Apartment.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Deepak - 2 - Going Out/Deepak - Favor for Leilani/Everything okay? / Do you actually want to go out?/Show Choices",
+    "owner": "Everything okay? / Do you actually want to go out?"
+  },
+  {
+    "scene": "Dining Hall.unity",
+    "node_name": "Show Choices (2)",
+    "hierarchy_path": "Conversations/Counter Conversation - Thrifting/Hangout #2 (5)/Show Choices (2)",
+    "owner": "Hangout #2 (5)"
+  },
+  {
+    "scene": "Dining Hall.unity",
+    "node_name": "Show Choices (2)",
+    "hierarchy_path": "Conversations/Counter Conversation - Thrifting/Hangout #2 (3)/Show Choices (2)",
+    "owner": "Hangout #2 (3)"
+  },
+  {
+    "scene": "Dining Hall.unity",
+    "node_name": "Show Choices (3)",
+    "hierarchy_path": "Conversations/Counter Conversation - Thrifting/Hangout #2 (7)/Show Choices (3)",
+    "owner": "Hangout #2 (7)"
+  },
+  {
+    "scene": "Dining Hall.unity",
+    "node_name": "Show Choices (1)",
+    "hierarchy_path": "Conversations/Counter Conversation - Thrifting/Thrifting/Show Choices (1)",
+    "owner": "Thrifting"
+  },
+  {
+    "scene": "Dining Hall.unity",
+    "node_name": "Show Choices (2)",
+    "hierarchy_path": "Conversations/Counter Conversation - Thrifting/Hangout #2 Deal/Show Choices (2)",
+    "owner": "Hangout #2 Deal"
+  },
+  {
+    "scene": "Dining Hall.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Breanna Arc - Lunch Date/Book/What book are you reading/Show Choices",
+    "owner": "What book are you reading"
+  },
+  {
+    "scene": "Dining Hall.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Breanna Arc - Lunch Date/Football/FootballIntro/Show Choices",
+    "owner": "FootballIntro"
+  },
+  {
+    "scene": "Dining Hall.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Breanna Arc - Cramming/Cramming - Intro/Show Choices",
+    "owner": "Cramming - Intro"
+  },
+  {
+    "scene": "Green.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Elevate with Eric/What have you been up to?/Show Choices",
+    "owner": "What have you been up to?"
+  },
+  {
+    "scene": "Green.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Deepak Encounter 6 - Ends Well/That's amazing/Show Choices",
+    "owner": "That's amazing"
+  },
+  {
+    "scene": "Green.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Matthew Encounter/Football/'Oh yea! '/Show Choices",
+    "owner": "'Oh yea! '"
+  },
+  {
+    "scene": "Green.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Matthew Encounter/Football/Nah/Food-Nah-Continued/Of course/Not on the menu/Show Choices",
+    "owner": "Not on the menu"
+  },
+  {
+    "scene": "Green.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Matthew Encounter/Football/'Oh yea! '/Oh yea - Continued/Does your dad go?/Does your dad go - cont/At least you'll see him/Show Choices",
+    "owner": "At least you'll see him"
+  },
+  {
+    "scene": "Green.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Matthew Encounter/Football/Nah/Food-Nah-Continued/Of course/Show Choices",
+    "owner": "Of course"
+  },
+  {
+    "scene": "Green.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Elevate with Eric/You Okay/Show Choices",
+    "owner": "You Okay"
+  },
+  {
+    "scene": "Green.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Matthew Encounter/Football/Nah/Food-Nah-Continued/No/Show Choices",
+    "owner": "No"
+  },
+  {
+    "scene": "Green.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Matthew Encounter/Football/Nah/Show Choices",
+    "owner": "Nah"
+  },
+  {
+    "scene": "Green.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Deepak Encounter 6 - Ends Well/Any plans this winter?/Show Choices",
+    "owner": "Any plans this winter?"
+  },
+  {
+    "scene": "Green.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Deepak Encounter 6 - Ends Well/I'm glad/Show Choices",
+    "owner": "I'm glad"
+  },
+  {
+    "scene": "Green.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Matthew Encounter/To the Shuttle/Show Choices",
+    "owner": "To the Shuttle"
+  },
+  {
+    "scene": "Green.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Matthew Encounter/Football/Nah/Food-Nah-Continued/No/Haven't tried it./Nope/Show Choices",
+    "owner": "Nope"
+  },
+  {
+    "scene": "Green.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Deepak Encounter 6 - Ends Well/Pulling your leg/Show Choices",
+    "owner": "Pulling your leg"
+  },
+  {
+    "scene": "Green.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Deepak Encounter 6 - Ends Well/How seasons work/Show Choices",
+    "owner": "How seasons work"
+  },
+  {
+    "scene": "Green.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Matthew Encounter/Football/'Oh yea! '/Oh yea - Continued/Whats stopping you/Show Choices",
+    "owner": "Whats stopping you"
+  },
+  {
+    "scene": "Green.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Deepak Encounter 6 - Ends Well/I'm good! Excited/Show Choices",
+    "owner": "I'm good! Excited"
+  },
+  {
+    "scene": "Green.unity",
+    "node_name": "'Show Choices '",
+    "hierarchy_path": "Conversations/Deepak Encounter 6 - Ends Well/'Show Choices '",
+    "owner": "Deepak Encounter 6 - Ends Well"
+  },
+  {
+    "scene": "Green.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Matthew Encounter/Football/'Oh yea! '/Oh yea - Continued/Does your dad go?/Show Choices",
+    "owner": "Does your dad go?"
+  },
+  {
+    "scene": "Green.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Matthew Encounter/Football/Nah/Food-Nah-Continued/Of course/Not on the menu/Secret Menu/Show Choices",
+    "owner": "Secret Menu"
+  },
+  {
+    "scene": "Green.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Breanna Arc - Breanna End of Semester/Break/YouSuck/Show Choices",
+    "owner": "YouSuck"
+  },
+  {
+    "scene": "Green.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Breanna Arc - Breanna End of Semester/Breanna EOS Start/HowFinals/Show Choices",
+    "owner": "HowFinals"
+  },
+  {
+    "scene": "Green.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Breanna Arc - Breanna End of Semester/Break/Plans/Show Choices",
+    "owner": "Plans"
+  },
+  {
+    "scene": "Green.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Breanna Arc - Breanna End of Semester/Breanna EOS Start/Breanna Goodbye/Show Choices",
+    "owner": "Breanna Goodbye"
+  },
+  {
+    "scene": "Green.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Breanna Arc - Breanna End of Semester/Break/BreakCont/Show Choices",
+    "owner": "BreakCont"
+  },
+  {
+    "scene": "Green.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Breanna Arc - Breanna End of Semester/Break/HaveToGo/Show Choices",
+    "owner": "HaveToGo"
+  },
+  {
+    "scene": "Green.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Breanna Arc - Breanna End of Semester/Thanks/ThankYou/Show Choices",
+    "owner": "ThankYou"
+  },
+  {
+    "scene": "Green.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Breanna Arc - Breanna End of Semester/Thanks/ForWhat/Show Choices",
+    "owner": "ForWhat"
+  },
+  {
+    "scene": "Lecture Hall.unity",
+    "node_name": "Show Choices (3)",
+    "hierarchy_path": "Conversations/Matthew Video Games/Video Games (5)/You're good/Show Choices (3)",
+    "owner": "You're good"
+  },
+  {
+    "scene": "Lecture Hall.unity",
+    "node_name": "Show Choices (2)",
+    "hierarchy_path": "Conversations/Matthew Video Games/Video Games (4)/Show Choices (2)",
+    "owner": "Video Games (4)"
+  },
+  {
+    "scene": "Lecture Hall.unity",
+    "node_name": "Show Choices (5)",
+    "hierarchy_path": "Conversations/Matthew Video Games/Video Games (8)/Show Choices (5)",
+    "owner": "Video Games (8)"
+  },
+  {
+    "scene": "Lecture Hall.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/In The Text - Week 10/You have no right to say that word/Show Choices",
+    "owner": "You have no right to say that word"
+  },
+  {
+    "scene": "Lecture Hall.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/In The Text - Week 10/Why Choose to Say/Show Choices",
+    "owner": "Why Choose to Say"
+  },
+  {
+    "scene": "Lecture Hall.unity",
+    "node_name": "Show Choices (1)",
+    "hierarchy_path": "Conversations/Matthew Video Games/Video Games (2)/Show Choices (1)",
+    "owner": "Video Games (2)"
+  },
+  {
+    "scene": "Lecture Hall.unity",
+    "node_name": "Show Choices (4)",
+    "hierarchy_path": "Conversations/Matthew Video Games/Video Games (5)/Yapatron 3000/Show Choices (4)",
+    "owner": "Yapatron 3000"
+  },
+  {
+    "scene": "Lecture Hall.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/First Class Nodes/Never Heard Of It/Show Choices",
+    "owner": "Never Heard Of It"
+  },
+  {
+    "scene": "Lecture Hall.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/In The Text - Week 10/Stay in Class/Show Choices",
+    "owner": "Stay in Class"
+  },
+  {
+    "scene": "Lecture Hall.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/In The Text - Week 10/I appreciate your concern/Show Choices",
+    "owner": "I appreciate your concern"
+  },
+  {
+    "scene": "Lecture Hall.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Matthew Video Games/Video Games/Show Choices",
+    "owner": "Video Games"
+  },
+  {
+    "scene": "Lecture Hall.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/In The Text - Week 10/Enjoyed the Reading/Show Choices",
+    "owner": "Enjoyed the Reading"
+  },
+  {
+    "scene": "Lecture Hall.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/In The Text - Week 10/Cancel Culture/Show Choices",
+    "owner": "Cancel Culture"
+  },
+  {
+    "scene": "Lecture Hall.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/First Class Nodes/Class Begins/Show Choices",
+    "owner": "Class Begins"
+  },
+  {
+    "scene": "Lecture Hall.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/In The Text - Week 10/Is it necessary?/Show Choices",
+    "owner": "Is it necessary?"
+  },
+  {
+    "scene": "Lecture Hall.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/End of Semester Conversations/Deepak/How seasons work/Show Choices",
+    "owner": "How seasons work"
+  },
+  {
+    "scene": "Lecture Hall.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/End of Semester Conversations/Deepak/That's amazing/Show Choices",
+    "owner": "That's amazing"
+  },
+  {
+    "scene": "Lecture Hall.unity",
+    "node_name": "Show Choices (1)",
+    "hierarchy_path": "Conversations/End of Semester Conversations/Charli/Hangout #2/Show Choices (1)",
+    "owner": "Hangout #2"
+  },
+  {
+    "scene": "Lecture Hall.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/End of Semester Conversations/Breanna/Breanna/HowFinals/Show Choices",
+    "owner": "HowFinals"
+  },
+  {
+    "scene": "Lecture Hall.unity",
+    "node_name": "Show Choices (2)",
+    "hierarchy_path": "Conversations/End of Semester Conversations/Charli/Hangout #2 (3)/Show Choices (2)",
+    "owner": "Hangout #2 (3)"
+  },
+  {
+    "scene": "Lecture Hall.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/End of Semester Conversations/Breanna/Thanks/ForWhat/Show Choices",
+    "owner": "ForWhat"
+  },
+  {
+    "scene": "Lecture Hall.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/End of Semester Conversations/Deepak/Pulling your leg/Show Choices",
+    "owner": "Pulling your leg"
+  },
+  {
+    "scene": "Lecture Hall.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/End of Semester Conversations/Breanna/Break/YouSuck/Show Choices",
+    "owner": "YouSuck"
+  },
+  {
+    "scene": "Lecture Hall.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/End of Semester Conversations/Breanna/Break/BreakCont/Show Choices",
+    "owner": "BreakCont"
+  },
+  {
+    "scene": "Lecture Hall.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/End of Semester Conversations/Breanna/Breanna/Breanna Goodbye/Show Choices",
+    "owner": "Breanna Goodbye"
+  },
+  {
+    "scene": "Lecture Hall.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/End of Semester Conversations/Deepak/I'm glad/Show Choices",
+    "owner": "I'm glad"
+  },
+  {
+    "scene": "Lecture Hall.unity",
+    "node_name": "'Show Choices '",
+    "hierarchy_path": "Conversations/End of Semester Conversations/Deepak/'Show Choices '",
+    "owner": "Deepak"
+  },
+  {
+    "scene": "Lecture Hall.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/End of Semester Conversations/Breanna/Break/Plans/Show Choices",
+    "owner": "Plans"
+  },
+  {
+    "scene": "Lecture Hall.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/End of Semester Conversations/Deepak/Any plans this winter?/Show Choices",
+    "owner": "Any plans this winter?"
+  },
+  {
+    "scene": "Lecture Hall.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/End of Semester Conversations/Deepak/I'm good! Excited/Show Choices",
+    "owner": "I'm good! Excited"
+  },
+  {
+    "scene": "Lecture Hall.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/End of Semester Conversations/Breanna/Thanks/ThankYou/Show Choices",
+    "owner": "ThankYou"
+  },
+  {
+    "scene": "Lecture Hall.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/End of Semester Conversations/Breanna/Break/HaveToGo/Show Choices",
+    "owner": "HaveToGo"
+  },
+  {
+    "scene": "Library.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Deepak Encounter 2 - Sudden Meeting/1.1.1.2/Open and Curious/Show Choices",
+    "owner": "Open and Curious"
+  },
+  {
+    "scene": "Library.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Deepak Encounter 2 - Sudden Meeting/1.1.1/Great/Show Choices",
+    "owner": "Great"
+  },
+  {
+    "scene": "Library.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Musical Theatre with Beau/Beau Continued/Eye of the hurricane/Show Choices",
+    "owner": "Eye of the hurricane"
+  },
+  {
+    "scene": "Library.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Deepak Encounter 2 - Sudden Meeting/1.1.1/Overwhelming/Show Choices",
+    "owner": "Overwhelming"
+  },
+  {
+    "scene": "Library.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Deepak Encounter 2 - Sudden Meeting/1.1/Nice to see you too!/Show Choices",
+    "owner": "Nice to see you too!"
+  },
+  {
+    "scene": "Library.unity",
+    "node_name": "Show Choices 1",
+    "hierarchy_path": "Conversations/Deepak Encounter 2 - Sudden Meeting/Show Choices 1",
+    "owner": "Deepak Encounter 2 - Sudden Meeting"
+  },
+  {
+    "scene": "Library.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Deepak Encounter 2 - Sudden Meeting/Let me know how/Show Choices",
+    "owner": "Let me know how"
+  },
+  {
+    "scene": "Library.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Deepak Encounter 2 - Sudden Meeting/1.1.2/Of course/Show Choices",
+    "owner": "Of course"
+  },
+  {
+    "scene": "Library.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Musical Theatre with Beau/Beau Continued/Lovely Singing Voice/Show Choices",
+    "owner": "Lovely Singing Voice"
+  },
+  {
+    "scene": "Library.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Deepak Encounter 2 - Sudden Meeting/1.1/Who are you?/Show Choices",
+    "owner": "Who are you?"
+  },
+  {
+    "scene": "Library.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Deepak Encounter 2 - Sudden Meeting/1.1.1.1/Fascinating/Show Choices",
+    "owner": "Fascinating"
+  },
+  {
+    "scene": "Library.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Musical Theatre with Beau/Beau Becomes Friend/Show Choices",
+    "owner": "Beau Becomes Friend"
+  },
+  {
+    "scene": "Library.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Deepak Encounter 2 - Sudden Meeting/1.1.1.2/I don't know/Show Choices",
+    "owner": "I don't know"
+  },
+  {
+    "scene": "Library.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Deepak Encounter 2 - Sudden Meeting/1.1.2.2/Right name/Show Choices",
+    "owner": "Right name"
+  },
+  {
+    "scene": "Library.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Deepak Encounter 2 - Sudden Meeting/1.1.2.2/Wrong name/Show Choices",
+    "owner": "Wrong name"
+  },
+  {
+    "scene": "Outside Class.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Bump Into Eric/My Bad/Show Choices",
+    "owner": "My Bad"
+  },
+  {
+    "scene": "Outside Class.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Bump Into Eric/Eric Friendship/Show Choices",
+    "owner": "Eric Friendship"
+  },
+  {
+    "scene": "Outside Class.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Bump Into Eric/Eric/Show Choices",
+    "owner": "Eric"
+  },
+  {
+    "scene": "Outside Class.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Bump Into Eric/You bumped into me/Show Choices",
+    "owner": "You bumped into me"
+  },
+  {
+    "scene": "Post Game.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Matthew/Show Choices",
+    "owner": "Matthew"
+  },
+  {
+    "scene": "Shuttle.unity",
+    "node_name": "Show Choices 1",
+    "hierarchy_path": "Conversations/Deepak 4 - Missing Cues/Show Choices 1",
+    "owner": "Deepak 4 - Missing Cues"
+  },
+  {
+    "scene": "Shuttle.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Limp/I was thinking the same thing / Spill Tea/Show Choices",
+    "owner": "I was thinking the same thing / Spill Tea"
+  },
+  {
+    "scene": "Shuttle.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Deepak 4 - Missing Cues/you sure you still/Show Choices",
+    "owner": "you sure you still"
+  },
+  {
+    "scene": "Shuttle.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Limp/Youre so nosy/Show Choices",
+    "owner": "Youre so nosy"
+  },
+  {
+    "scene": "Shuttle.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Deepak 4 - Missing Cues/Let's grab food/Show Choices",
+    "owner": "Let's grab food"
+  },
+  {
+    "scene": "Shuttle.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Deepak 4 - Missing Cues/Where are the others?/Show Choices",
+    "owner": "Where are the others?"
+  },
+  {
+    "scene": "Shuttle.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Limp/Start/Show Choices",
+    "owner": "Start"
+  },
+  {
+    "scene": "Shuttle.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Deepak 4 - Missing Cues/I'm not surprised at all/Show Choices",
+    "owner": "I'm not surprised at all"
+  },
+  {
+    "scene": "Shuttle.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Limp/No party without the shuttle/Show Choices",
+    "owner": "No party without the shuttle"
+  },
+  {
+    "scene": "Shuttle.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Limp/Damn Deepak/Show Choices",
+    "owner": "Damn Deepak"
+  },
+  {
+    "scene": "Shuttle.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Limp/If she's saying it's none of our business/Show Choices",
+    "owner": "If she's saying it's none of our business"
+  },
+  {
+    "scene": "Shuttle.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Deepak 4 - Missing Cues/wow, okay/Show Choices",
+    "owner": "wow, okay"
+  },
+  {
+    "scene": "Shuttle.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Limp/Can't you tell you're making her uncomfortable?/Show Choices",
+    "owner": "Can't you tell you're making her uncomfortable?"
+  },
+  {
+    "scene": "Shuttle.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Deepak 4 - Missing Cues/Hey what's up/Show Choices",
+    "owner": "Hey what's up"
+  },
+  {
+    "scene": "Shuttle.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Deepak 4 - Missing Cues/Don't mind going somewhere/Show Choices",
+    "owner": "Don't mind going somewhere"
+  },
+  {
+    "scene": "Shuttle.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Deepak 4 - Missing Cues/So what's new/Show Choices",
+    "owner": "So what's new"
+  },
+  {
+    "scene": "Shuttle.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Deepak 4 - Missing Cues/What do you mean/Show Choices",
+    "owner": "What do you mean"
+  },
+  {
+    "scene": "Shuttle.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Limp/I feel like you're making it a big deal/Show Choices",
+    "owner": "I feel like you're making it a big deal"
+  },
+  {
+    "scene": "Shuttle.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Deepak 4 - Missing Cues/Ewww!/Show Choices",
+    "owner": "Ewww!"
+  },
+  {
+    "scene": "Student Center.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Help Desk - First Time Core Loop - Socializing/Show Choices",
+    "owner": "Help Desk - First Time Core Loop - Socializing"
+  },
+  {
+    "scene": "Student Center.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Help Desk - First Time - Check Met/Show Choices",
+    "owner": "Help Desk - First Time - Check Met"
+  },
+  {
+    "scene": "Student Center.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Breanna Meets Eric/Follower/Show Choices",
+    "owner": "Follower"
+  },
+  {
+    "scene": "Student Center.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Help Desk - First Time Core Loop/Show Choices",
+    "owner": "Help Desk - First Time Core Loop"
+  },
+  {
+    "scene": "Student Center.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Help Desk - Return/Show Choices",
+    "owner": "Help Desk - Return"
+  },
+  {
+    "scene": "Student Center.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Help Desk - First Time Core Loop - Not Sure/Show Choices",
+    "owner": "Help Desk - First Time Core Loop - Not Sure"
+  },
+  {
+    "scene": "Student Center.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Help Desk - First Time Core Loop - Study Exams/Show Choices",
+    "owner": "Help Desk - First Time Core Loop - Study Exams"
+  },
+  {
+    "scene": "Student Center.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Help Desk - First Time Core Loop - Class/Show Choices",
+    "owner": "Help Desk - First Time Core Loop - Class"
+  },
+  {
+    "scene": "Student Center.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Help Desk - First Time Core Loop - Studying/Show Choices",
+    "owner": "Help Desk - First Time Core Loop - Studying"
+  },
+  {
+    "scene": "Student Center.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Help Desk - First Time Core Loop - Study Tutoring/Show Choices",
+    "owner": "Help Desk - First Time Core Loop - Study Tutoring"
+  },
+  {
+    "scene": "Student Center.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Help Desk - First Time Core Loop - Football/Show Choices",
+    "owner": "Help Desk - First Time Core Loop - Football"
+  },
+  {
+    "scene": "Student Center.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Help Desk - First Time Bro/Show Choices",
+    "owner": "Help Desk - First Time Bro"
+  },
+  {
+    "scene": "Student Center.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Help Desk - First Time Core Loop - Studying Alone/Show Choices",
+    "owner": "Help Desk - First Time Core Loop - Studying Alone"
+  },
+  {
+    "scene": "Student Center.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Help Desk - First Time - Haven't Met/Show Choices",
+    "owner": "Help Desk - First Time - Haven't Met"
+  },
+  {
+    "scene": "Student Center.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Help Desk - First Time Flirt/Show Choices",
+    "owner": "Help Desk - First Time Flirt"
+  },
+  {
+    "scene": "Student Center.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Breanna Meets Eric/Stop By/Show Choices",
+    "owner": "Stop By"
+  },
+  {
+    "scene": "Student Center.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Breanna Meets Eric/Thinking?/Show Choices",
+    "owner": "Thinking?"
+  },
+  {
+    "scene": "Student Center.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Breanna Meets Eric/Is this much work normal/Show Choices",
+    "owner": "Is this much work normal"
+  },
+  {
+    "scene": "Student Center.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Breanna Meets Eric/Yes, She Is/Show Choices",
+    "owner": "Yes, She Is"
+  },
+  {
+    "scene": "Student Center.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Breanna Meets Eric/Bad Study/Show Choices",
+    "owner": "Bad Study"
+  },
+  {
+    "scene": "Student Center.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Breanna Meets Eric/Someone Famous/Show Choices",
+    "owner": "Someone Famous"
+  },
+  {
+    "scene": "Student Center.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Meet Eric/Part 2/Show Choices",
+    "owner": "Part 2"
+  },
+  {
+    "scene": "Student Center.unity",
+    "node_name": "Show Choices",
+    "hierarchy_path": "Conversations/Breanna Meets Eric/Eric Leaves/Show Choices",
+    "owner": "Eric Leaves"
+  }
+]

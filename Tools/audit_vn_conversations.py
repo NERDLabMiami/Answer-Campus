@@ -394,7 +394,11 @@ PERSISTENT_CALL_PATH_RE = re.compile(
     r'^(.*)\.m_PersistentCalls\.m_Calls\.Array\.data\[(\d+)\]\.(.+)$'
 )
 INLINE_PERSISTENT_CALL_RE = re.compile(
-    r'm_Target:\s*\{fileID:\s*(-?\d+)[^}]*\}\s*\n\s*m_TargetAssemblyTypeName:\s*([^\n]*)\n\s*m_MethodName:\s*(\S*)'
+    # Note: the trailing [ \t]* (not \s*) before the final capture group is deliberate --
+    # when m_MethodName's value is blank (an unconfigured/broken persistent call slot),
+    # a \s* there would span the newline and greedily swallow the start of the next
+    # line (m_Mode: ...), misreporting it as the method name.
+    r'm_Target:\s*\{fileID:\s*(-?\d+)[^}]*\}\s*\n\s*m_TargetAssemblyTypeName:\s*([^\n]*)\n\s*m_MethodName:[ \t]*(\S*)'
 )
 CONV_JUMP_METHODS = {"Start_Conversation", "Start_Conversation_Partway_Through"}
 
