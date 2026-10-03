@@ -6,104 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="9996ada3-4319-4fb7-8fe3-ae48058a1aa4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Answer-Campus/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Answer-Campus/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Archive.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Archive/After Class - Breanna.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Archive/After Class - Breanna.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Archive/Apartment_Deepak_Going Out - Copy.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Archive/Apartment_Deepak_Going Out - Copy.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Archive/Apartment_Deepak_Going Out.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Archive/Apartment_Deepak_Going Out.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Archive/Apartments_CharliJiah_OnlineDating.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Archive/Apartments_CharliJiah_OnlineDating.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Archive/Apartments_Charli_Hangout2.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Archive/Apartments_Charli_Hangout2.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Archive/Apartments_Jiah_FakeID.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Archive/Apartments_Jiah_FakeID.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Archive/Befriend Breanna - Breanna.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Archive/Befriend Breanna - Breanna.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Archive/Club 1 - BradIntro.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Archive/Club 1 - BradIntro.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Archive/Deepak_Greene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Archive/Deepak_Greene.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Archive/Dining Hall - Breanna - Cramming.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Archive/Dining Hall - Breanna - Cramming.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Archive/Dining Hall_Deepak_Overwhelmed.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Archive/Dining Hall_Deepak_Overwhelmed.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Archive/DiningHall_Charli_Thrift.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Archive/DiningHall_Charli_Thrift.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Archive/Eat 2 - Breanna.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Archive/Eat 2 - Breanna.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Archive/Green_Deepak_Ends Well.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Archive/Green_Deepak_Ends Well.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Archive/Green_Deepak_Missing Cues.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Archive/Green_Deepak_Missing Cues.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Archive/Green_Deepak_Sudden Meeting.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Archive/Green_Deepak_Sudden Meeting.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Archive/Green_Eric_IntoFitness.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Archive/Green_Eric_IntoFitness.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Archive/Green_Matthew_FootballWithDad.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Archive/Green_Matthew_FootballWithDad.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Archive/Greene_Deepak_Endswell.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Archive/Greene_Deepak_Endswell.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Archive/Greene_Deepak_Missing Cues-Overwhelmed.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Archive/Greene_Deepak_Missing Cues-Overwhelmed.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Archive/Intro.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Archive/Intro.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Archive/Intro_Beau.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Archive/Intro_Beau.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Archive/Intro_Brad.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Archive/Intro_Brad.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Archive/Intro_Eric.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Archive/Intro_Eric.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Archive/Intro_Matthew.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Archive/Intro_Matthew.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Archive/Ji-ah_Fight.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Archive/Ji-ah_Fight.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Archive/LectureHall_Matthew_VideoGames.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Archive/LectureHall_Matthew_VideoGames.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Archive/Midterm Blues - Breanna.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Archive/Midterm Blues - Breanna.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Archive/StudyHall_Beu_MusicalTheater 1.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Archive/StudyHall_Beu_MusicalTheater 1.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Archive/StudyHall_Eric_Puns.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Archive/StudyHall_Eric_Puns.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Closing Charli.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Closing Charli.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Commercial.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Commercial.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Corkboard.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Corkboard.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Cutscene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Cutscene.unity.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Locations/Apartment.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Locations/Apartment.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Locations/Dining Hall.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Locations/Dining Hall.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Locations/Green.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Locations/Green.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Locations/Lecture Hall.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Locations/Lecture Hall.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Locations/Library.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Locations/Library.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Temporary.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Temporary/Breanna - 4B - Meeting Eric.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Temporary/Breanna - 4B - Meeting Eric.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Temporary/Breanna End of Semester.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Temporary/Breanna End of Semester.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Temporary/Breanna-Eric.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Temporary/Breanna-Eric.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Temporary/Charli - 7 - Snowflake.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Temporary/Charli - 7 - Snowflake.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Temporary/Charli 5 - Hangout 2.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Temporary/Charli 5 - Hangout 2.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Temporary/Charli End of Semester.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Temporary/Charli End of Semester.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Temporary/Charli-Snow.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Temporary/Charli-Snow.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Temporary/Deepak Encounter 6 - Ends Well.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Temporary/Deepak Encounter 6 - Ends Well.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Temporary/Deepak_CompleteArc.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Temporary/Deepak_CompleteArc.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Temporary/EOS.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Temporary/EOS.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Temporary/Midterm Blues.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Temporary/Midterm Blues.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HomeCutsceneController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HomeCutsceneController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Docs/VNEngine Audit/Apartment.md" beforeDir="false" afterPath="$PROJECT_DIR$/Docs/VNEngine Audit/Apartment.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/VNEngine Audit/Choice Migration/Library-editor-run.md" beforeDir="false" afterPath="$PROJECT_DIR$/Docs/VNEngine Audit/Choice Migration/Library-editor-run.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Docs/VNEngine Audit/Dining Hall.md" beforeDir="false" afterPath="$PROJECT_DIR$/Docs/VNEngine Audit/Dining Hall.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Docs/VNEngine Audit/Green.md" beforeDir="false" afterPath="$PROJECT_DIR$/Docs/VNEngine Audit/Green.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Docs/VNEngine Audit/Lecture Hall.md" beforeDir="false" afterPath="$PROJECT_DIR$/Docs/VNEngine Audit/Lecture Hall.md" afterDir="false" />
@@ -112,7 +20,7 @@
       <change beforePath="$PROJECT_DIR$/Docs/VNEngine Audit/Post Game.md" beforeDir="false" afterPath="$PROJECT_DIR$/Docs/VNEngine Audit/Post Game.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Docs/VNEngine Audit/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Docs/VNEngine Audit/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Docs/VNEngine Audit/Shuttle.md" beforeDir="false" afterPath="$PROJECT_DIR$/Docs/VNEngine Audit/Shuttle.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Docs/VNEngine Audit/Student Center.md" beforeDir="false" afterPath="$PROJECT_DIR$/Docs/VNEngine Audit/Student Center.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/VNEngine Audit/StatKeyLint.md" beforeDir="false" afterPath="$PROJECT_DIR$/Docs/VNEngine Audit/StatKeyLint.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tools/audit_vn_conversations.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tools/audit_vn_conversations.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -220,7 +128,7 @@
       <workItem from="1782418213467" duration="179926000" />
       <workItem from="1790355769469" duration="8146000" />
       <workItem from="1790633392743" duration="16907000" />
-      <workItem from="1790721562968" duration="84300000" />
+      <workItem from="1790721562968" duration="86791000" />
     </task>
     <servers />
   </component>

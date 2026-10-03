@@ -49,7 +49,7 @@ public class HomeCutsceneController : MonoBehaviour
     [Tooltip("Scene name for the class location.")]
     public string classScene    = "Lecture Hall";
     [Tooltip("Scene name for the football game.")]
-    public string footballScene = "Football Stadium";
+    public string footballScene = "Cheer";
 
     [Header("Alarm Clock")]
     [Tooltip("Animator on the Alarm Clock GameObject. Uses triggers: On (start ringing), Off (stop ringing), GameDay (reveal mascot).")]

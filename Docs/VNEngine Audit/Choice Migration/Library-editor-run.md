@@ -8,30 +8,10 @@ Diff this file's paths against `Docs/VNEngine Audit/Choice Migration/migrate_fil
 
 ## Migrated
 
-| Path | Resulting choices |
-|---|---|
-| Conversations/Deepak Encounter 2 - Sudden Meeting/Show Choices 1 | "Nice seeing you too!" → Nice to see you too!; "Sorry, have we met?" → Who are you? |
-| Conversations/Deepak Encounter 2 - Sudden Meeting/1.1/Nice to see you too!/Show Choices | "Overwhelming. New faces, new schedule, new room." → Overwhelming; "Great! Never been more energized." → Great |
-| Conversations/Deepak Encounter 2 - Sudden Meeting/1.1/Who are you?/Show Choices | "Of course, of course. I remember." → Of course; "I’m sorry, I’m terrible with names. I do remember meeting you now." → Sorry, terrible with |
-| Conversations/Deepak Encounter 2 - Sudden Meeting/1.1.1/Overwhelming/Show Choices | "Sounds fascinating. I’d love to hear your work." → Fascinating; "I find music a little overstimulating. I prefer naps." → Napping |
-| Conversations/Deepak Encounter 2 - Sudden Meeting/1.1.1/Great/Show Choices | "I don’t know, I just talk to people." → I don't know; "Being open and curious, asking questions, and letting others talk about themselves, I guess." → Open and Curious |
-| Conversations/Deepak Encounter 2 - Sudden Meeting/1.1.2/Of course/Show Choices | "Come on, you’re testing me? That’s so rude." → Rude; "Dominic" → Wrong name; "Dipak" → Wrong name; "Deepak" → Right name |
-| Conversations/Deepak Encounter 2 - Sudden Meeting/1.1.2.2/Wrong name/Show Choices | "I’m sorry. I didn’t want to make things weird." → Sorry |
-| Conversations/Deepak Encounter 2 - Sudden Meeting/1.1.2.2/Right name/Show Choices | "I was just messing with you. Lighten up!" → Lighten up |
-| Conversations/Deepak Encounter 2 - Sudden Meeting/1.1.1.1/Fascinating/Show Choices | "Dang, I have some errands to run." → Errands; "Of course! That sounds great." → Yes |
-| Conversations/Deepak Encounter 2 - Sudden Meeting/1.1.1.2/I don't know/Show Choices | "It’s not a secret! I just can’t think of anything concrete." → Keep your secrets |
-| Conversations/Deepak Encounter 2 - Sudden Meeting/1.1.1.2/Open and Curious/Show Choices | "Let me know how it goes!" → Let me know how |
-| Conversations/Deepak Encounter 2 - Sudden Meeting/Let me know how/Show Choices | "And I get to hear new music? I'm in!" → Yes; "Aw, I have some errands to run. " → Errands |
-| Conversations/Musical Theatre with Beau/Beau Becomes Friend/Show Choices | "This is the eye of the hurricane!" → Eye of the hurricane; "Not sure what that is about. But you have a lovely singing voice." → Lovely Singing Voice |
-| Conversations/Musical Theatre with Beau/Beau Continued/Eye of the hurricane/Show Choices | "A complete masterpiece." → A masterpiece; "Meh. Broadway stuff isn't really my thing." → Not My Thing |
-| Conversations/Musical Theatre with Beau/Beau Continued/Lovely Singing Voice/Show Choices | "Meh, broadway stuff is not really my thing." → Not My Thing; "All right. I'll try anything once." → A masterpiece |
+_None in this scene._
 
 ## Flagged
 
 | Path | Reasons |
 |---|---|
-| Conversations/Deepak Encounter 2 - Sudden Meeting/1.1.2/Sorry, terrible with/Show Choices | non-empty banner text: 'Overwhelming. New faces, new schedule, new room.' |
-| Conversations/Deepak Encounter 2 - Sudden Meeting/1.1.2.2.1/Sorry/Show Choices | button 0: other action (null.StartNewConversation) |
-| Conversations/Study with Beau/Show Choices | button 0: other action (NodeLaunchGroupStudy.Run_Node) |
 | Conversations/Finish Studying with Beau/Show Choices | button 0: other action (NodeLaunchGroupStudy.Run_Node) |
-| Conversations/One or Less/Show Choices | button 0: other action (NodeLaunchGroupStudy.Run_Node) |

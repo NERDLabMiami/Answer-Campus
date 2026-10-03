@@ -27,65 +27,53 @@ _A gate/requirement checks this key, but no `AlterStatNode`/delta anywhere in th
 
 | Written key | Write sites |
 |---|---|
-| `Art Project` | Assets/Scenes/Locations/Library.unity:20150; Assets/Scripts/Location.cs:255 |
+| `Art Project` | Assets/Scripts/Location.cs:255 |
 | `BREANNA IN LOVE` | Assets/Scenes/Locations/Student Center.unity:2939 |
-| `BeauIntro_AandC` | Assets/Scenes/Locations/Library.unity:124955 |
-| `BeauIntro_Hobby` | Assets/Scenes/Locations/Library.unity:123503 |
-| `BeauIntro_Major` | Assets/Scenes/Locations/Library.unity:123734 |
-| `Best Friend` | Assets/Scenes/Locations/Apartment.unity:33559; Assets/Scenes/Locations/Apartment.unity:165158; Assets/Scenes/Locations/Apartment.unity:202526; Assets/Scenes/Locations/Green.unity:38285; Assets/Scenes/Locations/Lecture Hall.unity:49241; Assets/Scenes/Temporary/Breanna-Eric.unity:117296; Assets/Scenes/Temporary/Charli-Snow.unity:110882; Assets/Scenes/Temporary/Charli-Snow.unity:144701 |
-| `BradIntro_AandC` | Assets/Scenes/Locations/Dining Hall.unity:84583 |
-| `BradIntro_Hobby` | Assets/Scenes/Locations/Dining Hall.unity:82688 |
-| `BradIntro_Major` | Assets/Scenes/Locations/Dining Hall.unity:82741 |
-| `Breanna` | Assets/Scenes/Locations/Dining Hall.unity:99613; Assets/Scenes/Locations/Dining Hall.unity:108693; Assets/Scenes/Locations/Green.unity:22400; Assets/Scenes/Temporary/Breanna-Eric.unity:60920; Assets/Scenes/Temporary/Breanna-Eric.unity:167534; Assets/Scenes/Temporary/Breanna-Eric.unity:269540; Assets/Scenes/Temporary/Breanna-Eric.unity:295951; Assets/Scenes/Temporary/Breanna-Eric.unity:306926 |
-| `Breanna Blanche` | Assets/Scenes/Temporary/Breanna-Eric.unity:205142 |
-| `Bro Down` | Assets/Scenes/Locations/Dining Hall.unity:26783; Assets/Scripts/Location.cs:262 |
-| `Can I Touch Your Hair` | Assets/Scenes/Locations/Apartment.unity:119376; Assets/Scenes/Temporary/Charli-Snow.unity:175941; Assets/Scripts/Location.cs:210 |
-| `Charli` | Assets/Scenes/Locations/Apartment.unity:93283; Assets/Scenes/Locations/Apartment.unity:182858; Assets/Scenes/Temporary/Charli-Snow.unity:90470; Assets/Scenes/Temporary/Charli-Snow.unity:124304; Assets/Scenes/Temporary/Charli-Snow.unity:157022 |
-| `Class Response` | Assets/Scenes/Locations/Lecture Hall.unity:25636; Assets/Scenes/Locations/Lecture Hall.unity:28880; Assets/Scenes/Locations/Lecture Hall.unity:33261 |
+| `Best Friend` | Assets/Scenes/Locations/Apartment.unity:70281; Assets/Scenes/Locations/Green.unity:11255; Assets/Scenes/Locations/Lecture Hall.unity:39405 |
+| `BradIntro_AandC` | Assets/Scenes/Locations/Dining Hall.unity:31164 |
+| `BradIntro_Hobby` | Assets/Scenes/Locations/Dining Hall.unity:29269 |
+| `BradIntro_Major` | Assets/Scenes/Locations/Dining Hall.unity:29322 |
+| `Breanna` | Assets/Scenes/Locations/Dining Hall.unity:42365; Assets/Scenes/Locations/Dining Hall.unity:49235; Assets/Scenes/Locations/Green.unity:6359 |
+| `Bro Down` | Assets/Scripts/Location.cs:262 |
+| `Can I Touch Your Hair` | Assets/Scripts/Location.cs:210 |
+| `Class Response` | Assets/Scenes/Locations/Lecture Hall.unity:20723; Assets/Scenes/Locations/Lecture Hall.unity:23212; Assets/Scenes/Locations/Lecture Hall.unity:26735 |
 | `ClassAttendedThisWeek` | Assets/Scripts/HomeCutsceneController.cs:406; Assets/Scripts/HomeCutsceneController.cs:720; Assets/Scripts/Nodes/NodeCheckpoint.cs:39; Assets/Scripts/Nodes/NodeCheckpoint.cs:53 |
-| `Competition` | Assets/Scenes/Locations/Dining Hall.unity:6713; Assets/Scenes/Locations/Green.unity:109711; Assets/Scenes/Locations/Green.unity:171858; Assets/Scenes/Locations/Library.unity:43831; Assets/Scenes/Locations/Library.unity:72781; Assets/Scenes/Locations/Library.unity:109326; Assets/Scenes/Locations/Outside Class.unity:922; Assets/Scenes/Locations/Outside Class.unity:3696 |
+| `Competition` | Assets/Scenes/Locations/Outside Class.unity:922; Assets/Scenes/Locations/Outside Class.unity:3696; Assets/Scenes/Locations/Shuttle.unity:951; Assets/Scripts/Location.cs:140 |
 | `CurrentExamId` | Assets/Scripts/Nodes/NodeLaunchExam.cs:34; Assets/Scripts/Mini Games/Study/FivePositionsGameManager.cs:1028 |
 | `DayOffset` | Assets/Scripts/HomeCutsceneController.cs:150; Assets/Scripts/HomeCutsceneController.cs:211; Assets/Scripts/HomeCutsceneController.cs:223; Assets/Scripts/HomeCutsceneController.cs:405; Assets/Scripts/HomeCutsceneController.cs:432; Assets/Scripts/HomeCutsceneController.cs:448; Assets/Scripts/HomeCutsceneController.cs:504; Assets/Scripts/HomeCutsceneController.cs:719 |
 | `DayPhase` | Assets/Scripts/HomeCutsceneController.cs:151; Assets/Scripts/HomeCutsceneController.cs:212; Assets/Scripts/HomeCutsceneController.cs:224; Assets/Scripts/HomeCutsceneController.cs:404; Assets/Scripts/HomeCutsceneController.cs:420; Assets/Scripts/HomeCutsceneController.cs:505; Assets/Scripts/HomeCutsceneController.cs:710; Assets/Scripts/HomeCutsceneController.cs:718 |
-| `Deepak` | Assets/Scenes/Locations/Apartment.unity:208908; Assets/Scenes/Locations/Apartment.unity:211305; Assets/Scenes/Locations/Dining Hall.unity:11363; Assets/Scenes/Locations/Green.unity:116785; Assets/Scenes/Locations/Lecture Hall.unity:90516; Assets/Scenes/Locations/Shuttle.unity:18574; Assets/Scenes/Temporary/Deepak_CompleteArc.unity:6778; Assets/Scenes/Temporary/Deepak_CompleteArc.unity:17899 |
+| `Deepak` | Assets/Scenes/Locations/Apartment.unity:76663; Assets/Scenes/Locations/Apartment.unity:79060; Assets/Scenes/Locations/Green.unity:34948; Assets/Scenes/Locations/Lecture Hall.unity:74028; Assets/Scenes/Locations/Shuttle.unity:18574 |
 | `Deepak Performs` | Assets/Scenes/Locations/Shuttle.unity:6266; Assets/Scripts/Location.cs:247 |
-| `Deepak Portrait` | Assets/Scenes/Locations/Green.unity:97946; Assets/Scenes/Locations/Lecture Hall.unity:92189; Assets/Scenes/Temporary/Deepak_CompleteArc.unity:5239 |
-| `Drinking` | Assets/Scenes/Locations/Apartment.unity:27164 |
+| `Deepak Portrait` | Assets/Scenes/Locations/Green.unity:28205; Assets/Scenes/Locations/Lecture Hall.unity:75701 |
+| `Drinking` | Assets/Scenes/Locations/Apartment.unity:8539 |
 | `Eric` | Assets/Scripts/Location.cs:161; Assets/Scripts/Location.cs:168 |
 | `Eric Relationship` | Assets/Scenes/Locations/Student Center.unity:24759 |
 | `EricIntro_AandC` | Assets/Scenes/Locations/Student Center.unity:27269 |
 | `EricIntro_Hobby` | Assets/Scenes/Locations/Student Center.unity:30903 |
 | `EricIntro_Major` | Assets/Scenes/Locations/Student Center.unity:30735 |
-| `Eyes` | Assets/Scenes/Locations/Apartment.unity:60361; Assets/Scenes/Locations/Green.unity:106383; Assets/Scenes/Temporary/Charli-Snow.unity:45790; Assets/Scripts/Location.cs:194 |
-| `Favorite Book` | Assets/Scenes/Locations/Lecture Hall.unity:7786; Assets/Scenes/Locations/Lecture Hall.unity:16955; Assets/Scenes/Locations/Lecture Hall.unity:31969; Assets/Scenes/Locations/Lecture Hall.unity:63503; Assets/Scenes/Locations/Lecture Hall.unity:64252 |
+| `Eyes` | Assets/Scripts/Location.cs:194 |
+| `Favorite Book` | Assets/Scenes/Locations/Lecture Hall.unity:6682; Assets/Scenes/Locations/Lecture Hall.unity:13474; Assets/Scenes/Locations/Lecture Hall.unity:25604; Assets/Scenes/Locations/Lecture Hall.unity:51138; Assets/Scenes/Locations/Lecture Hall.unity:51821 |
 | `FootballSchedule` | Assets/Scripts/HomeCutsceneController.cs:157; Assets/Scripts/FootballScheduler.cs:48; Assets/Scripts/FootballScheduler.cs:112; Assets/Scripts/Mini Games/Cheer/CheerGameManager.cs:855 |
-| `Full Team` | Assets/Scenes/Locations/Green.unity:137741 |
-| `Game` | Assets/Scenes/Locations/Apartment.unity:69421; Assets/Scenes/Locations/Green.unity:52926; Assets/Scenes/Temporary/Deepak_CompleteArc.unity:2100 |
-| `IN THE TEXT` | Assets/Scenes/Locations/Lecture Hall.unity:61283 |
-| `In The Text` | Assets/Scenes/Locations/Lecture Hall.unity:1735; Assets/Scenes/Locations/Lecture Hall.unity:49952; Assets/Scenes/Locations/Shuttle.unity:10901; Assets/Scripts/Location.cs:178 |
-| `Jiah` | Assets/Scenes/Locations/Apartment.unity:105276; Assets/Scenes/Locations/Apartment.unity:175843; Assets/Scenes/Temporary/Charli-Snow.unity:158740 |
+| `Game` | Assets/Scenes/Locations/Apartment.unity:19725; Assets/Scenes/Locations/Green.unity:14674 |
+| `IN THE TEXT` | Assets/Scenes/Locations/Lecture Hall.unity:49401 |
+| `In The Text` | Assets/Scenes/Locations/Lecture Hall.unity:1574; Assets/Scenes/Locations/Lecture Hall.unity:39902; Assets/Scenes/Locations/Shuttle.unity:10901; Assets/Scripts/Location.cs:178 |
 | `Just a Compliment` | Assets/Scripts/Location.cs:217 |
 | `JustReturnedFromGame` | Assets/Scripts/HomeCutsceneController.cs:399; Assets/Scripts/Mini Games/Cheer/CheerGameManager.cs:863 |
-| `Left Class` | Assets/Scenes/Locations/Lecture Hall.unity:33816; Assets/Scenes/Locations/Lecture Hall.unity:79103 |
-| `Limp` | Assets/Scenes/Locations/Green.unity:166153; Assets/Scenes/Locations/Shuttle.unity:3720; Assets/Scripts/Location.cs:186 |
-| `Major Declared` | Assets/Scenes/Locations/Apartment.unity:41789 |
-| `Matthew` | Assets/Scenes/Temporary/Breanna-Eric.unity:143215 |
-| `MatthewIntro_AandC` | Assets/Scenes/Locations/Library.unity:111704 |
-| `MatthewIntro_Hobby` | Assets/Scenes/Locations/Library.unity:115594 |
-| `MatthewIntro_Major` | Assets/Scenes/Locations/Library.unity:115630 |
-| `No Bros` | Assets/Scenes/Temporary/Breanna-Eric.unity:59227 |
+| `Left Class` | Assets/Scenes/Locations/Lecture Hall.unity:27290; Assets/Scenes/Locations/Lecture Hall.unity:63222 |
+| `Limp` | Assets/Scenes/Locations/Shuttle.unity:3720; Assets/Scripts/Location.cs:186 |
+| `Major Declared` | Assets/Scenes/Locations/Apartment.unity:12474 |
+| `MatthewIntro_AandC` | Assets/Scenes/Locations/Library.unity:26795 |
+| `MatthewIntro_Hobby` | Assets/Scenes/Locations/Library.unity:30685 |
+| `MatthewIntro_Major` | Assets/Scenes/Locations/Library.unity:30721 |
 | `PhoneHasNewActivity` | Assets/Scripts/Nodes/NodeEvent.cs:35; Assets/Scripts/Nodes/NodeContact.cs:21; Assets/Scripts/Nodes/NodeMessage.cs:88 |
 | `Player Name` | Assets/Scripts/Nodes/DebugInitNode.cs:110 |
-| `Relationships` | Assets/Scenes/Temporary/Breanna-Eric.unity:41124; Assets/Scenes/Temporary/Breanna-Eric.unity:287239; Assets/Scripts/Location.cs:202 |
-| `Revenge` | Assets/Scenes/Locations/Lecture Hall.unity:35065 |
-| `Round Table` | Assets/Scenes/Locations/Library.unity:109076; Assets/Scenes/Temporary/Breanna-Eric.unity:144576; Assets/Scripts/Location.cs:232 |
+| `Relationships` | Assets/Scripts/Location.cs:202 |
+| `Revenge` | Assets/Scenes/Locations/Lecture Hall.unity:28483 |
+| `Round Table` | Assets/Scripts/Location.cs:232 |
 | `Study Hall` | Assets/Scripts/Location.cs:225 |
 | `StudyGameScore` | Assets/Scripts/Mini Games/Study/FivePositionsGameManager.cs:1018; Assets/Scripts/Mini Games/Study/FivePositionsGameManager.cs:1053 |
-| `Tumblr` | Assets/Scenes/Locations/Apartment.unity:91926; Assets/Scenes/Locations/Apartment.unity:130319; Assets/Scenes/Locations/Apartment.unity:132763 |
-| `Walkout` | Assets/Scenes/Locations/Lecture Hall.unity:17314; Assets/Scenes/Locations/Lecture Hall.unity:70436 |
+| `Tumblr` | Assets/Scenes/Locations/Apartment.unity:25411; Assets/Scenes/Locations/Apartment.unity:40299; Assets/Scenes/Locations/Apartment.unity:41070 |
+| `Walkout` | Assets/Scenes/Locations/Lecture Hall.unity:13833; Assets/Scenes/Locations/Lecture Hall.unity:56950 |
 | `Week` | Assets/Scripts/HomeCutsceneController.cs:149; Assets/Scripts/HomeCutsceneController.cs:222; Assets/Scripts/HomeCutsceneController.cs:403; Assets/Scripts/HomeCutsceneController.cs:717; Assets/Scripts/NodeCheckpointCharacterStage.cs:104; Assets/Scripts/Nodes/DebugInitNode.cs:106; Assets/Scripts/Nodes/NodeCheckpoint.cs:50; Assets/Scripts/Phone/TextThreadPanel.cs:333 |
-| `charisma` | Assets/Scenes/Temporary/Breanna-Eric.unity:52012 |
-| `empathy` | Assets/Scenes/Temporary/Breanna-Eric.unity:3440; Assets/Scenes/Temporary/Breanna-Eric.unity:8056; Assets/Scenes/Temporary/Breanna-Eric.unity:14027; Assets/Scenes/Temporary/Breanna-Eric.unity:17400; Assets/Scenes/Temporary/Breanna-Eric.unity:26405; Assets/Scenes/Temporary/Breanna-Eric.unity:31204; Assets/Scenes/Temporary/Breanna-Eric.unity:44181; Assets/Scenes/Temporary/Breanna-Eric.unity:52649 |
-| `humor` | Assets/Scenes/Temporary/Breanna-Eric.unity:2586; Assets/Scenes/Temporary/Breanna-Eric.unity:6845; Assets/Scenes/Temporary/Breanna-Eric.unity:8035; Assets/Scenes/Temporary/Breanna-Eric.unity:21296; Assets/Scenes/Temporary/Breanna-Eric.unity:22871 |
 | `money` | Assets/Scripts/Nodes/NodeMoney.cs:19; Assets/Scripts/Nodes/NodeMoney.cs:23 |
 | `weeks` | Assets/Scripts/Nodes/NodeTime.cs:19; Assets/Scripts/Nodes/NodeTime.cs:23 |

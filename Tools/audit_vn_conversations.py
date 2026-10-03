@@ -398,6 +398,44 @@ def entity_owner(scene, kind, fid, transform_of_go, stripped_transform_prefab, g
     return owning_conversation(scene, start, transform_of_go, stripped_transform_prefab, go_conv_manager)
 
 
+# Mirrors CONVERSATIONS_ROOT_NAME in Tools/audit_choice_migration.py / Assets/Editor/ChoiceNodeMigrator.cs.
+CONVERSATIONS_ROOT_NAME = "Conversations"
+
+
+def direct_parent_go(scene, go_fid, transform_of_go, stripped_transform_prefab):
+    """Returns the GameObject fid that is the *direct* Hierarchy parent of go_fid
+    (one level up only, unlike owning_conversation which walks up to the nearest
+    ConversationManager). Skips a stripped prefab-instance wrapper transform to
+    reach the real parent GameObject, same as owning_conversation does."""
+    t = transform_of_go.get(go_fid)
+    if t is None or t not in scene.transforms:
+        return None
+    father = scene.transforms[t]['father']
+    if father in (None, 0):
+        return None
+    if father in stripped_transform_prefab:
+        pi_fid = stripped_transform_prefab[father]
+        father = scene.prefab_instances.get(pi_fid, {}).get('parent')
+        if father is None:
+            return None
+    ftr = scene.transforms.get(father)
+    return ftr['go'] if ftr and not ftr['stripped'] else None
+
+
+def find_container_name(scene, conv_go_fid, transform_of_go, stripped_transform_prefab, mb_go_set):
+    """A GameObject is an organizational container for a ConversationManager child when it is
+    that child's direct Hierarchy parent, has no MonoBehaviour of its own (a parent that IS
+    itself a ConversationManager means ordinary node-jump branching, not this grouping pattern),
+    and isn't the scene's top-level "Conversations" root (grouping under that is meaningless)."""
+    parent_go = direct_parent_go(scene, conv_go_fid, transform_of_go, stripped_transform_prefab)
+    if parent_go is None or parent_go in mb_go_set:
+        return None
+    name = scene.gameobjects.get(parent_go, {}).get('name')
+    if not name or name == CONVERSATIONS_ROOT_NAME:
+        return None
+    return name
+
+
 PERSISTENT_CALL_PATH_RE = re.compile(
     r'^(.*)\.m_PersistentCalls\.m_Calls\.Array\.data\[(\d+)\]\.(.+)$'
 )
@@ -628,6 +666,13 @@ def analyze_scene(scene):
         })
     legacy_nodes.sort(key=lambda n: n['line'])
 
+    mb_go_set = {mb['go'] for mb in scene.monobehaviours.values() if mb['go'] is not None}
+    container_of = {}
+    for fid in conv_manager_fids:
+        go = scene.monobehaviours[fid]['go']
+        container_of[fid] = find_container_name(scene, go, transform_of_go, stripped_transform_prefab, mb_go_set) \
+            if go is not None else None
+
     return {
         'conv_manager_fids': conv_manager_fids,
         'conv_name': conv_name,
@@ -638,6 +683,7 @@ def analyze_scene(scene):
         'root_reasons': root_reasons,
         'reachable': reachable,
         'unreachable': unreachable,
+        'container_of': container_of,
         'whole_conv_prefab_guids': whole_conv_prefab_guids,
         'legacy_nodes': legacy_nodes,
     }
@@ -681,20 +727,49 @@ def render_scene_report(scene_path, scene, result):
                  "save/resume-by-name). \"Entry points\" = conversations named `Start`, or targeted by "
                  "ClickToStartConversation / PressAnyKeyToStartConversation / VNSceneManager / GroupStudyManager / "
                  "FivePositionsGameManager._\n")
-    if unreach:
-        lines.append("| Conversation name | fileID | Line # | Outgoing references (if any) |")
-        lines.append("|---|---|---|---|")
-        for fid in unreach:
+
+    def render_unreachable_table(fids):
+        out = ["| Conversation name | fileID | Line # | Outgoing references (if any) |", "|---|---|---|---|"]
+        for fid in fids:
             outs = sorted(
                 f"{result['conv_name'](t)} ({label})"
                 for t in result['edges'].get(fid, ())
                 for label in result['edge_labels'][(fid, t)]
             )
             out_str = '; '.join(outs) if outs else '—'
-            lines.append(f"| {result['conv_name'](fid)} | {fid} | {result['conv_line'](fid)} | {out_str} |")
+            out.append(f"| {result['conv_name'](fid)} | {fid} | {result['conv_line'](fid)} | {out_str} |")
+        return out
+
+    if unreach:
+        container_of = result['container_of']
+        grouped = defaultdict(list)
+        ungrouped = []
+        for fid in unreach:
+            c = container_of.get(fid)
+            (grouped[c] if c else ungrouped).append(fid)
+
+        if grouped:
+            lines.append(
+                "_Grouped by organizational parent folder (a Transform-only GameObject with no "
+                "`ConversationManager` of its own, as opposed to a parent that's itself a conversation branching "
+                "via `nextConversation`/`start_conversation_when_done`) — these are commonly in-progress "
+                "conversation trees that haven't had their choices/stats wired up yet, not necessarily orphaned "
+                "dead ends._\n"
+            )
+            for container in sorted(grouped):
+                fids = sorted(grouped[container], key=lambda f: result['conv_line'](f))
+                lines.append(f"### {container} ({len(fids)} unreachable)\n")
+                lines.extend(render_unreachable_table(fids))
+                lines.append("")
+
+        if ungrouped:
+            if grouped:
+                lines.append("### Ungrouped\n")
+            lines.extend(render_unreachable_table(sorted(ungrouped, key=lambda f: result['conv_line'](f))))
+            lines.append("")
     else:
         lines.append("_None — every conversation in this scene is reachable from a known entry point._")
-    lines.append("")
+        lines.append("")
 
     lines.append("## Legacy ChoiceNode Usages\n")
     lines.append("_`ChoiceNode` (raw `Button_Events` UnityEvent array) instances, as opposed to the newer "
