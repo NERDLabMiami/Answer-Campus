@@ -5,9 +5,15 @@ Audits the VNEngine conversation scenes in Assets/Scenes/Locations for:
      entry point (dead node-tree paths).
   2. Legacy ChoiceNode (raw UnityEvent Button_Events) usages, as opposed to
      the newer ShowChoiceNode.nextConversation jump field.
+  3. Stat/trait keys that are written under one spelling and read under
+     another (StatKeyLint.md), and required stats that are never written
+     at all.
+  4. Raw scene-name strings used for navigation that don't match any real
+     scene file or aren't in Build Settings (SceneNameValidation.md).
 
 See Docs/VNEngine Audit/README.md for methodology and caveats.
 """
+import difflib
 import os
 import re
 import sys
@@ -74,7 +80,7 @@ VALUE_RE = re.compile(r'^\s*value:\s*(.*)$')
 # GUID -> class name lookup tables
 # ---------------------------------------------------------------------------
 
-def build_class_guid_table():
+def build_class_guid_table(extra_files=None):
     table = {}
     files = []
     nodes_dir = os.path.join(REPO, "Assets/Scripts/Nodes")
@@ -82,6 +88,8 @@ def build_class_guid_table():
         if fn.endswith(".cs"):
             files.append(os.path.join(nodes_dir, fn))
     for rel in EXTRA_CLASS_FILES:
+        files.append(os.path.join(REPO, rel))
+    for rel in (extra_files or []):
         files.append(os.path.join(REPO, rel))
 
     for cs_path in files:
@@ -775,7 +783,470 @@ def render_index(all_results):
         lines.append(f"| [{n}]({link}) | {cm} | {un} | {lg} |")
     lines.append(f"| **Total** | **{total_cm}** | **{total_unreach}** | **{total_legacy}** |")
     lines.append("")
+    lines.append("## Other reports\n")
+    lines.append(
+        "- [Stat Key Naming Lint](StatKeyLint.md) — stat/trait keys written under one spelling but read under "
+        "another, and required stats that are never written at all.\n"
+        "- [Scene Name / Location String Validation](SceneNameValidation.md) — raw scene-name strings "
+        "(`TextMessage.location`, `HomeCutsceneController`, routers, `LoadSceneNode`) that don't match any "
+        "real scene or aren't in Build Settings.\n"
+        "\nBoth scan a broader file set than the table above: every non-Archive scene under `Assets/Scenes/` "
+        "plus Conversation Pieces prefabs, not just the 9 Locations scenes.\n"
+    )
     return '\n'.join(lines)
+
+
+# ---------------------------------------------------------------------------
+# Stat-key naming lint + scene-name/location string validation
+#
+# Unlike the reachability/legacy-node audit above (scoped to the 9
+# Assets/Scenes/Locations/*.unity files), these two passes scan every scene
+# under Assets/Scenes/ (excluding Archive/) plus Conversation Pieces prefabs,
+# since real stat writes/gates and navigation strings also live in Home.unity,
+# Credits.unity, and Assets/Scenes/Temporary/*.unity.
+# ---------------------------------------------------------------------------
+
+ALL_SCENES_ROOT = os.path.join(REPO, "Assets/Scenes")
+CONVERSATION_PIECES_DIR = os.path.join(REPO, "Assets/Resources/Conversation Pieces")
+LOCATION_DATA_DIR = os.path.join(REPO, "Assets/Resources/Locations")
+BUILD_SETTINGS_PATH = os.path.join(REPO, "ProjectSettings/EditorBuildSettings.asset")
+
+# Mirrors `enum Trait { Humor, Charisma, Empathy, Grades }` and
+# GateTraitsNode.TraitKey() in Assets/Scripts/Nodes/GateTraitsNode.cs.
+TRAIT_ENUM_KEYS = ["Humor", "Charisma", "Empathy", "Grades"]
+
+# Mirrors `enum Stat_Type` in Assets/Scripts/Nodes/AlterStatNode.cs.
+STAT_TYPE_NAMES = ["Set_Number", "Modify_Number", "Set_Boolean", "Toggle_Boolean", "Set_String"]
+
+# Condition enum values in Assets/Scripts/Nodes/IfNode.cs that mean Stat_Name[x]
+# is an actual stat-key read (as opposed to Object_Is_Null/Object_Is_Active).
+IFNODE_STAT_CONDITION_VALUES = {"0", "1", "2"}
+
+# Raw scene-name string fields to validate, by owning MonoBehaviour class.
+SCENE_NAME_SOURCE_FIELDS = {
+    "CharacterStageRouterNode": ["currentSceneName"],
+    "LoadSceneNode": ["level_to_load"],
+    "HomeCutsceneController": ["orientationScene", "classScene", "footballScene", "cheerScene"],
+}
+
+TRAIT_REQ_ENUM_RE = re.compile(r'^\s*-?\s*enumTrait:\s*(\d+)\s*$')
+TRAIT_DELTA_ENUM_RE = re.compile(r'^\s*-?\s*trait:\s*(\d+)\s*$')
+TRAIT_KEY_RE = re.compile(r'^\s*traitKey:\s*(.*)$')
+
+
+def scalar_field_re(field):
+    return re.compile(r'^(\s*)' + re.escape(field) + r':\s*(.*)$')
+
+
+def first_scalar_value(body, field):
+    """Returns the value of the first `field: value` line in body, or None if absent."""
+    rx = scalar_field_re(field)
+    for line in body:
+        m = rx.match(line)
+        if m:
+            val = m.group(2).strip()
+            return '' if val in ("''", '""') else val
+    return None
+
+
+def find_block_header(body, field):
+    """Finds `field:` (or `field: []`) with nothing meaningful after it, signalling a
+    block list follows on subsequent lines. Returns (indent, start_index) or None."""
+    rx = re.compile(r'^(\s*)' + re.escape(field) + r':\s*(\[\])?\s*$')
+    for i, line in enumerate(body):
+        m = rx.match(line)
+        if m:
+            return len(m.group(1)), i + 1
+    return None
+
+
+def parse_scalar_block_list(body, field):
+    """Parses a flat Unity-serialized array of scalars (e.g. string[]/enum[]) under `field:`."""
+    header = find_block_header(body, field)
+    if header is None:
+        return []
+    indent, start = header
+    item_re = re.compile(r'^' + ' ' * indent + r'-\s*(.*)$')
+    values = []
+    i = start
+    while i < len(body):
+        m = item_re.match(body[i])
+        if not m:
+            break
+        v = m.group(1).strip()
+        values.append('' if v in ("''", '""') else v)
+        i += 1
+    return values
+
+
+def extract_resolved_trait_keys(body, enum_field_re):
+    """Scans body for `enumTrait: N` (FlexibleTraitRequirement) or `trait: N` (TraitDelta)
+    lines, each followed by a `traitKey: ...` line (fixed C# field declaration order), and
+    resolves to the actual stat key exactly as GateTraitsNode.ResolveKey() would: the
+    explicit traitKey string if non-empty, else the enum index mapped via TRAIT_ENUM_KEYS.
+    Works regardless of YAML nesting depth (e.g. ShowChoiceNode.Choice.requirements nested
+    inside the choices list) since it only looks at adjacent lines, not list structure.
+    Returns a list of (resolved_key, line_offset_within_body)."""
+    results = []
+    n = len(body)
+    for i, line in enumerate(body):
+        m = enum_field_re.match(line)
+        if not m:
+            continue
+        enum_idx = int(m.group(1))
+        resolved = None
+        if i + 1 < n:
+            km = TRAIT_KEY_RE.match(body[i + 1])
+            if km:
+                tk = km.group(1).strip()
+                if tk and tk not in ("''", '""'):
+                    resolved = tk
+        if resolved is None:
+            resolved = TRAIT_ENUM_KEYS[enum_idx] if 0 <= enum_idx < len(TRAIT_ENUM_KEYS) else f"<unknown enumTrait {enum_idx}>"
+        results.append((resolved, i))
+    return results
+
+
+def ifnode_stat_reads(body):
+    noc_raw = first_scalar_value(body, "Number_Of_Conditions")
+    try:
+        noc = int(noc_raw) if noc_raw else 0
+    except ValueError:
+        noc = 0
+    conditions = parse_scalar_block_list(body, "Conditions")
+    stat_names = parse_scalar_block_list(body, "Stat_Name")
+    reads = []
+    for x in range(min(noc, len(conditions), len(stat_names))):
+        if conditions[x] in IFNODE_STAT_CONDITION_VALUES and stat_names[x]:
+            reads.append(stat_names[x])
+    return reads
+
+
+def discover_stat_and_route_scan_files():
+    """Every .unity under Assets/Scenes/ (excluding any Archive/ subtree) plus every
+    Conversation Pieces prefab."""
+    scenes = []
+    for root, dirs, files in os.walk(ALL_SCENES_ROOT):
+        dirs[:] = [d for d in dirs if d != "Archive"]
+        for fn in sorted(files):
+            if fn.endswith(".unity"):
+                scenes.append(os.path.join(root, fn))
+    prefabs = []
+    if os.path.isdir(CONVERSATION_PIECES_DIR):
+        for fn in sorted(os.listdir(CONVERSATION_PIECES_DIR)):
+            if fn.endswith(".prefab"):
+                prefabs.append(os.path.join(CONVERSATION_PIECES_DIR, fn))
+    return sorted(scenes) + prefabs
+
+
+def discover_all_scene_basenames():
+    names = set()
+    for root, dirs, files in os.walk(ALL_SCENES_ROOT):
+        dirs[:] = [d for d in dirs if d != "Archive"]
+        for fn in files:
+            if fn.endswith(".unity"):
+                names.add(os.path.splitext(fn)[0])
+    return names
+
+
+def discover_build_settings_scene_basenames():
+    names = set()
+    path_re = re.compile(r'^\s*path:\s*(.+)$')
+    if os.path.exists(BUILD_SETTINGS_PATH):
+        with open(BUILD_SETTINGS_PATH, errors='replace') as f:
+            for line in f:
+                m = path_re.match(line)
+                if m:
+                    p = m.group(1).strip()
+                    if p.endswith(".unity"):
+                        names.add(os.path.splitext(os.path.basename(p))[0])
+    return names
+
+
+def collect_stat_key_usages(paths, class_guid_table, prefab_guid_table):
+    """Returns (writes, reads): key -> list of {file, line, conversation, node, detail}."""
+    writes = defaultdict(list)
+    reads = defaultdict(list)
+
+    for path in paths:
+        scene = parse_scene(path, class_guid_table, prefab_guid_table)
+        transform_of_go, stripped_transform_prefab, go_conv_manager = build_indexes(scene)
+        rel = os.path.relpath(path, REPO)
+
+        def owner_name(fid):
+            owner = entity_owner(scene, 'mb', fid, transform_of_go, stripped_transform_prefab, go_conv_manager)
+            if owner is None:
+                return '<no owning conversation>'
+            go = scene.monobehaviours[owner]['go']
+            n = scene.gameobjects.get(go, {}).get('name') if go is not None else None
+            return n or f"<ConversationManager {owner}>"
+
+        for fid, mb in scene.monobehaviours.items():
+            cls = mb['class']
+            if cls is None:
+                continue
+            body = scene.body(fid)
+            base_line = scene.docs[fid]['start'] + 1
+            node_name = display_name(scene, 'mb', fid)
+
+            if cls == 'AlterStatNode':
+                stat_name = first_scalar_value(body, 'stat_name')
+                stat_type_raw = first_scalar_value(body, 'stat_type')
+                try:
+                    stat_type = STAT_TYPE_NAMES[int(stat_type_raw)]
+                except (TypeError, ValueError, IndexError):
+                    stat_type = stat_type_raw
+                if stat_name:
+                    writes[stat_name].append({'file': rel, 'line': base_line, 'conversation': owner_name(fid),
+                                               'node': node_name, 'detail': f'AlterStatNode ({stat_type})'})
+
+            elif cls == 'GateTraitsNode':
+                for key, off in extract_resolved_trait_keys(body, TRAIT_REQ_ENUM_RE):
+                    reads[key].append({'file': rel, 'line': base_line + off, 'conversation': owner_name(fid),
+                                        'node': node_name, 'detail': 'GateTraitsNode.traitRequirements'})
+                for key, off in extract_resolved_trait_keys(body, TRAIT_DELTA_ENUM_RE):
+                    entry = {'file': rel, 'line': base_line + off, 'conversation': owner_name(fid),
+                             'node': node_name, 'detail': 'GateTraitsNode success/failure delta (read-modify-write)'}
+                    reads[key].append(entry)
+                    writes[key].append(entry)
+
+            elif cls == 'ShowChoiceNode':
+                for key, off in extract_resolved_trait_keys(body, TRAIT_REQ_ENUM_RE):
+                    reads[key].append({'file': rel, 'line': base_line + off, 'conversation': owner_name(fid),
+                                        'node': node_name, 'detail': 'ShowChoiceNode choice requirement'})
+
+            elif cls == 'IfNode':
+                for key in ifnode_stat_reads(body):
+                    reads[key].append({'file': rel, 'line': base_line, 'conversation': owner_name(fid),
+                                        'node': node_name, 'detail': 'IfNode condition'})
+
+    return writes, reads
+
+
+def collect_scene_name_references(paths, class_guid_table, prefab_guid_table):
+    refs = []
+    for path in paths:
+        scene = parse_scene(path, class_guid_table, prefab_guid_table)
+        rel = os.path.relpath(path, REPO)
+        for fid, mb in scene.monobehaviours.items():
+            cls = mb['class']
+            if cls != 'NodeMessage' and cls not in SCENE_NAME_SOURCE_FIELDS:
+                continue
+            body = scene.body(fid)
+            line = scene.docs[fid]['start'] + 1
+            if cls == 'NodeMessage':
+                loc = first_scalar_value(body, 'location')
+                if loc:
+                    refs.append({'value': loc, 'file': rel, 'line': line, 'field': 'textMessage.location', 'class': cls})
+                continue
+            for field in SCENE_NAME_SOURCE_FIELDS[cls]:
+                val = first_scalar_value(body, field)
+                if val:
+                    refs.append({'value': val, 'file': rel, 'line': line, 'field': field, 'class': cls})
+    return refs
+
+
+def collect_location_data_scene_names():
+    refs = []
+    if not os.path.isdir(LOCATION_DATA_DIR):
+        return refs
+    scene_name_re = re.compile(r'^\s*sceneName:\s*(.*)$')
+    for fn in sorted(os.listdir(LOCATION_DATA_DIR)):
+        if not fn.endswith(".asset"):
+            continue
+        path = os.path.join(LOCATION_DATA_DIR, fn)
+        with open(path, errors='replace') as f:
+            for i, line in enumerate(f):
+                m = scene_name_re.match(line)
+                if m:
+                    val = m.group(1).strip()
+                    if val:
+                        refs.append({'value': val, 'file': os.path.relpath(path, REPO), 'line': i + 1,
+                                     'field': 'sceneName', 'class': 'LocationData'})
+    return refs
+
+
+CS_STATSMANAGER_WRITE_RE = re.compile(
+    r'StatsManager\.(Set_Numbered_Stat|Add_To_Numbered_Stat|Set_Boolean_Stat|Toggle_Boolean_Stat|Set_String_Stat)'
+    r'\(\s*"([^"]+)"'
+)
+
+
+def collect_cs_stat_writes():
+    """Catches stats set directly from C# (e.g. a mini-game manager calling
+    StatsManager.Set_Numbered_Stat("X", ...) at runtime) rather than via an AlterStatNode
+    in scene data — without this, such a key looks indistinguishable from one that's
+    never written at all. Only literal string-constant keys are found; a computed/
+    interpolated key (e.g. $"{character}_affinity") is invisible to this regex scan,
+    same limitation as the rest of this lint."""
+    writes = defaultdict(list)
+    scripts_dir = os.path.join(REPO, "Assets/Scripts")
+    for root, _dirs, files in os.walk(scripts_dir):
+        for fn in files:
+            if not fn.endswith(".cs"):
+                continue
+            path = os.path.join(root, fn)
+            rel = os.path.relpath(path, REPO)
+            with open(path, errors='replace') as f:
+                for i, line in enumerate(f, start=1):
+                    for m in CS_STATSMANAGER_WRITE_RE.finditer(line):
+                        method, key = m.group(1), m.group(2)
+                        writes[key].append({'file': rel, 'line': i, 'conversation': '<C# script>',
+                                             'node': fn, 'detail': f'StatsManager.{method} (C#)'})
+    return writes
+
+
+def normalize_key(k):
+    return k.strip().lower()
+
+
+def render_stat_key_lint(writes, reads):
+    lines = []
+    lines.append("# Stat Key Naming Lint\n")
+    lines.append(
+        "Generated by `Tools/audit_vn_conversations.py`. Cross-references every stat/trait key *written* "
+        "(`AlterStatNode`, `GateTraitsNode` success/failure deltas) against every key *read* "
+        "(`GateTraitsNode.traitRequirements`, `ShowChoiceNode` choice requirements, `IfNode` stat conditions) "
+        "across every non-Archive scene under `Assets/Scenes/` and Conversation Pieces prefabs, to catch "
+        "casing/spelling mismatches that make a write invisible to a gate checking a differently-spelled key.\n"
+    )
+    lines.append("## Caveats\n")
+    lines.append(
+        "- Key resolution mirrors `GateTraitsNode.ResolveKey()`/`TraitKey()` exactly (an explicit `traitKey` "
+        "string wins; otherwise the `enumTrait`/`trait` index maps to `Humor`/`Charisma`/`Empathy`/`Grades`), "
+        "but extraction relies on fixed C# field declaration order via adjacent-line text scanning rather than "
+        "a true YAML struct parser — verify a finding in the Unity Inspector before acting on it.\n"
+        "- Per-character `<Character>_affinity` keys (`GateAffinityNode`/`ModifyAffinityNode`) are excluded: "
+        "both sides derive the key from the same `Character` enum, so a casing mismatch there isn't possible.\n"
+        "- A write reached only through a PrefabInstance field override (rather than set directly on the "
+        "MonoBehaviour) is not currently captured — this mirrors a known gap, not a confirmed absence.\n"
+        "- Writes made directly from C# (e.g. a mini-game manager calling `StatsManager.Set_Numbered_Stat(...)` "
+        "at runtime) are included only when the key is a literal string constant in the source — a computed/"
+        "interpolated key (e.g. `$\"{character}_affinity\"`) is invisible to this scan.\n"
+    )
+
+    writes_norm = defaultdict(set)
+    for k in writes:
+        writes_norm[normalize_key(k)].add(k)
+    reads_norm = {normalize_key(k) for k in reads}
+
+    lines.append("## Likely typos (read key never written, but a case/spelling-near match IS written)\n")
+    lines.append("| Read key (never written) | Written as (likely intended) | Read sites | Write sites |")
+    lines.append("|---|---|---|---|")
+    any_typo = False
+    for key in sorted(reads):
+        if key in writes:
+            continue
+        norm = normalize_key(key)
+        if norm in writes_norm:
+            any_typo = True
+            variants = ', '.join(f"`{v}`" for v in sorted(writes_norm[norm]))
+            read_sites = '; '.join(f"{r['file']}:{r['line']}" for r in reads[key][:5])
+            write_sites = '; '.join(f"{w['file']}:{w['line']}" for v in writes_norm[norm] for w in writes[v][:5])
+            lines.append(f"| `{key}` | {variants} | {read_sites} | {write_sites} |")
+    if not any_typo:
+        lines.append("| _None found_ | | | |")
+    lines.append("")
+
+    lines.append("## Required stats that are never written anywhere (cannot possibly be satisfied)\n")
+    lines.append(
+        "_A gate/requirement checks this key, but no `AlterStatNode`/delta anywhere in the scanned files ever "
+        "sets it, not even under a different casing. It defaults to 0 and can only ever satisfy a requirement "
+        "whose threshold permits 0 — this is a direct, statically-provable \"stat can never be met\" bug._\n"
+    )
+    lines.append("| Required key | Read sites |")
+    lines.append("|---|---|")
+    any_missing = False
+    for key in sorted(reads):
+        if key not in writes and normalize_key(key) not in writes_norm:
+            any_missing = True
+            read_sites = '; '.join(f"{r['file']}:{r['line']}" for r in reads[key][:8])
+            lines.append(f"| `{key}` | {read_sites} |")
+    if not any_missing:
+        lines.append("| _None found_ | |")
+    lines.append("")
+
+    lines.append("## Stats written but never read by any gate/condition (informational — possibly dead data)\n")
+    lines.append("| Written key | Write sites |")
+    lines.append("|---|---|")
+    any_dead = False
+    for key in sorted(writes):
+        if key not in reads and normalize_key(key) not in reads_norm:
+            any_dead = True
+            write_sites = '; '.join(f"{w['file']}:{w['line']}" for w in writes[key][:8])
+            lines.append(f"| `{key}` | {write_sites} |")
+    if not any_dead:
+        lines.append("| _None found_ | |")
+    lines.append("")
+
+    return '\n'.join(lines)
+
+
+def render_scene_name_validation(refs, all_scene_names, build_scene_names):
+    lines = []
+    lines.append("# Scene Name / Location String Validation\n")
+    lines.append(
+        "Generated by `Tools/audit_vn_conversations.py`. Collects every raw scene-name string used for "
+        "navigation (`TextMessage.location`, `HomeCutsceneController` scene fields, "
+        "`CharacterStageRouterNode.currentSceneName`, `LoadSceneNode.level_to_load`, `LocationData.sceneName`) "
+        "across every non-Archive scene, Conversation Pieces prefab, and `Assets/Resources/Locations/*.asset`, "
+        "and cross-checks each against (a) every `.unity` file that actually exists under `Assets/Scenes/` and "
+        "(b) the scene list in `ProjectSettings/EditorBuildSettings.asset`. These strings have no compile-time "
+        "link to a real scene, so a typo fails silently at runtime (`SceneManager.LoadScene` throws, or a "
+        "router falls through to a fallback) instead of being caught at edit time.\n"
+    )
+
+    unmatched = [r for r in refs if r['value'] not in all_scene_names]
+    not_in_build = [r for r in refs if r['value'] in all_scene_names and r['value'] not in build_scene_names]
+
+    lines.append("## No matching scene file anywhere in the project (hard typo / missing scene)\n")
+    lines.append("| Referenced string | Source | Closest real scene name(s) |")
+    lines.append("|---|---|---|")
+    if unmatched:
+        for r in unmatched:
+            close = difflib.get_close_matches(r['value'], sorted(all_scene_names), n=3, cutoff=0.5)
+            close_str = ', '.join(f"`{c}`" for c in close) if close else '—'
+            lines.append(f"| `{r['value']}` | {r['file']}:{r['line']} ({r['class']}.{r['field']}) | {close_str} |")
+    else:
+        lines.append("| _None found_ | | |")
+    lines.append("")
+
+    lines.append("## Scene file exists but is not in Build Settings (would fail at runtime in a real build)\n")
+    lines.append("| Referenced string | Source |")
+    lines.append("|---|---|")
+    if not_in_build:
+        for r in not_in_build:
+            lines.append(f"| `{r['value']}` | {r['file']}:{r['line']} ({r['class']}.{r['field']}) |")
+    else:
+        lines.append("| _None found_ | |")
+    lines.append("")
+
+    return '\n'.join(lines)
+
+
+def run_stat_and_route_audit():
+    class_guid_table = build_class_guid_table(extra_files=["Assets/Scripts/HomeCutsceneController.cs"])
+    prefab_guid_table = build_prefab_guid_table(class_guid_table)
+    scan_paths = discover_stat_and_route_scan_files()
+
+    print(f"Stat/route audit: scanning {len(scan_paths)} files ...", file=sys.stderr)
+
+    writes, reads = collect_stat_key_usages(scan_paths, class_guid_table, prefab_guid_table)
+    cs_writes = collect_cs_stat_writes()
+    for key, entries in cs_writes.items():
+        writes[key].extend(entries)
+    with open(os.path.join(OUT_DIR, "StatKeyLint.md"), 'w') as f:
+        f.write(render_stat_key_lint(writes, reads))
+    print(f"  stat key lint: {sum(len(v) for v in writes.values())} write sites, "
+          f"{sum(len(v) for v in reads.values())} read sites", file=sys.stderr)
+
+    refs = collect_scene_name_references(scan_paths, class_guid_table, prefab_guid_table)
+    refs += collect_location_data_scene_names()
+    all_scene_names = discover_all_scene_basenames()
+    build_scene_names = discover_build_settings_scene_basenames()
+    with open(os.path.join(OUT_DIR, "SceneNameValidation.md"), 'w') as f:
+        f.write(render_scene_name_validation(refs, all_scene_names, build_scene_names))
+    print(f"  scene name validation: {len(refs)} references checked", file=sys.stderr)
 
 
 # ---------------------------------------------------------------------------
@@ -805,6 +1276,8 @@ def main():
     index = render_index(all_results)
     with open(os.path.join(OUT_DIR, 'README.md'), 'w') as f:
         f.write(index)
+
+    run_stat_and_route_audit()
     print("Done.", file=sys.stderr)
 
 
