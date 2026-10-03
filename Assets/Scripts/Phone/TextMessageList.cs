@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 using System;
 using System.Text.RegularExpressions;
 using System.Linq;  // For LINQ methods
+using VNEngine;
 
 [System.Serializable]
 public struct ProfilePicture
@@ -15,6 +16,13 @@ public struct ProfilePicture
     public Sprite pictureLarge;
     public Sprite pictureSmall;
 
+}
+
+[System.Serializable]
+public struct CharacterReadMarker
+{
+    public Character character;
+    public long lastReadUnixTime;
 }
 public static class TextThreads
 {
@@ -30,6 +38,14 @@ public static class TextThreads
     }
     public static List<TextMessage> GetThread(Character other)
     {
+        // A message can now be sent by a NodeMessage running on a different
+        // character's conversation (e.g. a game-event text from Breanna fired
+        // while talking to Leilani), so the sender isn't guaranteed to be someone
+        // the player has actually met yet. Don't surface a thread for a character
+        // who isn't a contact - once they're added via NodeContact, the already-
+        // stored messages become visible on the next read, no re-delivery needed.
+        if (!Friend.IsFriend(other)) return new List<TextMessage>();
+
         // Show all messages addressed to/from this character once they've been
         // received. unlockWeek gates the quick-reply buttons (in TextThreadPanel),
         // not the message itself — the player should always be able to read a
@@ -57,8 +73,8 @@ public static class TextThreads
     {
         var all = GetAll();
 
-        // Player bubble uses the reply label as the outgoing text.
-        var playerMsg = new TextMessage(to, reply.label, location: null);
+        // Player bubble uses the emoji + themed response text as the outgoing message.
+        var playerMsg = new TextMessage(to, reply.ComposePlayerMessage(), location: null);
         playerMsg.unixTime = Now();
         playerMsg.isPlayer = true;
         playerMsg.quickReplies = null;
@@ -68,16 +84,22 @@ public static class TextThreads
         var lastNpcMsg = all.LastOrDefault(m => !m.isPlayer && m.from == to && m.quickReplies != null && m.quickReplies.Count > 0);
         if (lastNpcMsg != null) lastNpcMsg.quickReplies = null;
 
-        // Append NPC response if the reply option has one.
-        if (!string.IsNullOrWhiteSpace(reply.npcResponse))
-        {
-            var npcMsg = new TextMessage(to, reply.npcResponse, location: null);
-            npcMsg.unixTime = Now() + 1; // one second later to keep ordering deterministic
-            npcMsg.isPlayer = false;
-            npcMsg.quickReplies = null;
-            all.Add(npcMsg);
-        }
+        SaveAll(all);
+    }
 
+    // Appends an NPC follow-up message on its own, so callers can delay it
+    // (e.g. a "typing..." pause) instead of writing it atomically with the
+    // player's message.
+    public static void AppendNpcReply(Character to, string body)
+    {
+        if (string.IsNullOrWhiteSpace(body)) return;
+
+        var all = GetAll();
+        var npcMsg = new TextMessage(to, body, location: null);
+        npcMsg.unixTime = Now();
+        npcMsg.isPlayer = false;
+        npcMsg.quickReplies = null;
+        all.Add(npcMsg);
         SaveAll(all);
     }
     
@@ -100,6 +122,37 @@ public static class TextThreads
     }
 
     static long Now() => DateTimeOffset.UtcNow.ToUnixTimeSeconds();
+
+    const string ReadKey = "lastReadMessages";
+
+    // Unread = unlocked NPC messages newer than this character's last-read marker.
+    // If no marker exists yet, nothing has been read yet - everything in the thread
+    // counts as unread until MarkRead() is actually called for this character.
+    public static int GetUnreadCount(Character who)
+    {
+        var thread = GetThread(who);
+        if (thread.Count == 0) return 0;
+
+        var markers = PlayerPrefsExtra.GetList<CharacterReadMarker>(ReadKey, new List<CharacterReadMarker>());
+        int idx = markers.FindIndex(m => m.character == who);
+        long lastRead = idx >= 0 ? markers[idx].lastReadUnixTime : 0;
+
+        int week = Mathf.RoundToInt(StatsManager.Get_Numbered_Stat("Week"));
+        return thread.Count(m => !m.isPlayer && m.unixTime > lastRead && (m.unlockWeek <= 0 || week >= m.unlockWeek));
+    }
+
+    public static void MarkRead(Character who)
+    {
+        var thread = GetThread(who);
+        long upto = thread.Count > 0 ? thread[thread.Count - 1].unixTime : DateTimeOffset.UtcNow.ToUnixTimeSeconds();
+
+        var markers = PlayerPrefsExtra.GetList<CharacterReadMarker>(ReadKey, new List<CharacterReadMarker>());
+        int idx = markers.FindIndex(m => m.character == who);
+        if (idx >= 0) markers[idx] = new CharacterReadMarker { character = who, lastReadUnixTime = upto };
+        else markers.Add(new CharacterReadMarker { character = who, lastReadUnixTime = upto });
+        PlayerPrefsExtra.SetList(ReadKey, markers);
+        PlayerPrefs.Save();
+    }
 }
 public class TextMessageList : MonoBehaviour
 {

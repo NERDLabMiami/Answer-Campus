@@ -157,6 +157,28 @@ public class HomeCutsceneController : MonoBehaviour
             StatsManager.Set_String_Stat("FootballSchedule", schedule);
     }
 
+    // ── Departure snapshot — lets an in-conversation "Home" button abandon the conversation ──
+    private static Checkpoint _departureSnapshot;
+    private static List<string> _departureItems;
+
+    private static void TakeDepartureSnapshot()
+    {
+        _departureSnapshot = new Checkpoint(StatsManager.boolean_stats, StatsManager.numbered_stats, StatsManager.string_stats);
+        _departureItems    = new List<string>(StatsManager.items);
+    }
+
+    // Restores stats to how they were when the player left Home. Returns false if no snapshot exists.
+    public static bool RestoreDepartureSnapshot()
+    {
+        if (_departureSnapshot == null) return false;
+        StatsManager.boolean_stats  = new Dictionary<string, bool>(_departureSnapshot.booleanStats);
+        StatsManager.numbered_stats = new Dictionary<string, float>(_departureSnapshot.numberedStats);
+        StatsManager.string_stats   = new Dictionary<string, string>(_departureSnapshot.stringStats);
+        StatsManager.items          = new List<string>(_departureItems);
+        WriteCheckpoint();
+        return true;
+    }
+
     private void EnsureStatsPopulated()
     {
         // Only fall back to the checkpoint if VNEngine actually wiped StatsManager —
@@ -317,6 +339,9 @@ public class HomeCutsceneController : MonoBehaviour
     {
         IsCutscenePlaying = true;
 
+        // Before any flag mutation below, so quit-to-Home can undo them and any partial conversation.
+        TakeDepartureSnapshot();
+
         int  leavingWeek  = Mathf.RoundToInt(StatsManager.Get_Numbered_Stat("Week"));
         int  leavingPhase = Mathf.RoundToInt(StatsManager.Get_Numbered_Stat("DayPhase"));
 
@@ -427,24 +452,32 @@ public class HomeCutsceneController : MonoBehaviour
         string dayAndTime = SemesterHelper.GetDayAndTimeLabel(week, dayOffset, dayPhase);
         string fullDate   = SemesterHelper.GetDateLabel(week, dayOffset);
 
-        if (isFirstDay)
+        // Quit-to-Home from the orientation conversation restores Week 0 / morning / initialized:
+        // the player is back on Move-In Day night with the orientation button, no unpacking replay.
+        bool isOrientationReturn = week == 0 && dayPhase == 0 && !isFirstDay
+                                   && StatsManager.Get_Boolean_Stat(STAT_HOME_INITIALIZED);
+
+        if (isFirstDay || isOrientationReturn)
         {
             // ── Move-In Day ──────────────────────────────────────────────────
             overlay.SetContent(dayAndTime, "North Hall", null, fullDate, "Winchester Residential College");
             yield return new WaitForSeconds(holdDuration);
             yield return StartCoroutine(overlay.FadeOut());
 
-            if (arrivalSprite != null && backgroundImage != null)
+            if (isFirstDay)
             {
-                var normalSprite = backgroundImage.sprite;
-                backgroundImage.sprite = arrivalSprite;
-                yield return new WaitForSeconds(0.4f);
-                backgroundImage.sprite = normalSprite;
+                if (arrivalSprite != null && backgroundImage != null)
+                {
+                    var normalSprite = backgroundImage.sprite;
+                    backgroundImage.sprite = arrivalSprite;
+                    yield return new WaitForSeconds(0.4f);
+                    backgroundImage.sprite = normalSprite;
+                }
+
+                yield return StartCoroutine(AnimateBaseObjects());
+
+                StatsManager.Set_Boolean_Stat(STAT_HOME_INITIALIZED, true);
             }
-
-            yield return StartCoroutine(AnimateBaseObjects());
-
-            StatsManager.Set_Boolean_Stat(STAT_HOME_INITIALIZED, true);
 
             IsCutscenePlaying = false;
             _orientationButtonPressed = false;
@@ -460,6 +493,10 @@ public class HomeCutsceneController : MonoBehaviour
             }
 
             IsCutscenePlaying = true;
+
+            // Snapshot before the Saturday/afternoon writes so quit-to-Home from orientation
+            // can restore Move-In Day (Week 0, DayOffset 4, DayPhase 0, HomeInitialized).
+            TakeDepartureSnapshot();
 
             // Orientation is a Friday afternoon departure. Save DayOffset+1 (→ Saturday) so the
             // player returns home on Saturday. The local dayOffset (4 = Friday) is used for the

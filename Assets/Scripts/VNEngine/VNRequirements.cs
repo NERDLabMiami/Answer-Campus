@@ -20,22 +20,8 @@ namespace VNEngine
 
         public EventCheckType check = EventCheckType.Completed;
     }
-
-    public enum FootballCheckType
-    {
-        None,
-        IsWinningRecord,   // wins > losses
-        WinsAtLeast,       // wins >= threshold (int)
-        WinRateAtLeast     // wins/played >= threshold (0..1)
-    }
-
-    [Serializable]
-    public class FootballRequirement
-    {
-        public FootballCheckType check = FootballCheckType.None;
-        public float threshold = 0f;
-    }
-
+    
+    
     [Serializable]
     public class AffinityRequirement
     {

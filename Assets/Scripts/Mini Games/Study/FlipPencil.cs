@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class FlipPencil : MonoBehaviour {
     [SerializeField] private GameObject eraserCollider; // Reference to the eraser collider
@@ -12,15 +13,43 @@ public class FlipPencil : MonoBehaviour {
     [SerializeField] private float flipDuration = 0.05f; // Duration for the flip animation (faster)
     [SerializeField] private float minFlipDuration = 0.02f; // Minimum flip duration to prevent instant flips
 
+    [Header("Input")]
+    [Tooltip("PlayerInput driving the MiniGame.inputactions asset. If left unassigned, resolved automatically at runtime.")]
+    [SerializeField] private PlayerInput playerInput;
+    private InputAction _flip;
+
+    private void Awake() {
+        if (playerInput == null) playerInput = GetComponent<PlayerInput>();
+        if (playerInput == null) playerInput = GetComponentInParent<PlayerInput>();
+        if (playerInput == null) playerInput = FindAnyObjectByType<PlayerInput>();
+
+        if (playerInput == null) {
+            Debug.LogError("FlipPencil: No PlayerInput found in scene. Flip input will not work.");
+            return;
+        }
+
+        _flip = playerInput.actions["Flip"];
+    }
+
+    private void OnEnable() {
+        if (playerInput == null) return;
+
+        playerInput.ActivateInput();
+        playerInput.SwitchCurrentActionMap("Play");
+        playerInput.actions.Enable();
+
+        _flip.performed += OnFlip;
+    }
+
+    private void OnDisable() {
+        if (_flip != null) _flip.performed -= OnFlip;
+    }
+
+    private void OnFlip(InputAction.CallbackContext context) => Flip();
+
     private void Start() {
         SetRotation(isEraserMode ? erasingRotation : writingRotation);
         UpdateColliders();
-    }
-
-    private void Update() {
-        if (Input.GetKeyDown(KeyCode.F)) {
-            Flip();
-        }
     }
 
     /// <summary>

@@ -20,7 +20,7 @@ public class NodeLaunchExam : Node
             studyGameRoot.SetActive(true);
 
         if (gameManager == null)
-            gameManager = FindObjectOfType<FivePositionsGameManager>();
+            gameManager = FindAnyObjectByType<FivePositionsGameManager>();
 
         if (gameManager == null)
         {

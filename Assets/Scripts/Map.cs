@@ -3,11 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using VNEngine;
-using System;
 using System.Linq;
-using System.Collections.Generic;
-using TMPro.SpriteAssetUtilities;
-using UnityEngine;
 
 // A single-pass "truth" about what the phone/fullscreen map should show right now.
 public static class MapAvailability

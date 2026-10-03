@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2aa500e1ce0194cfa802bc3e355c41cb, type: 3}
+  m_Name: Default Challenge
+  m_EditorClassIdentifier: 
+  characterName: Beau
+  promptType: 1
+  preDropHangTime: 1
+  minSpawnInterval: 1
+  maxSpawnInterval: 1.5
+  chanceOfCorrectLetter: 1
+  customQuestions: []
+  timerDuration: 60
+  sharedStrikePool: 5
+  examStrikePool: 4
+  maxWordAttempts: 10
+  strikesPerWord: 3

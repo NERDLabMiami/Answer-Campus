@@ -18,6 +18,7 @@ public class GroupStudyManager : MonoBehaviour
         }
 
         Debug.Log($"Starting group study with {characterName}");
+        gameManager.Initialize();
         gameManager.ConfigureChallenge(profile);
         gameManager.StartGame();
     }

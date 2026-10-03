@@ -17,10 +17,9 @@ public class FMODAudioManager : MonoBehaviour
         public float finalvalue;
     }
     public static FMODAudioManager Instance { get; private set; }
-    private string currentEventPath = "";
     private AudioSource audioSource;
-    public FMOD.Studio.EventInstance currentMusic;
-    public FMOD.Studio.EventInstance currentAmbient;
+    [System.NonSerialized] public FMOD.Studio.EventInstance currentMusic;
+    [System.NonSerialized] public FMOD.Studio.EventInstance currentAmbient;
     private Guid _currentMusicGuid;
     private Guid _currentAmbientGuid;
 
@@ -108,7 +107,7 @@ public class FMODAudioManager : MonoBehaviour
         if (attachTo != null)
         {
             var rb = attachTo.GetComponent<Rigidbody>();
-            FMODUnity.RuntimeManager.AttachInstanceToGameObject(inst, attachTo, rb);
+            FMODUnity.RuntimeManager.AttachInstanceToGameObject(inst, attachTo.gameObject, rb);
         }
 
         // Set parameter before start (so 0s transition regions see correct value)
@@ -356,12 +355,12 @@ public class FMODAudioManager : MonoBehaviour
         {
             desc.is3D(out bool is3D);
             if (is3D)
-                FMODUnity.RuntimeManager.AttachInstanceToGameObject(inst, t, rb);
+                FMODUnity.RuntimeManager.AttachInstanceToGameObject(inst, t.gameObject, rb);
         }
     }
     private static Transform GetListenerTransform()
     {
-        var sl = UnityEngine.Object.FindObjectOfType<FMODUnity.StudioListener>();
+        var sl = UnityEngine.Object.FindAnyObjectByType<FMODUnity.StudioListener>();
         if (sl) return sl.transform;
 
         return Camera.main ? Camera.main.transform : null;
@@ -381,7 +380,6 @@ public class FMODAudioManager : MonoBehaviour
             currentMusic.release();
             currentMusic = default;  // <—
         }
-        currentEventPath = "";
     }
 
 

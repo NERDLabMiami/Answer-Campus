@@ -13,7 +13,7 @@ public class FriendChip : MonoBehaviour
     {
         if (_charactersCache == null)
         {
-            _charactersCache = GameObject.FindObjectOfType<Characters>();
+            _charactersCache = GameObject.FindAnyObjectByType<Characters>();
         }
 
         if (_charactersCache == null || _charactersCache.profiles == null)

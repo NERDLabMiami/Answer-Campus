@@ -25,7 +25,7 @@ namespace VNEngine
     // Each choice leads to a prescribed conversation.
     public class ChoiceNode : Node
     {
-        public Dictionary<int, string> originalOrder = new Dictionary<int, string>();
+        [System.NonSerialized] public Dictionary<int, string> originalOrder = new Dictionary<int, string>();
         public List<int> randomizedOrder = new List<int>();
         // DO NOT CHANGE: is the maximum number of choices. Dictated by the number of ChoiceButtons listed in the UIManager. You shouldn't ever need more than 20 buttons.
         public static int max_number_of_buttons = 6;

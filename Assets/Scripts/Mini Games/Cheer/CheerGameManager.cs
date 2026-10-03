@@ -161,9 +161,6 @@ public class CheerGameManager : MonoBehaviour
     [Header("Glyph Fade")]
     [SerializeField] private float glyphMinAlpha = 0.0f; // how far it fades (0 = invisible)
     private readonly Dictionary<Image, Coroutine> _glyphFadeCos = new();
-    [Header("Quarter End")]
-    [SerializeField] private float endOfQuarterMarkerBuffer = 0.75f; // tune
-    private int _eventLengthMs = -1;
     [Header("Quarter UI Timing")]
     [SerializeField] private float quarterIntroScoreboardSeconds = 2.0f;
     [SerializeField] private float quarterEndScoreboardSeconds   = 2.0f;
@@ -230,8 +227,6 @@ public class CheerGameManager : MonoBehaviour
     private int awayScore = 0;
     private int currentQuarter = 1;
     private CheerClip selectedCheerClip;
-    private int _lastCheerIdx = -1;
-    private int _beatsProcessedThisRound = 0;
     [Header("Round Settings")]
     public float comboDisplayTime = 1f;
     private int combosMade = 0;
@@ -240,15 +235,12 @@ public class CheerGameManager : MonoBehaviour
     string awayTeam; 
     private readonly Dictionary<int, Coroutine> countdowns = new();
     private bool gotTwo;
-    private double _fmodBaseDSP = double.NaN; // computed from first beat
     private double _lastBeatDSP;
     private int _debugBeatCount;
     private int _debugMarkerCount;
-    private int _lastCueStep;
     private double _anchorDSP;
     private readonly ConcurrentQueue<double> _cueQueue = new();
-    private double _baseDSP; // aligns FMOD timeline ms to Unity DSP seconds
-    
+
     int home, away;
     private static readonly Dictionary<CheerCombo, CheerDirection[]> comboMap = new()
     {
@@ -268,7 +260,7 @@ public class CheerGameManager : MonoBehaviour
     {
         if (playerInput == null) playerInput = GetComponent<PlayerInput>();
         if (inputBridge == null)
-            inputBridge = FindFirstObjectByType<CheerInputBridge>();
+            inputBridge = FindAnyObjectByType<CheerInputBridge>();
 
         if (inputBridge == null)
             Debug.LogError("[CHEER] No CheerInputBridge found in scene. Input will not work.");
@@ -414,12 +406,9 @@ private void CleanupCheerForQuarterEnd()
     _roundActive = false;
     
     // clear timing/cue state
-    _baseDSP = double.NaN;
-    _lastCueStep = 0;
     while (_cueQueue.TryDequeue(out _)) {}
 
     // reset round counters
-    _beatsProcessedThisRound = 0;
     combosMade = 0;
     opportunitiesThisRound = 0;
     markersThisRound = 0;

@@ -43,6 +43,9 @@ public class SteamManager : MonoBehaviour {
 		}
 	}
 
+	protected bool m_bStatsReceived = false;
+	protected Callback<UserStatsReceived_t> m_UserStatsReceivedCallback;
+
 	protected SteamAPIWarningMessageHook_t m_SteamAPIWarningMessageHook;
 
 	[AOT.MonoPInvokeCallback(typeof(SteamAPIWarningMessageHook_t))]
@@ -127,6 +130,33 @@ public class SteamManager : MonoBehaviour {
 		}
 
 		s_EverInitialized = true;
+
+		m_UserStatsReceivedCallback = Callback<UserStatsReceived_t>.Create(OnUserStatsReceived);
+		SteamUserStats.RequestCurrentStats();
+	}
+
+	private void OnUserStatsReceived(UserStatsReceived_t pCallback) {
+		if (pCallback.m_eResult == EResult.k_EResultOK) {
+			m_bStatsReceived = true;
+		}
+		else {
+			Debug.LogWarning("[Steamworks.NET] RequestCurrentStats failed with result: " + pCallback.m_eResult);
+		}
+	}
+
+	// Unlocks the given achievement on Steam if it isn't already unlocked. Safe to call repeatedly.
+	// No-ops (with a warning) if Steam isn't initialized or stats haven't been received yet.
+	public static void UnlockAchievement(string achievementApiName) {
+		if (!Initialized || !Instance.m_bStatsReceived) {
+			Debug.LogWarning("[Steamworks.NET] Cannot unlock achievement '" + achievementApiName + "': Steam is not initialized or stats have not been received yet.");
+			return;
+		}
+
+		bool alreadyUnlocked;
+		if (SteamUserStats.GetAchievement(achievementApiName, out alreadyUnlocked) && !alreadyUnlocked) {
+			SteamUserStats.SetAchievement(achievementApiName);
+			SteamUserStats.StoreStats();
+		}
 	}
 
 	// This should only ever get called on first load and after an Assembly reload, You should never Disable the Steamworks Manager yourself.
@@ -178,5 +208,7 @@ public class SteamManager : MonoBehaviour {
 			return false;
 		}
 	}
+
+	public static void UnlockAchievement(string achievementApiName) { }
 #endif // !DISABLESTEAMWORKS
 }

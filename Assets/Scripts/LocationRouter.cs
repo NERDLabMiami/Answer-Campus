@@ -16,9 +16,6 @@ public static class LocationRouter
             return;
         }
 
-        // Consume any pending phone invite to this same destination
-        PhoneDataService.ResolvePendingInvitesForScene(sceneName);
-
         Debug.Log($"[LocationRouter] Go -> '{sceneName}' (active='{SceneManager.GetActiveScene().name}')");
 
         if (FMODAudioManager.Instance != null)

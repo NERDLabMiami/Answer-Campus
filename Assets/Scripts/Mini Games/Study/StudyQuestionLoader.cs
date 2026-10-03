@@ -30,9 +30,6 @@ public class StudyQuestionLoader : MonoBehaviour
     public bool useDefinitions = true;
 
     [Header("Study selection")]
-    [Tooltip("If true, Study modes pull all weeks up to the player's current Week stat. If false, study pulls all weeks in the JSON.")]
-    public bool studyUsesUnlockedWeeksOnly = true;
-
     [Tooltip("If the player has never seen a word (or has failed it without mastering it), prefer those words.")]
     public bool preferUnseenOrUnmastered = true;
 
@@ -62,27 +59,49 @@ public class StudyQuestionLoader : MonoBehaviour
             return;
         }
 
-        int currentWeek = GetCurrentWeekStat();
+        // Clamp to the range of weeks actually present in the data, so an out-of-range
+        // "Week" stat (e.g. 0 during orientation, before week 1 begins) still resolves
+        // to a real week's study sheet instead of finding nothing.
+        var weekNumbers = all.Select(w => TryParseWeek(w.week)).Where(w => w > 0).ToList();
+        int currentWeek = weekNumbers.Count > 0
+            ? Mathf.Clamp(GetCurrentWeekStat(), weekNumbers.Min(), weekNumbers.Max())
+            : GetCurrentWeekStat();
 
-        // Load only the current week's questions so the primary word is always the exam word for this week
-        var wk = all.FirstOrDefault(w => TryParseWeek(w.week) == currentWeek);
-        currentQuestions = (wk?.questions ?? new List<QuestionAnswerPair>())
-            .Where(q => q != null && IsValidAnswer(q.answer))
-            .ToList();
-
-        // Fallback: if this week has no questions, load all unlocked weeks
-        if (currentQuestions.Count == 0)
+        if (currentMode == GameMode.Solo)
         {
-            var fallback = all.Where(w => TryParseWeek(w.week) <= currentWeek && TryParseWeek(w.week) > 0);
-            currentQuestions = fallback
-                .Where(w => w.questions != null)
+            // Solo always reads strictly from the current week's study sheet. No
+            // fallback to other weeks: an empty week just means an empty session.
+            var wk = all.FirstOrDefault(w => TryParseWeek(w.week) == currentWeek);
+            currentQuestions = (wk?.questions ?? new List<QuestionAnswerPair>())
+                .Where(q => q != null && IsValidAnswer(q.answer))
+                .ToList();
+
+            if (currentQuestions.Count == 0)
+                Debug.LogWarning($"[StudyQuestionLoader] No valid questions found for week {currentWeek}.");
+        }
+        else
+        {
+            // Group prefers past weeks' unseen/unmastered words; only once those are
+            // exhausted does the current week's content become available too.
+            var pastQuestions = all
+                .Where(w => TryParseWeek(w.week) > 0 && TryParseWeek(w.week) < currentWeek && w.questions != null)
                 .SelectMany(w => w.questions)
                 .Where(q => q != null && IsValidAnswer(q.answer))
                 .ToList();
+
+            var currentWeekQuestions = all
+                .Where(w => TryParseWeek(w.week) == currentWeek && w.questions != null)
+                .SelectMany(w => w.questions)
+                .Where(q => q != null && IsValidAnswer(q.answer))
+                .ToList();
+
+            currentQuestions = HasUnseenOrUnmastered(pastQuestions)
+                ? pastQuestions
+                : pastQuestions.Concat(currentWeekQuestions).ToList();
         }
 
         ResetAlreadyUsedFlags();
-        Debug.Log($"[StudyQuestionLoader] Loaded {currentQuestions.Count} study questions (week={currentWeek}).");
+        Debug.Log($"[StudyQuestionLoader] Loaded {currentQuestions.Count} study questions (mode={currentMode}, week={currentWeek}).");
     }
 
     public void LoadQuestionsForExam()
@@ -95,45 +114,37 @@ public class StudyQuestionLoader : MonoBehaviour
         }
 
         string examId = StatsManager.Get_String_Stat("CurrentExamId");
+        bool isFinals = string.Equals(examId, "EXAM_FINALS", StringComparison.OrdinalIgnoreCase);
+        int startWeek = isFinals ? 6 : 1;
+        int endWeek = isFinals ? 11 : 7;
 
-        // 1) Primary path: collect isPrimary questions from weeks tagged with this exam's ID
-        if (!string.IsNullOrWhiteSpace(examId))
+        // One question per week in range. Finals shares weeks 6-7 with midterms, so on
+        // those weeks it picks a different (non-primary) question to avoid repeating
+        // the exact word already tested on the midterm.
+        currentQuestions = new List<QuestionAnswerPair>();
+        for (int week = startWeek; week <= endWeek; week++)
         {
-            var examWeeks = all.Where(w => string.Equals(w.examId, examId, StringComparison.OrdinalIgnoreCase));
-            currentQuestions = examWeeks
-                .Where(w => w.questions != null)
-                .SelectMany(w => w.questions)
-                .Where(q => q != null && q.isPrimary && IsValidAnswer(q.answer))
+            var wk = all.FirstOrDefault(w => TryParseWeek(w.week) == week);
+            var valid = (wk?.questions ?? new List<QuestionAnswerPair>())
+                .Where(q => q != null && IsValidAnswer(q.answer))
                 .ToList();
 
-            if (currentQuestions.Count > 0)
+            if (valid.Count == 0)
             {
-                ResetAlreadyUsedFlags();
-                Debug.Log($"[StudyQuestionLoader] Exam '{examId}': {currentQuestions.Count} word(s) loaded.");
-                return;
+                Debug.LogWarning($"[StudyQuestionLoader] Week {week} has no usable exam question.");
+                continue;
             }
 
-            // 2) Fallback: look for a week named exactly as the exam ID (old behavior)
-            var byId = all.FirstOrDefault(w => string.Equals(w.week, examId.Trim(), StringComparison.OrdinalIgnoreCase));
-            if (byId != null && byId.questions != null)
-            {
-                currentQuestions = byId.questions.Where(q => q != null && IsValidAnswer(q.answer)).ToList();
-                ResetAlreadyUsedFlags();
-                Debug.Log($"[StudyQuestionLoader] Loaded {currentQuestions.Count} exam questions for id='{examId}' (named week fallback).");
-                return;
-            }
+            bool avoidMidtermOverlap = isFinals && week <= 7;
+            QuestionAnswerPair chosen = avoidMidtermOverlap
+                ? valid.FirstOrDefault(q => !q.isPrimary) ?? valid.FirstOrDefault(q => q.isPrimary)
+                : valid.FirstOrDefault(q => q.isPrimary) ?? valid.First();
+
+            currentQuestions.Add(chosen);
         }
 
-        // 3) Final fallback: current week number
-        int currentWeek = GetCurrentWeekStat();
-        if (currentWeek <= 0) currentWeek = 1;
-        var wk = all.FirstOrDefault(w => TryParseWeek(w.week) == currentWeek);
-        currentQuestions = (wk?.questions ?? new List<QuestionAnswerPair>())
-            .Where(q => q != null && IsValidAnswer(q.answer))
-            .ToList();
-
         ResetAlreadyUsedFlags();
-        Debug.Log($"[StudyQuestionLoader] Loaded {currentQuestions.Count} exam questions (week fallback, week={currentWeek}).");
+        Debug.Log($"[StudyQuestionLoader] Exam '{examId}': {currentQuestions.Count} word(s) loaded (weeks {startWeek}-{endWeek}).");
     }
 
     public QuestionAnswerPair GetRandomQuestion()
@@ -181,19 +192,12 @@ public class StudyQuestionLoader : MonoBehaviour
 
             foreach (var q in available)
             {
-                string a = NormalizeAnswer(q.answer);
-                if (string.IsNullOrEmpty(a)) { bandC.Add(q); continue; }
-
-                int seen = GetStatInt(SeenKey(a));
-                int succ = GetStatInt(SuccessKey(a));
-                int fail = GetStatInt(FailKey(a));
-
-                bool failedUnmastered = (fail > 0 && succ <= 0);
-                bool unseen = (seen <= 0);
-
-                if (failedUnmastered) bandA.Add(q);
-                else if (unseen) bandB.Add(q);
-                else bandC.Add(q);
+                switch (ClassifyBand(q))
+                {
+                    case SeenBand.FailedUnmastered: bandA.Add(q); break;
+                    case SeenBand.Unseen: bandB.Add(q); break;
+                    default: bandC.Add(q); break;
+                }
             }
 
             if (bandA.Count > 0) chosen = bandA[UnityEngine.Random.Range(0, bandA.Count)];
@@ -233,6 +237,26 @@ public class StudyQuestionLoader : MonoBehaviour
     }
 
     // --- Internals ----------------------------------------------------------
+
+    private enum SeenBand { FailedUnmastered, Unseen, Known }
+
+    private SeenBand ClassifyBand(QuestionAnswerPair q)
+    {
+        string a = NormalizeAnswer(q.answer);
+        if (string.IsNullOrEmpty(a)) return SeenBand.Known;
+
+        int seen = GetStatInt(SeenKey(a));
+        int succ = GetStatInt(SuccessKey(a));
+        int fail = GetStatInt(FailKey(a));
+
+        if (fail > 0 && succ <= 0) return SeenBand.FailedUnmastered;
+        if (seen <= 0) return SeenBand.Unseen;
+        return SeenBand.Known;
+    }
+
+    /// <summary>True if any question in the pool is unseen or failed-without-success.</summary>
+    private bool HasUnseenOrUnmastered(IEnumerable<QuestionAnswerPair> pool)
+        => pool.Any(q => q != null && ClassifyBand(q) != SeenBand.Known);
 
     private List<QuestionWeek> LoadAllWeeksFromJson()
     {

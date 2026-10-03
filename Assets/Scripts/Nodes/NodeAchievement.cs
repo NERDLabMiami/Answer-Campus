@@ -4,11 +4,9 @@ using UnityEngine.UI;
 
 namespace VNEngine
 {
-    // Not used in real code. Merely a template to copy and paste from when creating new nodes.
     public class NodeAchievement : Node
     {
         public string achievement;
-        private bool achievementCompleted;
         // Called initially when the node is run, put most of your logic here
         public override void Run_Node()
         {
@@ -23,15 +21,8 @@ namespace VNEngine
                 Debug.LogWarning("Achievement " + achievementKey + " already completed");
             }
 
-            
-            /*            
-            Steamworks.SteamUserStats.GetAchievement(achievement, out achievementCompleted);
+            SteamManager.UnlockAchievement(achievement);
 
-            if(achievementCompleted == false)
-            {
-                Steamworks.SteamUserStats.SetAchievement(achievement);
-            }
-*/
             // if there's no need to  wait for other operations/coroutines, call finish node at the end of this method
             Finish_Node();
         }

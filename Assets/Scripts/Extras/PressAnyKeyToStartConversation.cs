@@ -11,7 +11,7 @@ namespace VNEngine
 
         void Update()
         {
-            if (Input.anyKeyDown)
+            if (LegacyInputCompat.AnyKeyDown())
             {
                 conversation_to_start.Start_Conversation();
                 Destroy(this);

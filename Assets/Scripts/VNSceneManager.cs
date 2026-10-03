@@ -25,7 +25,7 @@ namespace VNEngine
 
         // LOCALIZATION
         public TextAsset Localized_Dialogue_CSV;    // Assign a CSV to this field if you wish to use use localization (support for multiple languages)
-        [HideInInspector]
+        [HideInInspector, System.NonSerialized]
         public Dictionary<string, Dictionary<string, string>> Localized_Dialogue_Dictionaries;    // One dictionary is assigned per language
                                                                                                   // LOCALIZATION
 
@@ -206,8 +206,8 @@ namespace VNEngine
             // Check for user input
 
             // If the user is holding down any of the below buttons, make it go SUPER FAST
-            if (Input.GetButtonDown(Submit_key)
-                || (super_speed_delay <= 0 && (Input.GetButton(Submit_key)))   // Holding down space bar
+            if (LegacyInputCompat.GetButtonDown(Submit_key)
+                || (super_speed_delay <= 0 && (LegacyInputCompat.GetButton(Submit_key)))   // Holding down space bar
                 || (fast_forwarding && super_speed_delay <= 0)  // Holding down the 'FAST' button
                 )
             {

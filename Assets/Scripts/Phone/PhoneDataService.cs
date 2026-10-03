@@ -27,7 +27,7 @@ public static class PhoneDataService
         }
 
         // 2) From any Location components present (scene-driven declarations)
-        foreach (var loc in GameObject.FindObjectsOfType<Location>(true))
+        foreach (var loc in GameObject.FindObjectsByType<Location>(FindObjectsInactive.Include))
         {
             if (loc == null) continue;
             if (!string.IsNullOrWhiteSpace(loc.scene)) names.Add(loc.scene);
@@ -40,35 +40,6 @@ public static class PhoneDataService
                 names.Add(cl.location);
 
         return names.OrderBy(n => n).ToList();
-    }
-    public static void ResolvePendingInvitesForScene(string sceneName)
-    {
-        if (string.IsNullOrWhiteSpace(sceneName)) return;
-
-        var messages = PlayerPrefsExtra.GetList<TextMessage>("messages", new List<TextMessage>());
-        if (messages == null || messages.Count == 0) return;
-
-        // Resolve latest invite targeting this scene
-        for (int i = messages.Count - 1; i >= 0; i--)
-        {
-            var m = messages[i];
-            if (m == null) continue;
-
-            bool isInvite =
-                !m.isPlayer &&
-                !string.IsNullOrWhiteSpace(m.location) &&
-                m.location == sceneName &&
-                m.quickReplies != null &&
-                m.quickReplies.Count > 0;
-
-            if (isInvite)
-            {
-                // Mark as consumed so the phone UI won't keep offering replies
-                m.quickReplies = null;
-                PlayerPrefsExtra.SetList("messages", messages);
-                return;
-            }
-        }
     }
     // ==== FRIENDS & MESSAGES ====
     public static Dictionary<Character, List<TextMessage>> GetMessageThreads()

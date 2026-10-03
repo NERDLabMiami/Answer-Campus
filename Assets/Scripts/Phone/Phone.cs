@@ -27,15 +27,36 @@ public class Phone : MonoBehaviour
     [Header("Mode")]
     [SerializeField] private GameObject mapNavButton;
 
+    private enum PhoneTab { Friends, Map, Agenda }
+
     private Animator anim;
     private PhoneMode _mode = PhoneMode.Home;
+    private PhoneTab _currentTab = PhoneTab.Friends;
+
+    void Awake()
+    {
+        friendsView.headerText = title;
+    }
 
     void Start()
     {
         anim = GetComponent<Animator>();
         RefreshNotificationBadge();
         ShowFriends(); // default
-        friendsView.headerText = title;
+    }
+
+    // Re-pull latest data every time the phone is reactivated (e.g. after a
+    // NodeContact/NodeMessage node runs while the phone was closed) instead
+    // of only on the object's first-ever Start().
+    void OnEnable()
+    {
+        RefreshNotificationBadge();
+        switch (_currentTab)
+        {
+            case PhoneTab.Map:    ShowMap();    break;
+            case PhoneTab.Agenda: ShowAgenda(); break;
+            default:              ShowFriends(); break;
+        }
     }
 
     // ---- Mode ----
@@ -59,6 +80,7 @@ public class Phone : MonoBehaviour
     public void ShowMap()
     {
         if (_mode == PhoneMode.Conversation) return;
+        _currentTab = PhoneTab.Map;
         title.text = "Finder";
         HideOverlays();
         TogglePanels(map: true);
@@ -99,6 +121,7 @@ public class Phone : MonoBehaviour
 
     public void ShowFriends()
     {
+        _currentTab = PhoneTab.Friends;
         title.text = "Friends";
         HideOverlays();
         TogglePanels(friends:true);
@@ -108,6 +131,7 @@ public class Phone : MonoBehaviour
 
     public void ShowAgenda()
     {
+        _currentTab = PhoneTab.Agenda;
         title.text = "Agenda";
         HideOverlays();
         TogglePanels(agenda:true);

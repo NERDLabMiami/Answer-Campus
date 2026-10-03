@@ -22,6 +22,7 @@ namespace VNEngine
         public float time_played;
 
         public string log_text;
+#pragma warning disable UAC1009 // Serialized via BinaryFormatter (SaveManager), not Unity's engine serializer
         public Dictionary<string, string> log_categories;
 
         // Save all the actors on the scene
@@ -42,6 +43,7 @@ namespace VNEngine
         public Dictionary<string, float> saved_numbered_stats;
         public Dictionary<string, bool> saved_boolean_stats;
         public Dictionary<string, string> saved_string_stats;
+#pragma warning restore UAC1009
         public List<string> saved_items;
 
 
@@ -51,6 +53,7 @@ namespace VNEngine
         public string saved_messages;
         public string saved_character_locations;
         public string saved_lockable_locations;
+        public string saved_last_read_messages;
 
         // Do not change
         const string feature_save_separation_character = ";;;;";
@@ -112,6 +115,8 @@ namespace VNEngine
                 PlayerPrefs.SetString("characterLocations", saved_character_locations);
             if (!string.IsNullOrEmpty(saved_lockable_locations))
                 PlayerPrefs.SetString("lockableLocationNames", saved_lockable_locations);
+            if (!string.IsNullOrEmpty(saved_last_read_messages))
+                PlayerPrefs.SetString("lastReadMessages", saved_last_read_messages);
             PlayerPrefs.Save();
 
             //<< MODIFY THE ABOVE SECTION TO LOAD THINGS SPECIFIC TO YOUR GAME >>//
@@ -246,7 +251,7 @@ namespace VNEngine
 
 
             // Delete conversations not present in our saved conversations
-            ConversationManager[] convs = (ConversationManager[])UnityEngine.Object.FindObjectsOfType(typeof(ConversationManager)) as ConversationManager[];
+            ConversationManager[] convs = UnityEngine.Object.FindObjectsByType(typeof(ConversationManager)) as ConversationManager[];
             foreach (ConversationManager c in convs)
             {
                 // Find all conversations in our freshly loaded scene, check if we should keep or delete these conversations
@@ -318,7 +323,7 @@ namespace VNEngine
             time_played = VNSceneManager.scene_manager != null ? VNSceneManager.scene_manager.play_time : 0f;
 
             // Record all remaining conversations (deleted ones will not be recorded)
-            ConversationManager[] convs = (ConversationManager[])UnityEngine.Object.FindObjectsOfType(typeof(ConversationManager)) as ConversationManager[];
+            ConversationManager[] convs = UnityEngine.Object.FindObjectsByType(typeof(ConversationManager)) as ConversationManager[];
             foreach (ConversationManager c in convs)
             {
                 remaining_conversations.Add(SaveManager.GetGameObjectPath(c.transform));
@@ -334,6 +339,7 @@ namespace VNEngine
             saved_messages             = PlayerPrefs.GetString("messages", "");
             saved_character_locations  = PlayerPrefs.GetString("characterLocations", "");
             saved_lockable_locations   = PlayerPrefs.GetString("lockableLocationNames", "");
+            saved_last_read_messages   = PlayerPrefs.GetString("lastReadMessages", "");
 
             // Features to save, like static images, background and foreground
             if (UIManager.ui_manager != null && UIManager.ui_manager.canvas != null)

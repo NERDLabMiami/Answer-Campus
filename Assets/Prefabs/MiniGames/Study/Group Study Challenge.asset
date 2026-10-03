@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2aa500e1ce0194cfa802bc3e355c41cb, type: 3}
-  m_Name: Beau
+  m_Name: Group Study Challenge
   m_EditorClassIdentifier: 
   characterName: Beau
   promptType: 1
-  preDropHangTime: 0.4
+  preDropHangTime: 1
   minSpawnInterval: 1
-  maxSpawnInterval: 3
-  chanceOfCorrectLetter: 0.5
-  showTimer: 1
-  allowHints: 0
+  maxSpawnInterval: 1.5
+  chanceOfCorrectLetter: 0.3
   customQuestions: []
   timerDuration: 60
-  strikesPerWord: 3
+  sharedStrikePool: 5
+  examStrikePool: 4
   maxWordAttempts: 10
+  strikesPerWord: 3

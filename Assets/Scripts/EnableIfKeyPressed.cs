@@ -8,7 +8,7 @@ namespace VNEngine
     {
         void Update()
         {
-            if (Input.anyKeyDown)
+            if (LegacyInputCompat.AnyKeyDown())
             {
                 VNSceneManager.scene_manager.Show_UI(true);
             }

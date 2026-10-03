@@ -1,100 +1,135 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 
 namespace VNEngine
 {
+    // Paired with ShowChoiceNode on the same GameObject. ShowChoiceNode calls
+    // BeginCountdown() directly (from its own Run_Node()) once its buttons are painted,
+    // since the ConversationManager sequencer never runs two sibling nodes concurrently.
     public class TimedChoiceNode : Node
     {
         public float timer = 30;
         public ConversationManager default_choice;
-        private ChoiceNode choiceNode;
-        private Coroutine timerCoroutine;
-        private Button[] buttons;
 
+        private ShowChoiceNode owner;
+        private List<Button> activeButtons;
+        private List<ConversationManager> slotConversations;
+        private List<int> slotOrigIndices;
+        private Coroutine timerCoroutine;
+
+        // The real work already ran synchronously via BeginCountdown(); if the sequencer
+        // later reaches this node's own slot (the "continue current conversation" path),
+        // just pass through to the next node.
         public override void Run_Node()
         {
-            Debug.Log("Timed Choice: " + timer);
-            VNSceneManager.scene_manager.Show_UI(false);
-            choiceNode = GetComponent<ChoiceNode>();
-            if (choiceNode == null)
-            {
-                Debug.LogError("Timed Choices must include a ChoiceNode Component");
-                return;
-            }
-            if (VNSceneManager.scene_manager.GetComponent<UIManager>())
-            {
-                buttons = VNSceneManager.scene_manager.GetComponent<UIManager>().choice_panel.GetComponentsInChildren<Button>();
+            base.Finish_Node();
+        }
 
-            }
+        public void BeginCountdown(ShowChoiceNode owner, List<Button> activeButtons, List<ConversationManager> slotConversations, List<int> slotOrigIndices)
+        {
+            this.owner = owner;
+            this.activeButtons = activeButtons;
+            this.slotConversations = slotConversations;
+            this.slotOrigIndices = slotOrigIndices;
 
-            timerCoroutine = StartCoroutine(Timer());
+            timerCoroutine = StartCoroutine(RunCountdown());
         }
 
         public void StopTimer()
         {
-            if (timerCoroutine != null)
+            StopAllCoroutines();
+            timerCoroutine = null;
+        }
+
+        private IEnumerator RunCountdown()
+        {
+            int defaultSlot = default_choice != null ? slotConversations.IndexOf(default_choice) : -1;
+
+            // Every slot slips away except the one protecting default_choice (if any).
+            var eliminationOrder = new List<int>();
+            for (int slot = 0; slot < activeButtons.Count; slot++)
+                if (slot != defaultSlot) eliminationOrder.Add(slot);
+
+            // Fisher-Yates shuffle so choices vanish in a random order.
+            for (int i = 0; i < eliminationOrder.Count; i++)
             {
-                StopCoroutine(timerCoroutine);
-                timerCoroutine = null;
+                int j = Random.Range(i, eliminationOrder.Count);
+                (eliminationOrder[i], eliminationOrder[j]) = (eliminationOrder[j], eliminationOrder[i]);
             }
-        }
 
-        private IEnumerator Timer()
-        {
-            StartCoroutine(DesaturateOverTime(timer));
-            yield return new WaitForSeconds(timer);
-            Finish_Node();
-        }
+            // One slice per elimination. A protected default gets one extra slice reserved
+            // at the end for its auto-selection; otherwise the last elimination itself
+            // lands exactly at time's up (no dead trailing wait).
+            int slices = defaultSlot >= 0 ? eliminationOrder.Count + 1 : Mathf.Max(1, eliminationOrder.Count);
+            float interval = timer / slices;
 
-        private IEnumerator DesaturateOverTime(float time)
-        {
-            float elapsedTime = 0f;
-            while (elapsedTime < time)
+            for (int i = 0; i < slices; i++)
             {
-                elapsedTime += Time.deltaTime;
-                float t = Mathf.Clamp01(elapsedTime / time);
+                yield return new WaitForSeconds(interval);
+                if (i < eliminationOrder.Count)
+                    yield return EliminateButton(activeButtons[eliminationOrder[i]]);
+            }
 
-                for (int i = 0; i < buttons.Length; i++)
-                {
-                    Color initialColor = buttons[i].targetGraphic.color;
-                    float grayscale = initialColor.r * 0.299f + initialColor.g * 0.587f + initialColor.b * 0.114f;
-                    Color desaturatedColor = Color.Lerp(initialColor, new Color(grayscale, grayscale, grayscale, initialColor.a), t);
-                    if(buttons[i].GetComponent<Image>())
-                    {
-                        buttons[i].GetComponent<Image>().color = desaturatedColor;
-                    }
+            if (defaultSlot >= 0)
+                owner.SelectChoiceExternally(slotOrigIndices[defaultSlot]);
+            else if (default_choice != null)
+                owner.ForceJumpExternally(default_choice);
+            else
+                Debug.LogWarning("TimedChoiceNode timed out with no matching or default choice set.");
+        }
 
-                }
+        private IEnumerator EliminateButton(Button btn)
+        {
+            if (btn == null || !btn.gameObject.activeSelf) yield break;
+
+            btn.interactable = false;
+
+            var cg = btn.GetComponent<CanvasGroup>();
+            if (cg == null) cg = btn.gameObject.AddComponent<CanvasGroup>();
+
+            const float duration = 0.25f;
+            float elapsed = 0f;
+            float startAlpha = cg.alpha;
+            while (elapsed < duration)
+            {
+                elapsed += Time.deltaTime;
+                cg.alpha = Mathf.Lerp(startAlpha, 0f, elapsed / duration);
                 yield return null;
             }
+            cg.alpha = 0f;
+            btn.gameObject.SetActive(false);
 
-            for (int i = 0; i < buttons.Length; i++)
+            EnsureGamepadSelection();
+        }
+
+        // Keeps gamepad focus alive: whatever caused it (elimination, or the button's own
+        // Selectable/EventSystem machinery clearing selection as it disables), if nothing
+        // valid is selected after an elimination, hand focus to the next surviving button.
+        private void EnsureGamepadSelection()
+        {
+            if (Gamepad.current == null || EventSystem.current == null) return;
+
+            var current = EventSystem.current.currentSelectedGameObject;
+            if (current != null && current.activeInHierarchy) return; // still a live selection
+
+            SelectFirstRemainingButton();
+        }
+
+        private void SelectFirstRemainingButton()
+        {
+            foreach (var b in activeButtons)
             {
-                Color initialColor = buttons[i].targetGraphic.color;
-                // Ensure the final color is fully desaturated
-                float finalGrayscale = initialColor.r * 0.299f + initialColor.g * 0.587f + initialColor.b * 0.114f;
-                if(buttons[i].GetComponent<Image>())
+                if (b != null && b.gameObject.activeSelf)
                 {
-                    buttons[i].GetComponent<Image>().color = new Color(finalGrayscale, finalGrayscale, finalGrayscale, initialColor.a);
+                    EventSystem.current.SetSelectedGameObject(null);
+                    EventSystem.current.SetSelectedGameObject(b.gameObject);
+                    return;
                 }
             }
         }
-
-        public override void Finish_Node()
-        {
-            StopAllCoroutines();
-            if (choiceNode != null) choiceNode.Clear_Choices();
-            if (default_choice != null)
-            {
-                VNSceneManager.current_conversation.Finish_Conversation();
-                default_choice.Start_Conversation();
-            }
-            else
-            {
-                base.Finish_Node();
-            }
-        }
-
     }
 }

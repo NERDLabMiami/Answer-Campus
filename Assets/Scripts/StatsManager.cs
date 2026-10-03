@@ -332,7 +332,7 @@ namespace VNEngine
         // Returns true if the item is present
         public static bool Check_If_Physical_Item_Exists(string item_name)
         {
-            Item[] existing_items = GameObject.FindObjectsOfType<Item>();
+            Item[] existing_items = GameObject.FindObjectsByType<Item>();
 
             foreach (Item i in existing_items)
             {

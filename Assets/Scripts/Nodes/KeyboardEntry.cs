@@ -16,7 +16,7 @@ namespace VNEngine
         public override void Run_Node()
         {
 
-            Canvas c = FindObjectOfType<Canvas>();
+            Canvas c = FindAnyObjectByType<Canvas>();
             textEntry = Instantiate(textEntryPrefab, c.transform);
             textInput = textEntry.GetComponentInChildren<TMP_InputField>();
             textInput.onEndEdit.AddListener(delegate { EndInput(textInput.text); });

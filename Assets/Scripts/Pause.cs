@@ -84,7 +84,7 @@ namespace VNEngine
 
         void Update()
         {
-            if (Input.GetButtonDown(toggle_pause_key))
+            if (LegacyInputCompat.GetButtonDown(toggle_pause_key))
                 Toggle_Pause();
 
             // Record time played here

@@ -3653,7 +3653,7 @@ MonoBehaviour:
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
-  m_ScreenMatchMode: 1
+  m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
@@ -4141,7 +4141,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1109089706
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8946,6 +8946,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6635711851347853423, guid: a89490c6c788c4bad9be06c8f4a6395f, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7827973373557697938, guid: a89490c6c788c4bad9be06c8f4a6395f, type: 3}
+      propertyPath: m_PreserveAspect
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7968701617975675364, guid: a89490c6c788c4bad9be06c8f4a6395f, type: 3}

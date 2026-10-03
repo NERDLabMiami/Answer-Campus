@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 using System.Collections.Generic;
 
 namespace VNEngine
@@ -8,42 +9,40 @@ namespace VNEngine
     [AddComponentMenu("Game Object/VN Engine/Branching/Show Choice Node")]
     public class ShowChoiceNode : Node
     {
-        [System.Serializable] private class FootballGameListWrapper { public FootballGame[] games; }
-        [System.Serializable] private class FootballGame { public bool played; public bool won; }
         [System.Serializable]
         public class Choice
         {
             [TextArea] public string text;
             public ConversationManager nextConversation;      // null => continue current
-            [Header("Enable Requirements")]
-            public bool useTraits = false;
-            public bool useEvents = false;
-            public bool useGame = false;
-
-            [Header("Trait Requirements (ALL must pass)")]
-            public List<TraitRequirement> traitRequirements = new();
-
-            [Header("Event Requirements (ALL must pass)")]
-            public List<EventRequirement> eventRequirements = new();
-
-            [Header("Game Requirements (ALL must pass)")]
-            public FootballRequirement footballRequirement = new FootballRequirement { check = FootballCheckType.None };
-
-            [Header("Affinity Requirements (ALL must pass)")]
-            public bool useAffinity = false;
-            public List<AffinityRequirement> affinityRequirements = new();
-
-            [Header("Affinity Changes (applied when chosen)")]
-            public List<AffinityDelta> affinityDeltas = new();
+            public List<FlexibleTraitRequirement> requirements = new List<FlexibleTraitRequirement>(); // ALL must pass
+            public bool enableLogging;
+            public string label;      // stable research ID, e.g. "gain_frame_A"
+            public string category;   // optional grouping, e.g. "framing"
+            public string variant;    // optional arm, e.g. "A" | "B"
         }
 
         public List<Choice> choices = new List<Choice>();
+        private List<int> _presentedOrder = new(); // shownIndex -> origIndex
 
-        [Header("Presentation")]
+        public bool logOnShow = true;
+        public bool logOnSelect = true;
+        public bool includeTraitSnapshot = true; 
         public bool hideDialogueUI = true; // default Answer Campus behavior
 
+        [SerializeField] private TraitRegistry traitRegistry;
         private readonly List<Button> _activeButtons = new();
+        private void Reset()  // called when the component is first added
+        {
+            if (traitRegistry == null) traitRegistry = TraitRegistry.Load();
+        }
 
+#if UNITY_EDITOR
+        private void OnValidate() // keeps it filled when edited/duplicated
+        {
+            if (!Application.isPlaying && traitRegistry == null)
+                traitRegistry = TraitRegistry.Load();
+        }
+#endif
         public override void Run_Node()
         {
             if (hideDialogueUI)
@@ -57,7 +56,7 @@ namespace VNEngine
             int uiMax = UIManager.ui_manager.choice_buttons.Length;                  // bound to prefab button capacity :contentReference[oaicite:5]{index=5}
             for (int i = 0; i < choices.Count && visible.Count < uiMax; i++)
             {
-                if (MeetsAllRequirements(choices[i]))
+                if (MeetsRequirements(choices[i].requirements))
                     visible.Add(i);
             }
 
@@ -68,6 +67,7 @@ namespace VNEngine
                 (visible[i], visible[j]) = (visible[j], visible[i]);
             }
 
+            _presentedOrder = new List<int>(visible);
             // 3) Paint buttons
             _activeButtons.Clear();
             for (int slot = 0; slot < visible.Count && slot < uiMax; slot++)
@@ -92,135 +92,71 @@ namespace VNEngine
                 UIManager.ui_manager.choice_buttons[i].gameObject.SetActive(false);
             }
 
-            // Animate & focus first active
+            // Animate & focus first active (gamepad only — mouse/keyboard shouldn't get a forced highlight)
             UIManager.ui_manager.AnimateChoiceButtons(_activeButtons);               // existing helper :contentReference[oaicite:6]{index=6}
-            if (_activeButtons.Count > 0)
+            if (_activeButtons.Count > 0 && Gamepad.current != null)
             {
                 EventSystem.current.SetSelectedGameObject(null);
-//                EventSystem.current.SetSelectedGameObject(_activeButtons[0].gameObject);
+                EventSystem.current.SetSelectedGameObject(_activeButtons[0].gameObject);
             }
+
+            // If this choice is timed, hand the countdown everything it needs to run
+            // alongside the buttons (the sequencer never runs both nodes concurrently on its own).
+            var timed = GetComponent<TimedChoiceNode>();
+            if (timed != null)
+            {
+                var slotConversations = new List<ConversationManager>(visible.Count);
+                for (int slot = 0; slot < visible.Count; slot++)
+                    slotConversations.Add(choices[visible[slot]].nextConversation);
+
+                timed.BeginCountdown(this, _activeButtons, slotConversations, visible);
+            }
+
+            if (logOnShow && Logging.Instance != null)
+            {
+                var cm = GetComponentInParent<ConversationManager>();
+                var json = new Dictionary<string, object>
+                {
+                    { "conversation", cm ? cm.name : "" },
+                    { "node", name },
+                    { "nodeIndex", cm ? cm.cur_node : 0 },                   // current node index
+                    { "hidden_count", Mathf.Max(0, choices.Count - _presentedOrder.Count) },
+                    { "order", _presentedOrder },                            // shownIndex -> origIndex
+                    { "options", BuildOptionsArray() }                       // descriptors incl. research tags
+                };
+                if (includeTraitSnapshot) json["traits_current"] = CurrentTraitMap();
+
+                SafeLogJson("choice_presented", json);
+            }
+            
         }
-private bool MeetsAllRequirements(Choice c)
-{
-    if (c == null) return false;
-
-    // TRAITS
-    if (c.useTraits && c.traitRequirements != null && c.traitRequirements.Count > 0)
-    {
-        for (int i = 0; i < c.traitRequirements.Count; i++)
-        {
-            var r = c.traitRequirements[i];
-
-            // Safety: if trait requirement is uninitialized, fail closed or skip.
-            // I recommend fail closed for pedagogy: errors become visible quickly.
-            float current = StatsManager.Get_Numbered_Stat(r.trait.ToString());
-            if (!CompareNumber(current, r.compare, r.value))
-                return false;
-        }
-    }
-
-    // EVENTS
-    if (c.useEvents && c.eventRequirements != null && c.eventRequirements.Count > 0)
-    {
-        for (int i = 0; i < c.eventRequirements.Count; i++)
-        {
-            var r = c.eventRequirements[i];
-            if (r == null || string.IsNullOrEmpty(r.key))
-                return false; // fail closed: author turned on Events but didn’t specify key
-
-            bool completed = GameEvents.IsCustomEventCompleted(r.key);
-
-            if (r.check == EventCheckType.Completed && !completed) return false;
-            if (r.check == EventCheckType.NotCompleted && completed) return false;
-        }
-    }
-
-    // GAME (football only for now)
-    if (c.useGame && c.footballRequirement != null && c.footballRequirement.check != FootballCheckType.None)
-    {
-        var record = GetFootballRecord();
-
-        switch (c.footballRequirement.check)
-        {
-            case FootballCheckType.IsWinningRecord:
-                if (!(record.wins > record.losses)) return false;
-                break;
-
-            case FootballCheckType.WinsAtLeast:
-                if (!(record.wins >= Mathf.RoundToInt(c.footballRequirement.threshold))) return false;
-                break;
-
-            case FootballCheckType.WinRateAtLeast:
-                if (!(record.played > 0 && record.winRate >= c.footballRequirement.threshold)) return false;
-                break;
-        }
-    }
-
-    // AFFINITY
-    if (c.useAffinity && c.affinityRequirements != null && c.affinityRequirements.Count > 0)
-    {
-        for (int i = 0; i < c.affinityRequirements.Count; i++)
-        {
-            var r = c.affinityRequirements[i];
-            float current = StatsManager.Get_Numbered_Stat(r.character.ToString() + "_affinity");
-            if (!CompareNumber(current, r.compare, r.value))
-                return false;
-        }
-    }
-
-    return true;
-}
-
-private (int wins, int losses, int played, float winRate) GetFootballRecord()
-{
-    string json = StatsManager.Get_String_Stat("FootballSchedule");
-    if (string.IsNullOrEmpty(json)) return (0, 0, 0, 0f);
-
-    FootballGameListWrapper wrapper = null;
-    try { wrapper = JsonUtility.FromJson<FootballGameListWrapper>(json); }
-    catch { }
-
-    if (wrapper?.games == null || wrapper.games.Count == 0)
-        return (0, 0, 0, 0f);
-
-    int wins = 0, losses = 0;
-    for (int i = 0; i < wrapper.games.Count; i++)
-    {
-        var g = wrapper.games[i];
-        if (!g.played) continue;
-        if (g.won) wins++; else losses++;
-    }
-
-    int played = wins + losses;
-    float winRate = played > 0 ? (float)wins / played : 0f;
-    return (wins, losses, played, winRate);
-}
 
         private void OnChoice(int idx)
         {
-            var c = choices[idx];
+            GetComponent<TimedChoiceNode>()?.StopTimer();
 
-            if (c.affinityDeltas != null)
+            if (logOnSelect && Logging.Instance != null)
             {
-                for (int i = 0; i < c.affinityDeltas.Count; i++)
+                var cm = GetComponentInParent<ConversationManager>();
+                var json = new Dictionary<string, object>
                 {
-                    var d = c.affinityDeltas[i];
-                    if (d.character == Character.NONE) continue;
-                    string key = d.character.ToString() + "_affinity";
-                    StatsManager.Set_Numbered_Stat(key, StatsManager.Get_Numbered_Stat(key) + d.amount);
-                }
+                    { "conversation", cm ? cm.name : "" },
+                    { "node", name },
+                    { "nodeIndex", cm ? cm.cur_node : 0 },
+                    { "order", _presentedOrder },
+                    { "selected", OptionDescriptor(idx) }
+                };
+                if (includeTraitSnapshot) json["traits_current"] = CurrentTraitMap();
+
+                SafeLogJson("choice_selected", json);
             }
+
+            var c = choices[idx];
 
             // Jump? End current conversation then start target (same as ChoicesManager.Change_Conversation)
             if (c.nextConversation != null)
             {
-                if (VNSceneManager.current_conversation != null)
-                    VNSceneManager.current_conversation.Finish_Conversation();        // finish current :contentReference[oaicite:7]{index=7}
-                c.nextConversation.Start_Conversation();                              // start target :contentReference[oaicite:8]{index=8}
-
-                go_to_next_node = false;                                             // don’t auto-advance current node chain :contentReference[oaicite:9]{index=9}
-                CleanupAndHide();
-                Finish_Node();
+                JumpToConversation(c.nextConversation);
                 return;
             }
 
@@ -229,11 +165,119 @@ private (int wins, int losses, int played, float winRate) GetFootballRecord()
             base.Finish_Node();                                                      // advance to next node in current convo :contentReference[oaicite:10]{index=10}
         }
 
-        private void CleanupAndHide()
+        // Called externally by TimedChoiceNode when its countdown ends with a surviving
+        // button that matches default_choice - equivalent to the player clicking it.
+        internal void SelectChoiceExternally(int origIndex) => OnChoice(origIndex);
+
+        // Called externally by TimedChoiceNode when its countdown ends with no button
+        // left standing (the "silent" default_choice case).
+        internal void ForceJumpExternally(ConversationManager target) => JumpToConversation(target);
+
+        private void JumpToConversation(ConversationManager target)
+        {
+            if (VNSceneManager.current_conversation != null)
+                VNSceneManager.current_conversation.Finish_Conversation();        // finish current
+            target.Start_Conversation();                                         // start target
+
+            go_to_next_node = false;                                             // don’t auto-advance current node chain
+            CleanupAndHide(restoreDialogueUI: false);                            // let the target conversation reveal the UI when it starts talking
+            Finish_Node();
+        }
+// Build array of descriptors for the presented buttons
+        private List<Dictionary<string, object>> BuildOptionsArray()
+        {
+            var list = new List<Dictionary<string, object>>();
+            for (int shown = 0; shown < _presentedOrder.Count; shown++)
+            {
+                int orig = _presentedOrder[shown];
+                var ch = choices[orig];
+                list.Add(new Dictionary<string, object> {
+                    { "id", $"{name}#{orig}" },
+                    { "label", ch.label ?? "" },
+                    { "category", ch.category ?? "" },
+                    { "variant", ch.variant ?? "" },
+                    { "text", DialogueNode.Insert_Stats_into_Text(ch.text ?? "") },
+                    { "origIndex", orig },
+                    { "shownIndex", shown }
+                });
+            }
+            return list;
+        }
+
+        private Dictionary<string, object> OptionDescriptor(int origIndex)
+        {
+            // Map orig index to shown index for completeness
+            int shownIndex = _presentedOrder.IndexOf(origIndex);
+            var ch = choices[origIndex];
+            return new Dictionary<string, object> {
+                { "id", $"{name}#{origIndex}" },
+                { "label", ch.label ?? "" },
+                { "category", ch.category ?? "" },
+                { "variant", ch.variant ?? "" },
+                { "text", DialogueNode.Insert_Stats_into_Text(ch.text ?? "") },
+                { "origIndex", origIndex },
+                { "shownIndex", shownIndex }
+            };
+        }
+        private Dictionary<string, object> CurrentTraitMap() {
+            var map = new Dictionary<string, object>();
+            foreach (var k in GateTraitsNode.AllTraitKeys())
+                map[k] = StatsManager.Get_Numbered_Stat(k);
+            return map;
+        }private void SafeLogJson(string eventName, Dictionary<string, object> payload)
+{
+    try
+    {
+        if (Logging.Instance == null) return;
+        string json = WriteJson(payload);
+        Logging.Instance.BeginCustom(eventName);          // see #6
+        Logging.Instance.ParamJson("payload", json);      // single packed blob
+        // Optional: add a couple scalars for query-ability
+        Logging.Instance.Param("conversation", GetComponentInParent<ConversationManager>()?.name ?? "");
+        Logging.Instance.Param("node", name);
+        Logging.Instance.SubmitCustom();
+    }
+    catch (System.Exception e)
+    {
+        Debug.LogWarning($"ShowChoiceNode log failed: {e.Message}");
+    }
+}
+
+private static string WriteJson(object obj)
+{
+    // very small JSON writer to handle dictionaries/lists/scalars
+    var sb = new System.Text.StringBuilder();
+    void W(object o)
+    {
+        switch (o)
+        {
+            case null: sb.Append("null"); break;
+            case string s: sb.Append('"').Append(s.Replace("\\","\\\\").Replace("\"","\\\"")
+                                                  .Replace("\n","\\n").Replace("\r","\\r").Replace("\t","\\t")).Append('"'); break;
+            case bool b: sb.Append(b ? "true" : "false"); break;
+            case int i: sb.Append(i); break;
+            case float f: sb.Append(f.ToString(System.Globalization.CultureInfo.InvariantCulture)); break;
+            case double d: sb.Append(d.ToString(System.Globalization.CultureInfo.InvariantCulture)); break;
+            case IDictionary<string, object> dict:
+                sb.Append('{'); bool first = true;
+                foreach (var kv in dict) { if(!first) sb.Append(','); first=false; W(kv.Key); sb.Append(':'); W(kv.Value); }
+                sb.Append('}'); break;
+            case System.Collections.IEnumerable seq:
+                sb.Append('['); first = true;
+                foreach (var v in seq) { if(!first) sb.Append(','); first=false; W(v); }
+                sb.Append(']'); break;
+            default: sb.Append('"').Append(o.ToString()).Append('"'); break;
+        }
+    }
+    W(obj);
+    return sb.ToString();
+}
+
+        private void CleanupAndHide(bool restoreDialogueUI = true)
         {
             ClearAllChoiceButtons();
             UIManager.ui_manager.choice_panel.SetActive(false);                       // close panel :contentReference[oaicite:11]{index=11}
-            if (hideDialogueUI)
+            if (hideDialogueUI && restoreDialogueUI)
                 VNSceneManager.scene_manager.Show_UI(true);                           // restore dialogue UI :contentReference[oaicite:12]{index=12}
         }
 
@@ -250,15 +294,14 @@ private (int wins, int losses, int played, float winRate) GetFootballRecord()
             }
         }
 
-        private static bool MeetsRequirements(List<TraitRequirement> reqs)
+        private static bool MeetsRequirements(List<FlexibleTraitRequirement> reqs)
         {
             if (reqs == null || reqs.Count == 0) return true;
-            for (int i = 0; i < reqs.Count; i++)
+            foreach (var r in reqs)
             {
-                var r = reqs[i];
-                float current = StatsManager.Get_Numbered_Stat(r.trait.ToString());
-                if (!CompareNumber(current, r.compare, r.value))
-                    return false;
+                var key = r.ResolveKey();
+                float current = StatsManager.Get_Numbered_Stat(key);
+                if (!CompareNumber(current, r.compare, r.value)) return false;
             }
             return true;
         }

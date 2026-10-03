@@ -47,7 +47,7 @@ namespace VNEngine.EditorTools
 
         private static void MarkAllVNNodesDirty(string reason)
         {
-            var nodes = GameObject.FindObjectsOfType<Node>(true); // include inactive
+            var nodes = GameObject.FindObjectsByType<Node>(FindObjectsInactive.Include); // include inactive
             foreach (var node in nodes)
             {
                 EditorUtility.SetDirty(node);

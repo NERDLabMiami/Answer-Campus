@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 using VNEngine;
 
 public class ClickOutsideToClose : MonoBehaviour,
@@ -20,7 +21,7 @@ public class ClickOutsideToClose : MonoBehaviour,
     void Update()
     {
         // Allow Escape to close (desktop)
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Keyboard.current != null && Keyboard.current.escapeKey.wasPressedThisFrame)
         {
             Close();
         }

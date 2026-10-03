@@ -32,7 +32,11 @@ public class FriendsView : MonoBehaviour
     {
         foreach (Transform c in listRoot) Destroy(c.gameObject);
 
-        var allMsgs = TextThreads.GetAll();
+        // A message's sender isn't guaranteed to be a contact yet - game-event
+        // NodeMessages can fire from an unrelated conversation (e.g. a Breanna
+        // text arriving while talking to Leilani) - so only surface threads for
+        // characters already added via NodeContact.
+        var allMsgs = TextThreads.GetAll().Where(m => Friend.IsFriend(m.from)).ToList();
         var threadsByChar = allMsgs
             .GroupBy(m => m.from)
             .ToDictionary(g => g.Key, g => g.OrderBy(m => m.unixTime).ToList());
@@ -43,11 +47,6 @@ public class FriendsView : MonoBehaviour
             .Distinct()
             .OrderBy(c => c.ToString())
             .ToList();
-
-        var charLocs = PlayerPrefsExtra.GetList<CharacterLocation>("characterLocations", new List<CharacterLocation>());
-        var locByChar = charLocs
-            .GroupBy(cl => cl.character)
-            .ToDictionary(g => g.Key, g => g.Last().location);
 
         if (emptyLabel != null)
         {
@@ -72,10 +71,11 @@ public class FriendsView : MonoBehaviour
                 if (pic) vm.profile.sprite = pic;
             }
 
-            if (vm.message)
+            if (vm.unreadCount || vm.notificationBubble)
             {
-                vm.message.text = locByChar.TryGetValue(who, out var where)
-                    && !string.IsNullOrWhiteSpace(where) ? where : "";
+                int unread = TextThreads.GetUnreadCount(who);
+                if (vm.unreadCount) vm.unreadCount.text = unread.ToString();
+                if (vm.notificationBubble) vm.notificationBubble.SetActive(unread > 0);
             }
 
             var btn = go.GetComponent<Button>();
@@ -102,6 +102,7 @@ public class FriendsView : MonoBehaviour
         if (listRoot) listRoot.gameObject.SetActive(false);
         if (threadPanel)   threadPanel.Show(who);
         headerText.text = who.ToString();
+        TextThreads.MarkRead(who);
     }
     public void HideThread() { if (threadPanel) threadPanel.Hide(); }
 }

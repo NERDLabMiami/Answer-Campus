@@ -15,7 +15,7 @@ namespace VNEngine
         {
             var pins = PlayerPrefsExtra.GetList<CharacterLocation>("characterLocations", new List<CharacterLocation>());
             int removed = pins.RemoveAll(p =>
-                (character == null || EqualityComparer<Character>.Default.Equals(p.character, character)) &&
+                (character == Character.NONE || EqualityComparer<Character>.Default.Equals(p.character, character)) &&
                 (string.IsNullOrWhiteSpace(locationScene) || string.Equals(p.location, locationScene, System.StringComparison.Ordinal)));
 
             PlayerPrefsExtra.SetList("characterLocations", pins);

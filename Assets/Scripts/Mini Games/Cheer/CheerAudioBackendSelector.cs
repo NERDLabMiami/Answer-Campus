@@ -36,7 +36,7 @@ public class CheerAudioBackendSelector : MonoBehaviour
         Debug.Log(
             $"[CHEER-AUDIO] {tag}\n" +
             $" selectorActive={gameObject.activeInHierarchy} enabled={enabled}\n" +
-            $" listenerCount={FindObjectsByType<AudioListener>(FindObjectsSortMode.None).Length} " +
+            $" listenerCount={FindObjectsByType<AudioListener>(FindObjectsInactive.Exclude).Length} " +
             $" AudioListener.pause={AudioListener.pause} vol={AudioListener.volume}\n" +
             $" crowd:     goActive={crowdSource && crowdSource.gameObject.activeInHierarchy} enabled={crowdSource && crowdSource.enabled} " +
             $" mute={crowdSource && crowdSource.mute} vol={(crowdSource ? crowdSource.volume : -1)} clip={(crowdSource && crowdSource.clip ? crowdSource.clip.name : "null")}\n" +

@@ -14,6 +14,10 @@ public class ChallengeProfile : ScriptableObject
     public List<QuestionAnswerPair> customQuestions;
     public float timerDuration = 60f;
     [Header("No-Timer Rules")]
-    public int strikesPerWord = 3;     // strikes allowed before that word fails
-    public int maxWordAttempts = 5;    // total words (success or fail) before game ends; use 4 for exam profiles
-    }
+    [Tooltip("Group study: total wrong letters the whole session can absorb before it ends.")]
+    public int sharedStrikePool = 5;
+    [Tooltip("Exam: total strikes before striking out. Each strike costs 2.0 / pool GPA points.")]
+    public int examStrikePool = 4;
+    public int maxWordAttempts = 5;    // words in the session/exam
+    [HideInInspector] public int strikesPerWord = 3; // deprecated: kept so existing assets deserialize
+}

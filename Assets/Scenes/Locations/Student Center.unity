@@ -7077,6 +7077,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1619724842}
   - {fileID: 241698607}
   m_Father: {fileID: 178533259}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -19207,7 +19208,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 5e1ab10876ffd4e239ae0b865e8cede9, type: 2}
     - target: {fileID: -5143952188114400212, guid: 0f3abc4b5d99b424eb1a504fb2b92c1b, type: 3}
       propertyPath: textMessage.body
-      value: Come meet some people at the party!
+      value: Come by the apartments and meet some people!
       objectReference: {fileID: 0}
     - target: {fileID: -5143952188114400212, guid: 0f3abc4b5d99b424eb1a504fb2b92c1b, type: 3}
       propertyPath: textMessage.from
@@ -19230,8 +19231,16 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -5143952188114400212, guid: 0f3abc4b5d99b424eb1a504fb2b92c1b, type: 3}
+      propertyPath: textMessage.quickReplies.Array.data[0].emoji
+      value: "\U0001F60E"
+      objectReference: {fileID: 0}
+    - target: {fileID: -5143952188114400212, guid: 0f3abc4b5d99b424eb1a504fb2b92c1b, type: 3}
       propertyPath: textMessage.quickReplies.Array.data[0].label
       value: Okay!
+      objectReference: {fileID: 0}
+    - target: {fileID: -5143952188114400212, guid: 0f3abc4b5d99b424eb1a504fb2b92c1b, type: 3}
+      propertyPath: textMessage.quickReplies.Array.data[1].emoji
+      value: "\U0001F605"
       objectReference: {fileID: 0}
     - target: {fileID: -5143952188114400212, guid: 0f3abc4b5d99b424eb1a504fb2b92c1b, type: 3}
       propertyPath: textMessage.quickReplies.Array.data[1].label
@@ -19259,11 +19268,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -5143952188114400212, guid: 0f3abc4b5d99b424eb1a504fb2b92c1b, type: 3}
       propertyPath: textMessage.quickReplies.Array.data[0].npcResponse
-      value: That's what I'm talking about
+      value: That's what I'm talking about!
       objectReference: {fileID: 0}
     - target: {fileID: -5143952188114400212, guid: 0f3abc4b5d99b424eb1a504fb2b92c1b, type: 3}
       propertyPath: textMessage.quickReplies.Array.data[1].npcResponse
       value: I guess I'll see you in class...
+      objectReference: {fileID: 0}
+    - target: {fileID: -5143952188114400212, guid: 0f3abc4b5d99b424eb1a504fb2b92c1b, type: 3}
+      propertyPath: textMessage.quickReplies.Array.data[0].responseText
+      value: Can't wait!
+      objectReference: {fileID: 0}
+    - target: {fileID: -5143952188114400212, guid: 0f3abc4b5d99b424eb1a504fb2b92c1b, type: 3}
+      propertyPath: textMessage.quickReplies.Array.data[1].responseText
+      value: I'm a little tired
       objectReference: {fileID: 0}
     - target: {fileID: 5932124337953696973, guid: 0f3abc4b5d99b424eb1a504fb2b92c1b, type: 3}
       propertyPath: m_RootOrder
@@ -25747,6 +25764,72 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 446614, guid: 0525e4528d69c7c40b354d4a011b5b0f, type: 3}
   m_PrefabInstance: {fileID: 1616966742}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1619724841
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 489855760}
+    m_Modifications:
+    - target: {fileID: 325504711817947736, guid: f87f54ccc1f776546ba2f07b357b20ce, type: 3}
+      propertyPath: m_Name
+      value: Get Achievement
+      objectReference: {fileID: 0}
+    - target: {fileID: 4958773577012995491, guid: f87f54ccc1f776546ba2f07b357b20ce, type: 3}
+      propertyPath: achievement
+      value: matchmaker
+      objectReference: {fileID: 0}
+    - target: {fileID: 7256101320574431474, guid: f87f54ccc1f776546ba2f07b357b20ce, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 739.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7256101320574431474, guid: f87f54ccc1f776546ba2f07b357b20ce, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 440.12766
+      objectReference: {fileID: 0}
+    - target: {fileID: 7256101320574431474, guid: f87f54ccc1f776546ba2f07b357b20ce, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7256101320574431474, guid: f87f54ccc1f776546ba2f07b357b20ce, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7256101320574431474, guid: f87f54ccc1f776546ba2f07b357b20ce, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7256101320574431474, guid: f87f54ccc1f776546ba2f07b357b20ce, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7256101320574431474, guid: f87f54ccc1f776546ba2f07b357b20ce, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7256101320574431474, guid: f87f54ccc1f776546ba2f07b357b20ce, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7256101320574431474, guid: f87f54ccc1f776546ba2f07b357b20ce, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7256101320574431474, guid: f87f54ccc1f776546ba2f07b357b20ce, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f87f54ccc1f776546ba2f07b357b20ce, type: 3}
+--- !u!4 &1619724842 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7256101320574431474, guid: f87f54ccc1f776546ba2f07b357b20ce, type: 3}
+  m_PrefabInstance: {fileID: 1619724841}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1651991622
 GameObject:
   m_ObjectHideFlags: 0
@@ -31071,6 +31154,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 239736579691046082, guid: 055d54775d5803f47a39dc9b66c29a8f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 239736579691046082, guid: 055d54775d5803f47a39dc9b66c29a8f, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 239736579691046082, guid: 055d54775d5803f47a39dc9b66c29a8f, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 239736579691046082, guid: 055d54775d5803f47a39dc9b66c29a8f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2199074185105101469, guid: 055d54775d5803f47a39dc9b66c29a8f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2199074185105101469, guid: 055d54775d5803f47a39dc9b66c29a8f, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2199074185105101469, guid: 055d54775d5803f47a39dc9b66c29a8f, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2199074185105101469, guid: 055d54775d5803f47a39dc9b66c29a8f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2493814459865414849, guid: 055d54775d5803f47a39dc9b66c29a8f, type: 3}
       propertyPath: starting_conversation
       value: 
@@ -31102,6 +31217,10 @@ PrefabInstance:
     - target: {fileID: 2493814459876713425, guid: 055d54775d5803f47a39dc9b66c29a8f, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2493814459898348335, guid: 055d54775d5803f47a39dc9b66c29a8f, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 2493814459898427495, guid: 055d54775d5803f47a39dc9b66c29a8f, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -31218,6 +31337,22 @@ PrefabInstance:
     - target: {fileID: 2493814459898490377, guid: 055d54775d5803f47a39dc9b66c29a8f, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -600
+      objectReference: {fileID: 0}
+    - target: {fileID: 5570394614048504125, guid: 055d54775d5803f47a39dc9b66c29a8f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5570394614048504125, guid: 055d54775d5803f47a39dc9b66c29a8f, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5570394614048504125, guid: 055d54775d5803f47a39dc9b66c29a8f, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5570394614048504125, guid: 055d54775d5803f47a39dc9b66c29a8f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6949990363796653807, guid: 055d54775d5803f47a39dc9b66c29a8f, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -39274,7 +39409,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 5e1ab10876ffd4e239ae0b865e8cede9, type: 2}
     - target: {fileID: -5143952188114400212, guid: 0f3abc4b5d99b424eb1a504fb2b92c1b, type: 3}
       propertyPath: textMessage.body
-      value: Group study for finals at my apartment, stop by!
+      value: Group study for finals at my apartment, are you in?
       objectReference: {fileID: 0}
     - target: {fileID: -5143952188114400212, guid: 0f3abc4b5d99b424eb1a504fb2b92c1b, type: 3}
       propertyPath: textMessage.from
@@ -39297,8 +39432,16 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -5143952188114400212, guid: 0f3abc4b5d99b424eb1a504fb2b92c1b, type: 3}
+      propertyPath: textMessage.quickReplies.Array.data[0].emoji
+      value: "\u2764\uFE0F"
+      objectReference: {fileID: 0}
+    - target: {fileID: -5143952188114400212, guid: 0f3abc4b5d99b424eb1a504fb2b92c1b, type: 3}
       propertyPath: textMessage.quickReplies.Array.data[0].label
       value: Great!
+      objectReference: {fileID: 0}
+    - target: {fileID: -5143952188114400212, guid: 0f3abc4b5d99b424eb1a504fb2b92c1b, type: 3}
+      propertyPath: textMessage.quickReplies.Array.data[1].emoji
+      value: "\U0001F62C"
       objectReference: {fileID: 0}
     - target: {fileID: -5143952188114400212, guid: 0f3abc4b5d99b424eb1a504fb2b92c1b, type: 3}
       propertyPath: textMessage.quickReplies.Array.data[1].label
@@ -39310,7 +39453,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -5143952188114400212, guid: 0f3abc4b5d99b424eb1a504fb2b92c1b, type: 3}
       propertyPath: textMessage.quickReplies.Array.data[0].payload
-      value: Sounds good
+      value: accept
       objectReference: {fileID: 0}
     - target: {fileID: -5143952188114400212, guid: 0f3abc4b5d99b424eb1a504fb2b92c1b, type: 3}
       propertyPath: textMessage.quickReplies.Array.data[1].iconKey
@@ -39318,7 +39461,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -5143952188114400212, guid: 0f3abc4b5d99b424eb1a504fb2b92c1b, type: 3}
       propertyPath: textMessage.quickReplies.Array.data[1].payload
-      value: Sorry, I'm busy
+      value: decline
+      objectReference: {fileID: 0}
+    - target: {fileID: -5143952188114400212, guid: 0f3abc4b5d99b424eb1a504fb2b92c1b, type: 3}
+      propertyPath: textMessage.quickReplies.Array.data[0].npcResponse
+      value: See you soon
+      objectReference: {fileID: 0}
+    - target: {fileID: -5143952188114400212, guid: 0f3abc4b5d99b424eb1a504fb2b92c1b, type: 3}
+      propertyPath: textMessage.quickReplies.Array.data[1].npcResponse
+      value: Oh, okay. Message received.
+      objectReference: {fileID: 0}
+    - target: {fileID: -5143952188114400212, guid: 0f3abc4b5d99b424eb1a504fb2b92c1b, type: 3}
+      propertyPath: textMessage.quickReplies.Array.data[0].responseText
+      value: On my way!
+      objectReference: {fileID: 0}
+    - target: {fileID: -5143952188114400212, guid: 0f3abc4b5d99b424eb1a504fb2b92c1b, type: 3}
+      propertyPath: textMessage.quickReplies.Array.data[1].responseText
+      value: I study better alone.
       objectReference: {fileID: 0}
     - target: {fileID: 5932124337953696973, guid: 0f3abc4b5d99b424eb1a504fb2b92c1b, type: 3}
       propertyPath: m_RootOrder

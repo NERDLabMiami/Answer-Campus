@@ -4,10 +4,15 @@ using System.Collections.Generic;
 [Serializable]
 public class QuickReply
 {
-    public string label;       // e.g., "Sounds good, see u there!"
-    public string iconKey;     // e.g., "thumbs_up"  (map to sprite/emoji in UI)
-    public string payload;     // optional: use if you need branching keys, stat deltas, etc.
-    public string npcResponse; // NPC's reply after the player picks this option (leave blank for none)
+    public string emoji;        // button text, e.g. "😎"
+    public string responseText; // themed line sent alongside the emoji, e.g. "Sounds good, see u there!"
+    public string payload;      // optional: use if you need branching keys, stat deltas, etc.
+    public string npcResponse;  // NPC's reply after the player picks this option (leave blank for none)
+
+    public string ComposePlayerMessage() =>
+        string.IsNullOrEmpty(emoji) ? responseText
+        : string.IsNullOrEmpty(responseText) ? emoji
+        : $"{emoji} {responseText}";
 }
 [Serializable]
 public class TextMessage : System.IEquatable<TextMessage>
@@ -18,11 +23,18 @@ public class TextMessage : System.IEquatable<TextMessage>
     public bool isPlayer;
     public string location;
 
-    public int unlockWeek; // 0 = immediately visible
+    // false = legacy/default behavior: if `location` is set, accepting a quick reply on this
+    // message navigates there via HomeCutsceneController.NavigateOut.
+    // true = `location` is used ONLY for NodeMessage/StageRouteIndex unlock-week timing -
+    // TextThreadPanel must never treat it as a navigation target; replying stays in the phone.
+    public bool locationForTimingOnly;
+
+    [UnityEngine.HideInInspector]
+    public int unlockWeek; // 0 = immediately visible; computed by NodeMessage, never hand-authored
 
     public List<QuickReply> quickReplies;
-    public TextMessage positiveResponseBranch;
-    public TextMessage negativeResponseBranch;
+    [System.NonSerialized] public TextMessage positiveResponseBranch;
+    [System.NonSerialized] public TextMessage negativeResponseBranch;
 
     public TextMessage(Character from, string message, string location)
     {

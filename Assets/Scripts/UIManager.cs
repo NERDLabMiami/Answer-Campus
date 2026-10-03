@@ -16,7 +16,7 @@ namespace VNEngine
         // CSV to load so our UI can be put into the proper language
         public TextAsset Localized_UI_CSV;
         // Each language has a dictionary, then that dictionary is searched for a specific key
-        [HideInInspector]
+        [HideInInspector, System.NonSerialized]
         public Dictionary<string, Dictionary<string, string>> Localized_UI_Dictionaries = new Dictionary<string, Dictionary<string, string>>();
         [HideInInspector]
         List<LocalizeTextElement> localized_ui_elements = new List<LocalizeTextElement>();  // Elements that were localized. Get localized again if the language changes

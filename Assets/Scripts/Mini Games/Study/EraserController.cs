@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class EraserController : MonoBehaviour {
     [Header("Box References")]
@@ -12,8 +13,54 @@ public class EraserController : MonoBehaviour {
     [Tooltip("The Y value where the eraser should remain.")]
     public float eraserZ = 1f;
 
+    [Header("Input")]
+    [Tooltip("PlayerInput driving the MiniGame.inputactions asset. If left unassigned, resolved automatically at runtime.")]
+    [SerializeField] private PlayerInput playerInput;
+    private InputAction _left, _right;
+
     private Vector3[] eraserPositions;  // Will be generated from boxPositions
     private int targetIndex = 0;        // Which position we're moving toward
+
+    /// <summary>Which column (box index) the eraser is currently set to intercept.</summary>
+    public int CurrentColumnIndex => targetIndex;
+
+    private void Awake() {
+        if (playerInput == null) playerInput = GetComponent<PlayerInput>();
+        if (playerInput == null) playerInput = GetComponentInParent<PlayerInput>();
+        if (playerInput == null) playerInput = FindAnyObjectByType<PlayerInput>();
+
+        if (playerInput == null) {
+            Debug.LogError("EraserController: No PlayerInput found in scene. Left/right input will not work.");
+            return;
+        }
+
+        _left = playerInput.actions["PressLeft"];
+        _right = playerInput.actions["PressRight"];
+    }
+
+    private void OnEnable() {
+        if (playerInput == null) return;
+
+        playerInput.ActivateInput();
+        playerInput.SwitchCurrentActionMap("Play");
+        playerInput.actions.Enable();
+
+        _left.performed += OnPressLeft;
+        _right.performed += OnPressRight;
+    }
+
+    private void OnDisable() {
+        if (_left != null) _left.performed -= OnPressLeft;
+        if (_right != null) _right.performed -= OnPressRight;
+    }
+
+    private void OnPressLeft(InputAction.CallbackContext context) {
+        if (eraserPositions != null && targetIndex > 0) targetIndex--;
+    }
+
+    private void OnPressRight(InputAction.CallbackContext context) {
+        if (eraserPositions != null && targetIndex < eraserPositions.Length - 1) targetIndex++;
+    }
 
     private void Start() {
         // Auto-generate eraserPositions from boxPositions
@@ -37,22 +84,7 @@ public class EraserController : MonoBehaviour {
     private void Update() {
         if (eraserPositions == null || eraserPositions.Length == 0) return;
 
-        HandleInput();
         MoveToTarget();
-    }
-
-    /// <summary>
-    /// Checks player input (left/right) and updates the targetIndex accordingly.
-    /// </summary>
-    private void HandleInput() {
-        // Move left (A or LeftArrow)
-        if ((Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)) && targetIndex > 0) {
-            targetIndex--;
-        }
-        // Move right (D or RightArrow)
-        else if ((Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)) && targetIndex < eraserPositions.Length - 1) {
-            targetIndex++;
-        }
     }
 
     /// <summary>
@@ -72,11 +104,13 @@ public class EraserController : MonoBehaviour {
 
     /// <summary>
     /// Called when another object (e.g. a Letter) enters this collider.
-    /// If it�s tagged �Letter,� we destroy it.
+    /// If it's tagged "Letter," we erase it.
     /// </summary>
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Letter")) {
-            Destroy(other.gameObject);
+            LetterMovement letter = other.GetComponent<LetterMovement>();
+            if (letter != null) letter.Erase();
+            else Destroy(other.gameObject);
             // Optional: add SFX or other feedback here
         }
     }

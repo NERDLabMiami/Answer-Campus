@@ -11,5 +11,7 @@ public class ViewTextMessage : MonoBehaviour
     public TextMessage txt;
     public Image profile;
     public Sprite threadProfileImage;
+    public GameObject notificationBubble;
+    public TextMeshProUGUI unreadCount;
     
 }

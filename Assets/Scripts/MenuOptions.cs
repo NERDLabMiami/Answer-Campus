@@ -42,6 +42,13 @@ public class MenuOptions : MonoBehaviour
         sceneToLoad = PlayerPrefs.GetString("Next Scene", sceneToLoad);
         LoadScene(sceneToLoad);
     }
+    // Abandons the current conversation and returns to Home; stats revert to when the player left.
+    public void QuitToHome()
+    {
+        HomeCutsceneController.RestoreDepartureSnapshot();
+        LocationRouter.Go("Home");
+    }
+
     public void LoadScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);

@@ -80,7 +80,7 @@ namespace VNEngine
                     {
                         node.sprite = Resources.Load<Sprite>(split_line[1]);
                     }
-                    catch (Exception e)
+                    catch (Exception)
                     {
                         Debug.Log("Error loading audio clip " + split_line[1] + ". Make sure your named clip matches the resource. Ex: some_folder/cool_music");
                     }
@@ -574,6 +574,18 @@ namespace VNEngine
             Selection.activeObject = go;
 
             go.AddComponent<AlterStatNode>();
+        }
+
+
+        [MenuItem("GameObject/VN Engine/Stats/Modify Affinity", false, 0)]
+        private static void ModifyAffinity(MenuCommand menuCommand)
+        {
+            GameObject go = new GameObject("Modify Affinity");     // Create new object
+            GameObjectUtility.SetParentAndAlign(go, menuCommand.context as GameObject); // Parent the new object
+            Undo.RegisterCreatedObjectUndo(go, "Create " + go.name);    // Register the creation in the undo system
+            Selection.activeObject = go;
+
+            go.AddComponent<ModifyAffinityNode>();
         }
 
 
