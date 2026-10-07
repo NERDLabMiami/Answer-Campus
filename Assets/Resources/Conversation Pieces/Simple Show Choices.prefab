@@ -49,12 +49,13 @@ MonoBehaviour:
   choices:
   - text: 
     nextConversation: {fileID: 0}
-    useTraits: 0
-    useEvents: 1
-    useGame: 0
-    traitRequirements: []
-    eventRequirements: []
-    footballRequirement:
-      check: 0
-      threshold: 0
+    requirements: []
+    enableLogging: 0
+    label: 
+    category: 
+    variant: 
+  logOnShow: 1
+  logOnSelect: 1
+  includeTraitSnapshot: 1
   hideDialogueUI: 1
+  traitRegistry: {fileID: 11400000, guid: 6b89a2d11a3454fb68d0952517d6298a, type: 2}

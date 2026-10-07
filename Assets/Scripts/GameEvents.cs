@@ -165,6 +165,36 @@ public static class GameEvents
         if (changed) SaveCustomEvents(items);
         return changed;
     }
+    // Finds a required exam (Finals takes priority over Midterms) that's due this week or
+    // OVERDUE (ev.week <= currentWeek) and not yet completed. GetWeekPreview's strict
+    // "ev.week == week" match is correct for "what's on the agenda this week" display, but a
+    // forced exam redirect must still catch an exam whose week got skipped entirely by a
+    // story checkpoint's explicit week-jump -- confirmed to happen (a "Set Week" node
+    // configured to land on week 15 skips week 14 outright) -- which would otherwise let the
+    // player skip Finals forever, since Calendar.TryRedirectToRequiredEvent() only ever
+    // checks the current week value against GetWeekPreview(currentWeek).
+    public static bool TryFindOverdueRequiredEvent(int currentWeek, out EventInfo found)
+    {
+        found = default;
+        var items = LoadCustomEvents();
+
+        var finals = items.Find(e => e != null && e.id == FinalsEventId);
+        if (finals != null && !finals.completed && finals.week <= currentWeek)
+        {
+            found = new EventInfo { id = finals.id, type = EventType.Finals, label = finals.name, week = finals.week, location = finals.location, icon = finals.icon };
+            return true;
+        }
+
+        var midterms = items.Find(e => e != null && e.id == MidtermsEventId);
+        if (midterms != null && !midterms.completed && midterms.week <= currentWeek)
+        {
+            found = new EventInfo { id = midterms.id, type = EventType.Midterms, label = midterms.name, week = midterms.week, location = midterms.location, icon = midterms.icon };
+            return true;
+        }
+
+        return false;
+    }
+
     public static List<EventInfo> GetWeekPreview(int week)
     {
         var outList = new List<EventInfo>();

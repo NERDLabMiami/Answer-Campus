@@ -54,8 +54,8 @@ public static class GradeCalculator
     public static string CurrentExamLetterGrade(int strikes, int strikePool)
         => LetterGrade(ExamPercent(strikes, strikePool));
 
-    /// <summary>This exam's GPA contribution (half the 4.0 scale) for a given letter grade.</summary>
-    public static float ExamHalfPoints(string letterGrade) => LetterGradeGpa(letterGrade) * (ExamHalf / 4f);
+    /// <summary>Continuous exam-half GPA contribution, proportional to percent correct (no letter-band snapping).</summary>
+    public static float ExamHalfPointsFromPercent(float percent) => Mathf.Clamp(percent, 0f, 100f) / 100f * ExamHalf;
 
     public static bool IsFinal(string examId)
         => string.Equals(examId, FinalId, System.StringComparison.OrdinalIgnoreCase);
@@ -66,7 +66,7 @@ public static class GradeCalculator
     /// </summary>
     public static float ProjectedGpa(string examId, int strikes, int strikePool)
     {
-        float points = ExamHalfPoints(CurrentExamLetterGrade(strikes, strikePool));
+        float points = ExamHalfPointsFromPercent(ExamPercent(strikes, strikePool));
         if (IsFinal(examId))
             return StatsManager.Get_Numbered_Stat(MidtermScoreKey) + points;
         return points + ExamHalf;
@@ -77,15 +77,17 @@ public static class GradeCalculator
     {
         if (IsFinal(examId))
             return StatsManager.Get_Boolean_Stat(MidtermTakenKey)
-                ? StatsManager.Get_String_Stat(MidtermLetterKey)
+                ? "Midterm Exam: " + StatsManager.Get_String_Stat(MidtermLetterKey)
                 : "";
         return ""; // Midterm has no prior exam
     }
 
-    public static void RecordExam(string examId, string letterGrade)
+    public static void RecordExam(string examId, int strikes, int strikePool)
     {
-        float points = ExamHalfPoints(letterGrade);
-        if (IsFinal(examId))
+        string letterGrade = CurrentExamLetterGrade(strikes, strikePool);
+        float points = ExamHalfPointsFromPercent(ExamPercent(strikes, strikePool));
+        bool isFinalExam = IsFinal(examId);
+        if (isFinalExam)
         {
             StatsManager.Set_Numbered_Stat(FinalScoreKey, points);
             StatsManager.Set_String_Stat(FinalLetterKey, letterGrade);
@@ -102,7 +104,17 @@ public static class GradeCalculator
             Debug.LogWarning($"[GradeCalculator] RecordExam: unrecognized examId '{examId}', grade not recorded.");
             return;
         }
-        RefreshGrades();
+        float gpa = RefreshGrades();
+
+        // Both achievements are only decidable once the final is recorded: FinalTaken is
+        // guaranteed true here, so `gpa` genuinely reflects mid+fin (see ClassGpa doc).
+        if (isFinalExam)
+        {
+            if (gpa >= 3.99f)
+                NodeAchievement.Unlock("academic_excellence");
+            if (!StatsManager.Get_Boolean_Stat("SkippedClass"))
+                NodeAchievement.Unlock("perfect_attendance");
+        }
     }
 
     /// <summary>

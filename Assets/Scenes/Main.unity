@@ -265,7 +265,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 154556030}
-  - component: {fileID: 154556029}
   - component: {fileID: 154556031}
   m_Layer: 0
   m_Name: Constant
@@ -274,22 +273,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &154556029
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 154556028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4490657621fc90c4eae361783f4f5d36, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  appId: answercampus
-  appVersion: 1
-  clientLogVersion: 1
-  debugMode: 1
 --- !u!4 &154556030
 Transform:
   m_ObjectHideFlags: 0
@@ -4135,6 +4118,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1109089707}
   - component: {fileID: 1109089706}
+  - component: {fileID: 1109089708}
   m_Layer: 0
   m_Name: Steam
   m_TagString: Untagged
@@ -4169,6 +4153,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1109089708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1109089705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8060999e273814622abb876fb6bc9ab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Logging
+  appId: ANSWER_CAMPUS
+  appVersion: 2
+  clientLogVersion: 0
+  debugMode: 1
 --- !u!1 &1198349188
 GameObject:
   m_ObjectHideFlags: 0
@@ -7064,7 +7064,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 317.50003, y: -378.46826}
+  m_AnchoredPosition: {x: 317.50006, y: -378.46826}
   m_SizeDelta: {x: 350, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1804311909

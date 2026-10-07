@@ -112,6 +112,34 @@ public class StageRouteIndex : ScriptableObject
             for (int i = 0; i < group.Count; i++)
                 group[i].stage = i + 1;
         }
+
+        // Warn (don't block) when one character has routes at two different
+        // locations unlocking the same week -- usually intentional (a conversation
+        // chains directly into the other location without going through the
+        // Home hub), but it's also exactly how a scene's router can end up
+        // silently missing a route, so flag it for a designer to confirm.
+        var byCharacterWeek = new Dictionary<(Character, int), List<string>>();
+        foreach (var meta in routes)
+        {
+            if (meta == null || meta.location == null) continue;
+            var key = (meta.character, meta.unlockWeek);
+            var locName = meta.location.sceneName ?? meta.location.name ?? "";
+            if (!byCharacterWeek.ContainsKey(key)) byCharacterWeek[key] = new List<string>();
+            if (!byCharacterWeek[key].Contains(locName)) byCharacterWeek[key].Add(locName);
+        }
+        foreach (var entry in byCharacterWeek)
+        {
+            if (entry.Value.Count > 1)
+            {
+                var (character, week) = entry.Key;
+                Debug.LogWarning(
+                    $"[StageRouteIndex] {character} has routes at {entry.Value.Count} different " +
+                    $"locations ({string.Join(", ", entry.Value)}) unlocking the same week ({week}). " +
+                    $"If these aren't a single chained conversation, double-check both get wired into " +
+                    $"their scene's Conversation Router.", this);
+            }
+        }
+
         UnityEditor.EditorUtility.SetDirty(this);
     }
     public void EditorReplaceRoutes(List<StageRouteMeta> newRoutes)

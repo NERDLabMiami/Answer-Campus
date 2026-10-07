@@ -21,6 +21,6 @@ MonoBehaviour:
   customQuestions: []
   timerDuration: 60
   sharedStrikePool: 5
-  examStrikePool: 4
+  examStrikePool: 20
   maxWordAttempts: 10
   strikesPerWord: 3

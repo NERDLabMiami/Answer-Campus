@@ -25,6 +25,9 @@ public class FMODAudioManager : MonoBehaviour
 
     private Coroutine currentFadeOut;
     private EventInstance nextMusicToPlay;
+    private EventReference _currentMusicEvent;
+    private EventReference _savedMusicEvent;
+    private bool _hasSavedMusic;
 
     private Coroutine currentMusicCoroutine;
     private List<EventInstance> allCreatedInstances = new();
@@ -59,6 +62,7 @@ public class FMODAudioManager : MonoBehaviour
             return;
 
         _currentMusicGuid = evt.Guid;
+        _currentMusicEvent = evt;
 
         // IMPORTANT: if you adopted StopAllAudio() earlier, do NOT nuke ambient here
         // unless you explicitly want music to always kill ambient.
@@ -66,6 +70,24 @@ public class FMODAudioManager : MonoBehaviour
             StopCoroutine(currentMusicCoroutine);
 
         currentMusicCoroutine = StartCoroutine(TransitionToNewMusic(evt, fadeDuration));
+    }
+
+    public void PushMusic(EventReference evt, float fadeDuration = 1f)
+    {
+        _savedMusicEvent = _currentMusicEvent;
+        _hasSavedMusic = true;
+        PlayMusic(evt, fadeDuration);
+    }
+
+    public void PopMusic(float fadeDuration = 1f)
+    {
+        if (!_hasSavedMusic) return;
+        _hasSavedMusic = false;
+
+        if (_savedMusicEvent.IsNull)
+            StopMusic();
+        else
+            PlayMusic(_savedMusicEvent, fadeDuration);
     }
 
     public void PlayAmbient(EventReference evt, float fadeDuration = 1f)

@@ -3523,24 +3523,24 @@ MonoBehaviour:
   - text: It's interesting how isolation doesn't always look dramatic.
     nextConversation: {fileID: 1454347058}
     requirements: []
-    enableLogging: 0
-    label: 
-    category: 
+    enableLogging: 1
+    label: alone
+    category: moral_reasoning
     variant: 
   - text: Some people are pushed to the margins without choosing it.
     nextConversation: {fileID: 1494289773}
     requirements: []
-    enableLogging: 0
-    label: 
-    category: 
-    variant: 
+    enableLogging: 1
+    label: alone
+    category: moral_reasoning
+    variant: empathy
   - text: The book shows how communities create loneliness.
     nextConversation: {fileID: 1850348192}
     requirements: []
-    enableLogging: 0
-    label: 
-    category: 
-    variant: 
+    enableLogging: 1
+    label: alone
+    category: moral_reasoning
+    variant: charisma
   logOnShow: 1
   logOnSelect: 1
   includeTraitSnapshot: 1
@@ -5116,6 +5116,76 @@ MonoBehaviour:
   set_foreground: 0
   fade_out: 0
   fade_in: 0
+--- !u!1001 &154611130
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6429951056952780404}
+    m_Modifications:
+    - target: {fileID: 1240950425329551039, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: amount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1240950425329551039, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: character
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 945
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 531.5625
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6204444977821185656, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_Name
+      value: Modify Affinity
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f781a81081f604549996166314b2181c, type: 3}
+--- !u!4 &154611131 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+  m_PrefabInstance: {fileID: 154611130}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &156665722
 GameObject:
   m_ObjectHideFlags: 0
@@ -11304,24 +11374,24 @@ MonoBehaviour:
   - text: All the time.
     nextConversation: {fileID: 1213760632}
     requirements: []
-    enableLogging: 0
-    label: 
-    category: 
-    variant: 
+    enableLogging: 1
+    label: judge
+    category: moral_reasoning
+    variant: humor
   - text: When we're scared.
     nextConversation: {fileID: 140154076}
     requirements: []
-    enableLogging: 0
-    label: 
-    category: 
-    variant: 
+    enableLogging: 1
+    label: judge
+    category: moral_reasoning
+    variant: empathy
   - text: Whenever we repeat what we were taught.
     nextConversation: {fileID: 1959943524}
     requirements: []
-    enableLogging: 0
-    label: 
-    category: 
-    variant: 
+    enableLogging: 1
+    label: judge
+    category: moral_reasoning
+    variant: charisma
   logOnShow: 1
   logOnSelect: 1
   includeTraitSnapshot: 1
@@ -13647,24 +13717,24 @@ MonoBehaviour:
   - text: Doing the right thing.
     nextConversation: {fileID: 1627278273}
     requirements: []
-    enableLogging: 0
-    label: 
-    category: 
-    variant: 
+    enableLogging: 1
+    label: morality
+    category: moral_reasoning
+    variant: humor
   - text: Choosing compassion, even if it costs you socially.
     nextConversation: {fileID: 1283820129}
     requirements: []
-    enableLogging: 0
-    label: 
-    category: 
-    variant: 
+    enableLogging: 1
+    label: morality
+    category: moral_reasoning
+    variant: empathy
   - text: Integrity matters more than winning.
     nextConversation: {fileID: 1245688179}
     requirements: []
-    enableLogging: 0
-    label: 
-    category: 
-    variant: 
+    enableLogging: 1
+    label: morality
+    category: moral_reasoning
+    variant: charisma
   logOnShow: 1
   logOnSelect: 1
   includeTraitSnapshot: 1
@@ -14946,29 +15016,99 @@ MonoBehaviour:
   - text: I do. Is it really necessary?
     nextConversation: {fileID: 1533301364}
     requirements: []
-    enableLogging: 0
-    label: 
-    category: 
-    variant: 
+    enableLogging: 1
+    label: concerned
+    category: classroom_harm
+    variant: initial_incident
   - text: It's in the book, so I don't see a problem with it.
     nextConversation: {fileID: 86116883}
     requirements: []
-    enableLogging: 0
-    label: 
-    category: 
-    variant: 
+    enableLogging: 1
+    label: in_the_book
+    category: classroom_harm
+    variant: initial_incident
   - text: Cancel culture at it again.
     nextConversation: {fileID: 493164196}
     requirements: []
-    enableLogging: 0
-    label: 
-    category: 
-    variant: 
+    enableLogging: 1
+    label: cancel_culture
+    category: classroom_harm
+    variant: initial_incident
   logOnShow: 1
   logOnSelect: 1
   includeTraitSnapshot: 1
   hideDialogueUI: 1
   traitRegistry: {fileID: 11400000, guid: 6b89a2d11a3454fb68d0952517d6298a, type: 2}
+--- !u!1001 &467062063
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5176315381934425110}
+    m_Modifications:
+    - target: {fileID: 1240950425329551039, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: amount
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1240950425329551039, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: character
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1703.8151
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 130.1285
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6204444977821185656, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_Name
+      value: Modify Affinity
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f781a81081f604549996166314b2181c, type: 3}
+--- !u!4 &467062064 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+  m_PrefabInstance: {fileID: 467062063}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &467411424
 GameObject:
   m_ObjectHideFlags: 0
@@ -15130,6 +15270,76 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
+--- !u!1001 &469558158
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1087636326}
+    m_Modifications:
+    - target: {fileID: 1240950425329551039, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: amount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1240950425329551039, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: character
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -472.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -265.78125
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6204444977821185656, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_Name
+      value: Modify Affinity
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f781a81081f604549996166314b2181c, type: 3}
+--- !u!4 &469558159 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+  m_PrefabInstance: {fileID: 469558158}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &471113669
 GameObject:
   m_ObjectHideFlags: 0
@@ -16876,7 +17086,8 @@ Transform:
   m_LocalPosition: {x: -472.5, y: -265.78125, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1786046036}
   m_Father: {fileID: 457831268}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &513813004
@@ -26782,6 +26993,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 921627244}
   - {fileID: 1670463308}
   - {fileID: 1313431890}
   - {fileID: 563068344}
@@ -29569,24 +29781,24 @@ MonoBehaviour:
   - text: Doing what you said you would do.
     nextConversation: {fileID: 18734763}
     requirements: []
-    enableLogging: 0
-    label: 
-    category: 
-    variant: 
+    enableLogging: 1
+    label: trust
+    category: moral_reasoning
+    variant: humor
   - text: Owning the damage, not just explaining it.
     nextConversation: {fileID: 1529714315}
     requirements: []
-    enableLogging: 0
-    label: 
-    category: 
-    variant: 
+    enableLogging: 1
+    label: trust
+    category: moral_reasoning
+    variant: empathy
   - text: Not asking for authority to do the work.
     nextConversation: {fileID: 2135873752}
     requirements: []
-    enableLogging: 0
-    label: 
-    category: 
-    variant: 
+    enableLogging: 1
+    label: trust
+    category: moral_reasoning
+    variant: trust
   logOnShow: 1
   logOnSelect: 1
   includeTraitSnapshot: 1
@@ -30180,6 +30392,76 @@ MonoBehaviour:
   fade_in_time: 0.1
   destination: 3
   custom_position: {fileID: 4909160718463724324}
+--- !u!1001 &921627243
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 804537323}
+    m_Modifications:
+    - target: {fileID: 1240950425329551039, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: amount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1240950425329551039, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: character
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -472.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -265.78125
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6204444977821185656, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_Name
+      value: Modify Affinity (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f781a81081f604549996166314b2181c, type: 3}
+--- !u!4 &921627244 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+  m_PrefabInstance: {fileID: 921627243}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &921699462
 GameObject:
   m_ObjectHideFlags: 0
@@ -30814,24 +31096,24 @@ MonoBehaviour:
   - text: Moving before fear talks you out of it
     nextConversation: {fileID: 471113671}
     requirements: []
-    enableLogging: 0
-    label: 
-    category: 
-    variant: 
+    enableLogging: 1
+    label: bravery
+    category: moral_reasoning
+    variant: humor
   - text: Risking what people think of you
     nextConversation: {fileID: 1830367330}
     requirements: []
-    enableLogging: 0
-    label: 
-    category: 
-    variant: 
+    enableLogging: 1
+    label: bravery
+    category: moral_reasoning
+    variant: empathy
   - text: Standing alone when the room has always decided
     nextConversation: {fileID: 526751677}
     requirements: []
-    enableLogging: 0
-    label: 
-    category: 
-    variant: 
+    enableLogging: 1
+    label: bravery
+    category: moral_reasoning
+    variant: charisma
   logOnShow: 1
   logOnSelect: 1
   includeTraitSnapshot: 1
@@ -32194,6 +32476,76 @@ MonoBehaviour:
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
+--- !u!1001 &990573275
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5504665119466509717}
+    m_Modifications:
+    - target: {fileID: 1240950425329551039, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: amount
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1240950425329551039, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: character
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 945
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 531.5625
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6204444977821185656, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_Name
+      value: Modify Affinity
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f781a81081f604549996166314b2181c, type: 3}
+--- !u!4 &990573276 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+  m_PrefabInstance: {fileID: 990573275}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &992455347
 GameObject:
   m_ObjectHideFlags: 0
@@ -32411,17 +32763,17 @@ MonoBehaviour:
   - text: Probably not. I don't really know them.
     nextConversation: {fileID: 7543704547932204265}
     requirements: []
-    enableLogging: 0
-    label: 
-    category: 
-    variant: 
+    enableLogging: 1
+    label: not_accepted
+    category: belonging
+    variant: deepak_soclalization
   - text: Sure, no problem. I'll see if I can convince them.
     nextConversation: {fileID: 649359982682038519}
     requirements: []
-    enableLogging: 0
-    label: 
-    category: 
-    variant: 
+    enableLogging: 1
+    label: accepted
+    category: belonging
+    variant: deepak_socialization
   logOnShow: 1
   logOnSelect: 1
   includeTraitSnapshot: 1
@@ -33252,24 +33604,24 @@ MonoBehaviour:
   - text: Moving faster than anyone can stop it.
     nextConversation: {fileID: 1396344916}
     requirements: []
-    enableLogging: 0
-    label: 
-    category: 
-    variant: 
+    enableLogging: 1
+    label: power
+    category: moral_reasoning
+    variant: humor
   - text: Making people afraid to say no.
     nextConversation: {fileID: 105724009}
     requirements: []
-    enableLogging: 0
-    label: 
-    category: 
-    variant: 
+    enableLogging: 1
+    label: power
+    category: moral_reasoning
+    variant: empathy
   - text: Making itself sound normal.
     nextConversation: {fileID: 1752275822}
     requirements: []
-    enableLogging: 0
-    label: 
-    category: 
-    variant: 
+    enableLogging: 1
+    label: power
+    category: moral_reasoning
+    variant: charisma
   logOnShow: 1
   logOnSelect: 1
   includeTraitSnapshot: 1
@@ -34718,24 +35070,24 @@ MonoBehaviour:
   - text: Trust usually follows listening.
     nextConversation: {fileID: 111023491}
     requirements: []
-    enableLogging: 0
-    label: 
-    category: 
-    variant: 
+    enableLogging: 1
+    label: humor
+    category: moral_reasoning
+    variant: moral
   - text: Trust is harder when some voices are dismissed.
     nextConversation: {fileID: 1199559061}
     requirements: []
-    enableLogging: 0
-    label: 
-    category: 
-    variant: 
+    enableLogging: 1
+    label: empathy
+    category: moral_reasoning
+    variant: moral
   - text: Trust grows when accountability is visible.
     nextConversation: {fileID: 538729094}
     requirements: []
-    enableLogging: 0
-    label: 
-    category: 
-    variant: 
+    enableLogging: 1
+    label: charisma
+    category: moral_reasoning
+    variant: moral
   logOnShow: 1
   logOnSelect: 1
   includeTraitSnapshot: 1
@@ -35073,17 +35425,17 @@ MonoBehaviour:
   - text: Leave with Leilani
     nextConversation: {fileID: 1813714272}
     requirements: []
-    enableLogging: 0
-    label: 
-    category: 
-    variant: 
+    enableLogging: 1
+    label: leave
+    category: classroom_harm
+    variant: escalation
   - text: Stay in Class
     nextConversation: {fileID: 642727324}
     requirements: []
-    enableLogging: 0
-    label: 
-    category: 
-    variant: 
+    enableLogging: 1
+    label: stay
+    category: classroom_harm
+    variant: escalation
   logOnShow: 1
   logOnSelect: 1
   includeTraitSnapshot: 1
@@ -35280,6 +35632,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 469558159}
   - {fileID: 792454321}
   - {fileID: 540613233}
   - {fileID: 972976856}
@@ -37790,24 +38143,24 @@ MonoBehaviour:
   - text: That knowing better does not mean doing better.
     nextConversation: {fileID: 1068436924}
     requirements: []
-    enableLogging: 0
-    label: 
-    category: 
-    variant: 
+    enableLogging: 1
+    label: learn
+    category: moral_reasoning
+    variant: humor
   - text: That people can study injustice and still repeat it.
     nextConversation: {fileID: 66969197}
     requirements: []
-    enableLogging: 0
-    label: 
-    category: 
-    variant: 
+    enableLogging: 1
+    label: learn
+    category: moral_reasoning
+    variant: empathy
   - text: That the lesson changes depending on who gets hurt.
     nextConversation: {fileID: 1250452040}
     requirements: []
-    enableLogging: 0
-    label: 
-    category: 
-    variant: 
+    enableLogging: 1
+    label: learn
+    category: moral_reasoning
+    variant: empathy
   logOnShow: 1
   logOnSelect: 1
   includeTraitSnapshot: 1
@@ -41292,24 +41645,24 @@ MonoBehaviour:
   - text: The truth was inconvenient.
     nextConversation: {fileID: 1898187970}
     requirements: []
-    enableLogging: 0
-    label: 
-    category: 
-    variant: 
+    enableLogging: 1
+    label: truth
+    category: moral_reasoning
+    variant: humor
   - text: People were afraid of what it would cost them.
     nextConversation: {fileID: 1640720128}
     requirements: []
-    enableLogging: 0
-    label: 
-    category: 
-    variant: 
+    enableLogging: 1
+    label: truth
+    category: moral_reasoning
+    variant: empathy
   - text: Everyone had already agreed what to believe.
     nextConversation: {fileID: 2090665001}
     requirements: []
-    enableLogging: 0
-    label: 
-    category: 
-    variant: 
+    enableLogging: 1
+    label: truth
+    category: moral_reasoning
+    variant: charisma
   logOnShow: 1
   logOnSelect: 1
   includeTraitSnapshot: 1
@@ -42576,17 +42929,17 @@ MonoBehaviour:
   - text: Sounds fun, count me in.
     nextConversation: {fileID: 1087636327}
     requirements: []
-    enableLogging: 0
-    label: 
-    category: 
-    variant: 
+    enableLogging: 1
+    label: campus_tradition
+    category: belonging
+    variant: accept
   - text: I'd rather hide in my room.
     nextConversation: {fileID: 672726961}
     requirements: []
-    enableLogging: 0
-    label: 
-    category: 
-    variant: 
+    enableLogging: 1
+    label: campus_tradition
+    category: belonging
+    variant: decline
   logOnShow: 1
   logOnSelect: 1
   includeTraitSnapshot: 1
@@ -46438,25 +46791,25 @@ MonoBehaviour:
   - text: Honor seems to depend on whose discomfort we prioritize.
     nextConversation: {fileID: 402626725}
     requirements: []
-    enableLogging: 0
-    label: 
-    category: 
-    variant: 
+    enableLogging: 1
+    label: honor
+    category: moral_reasoning
+    variant: humor
   - text: Honoring a text shouldn't come at the expense of people.
     nextConversation: {fileID: 1299294365}
     requirements: []
-    enableLogging: 0
-    label: 
-    category: 
-    variant: 
+    enableLogging: 1
+    label: honor
+    category: moral_reasoning
+    variant: empathy
   - text: Honor shows up in how we conduct the conversation, not just how we frame
       it.
     nextConversation: {fileID: 338146707}
     requirements: []
-    enableLogging: 0
-    label: 
-    category: 
-    variant: 
+    enableLogging: 1
+    label: honor
+    category: moral_reasoning
+    variant: charisma
   logOnShow: 1
   logOnSelect: 1
   includeTraitSnapshot: 1
@@ -47324,6 +47677,76 @@ MonoBehaviour:
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
+--- !u!1001 &1520323143
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2005466471}
+    m_Modifications:
+    - target: {fileID: 1240950425329551039, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: amount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1240950425329551039, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: character
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -472.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -265.78125
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6204444977821185656, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_Name
+      value: Modify Affinity (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f781a81081f604549996166314b2181c, type: 3}
+--- !u!4 &1520323144 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+  m_PrefabInstance: {fileID: 1520323143}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1520444067
 GameObject:
   m_ObjectHideFlags: 0
@@ -52359,24 +52782,24 @@ MonoBehaviour:
   - text: Enough to do something before you overthink it.
     nextConversation: {fileID: 1110099396}
     requirements: []
-    enableLogging: 0
-    label: 
-    category: 
-    variant: 
+    enableLogging: 1
+    label: heart
+    category: moral_reasoning
+    variant: humor
   - text: Enough to care when it would be easier not to.
     nextConversation: {fileID: 1061366845}
     requirements: []
-    enableLogging: 0
-    label: 
-    category: 
-    variant: 
+    enableLogging: 1
+    label: heart
+    category: moral_reasoning
+    variant: empathy
   - text: Only if it's real, not what people expect you to feel.
     nextConversation: {fileID: 1122101896}
     requirements: []
-    enableLogging: 0
-    label: 
-    category: 
-    variant: 
+    enableLogging: 1
+    label: heart
+    category: moral_reasoning
+    variant: charisma
   logOnShow: 1
   logOnSelect: 1
   includeTraitSnapshot: 1
@@ -55026,6 +55449,76 @@ MonoBehaviour:
   includeTraitSnapshot: 1
   hideDialogueUI: 1
   traitRegistry: {fileID: 11400000, guid: 6b89a2d11a3454fb68d0952517d6298a, type: 2}
+--- !u!1001 &1786046035
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 513813003}
+    m_Modifications:
+    - target: {fileID: 1240950425329551039, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: amount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1240950425329551039, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: character
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6204444977821185656, guid: f781a81081f604549996166314b2181c, type: 3}
+      propertyPath: m_Name
+      value: Modify Affinity
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f781a81081f604549996166314b2181c, type: 3}
+--- !u!4 &1786046036 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1255999624826486351, guid: f781a81081f604549996166314b2181c, type: 3}
+  m_PrefabInstance: {fileID: 1786046035}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1786875398
 GameObject:
   m_ObjectHideFlags: 0
@@ -58590,17 +59083,17 @@ MonoBehaviour:
   - text: Leave with Leilani
     nextConversation: {fileID: 1813714272}
     requirements: []
-    enableLogging: 0
-    label: 
-    category: 
-    variant: 
+    enableLogging: 1
+    label: escalation
+    category: classroom_harm
+    variant: leave
   - text: Stay in Class
     nextConversation: {fileID: 642727324}
     requirements: []
-    enableLogging: 0
-    label: 
-    category: 
-    variant: 
+    enableLogging: 1
+    label: escalation
+    category: classroom_harm
+    variant: stay
   logOnShow: 1
   logOnSelect: 1
   includeTraitSnapshot: 1
@@ -58949,17 +59442,17 @@ MonoBehaviour:
   - text: Leave with Leilani
     nextConversation: {fileID: 1813714272}
     requirements: []
-    enableLogging: 0
-    label: 
-    category: 
-    variant: 
+    enableLogging: 1
+    label: leave
+    category: classroom_harm
+    variant: escalation
   - text: Stay in Class
     nextConversation: {fileID: 642727324}
     requirements: []
-    enableLogging: 0
-    label: 
-    category: 
-    variant: 
+    enableLogging: 1
+    label: stay
+    category: classroom_harm
+    variant: escalation
   logOnShow: 1
   logOnSelect: 1
   includeTraitSnapshot: 1
@@ -61154,6 +61647,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1520323144}
   - {fileID: 401177367}
   - {fileID: 943182324}
   - {fileID: 733384611}
@@ -76407,6 +76901,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 467062064}
   - {fileID: 3491052973069643929}
   - {fileID: 382626086}
   - {fileID: 3226250932306827652}
@@ -76989,6 +77484,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 990573276}
   - {fileID: 4565554751325725021}
   - {fileID: 7292345862835783120}
   - {fileID: 6926673360804586211}
@@ -78946,6 +79442,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 653469702}
+  - {fileID: 154611131}
   - {fileID: 944694888945041452}
   - {fileID: 2993337024979860786}
   - {fileID: 8508068888993914886}
@@ -84080,24 +84577,24 @@ MonoBehaviour:
   - text: Good, I think.
     nextConversation: {fileID: 1680623386763040324}
     requirements: []
-    enableLogging: 0
-    label: 
-    category: 
-    variant: 
+    enableLogging: 1
+    label: positive
+    category: academics
+    variant: reflection
   - text: About as well as can be expected.
     nextConversation: {fileID: 3818832773077118264}
     requirements: []
-    enableLogging: 0
-    label: 
-    category: 
-    variant: 
+    enableLogging: 1
+    label: neutral
+    category: academics
+    variant: reflection
   - text: I think they could've been better.
     nextConversation: {fileID: 7674174596591450287}
     requirements: []
-    enableLogging: 0
-    label: 
-    category: 
-    variant: 
+    enableLogging: 1
+    label: negative
+    category: academics
+    variant: reflection
   logOnShow: 1
   logOnSelect: 1
   includeTraitSnapshot: 1

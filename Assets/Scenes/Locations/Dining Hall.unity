@@ -334,6 +334,60 @@ MonoBehaviour:
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
+--- !u!1 &36796797
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 36796798}
+  - component: {fileID: 36796799}
+  m_Layer: 0
+  m_Name: Change Actor Image (8)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &36796798
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 36796797}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 230959590}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &36796799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 36796797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44973f879676fe646a5d712c3f31e15a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VNEngine.ChangeActorImageNode
+  go_to_next_node: 1
+  executed_from_load: 0
+  actor_name_from: 0
+  actor_name: Charli
+  new_image: {fileID: 21300000, guid: 3248e1911d1c28040a01014bd1fdcbab, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
+  fade_in_new_image: 1
+  lighten_actor: 0
+  bring_actor_to_front: 0
 --- !u!1001 &41724635
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -450,6 +504,168 @@ MonoBehaviour:
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
+--- !u!1 &49586062
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 49586063}
+  - component: {fileID: 49586064}
+  m_Layer: 0
+  m_Name: Scared Charli (13)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &49586063
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 49586062}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1855016484}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &49586064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 49586062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44973f879676fe646a5d712c3f31e15a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  go_to_next_node: 1
+  executed_from_load: 0
+  actor_name_from: 0
+  actor_name: Charli
+  new_image: {fileID: 21300000, guid: 04997ce779b256d4c90e1c9fb32668ed, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
+  fade_in_new_image: 0
+  lighten_actor: 0
+  bring_actor_to_front: 0
+--- !u!1 &55880337
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 55880338}
+  - component: {fileID: 55880339}
+  m_Layer: 0
+  m_Name: Online Dating Segue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &55880338
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 55880337}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -472.5, y: -265.78125, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1703134965}
+  - {fileID: 466080703}
+  - {fileID: 669463519}
+  - {fileID: 155050389}
+  - {fileID: 207510687}
+  m_Father: {fileID: 561909551}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &55880339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 55880337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7598fdb9cbb025c4293438a58006c68f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroy_when_finished: 0
+  start_conversation_when_done: {fileID: 0}
+  cur_node: 0
+  active: 0
+  finished_conversation: 0
+--- !u!1 &59802777
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 59802778}
+  - component: {fileID: 59802779}
+  m_Layer: 0
+  m_Name: Scared Charli (12)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &59802778
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 59802777}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1855016484}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &59802779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 59802777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44973f879676fe646a5d712c3f31e15a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  go_to_next_node: 1
+  executed_from_load: 0
+  actor_name_from: 0
+  actor_name: Charli
+  new_image: {fileID: 21300000, guid: 418340026af91d844b0cb5f7ea54bc6d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
+  fade_in_new_image: 0
+  lighten_actor: 0
+  bring_actor_to_front: 0
 --- !u!1 &66802470
 GameObject:
   m_ObjectHideFlags: 0
@@ -499,6 +715,60 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Charli
   new_image: {fileID: 21300000, guid: 4f0404b7d59fae44fa5c4dc3a6be5e41, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
+  fade_in_new_image: 0
+  lighten_actor: 0
+  bring_actor_to_front: 0
+--- !u!1 &69945343
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 69945344}
+  - component: {fileID: 69945345}
+  m_Layer: 0
+  m_Name: Scared Charli (13)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &69945344
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 69945343}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 796468413}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &69945345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 69945343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44973f879676fe646a5d712c3f31e15a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  go_to_next_node: 1
+  executed_from_load: 0
+  actor_name_from: 0
+  actor_name: Charli
+  new_image: {fileID: 21300000, guid: 418340026af91d844b0cb5f7ea54bc6d, type: 3}
   alt_idle_sprite: {fileID: 0}
   idle_frame_interval: 3
   fade_in_new_image: 0
@@ -1258,6 +1528,60 @@ MonoBehaviour:
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
+--- !u!1 &107182598
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 107182599}
+  - component: {fileID: 107182600}
+  m_Layer: 0
+  m_Name: Scared Charli (8)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &107182599
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 107182598}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 434310330}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &107182600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 107182598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44973f879676fe646a5d712c3f31e15a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  go_to_next_node: 1
+  executed_from_load: 0
+  actor_name_from: 0
+  actor_name: Charli
+  new_image: {fileID: 21300000, guid: 4f0404b7d59fae44fa5c4dc3a6be5e41, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
+  fade_in_new_image: 0
+  lighten_actor: 0
+  bring_actor_to_front: 0
 --- !u!1 &109626961
 GameObject:
   m_ObjectHideFlags: 0
@@ -1419,6 +1743,60 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
+--- !u!1 &117670347
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 117670348}
+  - component: {fileID: 117670349}
+  m_Layer: 0
+  m_Name: Scared Charli (14)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &117670348
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 117670347}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 796468413}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &117670349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 117670347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44973f879676fe646a5d712c3f31e15a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  go_to_next_node: 1
+  executed_from_load: 0
+  actor_name_from: 0
+  actor_name: Charli
+  new_image: {fileID: 21300000, guid: 3248e1911d1c28040a01014bd1fdcbab, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
+  fade_in_new_image: 0
+  lighten_actor: 0
+  bring_actor_to_front: 0
 --- !u!1 &133003845
 GameObject:
   m_ObjectHideFlags: 0
@@ -1527,6 +1905,167 @@ MonoBehaviour:
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
+--- !u!1 &155050388
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 155050389}
+  - component: {fileID: 155050391}
+  - component: {fileID: 155050390}
+  m_Layer: 0
+  m_Name: Welcome (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &155050389
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 155050388}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 55880338}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &155050390
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 155050388}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &155050391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 155050388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b40beeb965e5d9419bf817d6f7d59bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  go_to_next_node: 1
+  executed_from_load: 0
+  actor_name_from: 0
+  actor: Charli
+  speaker_name_from: 0
+  textbox_title: Charli
+  fetch_localized_stat_value: 0
+  dialogue_from: 0
+  localized_key: 
+  text: Wanna hang out?
+  talking_beeps: {fileID: 0}
+  darken_all_other_characters: 1
+  bring_speaker_to_front: 1
+  clear_text_after: 0
+  log_text: 1
+  log_category: Default
+  done_printing: 0
+  no_voice_playing: 0
+  done_voice_clip: 0
 --- !u!1 &160768530
 GameObject:
   m_ObjectHideFlags: 0
@@ -1771,6 +2310,72 @@ MonoBehaviour:
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
+--- !u!1 &207510686
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 207510687}
+  - component: {fileID: 207510688}
+  m_Layer: 0
+  m_Name: Show Choices (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &207510687
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 207510686}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 472.5, y: 265.78125, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 55880338}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &207510688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 207510686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b53734dc413e348579dd61685c53ee9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VNEngine.ShowChoiceNode
+  go_to_next_node: 1
+  executed_from_load: 0
+  choices:
+  - text: Sure!
+    nextConversation: {fileID: 1658570998}
+    requirements: []
+    enableLogging: 0
+    label: 
+    category: 
+    variant: 
+  - text: Nah, I have to get back.
+    nextConversation: {fileID: 1257008414}
+    requirements: []
+    enableLogging: 0
+    label: 
+    category: 
+    variant: 
+  logOnShow: 1
+  logOnSelect: 1
+  includeTraitSnapshot: 1
+  hideDialogueUI: 1
+  traitRegistry: {fileID: 11400000, guid: 6b89a2d11a3454fb68d0952517d6298a, type: 2}
 --- !u!1001 &209647455
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2203,6 +2808,114 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
+--- !u!1 &213297279
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 213297280}
+  - component: {fileID: 213297281}
+  m_Layer: 0
+  m_Name: Scared Charli (12)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &213297280
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 213297279}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1452016554}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &213297281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 213297279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44973f879676fe646a5d712c3f31e15a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  go_to_next_node: 1
+  executed_from_load: 0
+  actor_name_from: 0
+  actor_name: Charli
+  new_image: {fileID: 21300000, guid: 418340026af91d844b0cb5f7ea54bc6d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
+  fade_in_new_image: 0
+  lighten_actor: 0
+  bring_actor_to_front: 0
+--- !u!1 &214704592
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 214704593}
+  - component: {fileID: 214704594}
+  m_Layer: 0
+  m_Name: Scared Charli (11)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &214704593
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 214704592}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1855016484}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &214704594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 214704592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44973f879676fe646a5d712c3f31e15a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  go_to_next_node: 1
+  executed_from_load: 0
+  actor_name_from: 0
+  actor_name: Charli
+  new_image: {fileID: 21300000, guid: 3248e1911d1c28040a01014bd1fdcbab, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
+  fade_in_new_image: 0
+  lighten_actor: 0
+  bring_actor_to_front: 0
 --- !u!1 &216340761
 GameObject:
   m_ObjectHideFlags: 0
@@ -2257,6 +2970,72 @@ MonoBehaviour:
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
+--- !u!1001 &220361283
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1257008413}
+    m_Modifications:
+    - target: {fileID: 160300, guid: 02fa0947d6da04082ae770693640dc11, type: 3}
+      propertyPath: m_Name
+      value: Fade Out Music
+      objectReference: {fileID: 0}
+    - target: {fileID: 424250, guid: 02fa0947d6da04082ae770693640dc11, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 424250, guid: 02fa0947d6da04082ae770693640dc11, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 424250, guid: 02fa0947d6da04082ae770693640dc11, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 424250, guid: 02fa0947d6da04082ae770693640dc11, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 424250, guid: 02fa0947d6da04082ae770693640dc11, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 424250, guid: 02fa0947d6da04082ae770693640dc11, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 424250, guid: 02fa0947d6da04082ae770693640dc11, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 424250, guid: 02fa0947d6da04082ae770693640dc11, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 424250, guid: 02fa0947d6da04082ae770693640dc11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 424250, guid: 02fa0947d6da04082ae770693640dc11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 424250, guid: 02fa0947d6da04082ae770693640dc11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 02fa0947d6da04082ae770693640dc11, type: 3}
+--- !u!4 &220361284 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 424250, guid: 02fa0947d6da04082ae770693640dc11, type: 3}
+  m_PrefabInstance: {fileID: 220361283}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &220782330
 GameObject:
   m_ObjectHideFlags: 0
@@ -2353,13 +3132,19 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 36796798}
   - {fileID: 109626962}
+  - {fileID: 1005910572}
   - {fileID: 1575312515}
+  - {fileID: 1967250395}
   - {fileID: 1549927796}
+  - {fileID: 1162234828}
   - {fileID: 625332318}
+  - {fileID: 1790605521}
   - {fileID: 411596761}
+  - {fileID: 320580638}
   - {fileID: 248326018}
-  m_Father: {fileID: 1094843572}
+  m_Father: {fileID: 704833878}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &230959591
 MonoBehaviour:
@@ -2378,6 +3163,60 @@ MonoBehaviour:
   cur_node: 0
   active: 0
   finished_conversation: 0
+--- !u!1 &247134345
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 247134346}
+  - component: {fileID: 247134347}
+  m_Layer: 0
+  m_Name: Change Actor Image (6)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &247134346
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247134345}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 335549500}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &247134347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247134345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44973f879676fe646a5d712c3f31e15a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VNEngine.ChangeActorImageNode
+  go_to_next_node: 1
+  executed_from_load: 0
+  actor_name_from: 0
+  actor_name: Charli
+  new_image: {fileID: 21300000, guid: 3248e1911d1c28040a01014bd1fdcbab, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
+  fade_in_new_image: 1
+  lighten_actor: 0
+  bring_actor_to_front: 0
 --- !u!1 &248326017
 GameObject:
   m_ObjectHideFlags: 0
@@ -2707,7 +3546,7 @@ MonoBehaviour:
   executed_from_load: 0
   actor_name_from: 0
   actor_name: Charli
-  new_image: {fileID: 21300000, guid: 4f0404b7d59fae44fa5c4dc3a6be5e41, type: 3}
+  new_image: {fileID: 21300000, guid: 3248e1911d1c28040a01014bd1fdcbab, type: 3}
   alt_idle_sprite: {fileID: 0}
   idle_frame_interval: 3
   fade_in_new_image: 0
@@ -2974,6 +3813,60 @@ MonoBehaviour:
   alt_idle_sprite: {fileID: 0}
   idle_frame_interval: 3
   fade_in_new_image: 0
+  lighten_actor: 0
+  bring_actor_to_front: 0
+--- !u!1 &302214871
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 302214872}
+  - component: {fileID: 302214873}
+  m_Layer: 0
+  m_Name: Change Actor Image (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &302214872
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 302214871}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1637173014}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &302214873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 302214871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44973f879676fe646a5d712c3f31e15a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VNEngine.ChangeActorImageNode
+  go_to_next_node: 1
+  executed_from_load: 0
+  actor_name_from: 0
+  actor_name: Charli
+  new_image: {fileID: 21300000, guid: 418340026af91d844b0cb5f7ea54bc6d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
+  fade_in_new_image: 1
   lighten_actor: 0
   bring_actor_to_front: 0
 --- !u!1 &304163646
@@ -3407,6 +4300,60 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
+--- !u!1 &320580637
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 320580638}
+  - component: {fileID: 320580639}
+  m_Layer: 0
+  m_Name: Change Actor Image (13)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &320580638
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 320580637}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 230959590}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &320580639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 320580637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44973f879676fe646a5d712c3f31e15a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VNEngine.ChangeActorImageNode
+  go_to_next_node: 1
+  executed_from_load: 0
+  actor_name_from: 0
+  actor_name: Charli
+  new_image: {fileID: 21300000, guid: 4f0404b7d59fae44fa5c4dc3a6be5e41, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
+  fade_in_new_image: 1
+  lighten_actor: 0
+  bring_actor_to_front: 0
 --- !u!1 &331123632
 GameObject:
   m_ObjectHideFlags: 0
@@ -3634,7 +4581,7 @@ GameObject:
   - component: {fileID: 335549500}
   - component: {fileID: 335549501}
   m_Layer: 0
-  m_Name: Hangout #2 (3)
+  m_Name: Hangout Continues
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3653,7 +4600,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 247134346}
   - {fileID: 1516949410}
+  - {fileID: 1977508580}
   - {fileID: 1993169821}
   - {fileID: 918006102}
   m_Father: {fileID: 704833878}
@@ -3920,14 +4869,18 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1454693529}
   - {fileID: 1262079963}
+  - {fileID: 1306841473}
   - {fileID: 1831365196}
+  - {fileID: 1150839315}
   - {fileID: 656117562}
   - {fileID: 526917441}
   - {fileID: 1418610476}
+  - {fileID: 499103645}
   - {fileID: 83480586}
   - {fileID: 1435347165}
-  m_Father: {fileID: 1877834771}
+  m_Father: {fileID: 704833878}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &343170020
 MonoBehaviour:
@@ -4180,6 +5133,134 @@ MonoBehaviour:
   includeTraitSnapshot: 1
   hideDialogueUI: 1
   traitRegistry: {fileID: 11400000, guid: 6b89a2d11a3454fb68d0952517d6298a, type: 2}
+--- !u!1001 &349165252
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1855016484}
+    m_Modifications:
+    - target: {fileID: -7185135663363208663, guid: 8f1670c9580104ce187ca494c92f827a, type: 3}
+      propertyPath: scene
+      value: Dining Hall
+      objectReference: {fileID: 0}
+    - target: {fileID: -7185135663363208663, guid: 8f1670c9580104ce187ca494c92f827a, type: 3}
+      propertyPath: character
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: -7185135663363208663, guid: 8f1670c9580104ce187ca494c92f827a, type: 3}
+      propertyPath: stageRouteIndex
+      value: 
+      objectReference: {fileID: 11400000, guid: 5e1ab10876ffd4e239ae0b865e8cede9, type: 2}
+    - target: {fileID: 5275582187492880113, guid: 8f1670c9580104ce187ca494c92f827a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5275582187492880113, guid: 8f1670c9580104ce187ca494c92f827a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5275582187492880113, guid: 8f1670c9580104ce187ca494c92f827a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5275582187492880113, guid: 8f1670c9580104ce187ca494c92f827a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5275582187492880113, guid: 8f1670c9580104ce187ca494c92f827a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5275582187492880113, guid: 8f1670c9580104ce187ca494c92f827a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5275582187492880113, guid: 8f1670c9580104ce187ca494c92f827a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5275582187492880113, guid: 8f1670c9580104ce187ca494c92f827a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5275582187492880113, guid: 8f1670c9580104ce187ca494c92f827a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5275582187492880113, guid: 8f1670c9580104ce187ca494c92f827a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8870558989146336016, guid: 8f1670c9580104ce187ca494c92f827a, type: 3}
+      propertyPath: m_Name
+      value: Save Checkpoint Character
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8f1670c9580104ce187ca494c92f827a, type: 3}
+--- !u!4 &349165253 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5275582187492880113, guid: 8f1670c9580104ce187ca494c92f827a, type: 3}
+  m_PrefabInstance: {fileID: 349165252}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &377664809
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 377664810}
+  - component: {fileID: 377664811}
+  m_Layer: 0
+  m_Name: Scared Charli (17)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &377664810
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 377664809}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 796468413}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &377664811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 377664809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44973f879676fe646a5d712c3f31e15a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  go_to_next_node: 1
+  executed_from_load: 0
+  actor_name_from: 0
+  actor_name: Charli
+  new_image: {fileID: 21300000, guid: 4f0404b7d59fae44fa5c4dc3a6be5e41, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
+  fade_in_new_image: 0
+  lighten_actor: 0
+  bring_actor_to_front: 0
 --- !u!1001 &379463393
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4971,13 +6052,16 @@ Transform:
   m_Children:
   - {fileID: 1273386778}
   - {fileID: 735237185}
+  - {fileID: 1182874597}
   - {fileID: 1110993488}
+  - {fileID: 107182599}
   - {fileID: 473550298}
+  - {fileID: 1637935086}
   - {fileID: 2055428850}
   - {fileID: 258788846}
   - {fileID: 1602239483}
   - {fileID: 815786646}
-  m_Father: {fileID: 1094843572}
+  m_Father: {fileID: 704833878}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &434310331
 MonoBehaviour:
@@ -4996,6 +6080,72 @@ MonoBehaviour:
   cur_node: 0
   active: 0
   finished_conversation: 0
+--- !u!1 &466080702
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 466080703}
+  - component: {fileID: 466080705}
+  - component: {fileID: 466080704}
+  m_Layer: 0
+  m_Name: Fade in from Black
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &466080703
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 466080702}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 55880338}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &466080704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 466080702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae561942d02efd6479240df1ebb914ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  go_to_next_node: 1
+  executed_from_load: 0
+--- !u!114 &466080705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 466080702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14efe4bb02d1ee841ab94338a44f1406, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  go_to_next_node: 1
+  executed_from_load: 0
+  sprite: {fileID: 21300000, guid: d30161e14a6229e40a96f4b6288e4eeb, type: 3}
+  set_foreground: 1
+  fade_out: 1
+  fade_in: 0
+  wait_for_all_fading: 1
 --- !u!1 &467009316
 GameObject:
   m_ObjectHideFlags: 0
@@ -5048,6 +6198,60 @@ MonoBehaviour:
   alt_idle_sprite: {fileID: 0}
   idle_frame_interval: 3
   fade_in_new_image: 0
+  lighten_actor: 0
+  bring_actor_to_front: 0
+--- !u!1 &468715387
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 468715388}
+  - component: {fileID: 468715389}
+  m_Layer: 0
+  m_Name: Change Actor Image (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &468715388
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 468715387}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1637173014}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &468715389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 468715387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44973f879676fe646a5d712c3f31e15a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VNEngine.ChangeActorImageNode
+  go_to_next_node: 1
+  executed_from_load: 0
+  actor_name_from: 0
+  actor_name: Charli
+  new_image: {fileID: 21300000, guid: 4f0404b7d59fae44fa5c4dc3a6be5e41, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
+  fade_in_new_image: 1
   lighten_actor: 0
   bring_actor_to_front: 0
 --- !u!1 &473550297
@@ -5266,6 +6470,60 @@ MonoBehaviour:
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
+--- !u!1 &479163770
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 479163771}
+  - component: {fileID: 479163772}
+  m_Layer: 0
+  m_Name: Scared Charli (12)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &479163771
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 479163770}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 796468413}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &479163772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 479163770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44973f879676fe646a5d712c3f31e15a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  go_to_next_node: 1
+  executed_from_load: 0
+  actor_name_from: 0
+  actor_name: Charli
+  new_image: {fileID: 21300000, guid: 3248e1911d1c28040a01014bd1fdcbab, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
+  fade_in_new_image: 0
+  lighten_actor: 0
+  bring_actor_to_front: 0
 --- !u!1 &482419332
 GameObject:
   m_ObjectHideFlags: 0
@@ -5427,6 +6685,60 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
+--- !u!1 &499103644
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 499103645}
+  - component: {fileID: 499103646}
+  m_Layer: 0
+  m_Name: Happy Charli
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &499103645
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 499103644}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 343170019}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &499103646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 499103644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44973f879676fe646a5d712c3f31e15a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  go_to_next_node: 1
+  executed_from_load: 0
+  actor_name_from: 0
+  actor_name: Charli
+  new_image: {fileID: 21300000, guid: 3248e1911d1c28040a01014bd1fdcbab, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
+  fade_in_new_image: 0
+  lighten_actor: 0
+  bring_actor_to_front: 0
 --- !u!1 &505814674
 GameObject:
   m_ObjectHideFlags: 0
@@ -5803,6 +7115,68 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
+--- !u!1001 &519147311
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1257008413}
+    m_Modifications:
+    - target: {fileID: 5275582187492880113, guid: c87e9d001b140b24e93b21ae3617e89b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -130.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5275582187492880113, guid: c87e9d001b140b24e93b21ae3617e89b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.8725586
+      objectReference: {fileID: 0}
+    - target: {fileID: 5275582187492880113, guid: c87e9d001b140b24e93b21ae3617e89b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5275582187492880113, guid: c87e9d001b140b24e93b21ae3617e89b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5275582187492880113, guid: c87e9d001b140b24e93b21ae3617e89b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5275582187492880113, guid: c87e9d001b140b24e93b21ae3617e89b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5275582187492880113, guid: c87e9d001b140b24e93b21ae3617e89b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5275582187492880113, guid: c87e9d001b140b24e93b21ae3617e89b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5275582187492880113, guid: c87e9d001b140b24e93b21ae3617e89b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5275582187492880113, guid: c87e9d001b140b24e93b21ae3617e89b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8870558989146336016, guid: c87e9d001b140b24e93b21ae3617e89b, type: 3}
+      propertyPath: m_Name
+      value: Set Week
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c87e9d001b140b24e93b21ae3617e89b, type: 3}
+--- !u!4 &519147312 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5275582187492880113, guid: c87e9d001b140b24e93b21ae3617e89b, type: 3}
+  m_PrefabInstance: {fileID: 519147311}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &523765801
 GameObject:
   m_ObjectHideFlags: 0
@@ -5814,7 +7188,7 @@ GameObject:
   - component: {fileID: 523765802}
   - component: {fileID: 523765803}
   m_Layer: 0
-  m_Name: Love to go
+  m_Name: Love to go - Invite Accepted
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5833,9 +7207,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 659867192}
   - {fileID: 686571068}
+  - {fileID: 1273178324}
   - {fileID: 1086879392}
-  m_Father: {fileID: 1028241246}
+  m_Father: {fileID: 704833878}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &523765803
 MonoBehaviour:
@@ -6529,7 +7905,7 @@ GameObject:
   - component: {fileID: 552146082}
   - component: {fileID: 552146083}
   m_Layer: 0
-  m_Name: Hangout #2 (8)
+  m_Name: Goodbyes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6550,7 +7926,9 @@ Transform:
   m_Children:
   - {fileID: 2072490979}
   - {fileID: 1920118605}
+  - {fileID: 996743068}
   - {fileID: 210656560}
+  - {fileID: 1744597290}
   - {fileID: 697646249}
   m_Father: {fileID: 704833878}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6607,9 +7985,12 @@ Transform:
   - {fileID: 2441957760931938726}
   - {fileID: 8367204903315048832}
   - {fileID: 95037231}
+  - {fileID: 55880338}
+  - {fileID: 1658570997}
   - {fileID: 1136954376018468964}
   - {fileID: 704833878}
   - {fileID: 282285651}
+  - {fileID: 1257008413}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &581310661
@@ -6716,6 +8097,60 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Brad
   new_image: {fileID: 21300000, guid: 9ae4f106701e24e49ac88a54e2abe3a6, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
+  fade_in_new_image: 0
+  lighten_actor: 0
+  bring_actor_to_front: 0
+--- !u!1 &598056653
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 598056654}
+  - component: {fileID: 598056655}
+  m_Layer: 0
+  m_Name: Scared Charli (15)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &598056654
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 598056653}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1659863658}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &598056655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 598056653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44973f879676fe646a5d712c3f31e15a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  go_to_next_node: 1
+  executed_from_load: 0
+  actor_name_from: 0
+  actor_name: Charli
+  new_image: {fileID: 21300000, guid: 4f0404b7d59fae44fa5c4dc3a6be5e41, type: 3}
   alt_idle_sprite: {fileID: 0}
   idle_frame_interval: 3
   fade_in_new_image: 0
@@ -7002,6 +8437,60 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7256101320574431474, guid: f87f54ccc1f776546ba2f07b357b20ce, type: 3}
   m_PrefabInstance: {fileID: 613283035}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &620530637
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 620530638}
+  - component: {fileID: 620530639}
+  m_Layer: 0
+  m_Name: Scared Charli (11)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &620530638
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 620530637}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 796468413}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &620530639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 620530637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44973f879676fe646a5d712c3f31e15a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  go_to_next_node: 1
+  executed_from_load: 0
+  actor_name_from: 0
+  actor_name: Charli
+  new_image: {fileID: 21300000, guid: 4f0404b7d59fae44fa5c4dc3a6be5e41, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
+  fade_in_new_image: 0
+  lighten_actor: 0
+  bring_actor_to_front: 0
 --- !u!1 &625332317
 GameObject:
   m_ObjectHideFlags: 0
@@ -7163,6 +8652,72 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
+--- !u!1001 &628359771
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1658570997}
+    m_Modifications:
+    - target: {fileID: 2180574896097361886, guid: a9f805e163f0b450bafa7617ab1c41de, type: 3}
+      propertyPath: m_Name
+      value: Cutscene to Apartment
+      objectReference: {fileID: 0}
+    - target: {fileID: 6029872425083904624, guid: a9f805e163f0b450bafa7617ab1c41de, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6029872425083904624, guid: a9f805e163f0b450bafa7617ab1c41de, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6029872425083904624, guid: a9f805e163f0b450bafa7617ab1c41de, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6029872425083904624, guid: a9f805e163f0b450bafa7617ab1c41de, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6029872425083904624, guid: a9f805e163f0b450bafa7617ab1c41de, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6029872425083904624, guid: a9f805e163f0b450bafa7617ab1c41de, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6029872425083904624, guid: a9f805e163f0b450bafa7617ab1c41de, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6029872425083904624, guid: a9f805e163f0b450bafa7617ab1c41de, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6029872425083904624, guid: a9f805e163f0b450bafa7617ab1c41de, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6029872425083904624, guid: a9f805e163f0b450bafa7617ab1c41de, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7776910701698501432, guid: a9f805e163f0b450bafa7617ab1c41de, type: 3}
+      propertyPath: targetScene
+      value: Apartment
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a9f805e163f0b450bafa7617ab1c41de, type: 3}
+--- !u!4 &628359772 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6029872425083904624, guid: a9f805e163f0b450bafa7617ab1c41de, type: 3}
+  m_PrefabInstance: {fileID: 628359771}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &628568364
 GameObject:
   m_ObjectHideFlags: 0
@@ -7370,6 +8925,7 @@ Transform:
   - {fileID: 1987018481}
   - {fileID: 2123500595}
   - {fileID: 1927713107}
+  - {fileID: 920093318}
   - {fileID: 1157327205}
   - {fileID: 1102653847}
   m_Father: {fileID: 704833878}
@@ -7543,6 +9099,221 @@ MonoBehaviour:
   dialogue_from: 0
   localized_key: 
   text: I'm sad to say it only gets worse from here once the parent visits die down.
+  talking_beeps: {fileID: 0}
+  darken_all_other_characters: 1
+  bring_speaker_to_front: 1
+  clear_text_after: 0
+  log_text: 1
+  log_category: Default
+  done_printing: 0
+  no_voice_playing: 0
+  done_voice_clip: 0
+--- !u!1 &659867191
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 659867192}
+  - component: {fileID: 659867193}
+  m_Layer: 0
+  m_Name: Scared Charli (16)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &659867192
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 659867191}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 523765802}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &659867193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 659867191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44973f879676fe646a5d712c3f31e15a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  go_to_next_node: 1
+  executed_from_load: 0
+  actor_name_from: 0
+  actor_name: Charli
+  new_image: {fileID: 21300000, guid: 3248e1911d1c28040a01014bd1fdcbab, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
+  fade_in_new_image: 0
+  lighten_actor: 0
+  bring_actor_to_front: 0
+--- !u!1 &669463518
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 669463519}
+  - component: {fileID: 669463521}
+  - component: {fileID: 669463520}
+  m_Layer: 0
+  m_Name: Sup
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &669463519
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 669463518}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 55880338}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &669463520
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 669463518}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &669463521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 669463518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b40beeb965e5d9419bf817d6f7d59bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  go_to_next_node: 1
+  executed_from_load: 0
+  actor_name_from: 0
+  actor: Charli
+  speaker_name_from: 0
+  textbox_title: Charli
+  fetch_localized_stat_value: 0
+  dialogue_from: 0
+  localized_key: 
+  text: '[s:Player Name]! I''m heading back to my apartment.'
   talking_beeps: {fileID: 0}
   darken_all_other_characters: 1
   bring_speaker_to_front: 1
@@ -8388,14 +10159,17 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 655858618}
-  - {fileID: 1877834771}
+  - {fileID: 343170019}
+  - {fileID: 1637173014}
   - {fileID: 335549500}
-  - {fileID: 1094843572}
+  - {fileID: 230959590}
+  - {fileID: 434310330}
   - {fileID: 796468413}
   - {fileID: 1131484254}
   - {fileID: 1452016554}
   - {fileID: 1855016484}
-  - {fileID: 1028241246}
+  - {fileID: 1659863658}
+  - {fileID: 523765802}
   - {fileID: 1053893456}
   - {fileID: 552146082}
   m_Father: {fileID: 561909551}
@@ -9481,7 +11255,7 @@ GameObject:
   - component: {fileID: 796468413}
   - component: {fileID: 796468414}
   m_Layer: 0
-  m_Name: Hangout #2 (5)
+  m_Name: Sustainability
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9500,15 +11274,24 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1063930689}
   - {fileID: 985265262}
+  - {fileID: 620530638}
   - {fileID: 2142630183}
+  - {fileID: 479163771}
   - {fileID: 1922057019}
+  - {fileID: 69945344}
   - {fileID: 482419333}
+  - {fileID: 117670348}
   - {fileID: 1893118975}
   - {fileID: 1675085649}
+  - {fileID: 1165993601}
   - {fileID: 1594512459}
+  - {fileID: 1539862175}
   - {fileID: 1854932476}
+  - {fileID: 377664810}
   - {fileID: 844878869}
+  - {fileID: 1265707494}
   - {fileID: 1628036955}
   - {fileID: 798218005}
   - {fileID: 1603297509}
@@ -10885,6 +12668,60 @@ MonoBehaviour:
   includeTraitSnapshot: 1
   hideDialogueUI: 1
   traitRegistry: {fileID: 11400000, guid: 6b89a2d11a3454fb68d0952517d6298a, type: 2}
+--- !u!1 &920093317
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 920093318}
+  - component: {fileID: 920093319}
+  m_Layer: 0
+  m_Name: Change Actor Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &920093318
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 920093317}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 655858618}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &920093319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 920093317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44973f879676fe646a5d712c3f31e15a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VNEngine.ChangeActorImageNode
+  go_to_next_node: 1
+  executed_from_load: 0
+  actor_name_from: 0
+  actor_name: Charli
+  new_image: {fileID: 21300000, guid: 3248e1911d1c28040a01014bd1fdcbab, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
+  fade_in_new_image: 1
+  lighten_actor: 0
+  bring_actor_to_front: 0
 --- !u!1001 &920705069
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11771,6 +13608,114 @@ MonoBehaviour:
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
+--- !u!1 &996743067
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 996743068}
+  - component: {fileID: 996743069}
+  m_Layer: 0
+  m_Name: Scared Charli (18)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &996743068
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 996743067}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 552146082}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &996743069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 996743067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44973f879676fe646a5d712c3f31e15a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  go_to_next_node: 1
+  executed_from_load: 0
+  actor_name_from: 0
+  actor_name: Charli
+  new_image: {fileID: 21300000, guid: 418340026af91d844b0cb5f7ea54bc6d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
+  fade_in_new_image: 0
+  lighten_actor: 0
+  bring_actor_to_front: 0
+--- !u!1 &1005910571
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1005910572}
+  - component: {fileID: 1005910573}
+  m_Layer: 0
+  m_Name: Change Actor Image (9)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1005910572
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1005910571}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 230959590}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1005910573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1005910571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44973f879676fe646a5d712c3f31e15a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VNEngine.ChangeActorImageNode
+  go_to_next_node: 1
+  executed_from_load: 0
+  actor_name_from: 0
+  actor_name: Charli
+  new_image: {fileID: 21300000, guid: 04997ce779b256d4c90e1c9fb32668ed, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
+  fade_in_new_image: 1
+  lighten_actor: 0
+  bring_actor_to_front: 0
 --- !u!1 &1011282047
 GameObject:
   m_ObjectHideFlags: 0
@@ -11987,57 +13932,6 @@ MonoBehaviour:
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
---- !u!1 &1028241245
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1028241246}
-  - component: {fileID: 1028241247}
-  m_Layer: 0
-  m_Name: Hangout #2 (6)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1028241246
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1028241245}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1659863658}
-  - {fileID: 523765802}
-  m_Father: {fileID: 704833878}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1028241247
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1028241245}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7598fdb9cbb025c4293438a58006c68f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destroy_when_finished: 0
-  start_conversation_when_done: {fileID: 0}
-  cur_node: 0
-  active: 0
-  finished_conversation: 0
 --- !u!1 &1050753103
 GameObject:
   m_ObjectHideFlags: 0
@@ -12115,7 +14009,7 @@ GameObject:
   - component: {fileID: 1053893456}
   - component: {fileID: 1053893457}
   m_Layer: 0
-  m_Name: Hangout #2 (7)
+  m_Name: Ending Hangout
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12203,6 +14097,60 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Brad
   new_image: {fileID: 21300000, guid: 486566a01ce464da7b060b1364959c2e, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
+  fade_in_new_image: 0
+  lighten_actor: 0
+  bring_actor_to_front: 0
+--- !u!1 &1063930688
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1063930689}
+  - component: {fileID: 1063930690}
+  m_Layer: 0
+  m_Name: Scared Charli (10)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1063930689
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1063930688}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 796468413}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1063930690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1063930688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44973f879676fe646a5d712c3f31e15a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  go_to_next_node: 1
+  executed_from_load: 0
+  actor_name_from: 0
+  actor_name: Charli
+  new_image: {fileID: 21300000, guid: 3248e1911d1c28040a01014bd1fdcbab, type: 3}
   alt_idle_sprite: {fileID: 0}
   idle_frame_interval: 3
   fade_in_new_image: 0
@@ -12532,6 +14480,60 @@ MonoBehaviour:
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
+--- !u!1 &1082444876
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1082444877}
+  - component: {fileID: 1082444878}
+  m_Layer: 0
+  m_Name: Scared Charli (10)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1082444877
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082444876}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1855016484}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1082444878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082444876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44973f879676fe646a5d712c3f31e15a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  go_to_next_node: 1
+  executed_from_load: 0
+  actor_name_from: 0
+  actor_name: Charli
+  new_image: {fileID: 21300000, guid: 4f0404b7d59fae44fa5c4dc3a6be5e41, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
+  fade_in_new_image: 0
+  lighten_actor: 0
+  bring_actor_to_front: 0
 --- !u!1 &1086879391
 GameObject:
   m_ObjectHideFlags: 0
@@ -12693,57 +14695,6 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
---- !u!1 &1094843571
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1094843572}
-  - component: {fileID: 1094843573}
-  m_Layer: 0
-  m_Name: Hangout #2 (4)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1094843572
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1094843571}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 230959590}
-  - {fileID: 434310330}
-  m_Father: {fileID: 704833878}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1094843573
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1094843571}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7598fdb9cbb025c4293438a58006c68f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destroy_when_finished: 0
-  start_conversation_when_done: {fileID: 0}
-  cur_node: 0
-  active: 0
-  finished_conversation: 0
 --- !u!1 &1098010217
 GameObject:
   m_ObjectHideFlags: 0
@@ -13056,7 +15007,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1611349575936783945, guid: 0991620b818a844c8872842d42ccce09, type: 3}
       propertyPath: routes.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1611349575936783945, guid: 0991620b818a844c8872842d42ccce09, type: 3}
       propertyPath: musicFMODEventName
@@ -13065,7 +15016,7 @@ PrefabInstance:
     - target: {fileID: 1611349575936783945, guid: 0991620b818a844c8872842d42ccce09, type: 3}
       propertyPath: repeatableFallback
       value: 
-      objectReference: {fileID: 282285652}
+      objectReference: {fileID: 1257008414}
     - target: {fileID: 1611349575936783945, guid: 0991620b818a844c8872842d42ccce09, type: 3}
       propertyPath: musicFMODEventName.Path
       value: event:/MX_DiningHall
@@ -13092,7 +15043,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1611349575936783945, guid: 0991620b818a844c8872842d42ccce09, type: 3}
       propertyPath: routes.Array.data[4].stage
-      value: 8
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1611349575936783945, guid: 0991620b818a844c8872842d42ccce09, type: 3}
+      propertyPath: routes.Array.data[5].stage
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1611349575936783945, guid: 0991620b818a844c8872842d42ccce09, type: 3}
       propertyPath: musicFMODEventName.Guid.Data1
@@ -13128,7 +15083,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1611349575936783945, guid: 0991620b818a844c8872842d42ccce09, type: 3}
       propertyPath: routes.Array.data[4].character
-      value: 4
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1611349575936783945, guid: 0991620b818a844c8872842d42ccce09, type: 3}
+      propertyPath: routes.Array.data[5].character
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1611349575936783945, guid: 0991620b818a844c8872842d42ccce09, type: 3}
       propertyPath: ambientFMODEventName.Guid.Data1
@@ -13164,7 +15123,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1611349575936783945, guid: 0991620b818a844c8872842d42ccce09, type: 3}
       propertyPath: routes.Array.data[4].unlockWeek
-      value: 14
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1611349575936783945, guid: 0991620b818a844c8872842d42ccce09, type: 3}
+      propertyPath: routes.Array.data[5].unlockWeek
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1611349575936783945, guid: 0991620b818a844c8872842d42ccce09, type: 3}
       propertyPath: fallbackConversations.Array.size
@@ -13189,7 +15152,7 @@ PrefabInstance:
     - target: {fileID: 1611349575936783945, guid: 0991620b818a844c8872842d42ccce09, type: 3}
       propertyPath: routes.Array.data[4].conversation
       value: 
-      objectReference: {fileID: 1952798246198013278}
+      objectReference: {fileID: 55880339}
     - target: {fileID: 1611349575936783945, guid: 0991620b818a844c8872842d42ccce09, type: 3}
       propertyPath: 'fallbackConversations.Array.data[0]'
       value: 
@@ -13498,7 +15461,7 @@ GameObject:
   - component: {fileID: 1131484254}
   - component: {fileID: 1131484255}
   m_Layer: 0
-  m_Name: Hangout #2 - No invite
+  m_Name: Treasure Declined - No Invitation to Thrift
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13517,8 +15480,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1916633742}
   - {fileID: 1968623638}
+  - {fileID: 1571952314}
   - {fileID: 399845153}
+  - {fileID: 1781981962}
   - {fileID: 1803748302}
   m_Father: {fileID: 704833878}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13539,6 +15505,60 @@ MonoBehaviour:
   cur_node: 0
   active: 0
   finished_conversation: 0
+--- !u!1 &1150839314
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1150839315}
+  - component: {fileID: 1150839316}
+  m_Layer: 0
+  m_Name: Change Actor Image (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1150839315
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1150839314}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 343170019}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1150839316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1150839314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44973f879676fe646a5d712c3f31e15a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VNEngine.ChangeActorImageNode
+  go_to_next_node: 1
+  executed_from_load: 0
+  actor_name_from: 0
+  actor_name: Charli
+  new_image: {fileID: 21300000, guid: 3c5941dcd9aa794419fce89eef63189e, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
+  fade_in_new_image: 1
+  lighten_actor: 0
+  bring_actor_to_front: 0
 --- !u!1 &1157327204
 GameObject:
   m_ObjectHideFlags: 0
@@ -13700,6 +15720,168 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
+--- !u!1 &1162234827
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1162234828}
+  - component: {fileID: 1162234829}
+  m_Layer: 0
+  m_Name: Change Actor Image (11)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1162234828
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1162234827}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 230959590}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1162234829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1162234827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44973f879676fe646a5d712c3f31e15a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VNEngine.ChangeActorImageNode
+  go_to_next_node: 1
+  executed_from_load: 0
+  actor_name_from: 0
+  actor_name: Charli
+  new_image: {fileID: 21300000, guid: 4f0404b7d59fae44fa5c4dc3a6be5e41, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
+  fade_in_new_image: 1
+  lighten_actor: 0
+  bring_actor_to_front: 0
+--- !u!1 &1165993600
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1165993601}
+  - component: {fileID: 1165993602}
+  m_Layer: 0
+  m_Name: Scared Charli (15)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1165993601
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1165993600}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 796468413}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1165993602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1165993600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44973f879676fe646a5d712c3f31e15a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  go_to_next_node: 1
+  executed_from_load: 0
+  actor_name_from: 0
+  actor_name: Charli
+  new_image: {fileID: 21300000, guid: 4f0404b7d59fae44fa5c4dc3a6be5e41, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
+  fade_in_new_image: 0
+  lighten_actor: 0
+  bring_actor_to_front: 0
+--- !u!1 &1182874596
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1182874597}
+  - component: {fileID: 1182874598}
+  m_Layer: 0
+  m_Name: Scared Charli (7)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1182874597
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1182874596}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 434310330}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1182874598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1182874596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44973f879676fe646a5d712c3f31e15a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  go_to_next_node: 1
+  executed_from_load: 0
+  actor_name_from: 0
+  actor_name: Charli
+  new_image: {fileID: 21300000, guid: 418340026af91d844b0cb5f7ea54bc6d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
+  fade_in_new_image: 0
+  lighten_actor: 0
+  bring_actor_to_front: 0
 --- !u!1 &1184058415
 GameObject:
   m_ObjectHideFlags: 0
@@ -14471,6 +16653,58 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!1 &1257008412
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1257008413}
+  - component: {fileID: 1257008414}
+  m_Layer: 0
+  m_Name: Go Home and Advance Week
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1257008413
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1257008412}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 519147312}
+  - {fileID: 220361284}
+  - {fileID: 1856335884}
+  m_Father: {fileID: 561909551}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1257008414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1257008412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7598fdb9cbb025c4293438a58006c68f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroy_when_finished: 0
+  start_conversation_when_done: {fileID: 0}
+  cur_node: 0
+  active: 0
+  finished_conversation: 0
 --- !u!1 &1261725134
 GameObject:
   m_ObjectHideFlags: 0
@@ -14733,6 +16967,60 @@ MonoBehaviour:
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
+--- !u!1 &1265707493
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1265707494}
+  - component: {fileID: 1265707495}
+  m_Layer: 0
+  m_Name: Scared Charli (18)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1265707494
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1265707493}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 796468413}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1265707495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1265707493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44973f879676fe646a5d712c3f31e15a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  go_to_next_node: 1
+  executed_from_load: 0
+  actor_name_from: 0
+  actor_name: Charli
+  new_image: {fileID: 21300000, guid: be494195edebe854993168cb956220e1, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
+  fade_in_new_image: 0
+  lighten_actor: 0
+  bring_actor_to_front: 0
 --- !u!1 &1270281118
 GameObject:
   m_ObjectHideFlags: 0
@@ -14894,6 +17182,60 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
+--- !u!1 &1273178323
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1273178324}
+  - component: {fileID: 1273178325}
+  m_Layer: 0
+  m_Name: Scared Charli (17)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1273178324
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1273178323}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 523765802}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1273178325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1273178323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44973f879676fe646a5d712c3f31e15a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  go_to_next_node: 1
+  executed_from_load: 0
+  actor_name_from: 0
+  actor_name: Charli
+  new_image: {fileID: 21300000, guid: 4f0404b7d59fae44fa5c4dc3a6be5e41, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
+  fade_in_new_image: 0
+  lighten_actor: 0
+  bring_actor_to_front: 0
 --- !u!1 &1273386777
 GameObject:
   m_ObjectHideFlags: 0
@@ -15000,6 +17342,60 @@ MonoBehaviour:
   alt_idle_sprite: {fileID: 0}
   idle_frame_interval: 3
   fade_in_new_image: 0
+  lighten_actor: 0
+  bring_actor_to_front: 0
+--- !u!1 &1306841472
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1306841473}
+  - component: {fileID: 1306841474}
+  m_Layer: 0
+  m_Name: Change Actor Image (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1306841473
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1306841472}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 343170019}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1306841474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1306841472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44973f879676fe646a5d712c3f31e15a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VNEngine.ChangeActorImageNode
+  go_to_next_node: 1
+  executed_from_load: 0
+  actor_name_from: 0
+  actor_name: Charli
+  new_image: {fileID: 21300000, guid: 4f0404b7d59fae44fa5c4dc3a6be5e41, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
+  fade_in_new_image: 1
   lighten_actor: 0
   bring_actor_to_front: 0
 --- !u!1 &1320506376
@@ -15225,6 +17621,60 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Brad
   new_image: {fileID: 21300000, guid: 7670f9f301ce44cac8bc46503ace404a, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
+  fade_in_new_image: 0
+  lighten_actor: 0
+  bring_actor_to_front: 0
+--- !u!1 &1342406893
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1342406894}
+  - component: {fileID: 1342406895}
+  m_Layer: 0
+  m_Name: Scared Charli (14)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1342406894
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1342406893}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1659863658}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1342406895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1342406893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44973f879676fe646a5d712c3f31e15a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  go_to_next_node: 1
+  executed_from_load: 0
+  actor_name_from: 0
+  actor_name: Charli
+  new_image: {fileID: 21300000, guid: 3248e1911d1c28040a01014bd1fdcbab, type: 3}
   alt_idle_sprite: {fileID: 0}
   idle_frame_interval: 3
   fade_in_new_image: 0
@@ -16308,7 +18758,7 @@ GameObject:
   - component: {fileID: 1452016554}
   - component: {fileID: 1452016555}
   m_Layer: 0
-  m_Name: Hangout #2 - Dont wear other peoples clothes
+  m_Name: Only New Clothes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16327,7 +18777,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 213297280}
   - {fileID: 2013482076}
+  - {fileID: 1629079342}
   - {fileID: 1270281119}
   - {fileID: 800210974}
   - {fileID: 1642719492}
@@ -16351,6 +18803,60 @@ MonoBehaviour:
   cur_node: 0
   active: 0
   finished_conversation: 0
+--- !u!1 &1454693528
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1454693529}
+  - component: {fileID: 1454693530}
+  m_Layer: 0
+  m_Name: Change Actor Image (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1454693529
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1454693528}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 343170019}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1454693530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1454693528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44973f879676fe646a5d712c3f31e15a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VNEngine.ChangeActorImageNode
+  go_to_next_node: 1
+  executed_from_load: 0
+  actor_name_from: 0
+  actor_name: Charli
+  new_image: {fileID: 21300000, guid: 418340026af91d844b0cb5f7ea54bc6d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
+  fade_in_new_image: 1
+  lighten_actor: 0
+  bring_actor_to_front: 0
 --- !u!1 &1458182226
 GameObject:
   m_ObjectHideFlags: 0
@@ -17155,6 +19661,126 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
+--- !u!1001 &1535141765
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1910249043}
+    m_Modifications:
+    - target: {fileID: 5319443675053700257, guid: ec3a0cb61ebe746fe83af3f37b823395, type: 3}
+      propertyPath: character
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7538389768137986737, guid: ec3a0cb61ebe746fe83af3f37b823395, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -472.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7538389768137986737, guid: ec3a0cb61ebe746fe83af3f37b823395, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -265.78125
+      objectReference: {fileID: 0}
+    - target: {fileID: 7538389768137986737, guid: ec3a0cb61ebe746fe83af3f37b823395, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7538389768137986737, guid: ec3a0cb61ebe746fe83af3f37b823395, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7538389768137986737, guid: ec3a0cb61ebe746fe83af3f37b823395, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7538389768137986737, guid: ec3a0cb61ebe746fe83af3f37b823395, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7538389768137986737, guid: ec3a0cb61ebe746fe83af3f37b823395, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7538389768137986737, guid: ec3a0cb61ebe746fe83af3f37b823395, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7538389768137986737, guid: ec3a0cb61ebe746fe83af3f37b823395, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7538389768137986737, guid: ec3a0cb61ebe746fe83af3f37b823395, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8664001893975722998, guid: ec3a0cb61ebe746fe83af3f37b823395, type: 3}
+      propertyPath: m_Name
+      value: Football Invite
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ec3a0cb61ebe746fe83af3f37b823395, type: 3}
+--- !u!4 &1535141766 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7538389768137986737, guid: ec3a0cb61ebe746fe83af3f37b823395, type: 3}
+  m_PrefabInstance: {fileID: 1535141765}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1539862174
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1539862175}
+  - component: {fileID: 1539862176}
+  m_Layer: 0
+  m_Name: Scared Charli (16)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1539862175
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1539862174}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 796468413}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1539862176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1539862174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44973f879676fe646a5d712c3f31e15a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  go_to_next_node: 1
+  executed_from_load: 0
+  actor_name_from: 0
+  actor_name: Charli
+  new_image: {fileID: 21300000, guid: 3248e1911d1c28040a01014bd1fdcbab, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
+  fade_in_new_image: 0
+  lighten_actor: 0
+  bring_actor_to_front: 0
 --- !u!1 &1541745985
 GameObject:
   m_ObjectHideFlags: 0
@@ -17853,6 +20479,60 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
+--- !u!1 &1571952313
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1571952314}
+  - component: {fileID: 1571952315}
+  m_Layer: 0
+  m_Name: Scared Charli (10)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1571952314
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1571952313}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1131484254}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1571952315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1571952313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44973f879676fe646a5d712c3f31e15a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  go_to_next_node: 1
+  executed_from_load: 0
+  actor_name_from: 0
+  actor_name: Charli
+  new_image: {fileID: 21300000, guid: 3c5941dcd9aa794419fce89eef63189e, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
+  fade_in_new_image: 0
+  lighten_actor: 0
+  bring_actor_to_front: 0
 --- !u!1 &1575312514
 GameObject:
   m_ObjectHideFlags: 0
@@ -18936,6 +21616,60 @@ MonoBehaviour:
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
+--- !u!1 &1629079341
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1629079342}
+  - component: {fileID: 1629079343}
+  m_Layer: 0
+  m_Name: Scared Charli (13)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1629079342
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1629079341}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1452016554}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1629079343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1629079341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44973f879676fe646a5d712c3f31e15a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  go_to_next_node: 1
+  executed_from_load: 0
+  actor_name_from: 0
+  actor_name: Charli
+  new_image: {fileID: 21300000, guid: 4f0404b7d59fae44fa5c4dc3a6be5e41, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
+  fade_in_new_image: 0
+  lighten_actor: 0
+  bring_actor_to_front: 0
 --- !u!1 &1634542554
 GameObject:
   m_ObjectHideFlags: 0
@@ -19020,7 +21754,7 @@ GameObject:
   - component: {fileID: 1637173014}
   - component: {fileID: 1637173015}
   m_Layer: 0
-  m_Name: Grub any good?
+  m_Name: Food any good?
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19039,13 +21773,15 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 468715388}
   - {fileID: 1785153566}
+  - {fileID: 302214872}
   - {fileID: 870080292}
   - {fileID: 467009317}
   - {fileID: 257983296}
   - {fileID: 66802471}
   - {fileID: 527887088}
-  m_Father: {fileID: 1877834771}
+  m_Father: {fileID: 704833878}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1637173015
 MonoBehaviour:
@@ -19064,6 +21800,60 @@ MonoBehaviour:
   cur_node: 0
   active: 0
   finished_conversation: 0
+--- !u!1 &1637935085
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1637935086}
+  - component: {fileID: 1637935087}
+  m_Layer: 0
+  m_Name: Scared Charli (9)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1637935086
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1637935085}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 434310330}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1637935087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1637935085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44973f879676fe646a5d712c3f31e15a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  go_to_next_node: 1
+  executed_from_load: 0
+  actor_name_from: 0
+  actor_name: Charli
+  new_image: {fileID: 21300000, guid: 4f0404b7d59fae44fa5c4dc3a6be5e41, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
+  fade_in_new_image: 0
+  lighten_actor: 0
+  bring_actor_to_front: 0
 --- !u!1 &1642719491
 GameObject:
   m_ObjectHideFlags: 0
@@ -19276,6 +22066,57 @@ MonoBehaviour:
   fade_out: 0
   fade_in: 1
   wait_for_all_fading: 1
+--- !u!1 &1658570996
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1658570997}
+  - component: {fileID: 1658570998}
+  m_Layer: 0
+  m_Name: Online Dating - Move to Apartment
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1658570997
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1658570996}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -472.5, y: -265.78125, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2043344843}
+  - {fileID: 628359772}
+  m_Father: {fileID: 561909551}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1658570998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1658570996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7598fdb9cbb025c4293438a58006c68f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroy_when_finished: 0
+  start_conversation_when_done: {fileID: 0}
+  cur_node: 0
+  active: 0
+  finished_conversation: 0
 --- !u!1 &1659863657
 GameObject:
   m_ObjectHideFlags: 0
@@ -19306,9 +22147,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1342406894}
   - {fileID: 725314772}
+  - {fileID: 598056654}
   - {fileID: 683973595}
-  m_Father: {fileID: 1028241246}
+  m_Father: {fileID: 704833878}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1659863659
 MonoBehaviour:
@@ -19508,6 +22351,112 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6029872425083904624, guid: a9f805e163f0b450bafa7617ab1c41de, type: 3}
   m_PrefabInstance: {fileID: 1676485218}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1703134964
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1703134965}
+  - component: {fileID: 1703134966}
+  m_Layer: 0
+  m_Name: Enter Charli
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1703134965
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1703134964}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 55880338}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1703134966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1703134964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09938c65e7e0d714ab496e0473e454a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  go_to_next_node: 1
+  executed_from_load: 0
+  actor_name: Charli
+  actor_name_from: 0
+  entrance_type: 1
+  fade_in_time: 0.1
+  destination: 3
+  custom_position: {fileID: 1450658869}
+--- !u!1 &1714037565
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1714037566}
+  - component: {fileID: 1714037567}
+  m_Layer: 0
+  m_Name: Scared Charli (9)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1714037566
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1714037565}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1855016484}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1714037567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1714037565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44973f879676fe646a5d712c3f31e15a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  go_to_next_node: 1
+  executed_from_load: 0
+  actor_name_from: 0
+  actor_name: Charli
+  new_image: {fileID: 21300000, guid: 3248e1911d1c28040a01014bd1fdcbab, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
+  fade_in_new_image: 0
+  lighten_actor: 0
+  bring_actor_to_front: 0
 --- !u!1 &1714307278
 GameObject:
   m_ObjectHideFlags: 0
@@ -19836,6 +22785,60 @@ MonoBehaviour:
   includeTraitSnapshot: 1
   hideDialogueUI: 1
   traitRegistry: {fileID: 11400000, guid: 6b89a2d11a3454fb68d0952517d6298a, type: 2}
+--- !u!1 &1744597289
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1744597290}
+  - component: {fileID: 1744597291}
+  m_Layer: 0
+  m_Name: Scared Charli (19)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1744597290
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1744597289}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 552146082}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1744597291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1744597289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44973f879676fe646a5d712c3f31e15a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  go_to_next_node: 1
+  executed_from_load: 0
+  actor_name_from: 0
+  actor_name: Charli
+  new_image: {fileID: 21300000, guid: 4f0404b7d59fae44fa5c4dc3a6be5e41, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
+  fade_in_new_image: 0
+  lighten_actor: 0
+  bring_actor_to_front: 0
 --- !u!1 &1758200896
 GameObject:
   m_ObjectHideFlags: 0
@@ -19982,6 +22985,60 @@ MonoBehaviour:
   includeTraitSnapshot: 1
   hideDialogueUI: 1
   traitRegistry: {fileID: 11400000, guid: 6b89a2d11a3454fb68d0952517d6298a, type: 2}
+--- !u!1 &1781981961
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1781981962}
+  - component: {fileID: 1781981963}
+  m_Layer: 0
+  m_Name: Scared Charli (11)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1781981962
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1781981961}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1131484254}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1781981963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1781981961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44973f879676fe646a5d712c3f31e15a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  go_to_next_node: 1
+  executed_from_load: 0
+  actor_name_from: 0
+  actor_name: Charli
+  new_image: {fileID: 21300000, guid: 418340026af91d844b0cb5f7ea54bc6d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
+  fade_in_new_image: 0
+  lighten_actor: 0
+  bring_actor_to_front: 0
 --- !u!1 &1785153565
 GameObject:
   m_ObjectHideFlags: 0
@@ -20143,6 +23200,60 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
+--- !u!1 &1790605520
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1790605521}
+  - component: {fileID: 1790605522}
+  m_Layer: 0
+  m_Name: Change Actor Image (12)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1790605521
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1790605520}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 230959590}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1790605522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1790605520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44973f879676fe646a5d712c3f31e15a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VNEngine.ChangeActorImageNode
+  go_to_next_node: 1
+  executed_from_load: 0
+  actor_name_from: 0
+  actor_name: Charli
+  new_image: {fileID: 21300000, guid: 3248e1911d1c28040a01014bd1fdcbab, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
+  fade_in_new_image: 1
+  lighten_actor: 0
+  bring_actor_to_front: 0
 --- !u!1 &1803748301
 GameObject:
   m_ObjectHideFlags: 0
@@ -21138,7 +24249,7 @@ GameObject:
   - component: {fileID: 1855016484}
   - component: {fileID: 1855016485}
   m_Layer: 0
-  m_Name: Hangout #2 Deal
+  m_Name: Love Deals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21157,10 +24268,16 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1714037566}
   - {fileID: 1196501140}
+  - {fileID: 1082444877}
   - {fileID: 1516483042}
+  - {fileID: 214704593}
   - {fileID: 320565251}
+  - {fileID: 349165253}
+  - {fileID: 59802778}
   - {fileID: 848527182}
+  - {fileID: 49586063}
   - {fileID: 612836612}
   - {fileID: 2049340131}
   - {fileID: 1734920254}
@@ -21185,6 +24302,68 @@ MonoBehaviour:
   cur_node: 0
   active: 0
   finished_conversation: 0
+--- !u!1001 &1856335883
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1257008413}
+    m_Modifications:
+    - target: {fileID: 2180574896097361886, guid: a9f805e163f0b450bafa7617ab1c41de, type: 3}
+      propertyPath: m_Name
+      value: Cutscene Back Home (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6029872425083904624, guid: a9f805e163f0b450bafa7617ab1c41de, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -477.54218
+      objectReference: {fileID: 0}
+    - target: {fileID: 6029872425083904624, guid: a9f805e163f0b450bafa7617ab1c41de, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -261.9254
+      objectReference: {fileID: 0}
+    - target: {fileID: 6029872425083904624, guid: a9f805e163f0b450bafa7617ab1c41de, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6029872425083904624, guid: a9f805e163f0b450bafa7617ab1c41de, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6029872425083904624, guid: a9f805e163f0b450bafa7617ab1c41de, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6029872425083904624, guid: a9f805e163f0b450bafa7617ab1c41de, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6029872425083904624, guid: a9f805e163f0b450bafa7617ab1c41de, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6029872425083904624, guid: a9f805e163f0b450bafa7617ab1c41de, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6029872425083904624, guid: a9f805e163f0b450bafa7617ab1c41de, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6029872425083904624, guid: a9f805e163f0b450bafa7617ab1c41de, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a9f805e163f0b450bafa7617ab1c41de, type: 3}
+--- !u!4 &1856335884 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6029872425083904624, guid: a9f805e163f0b450bafa7617ab1c41de, type: 3}
+  m_PrefabInstance: {fileID: 1856335883}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1857154641
 GameObject:
   m_ObjectHideFlags: 0
@@ -21372,57 +24551,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1877834770
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1877834771}
-  - component: {fileID: 1877834772}
-  m_Layer: 0
-  m_Name: Hangout #2 (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1877834771
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1877834770}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 343170019}
-  - {fileID: 1637173014}
-  m_Father: {fileID: 704833878}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1877834772
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1877834770}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7598fdb9cbb025c4293438a58006c68f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destroy_when_finished: 0
-  start_conversation_when_done: {fileID: 0}
-  cur_node: 0
-  active: 0
-  finished_conversation: 0
 --- !u!1 &1887454089
 GameObject:
   m_ObjectHideFlags: 0
@@ -21885,6 +25013,7 @@ Transform:
   m_Children:
   - {fileID: 741271231}
   - {fileID: 209647456}
+  - {fileID: 1535141766}
   - {fileID: 160768531}
   - {fileID: 828607309}
   - {fileID: 1015948410}
@@ -21910,6 +25039,60 @@ MonoBehaviour:
   cur_node: 0
   active: 0
   finished_conversation: 0
+--- !u!1 &1916633741
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1916633742}
+  - component: {fileID: 1916633743}
+  m_Layer: 0
+  m_Name: Scared Charli (9)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1916633742
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1916633741}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1131484254}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1916633743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1916633741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44973f879676fe646a5d712c3f31e15a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  go_to_next_node: 1
+  executed_from_load: 0
+  actor_name_from: 0
+  actor_name: Charli
+  new_image: {fileID: 21300000, guid: 4f0404b7d59fae44fa5c4dc3a6be5e41, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
+  fade_in_new_image: 0
+  lighten_actor: 0
+  bring_actor_to_front: 0
 --- !u!1 &1919570006
 GameObject:
   m_ObjectHideFlags: 0
@@ -22426,6 +25609,60 @@ MonoBehaviour:
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
+--- !u!1 &1967250394
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1967250395}
+  - component: {fileID: 1967250396}
+  m_Layer: 0
+  m_Name: Change Actor Image (10)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1967250395
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1967250394}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 230959590}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1967250396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1967250394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44973f879676fe646a5d712c3f31e15a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VNEngine.ChangeActorImageNode
+  go_to_next_node: 1
+  executed_from_load: 0
+  actor_name_from: 0
+  actor_name: Charli
+  new_image: {fileID: 21300000, guid: 3248e1911d1c28040a01014bd1fdcbab, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
+  fade_in_new_image: 1
+  lighten_actor: 0
+  bring_actor_to_front: 0
 --- !u!1 &1968623637
 GameObject:
   m_ObjectHideFlags: 0
@@ -22587,6 +25824,60 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
+--- !u!1 &1977508579
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1977508580}
+  - component: {fileID: 1977508581}
+  m_Layer: 0
+  m_Name: Change Actor Image (7)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1977508580
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1977508579}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 335549500}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1977508581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1977508579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44973f879676fe646a5d712c3f31e15a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VNEngine.ChangeActorImageNode
+  go_to_next_node: 1
+  executed_from_load: 0
+  actor_name_from: 0
+  actor_name: Charli
+  new_image: {fileID: 21300000, guid: 4f0404b7d59fae44fa5c4dc3a6be5e41, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
+  fade_in_new_image: 1
+  lighten_actor: 0
+  bring_actor_to_front: 0
 --- !u!1 &1978890051
 GameObject:
   m_ObjectHideFlags: 0
@@ -23240,6 +26531,167 @@ MonoBehaviour:
   dialogue_from: 0
   localized_key: 
   text: You sound like my girlfriend Ji-ah.
+  talking_beeps: {fileID: 0}
+  darken_all_other_characters: 1
+  bring_speaker_to_front: 1
+  clear_text_after: 0
+  log_text: 1
+  log_category: Default
+  done_printing: 0
+  no_voice_playing: 0
+  done_voice_clip: 0
+--- !u!1 &2043344842
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2043344843}
+  - component: {fileID: 2043344845}
+  - component: {fileID: 2043344844}
+  m_Layer: 0
+  m_Name: Sup
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2043344843
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2043344842}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1658570997}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &2043344844
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2043344842}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &2043344845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2043344842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b40beeb965e5d9419bf817d6f7d59bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  go_to_next_node: 1
+  executed_from_load: 0
+  actor_name_from: 0
+  actor: Charli
+  speaker_name_from: 0
+  textbox_title: Charli
+  fetch_localized_stat_value: 0
+  dialogue_from: 0
+  localized_key: 
+  text: Nice!
   talking_beeps: {fileID: 0}
   darken_all_other_characters: 1
   bring_speaker_to_front: 1

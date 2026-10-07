@@ -657,7 +657,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 154.09, y: -64.813835}
+  m_AnchoredPosition: {x: 154.09, y: -16}
   m_SizeDelta: {x: 308.18, y: 32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4594251905516068138
@@ -2761,7 +2761,7 @@ MonoBehaviour:
       currentGradeText: {fileID: 4294454970340807001}
       previousExamText: {fileID: 8022653390702580869}
       currentGpaText: {fileID: 3583323621675262208}
-      penaltyFlashText: {fileID: 7482270936632529350}
+      penaltyFlashText: {fileID: 1146525080009713443}
     notepad:
       scoreText: {fileID: 2483910965230993263}
       scoreCaptionText: {fileID: 502261206483327804}
@@ -2772,6 +2772,13 @@ MonoBehaviour:
   incorrectClip: {fileID: 8300000, guid: 4b38b24fa5edb3343a9a58796471414f, type: 3}
   boxSpritePrefab: {fileID: 3556367016535126506, guid: 4ac777b79d1fd475f8e322b6da52004a, type: 3}
   eraserPrefab: {fileID: 293335351254099097, guid: e2d52a7aeba284a3d83a01105933da8f, type: 3}
+  studyMusicEvent:
+    Guid:
+      Data1: -1415558746
+      Data2: 1248991525
+      Data3: -430689096
+      Data4: -1452174976
+    Path: event:/Study
   spawnYOffset: 4
   boxYOffset: 0
   eraserYOffset: 0.75
@@ -4126,8 +4133,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -50, y: 0}
-  m_SizeDelta: {x: -700, y: -400}
+  m_AnchoredPosition: {x: 12.221008, y: 0}
+  m_SizeDelta: {x: -883.73, y: -400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &4611927580108931211
 GameObject:
@@ -4404,8 +4411,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 400
-  m_fontSizeBase: 400
+  m_fontSize: 350
+  m_fontSizeBase: 350
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4752,8 +4759,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 3723906582505538829}
   - {fileID: 8312266805002939794}
+  - {fileID: 3723906582505538829}
   - {fileID: 8889498810782703870}
   m_Father: {fileID: 2964319577239045055}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4803,7 +4810,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8552825403185428863
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5036,7 +5043,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 154.09, y: -16}
+  m_AnchoredPosition: {x: 154.09, y: -64.813835}
   m_SizeDelta: {x: 308.18, y: 32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5732716028948056633

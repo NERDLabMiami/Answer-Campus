@@ -135,7 +135,7 @@ namespace VNEngine
         {
             GetComponent<TimedChoiceNode>()?.StopTimer();
 
-            if (logOnSelect && Logging.Instance != null)
+            if (logOnSelect && Logging.Instance != null && choices[idx].enableLogging)
             {
                 var cm = GetComponentInParent<ConversationManager>();
                 var json = new Dictionary<string, object>
@@ -191,6 +191,7 @@ namespace VNEngine
             {
                 int orig = _presentedOrder[shown];
                 var ch = choices[orig];
+                if (!ch.enableLogging) continue;
                 list.Add(new Dictionary<string, object> {
                     { "id", $"{name}#{orig}" },
                     { "label", ch.label ?? "" },

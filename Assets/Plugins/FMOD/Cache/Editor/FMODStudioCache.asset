@@ -210,10 +210,10 @@ MonoBehaviour:
   Path: FMODProject2.03.09/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639096899854675230
+  lastModified: 639268749245231708
   FileSizes:
   - Name: Desktop
-    Value: 3783872
+    Value: 4969888
   Exists: 1
 --- !u!114 &-2149293943409382034
 MonoBehaviour:
@@ -304,13 +304,14 @@ MonoBehaviour:
   - {fileID: 2209437869186358229}
   - {fileID: -6960244031982086609}
   - {fileID: -6300990642991159049}
+  - {fileID: 3161252801478860348}
   EditorParameters: []
   MasterBanks:
   - {fileID: -3252486969619402163}
   StringsBanks:
   - {fileID: 1438610184703079444}
   cacheVersion: 131860
-  cacheTime: 639096899854692907
+  cacheTime: 639268749266464080
   SerializableEventsDict:
   - key: event:/AMB_Outdoors
     index: 0
@@ -344,6 +345,8 @@ MonoBehaviour:
     index: 14
   - key: event:/Band Countdown
     index: 15
+  - key: event:/Study
+    index: 16
 --- !u!114 &59669392965041854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -415,10 +418,10 @@ MonoBehaviour:
   Path: FMODProject2.03.09/Build/Desktop/AMB.bank
   Name: AMB
   StudioPath: bank:/AMB
-  lastModified: 639096899854520820
+  lastModified: 639268749227296241
   FileSizes:
   - Name: Desktop
-    Value: 6412832
+    Value: 6412864
   Exists: 1
 --- !u!114 &861672118006877754
 MonoBehaviour:
@@ -490,10 +493,10 @@ MonoBehaviour:
   Path: FMODProject2.03.09/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639096899854692907
+  lastModified: 639268749245245819
   FileSizes:
   - Name: Desktop
-    Value: 1730
+    Value: 1766
   Exists: 1
 --- !u!114 &1537494245310959418
 MonoBehaviour:
@@ -685,6 +688,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 64000
+--- !u!114 &3161252801478860348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Study
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Study
+  Guid:
+    Data1: -1415558746
+    Data2: 1248991525
+    Data3: -430689096
+    Data4: -1452174976
+  Banks:
+  - {fileID: -3252486969619402163}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 114782
 --- !u!114 &4038929919171215268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -832,10 +862,10 @@ MonoBehaviour:
   Path: FMODProject2.03.09/Build/Desktop/MX.bank
   Name: MX
   StudioPath: bank:/MX
-  lastModified: 639096899854637859
+  lastModified: 639268749266464080
   FileSizes:
   - Name: Desktop
-    Value: 15539808
+    Value: 15539712
   Exists: 1
 --- !u!114 &8519286237822434307
 MonoBehaviour:

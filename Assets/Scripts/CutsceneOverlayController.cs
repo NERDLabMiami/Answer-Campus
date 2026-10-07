@@ -72,7 +72,7 @@ public class CutsceneOverlayController : MonoBehaviour
         if (_canvas != null) _canvas.enabled = true;
         canvasGroup.blocksRaycasts = true;
         canvasGroup.interactable   = true;
-        yield return Fade(canvasGroup.alpha, 5f);
+        yield return Fade(canvasGroup.alpha, 1f);
     }
 
     // Fade the overlay out (to transparent).

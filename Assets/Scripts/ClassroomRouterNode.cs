@@ -25,8 +25,12 @@ namespace VNEngine
 
             Debug.Log($"[ClassroomRouterNode] Week: {currentWeek} (Mid:{midWeek} Final:{finWeek})");
 
-            // Finals preempts everything on its week, but only if not completed.
-            if (currentWeek == finWeek && finalConversation != null)
+            // Finals preempts everything from its week onward (>=, not ==), but only if not
+            // completed. A story checkpoint's explicit week-jump can land the player past
+            // finWeek before they ever arrive here (confirmed: a "Set Week" node configured
+            // for week 15 skips week 14 outright) -- Finals must still fire when overdue, not
+            // only on the exact week, or it becomes permanently skippable.
+            if (currentWeek >= finWeek && finalConversation != null)
             {
                 bool finalDone = GameEvents.IsCustomEventCompleted(GameEvents.FinalsEventId);
                 if (!finalDone)
@@ -40,8 +44,8 @@ namespace VNEngine
                 Debug.Log("[ClassroomRouterNode] Final already completed; falling through.");
             }
 
-            // Midterm preempts everything on its week, but only if not completed.
-            if (currentWeek == midWeek && midtermConversation != null)
+            // Midterm preempts everything from its week onward (>=, not ==), same reasoning.
+            if (currentWeek >= midWeek && midtermConversation != null)
             {
                 bool midDone = GameEvents.IsCustomEventCompleted(GameEvents.MidtermsEventId);
                 if (!midDone)

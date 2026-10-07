@@ -47,6 +47,11 @@ namespace VNEngine
             SaveManager.current_slot = slotIndex;
             StatsManager.Clear_All_Stats();
             PlayerPrefs.DeleteAll();
+            // Only reached via ShowEmpty (no save currently in this slot), so there's
+            // normally nothing here to delete -- this guards against a stale file left
+            // over if the slot's SaveFile failed to deserialize/load earlier without
+            // being cleaned up. Deletes only this slot, not the other two.
+            SaveManager.DeleteSaveForSlot(slotIndex);
             SceneManager.LoadScene(newGameScene);
         }
 

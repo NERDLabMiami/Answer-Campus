@@ -40,8 +40,15 @@ public class SaveProgress : MonoBehaviour
 
     public void Reset()
     {
+        // VNEngine.SaveManager writes its own files straight to disk (save_slot_N.gd),
+        // entirely separate from StatsManager/PlayerPrefs -- neither of the clears above
+        // touches it. Without this, HomeCutsceneController.EnsureStatsPopulated() falls
+        // back to whatever stale save is still on disk the moment Home.unity loads with no
+        // Week stat and no PlayerPrefs checkpoint, silently resuming the previous
+        // playthrough's end-of-game state instead of starting Move-In Day/Orientation.
         StatsManager.Clear_All_Stats();
         PlayerPrefs.DeleteAll();
+        SaveManager.DeleteAllSaves();
     }
 
     public void Save()

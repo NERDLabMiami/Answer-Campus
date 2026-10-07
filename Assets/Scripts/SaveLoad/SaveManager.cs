@@ -118,6 +118,22 @@ namespace VNEngine
             Save();
         }
 
+        // Deletes just the given slot's own file, without needing a loaded SaveFile object
+        // (DeleteSave(SaveFile) requires one, which doesn't exist for an already-empty slot).
+        // Used by SaveSlotController.StartNewGame() so starting fresh in one slot can't leave
+        // that slot's own stale file behind without touching the other two slots' saves.
+        public static void DeleteSaveForSlot(int slot)
+        {
+            string path = SlotPath(slot);
+            if (File.Exists(path))
+            {
+                File.Delete(path);
+                Debug.Log("Deleted save slot " + slot);
+            }
+            saved_games.RemoveAll(s => s.slot_index == slot);
+            Save();
+        }
+
         public static void DeleteAllSaves()
         {
             for (int i = 0; i < 3; i++)

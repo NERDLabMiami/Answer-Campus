@@ -355,6 +355,9 @@ public class HomeCutsceneController : MonoBehaviour
         {
             // Any non-class destination: the day is consumed.
             // Mark skip penalty if player is still in the morning phase.
+            // NOTE: never reset back to false anywhere, so it doubles as a semester-wide
+            // "never skipped a class" signal for GradeCalculator's perfect_attendance achievement.
+            // Don't add a per-week reset without updating that check.
             if (leavingPhase == 0 && leavingWeek >= 1 &&
                 targetScene != cheerScene && targetScene != footballScene)
             {
@@ -460,21 +463,28 @@ public class HomeCutsceneController : MonoBehaviour
         if (isFirstDay || isOrientationReturn)
         {
             // ── Move-In Day ──────────────────────────────────────────────────
+            Debug.Log("[MoveInDay] Showing North Hall overlay, holding...");
             overlay.SetContent(dayAndTime, "North Hall", null, fullDate, "Winchester Residential College");
             yield return new WaitForSeconds(holdDuration);
+            Debug.Log("[MoveInDay] Hold finished, fading overlay out...");
             yield return StartCoroutine(overlay.FadeOut());
+            Debug.Log("[MoveInDay] Overlay faded out.");
 
             if (isFirstDay)
             {
                 if (arrivalSprite != null && backgroundImage != null)
                 {
+                    Debug.Log("[MoveInDay] Showing arrival sprite...");
                     var normalSprite = backgroundImage.sprite;
                     backgroundImage.sprite = arrivalSprite;
                     yield return new WaitForSeconds(0.4f);
                     backgroundImage.sprite = normalSprite;
+                    Debug.Log("[MoveInDay] Arrival sprite shown.");
                 }
 
+                Debug.Log("[MoveInDay] Animating base objects...");
                 yield return StartCoroutine(AnimateBaseObjects());
+                Debug.Log("[MoveInDay] Base objects animated.");
 
                 StatsManager.Set_Boolean_Stat(STAT_HOME_INITIALIZED, true);
             }
@@ -484,10 +494,12 @@ public class HomeCutsceneController : MonoBehaviour
 
             if (orientationButton != null)
             {
+                Debug.Log("[MoveInDay] Activating orientation button.");
                 orientationButton.onClick.RemoveAllListeners();
                 orientationButton.onClick.AddListener(() => { _orientationButtonPressed = true; });
                 orientationButton.gameObject.SetActive(true);
                 yield return new WaitUntil(() => _orientationButtonPressed);
+                Debug.Log("[MoveInDay] Orientation button pressed.");
                 orientationButton.onClick.RemoveAllListeners();
                 orientationButton.gameObject.SetActive(false);
             }
@@ -589,8 +601,19 @@ public class HomeCutsceneController : MonoBehaviour
 
         foreach (var obj in home.homeObjects)
         {
-            if (obj == null || obj.condition != HomeObject.Condition.Achievement) continue;
-            bool earned   = StatsManager.Get_Boolean_Stat("Achievement_" + obj.achievementKey);
+            if (obj == null) continue;
+            bool earned;
+            switch (obj.condition)
+            {
+                case HomeObject.Condition.Achievement:
+                    earned = StatsManager.Get_Boolean_Stat("Achievement_" + obj.achievementKey);
+                    break;
+                case HomeObject.Condition.HasItem:
+                    earned = StatsManager.Has_Item(obj.itemKey);
+                    break;
+                default:
+                    continue;
+            }
             bool wasShown = StatsManager.Get_Boolean_Stat(REVEAL_PREFIX + obj.gameObject.name);
             if (earned && !wasShown) result.Add(obj);
         }
@@ -620,7 +643,11 @@ public class HomeCutsceneController : MonoBehaviour
 
     private IEnumerator AnimateBaseObjects()
     {
-        if (home?.homeObjects == null) yield break;
+        if (home?.homeObjects == null)
+        {
+            Debug.Log("[MoveInDay][AnimateBaseObjects] home or home.homeObjects is null -- exiting immediately.");
+            yield break;
+        }
 
         if (homeObjectsGroup != null)
             homeObjectsGroup.alpha = 1f;
@@ -640,8 +667,12 @@ public class HomeCutsceneController : MonoBehaviour
                 toReveal.Add(obj);
         }
 
+        Debug.Log($"[MoveInDay][AnimateBaseObjects] home.homeObjects.Count={home.homeObjects.Count}, toReveal.Count={toReveal.Count}, revealDuration={revealDuration}, pauseBetweenReveals={pauseBetweenReveals}");
+
         foreach (var obj in toReveal)
         {
+            Debug.Log($"[MoveInDay][AnimateBaseObjects] Revealing '{obj.gameObject.name}'...");
+
             // Get (or add) a CanvasGroup local to this object's own GameObject.
             // obj.canvasGroup points to the shared parent group — using it would fade all objects at once.
             CanvasGroup cg = obj.gameObject.GetComponent<CanvasGroup>();
@@ -660,9 +691,11 @@ public class HomeCutsceneController : MonoBehaviour
                 yield return null;
             }
             cg.alpha = 1f;
+            Debug.Log($"[MoveInDay][AnimateBaseObjects] Faded in '{obj.gameObject.name}'. Waiting {pauseBetweenReveals}s before next.");
 
             StatsManager.Set_Boolean_Stat(REVEAL_PREFIX + obj.gameObject.name, true);
             yield return new WaitForSeconds(pauseBetweenReveals);
+            Debug.Log($"[MoveInDay][AnimateBaseObjects] Pause finished after '{obj.gameObject.name}'.");
         }
     }
 

@@ -7,8 +7,10 @@ namespace VNEngine
     public class NodeAchievement : Node
     {
         public string achievement;
-        // Called initially when the node is run, put most of your logic here
-        public override void Run_Node()
+
+        // Grants an achievement by key. Shared so non-Node code (e.g. GradeCalculator) can unlock
+        // achievements that are earned from pure stat conditions rather than a conversation beat.
+        public static void Unlock(string achievement)
         {
             string achievementKey = "Achievement_" + achievement;
             if (!StatsManager.Get_Boolean_Stat(achievementKey))
@@ -22,6 +24,12 @@ namespace VNEngine
             }
 
             SteamManager.UnlockAchievement(achievement);
+        }
+
+        // Called initially when the node is run, put most of your logic here
+        public override void Run_Node()
+        {
+            Unlock(achievement);
 
             // if there's no need to  wait for other operations/coroutines, call finish node at the end of this method
             Finish_Node();

@@ -2956,7 +2956,55 @@ MonoBehaviour:
   set_number_to: 0
   modify_number_amount: 0
   set_bool_to: 1
-  set_string_to: 
+  set_string_to:
+--- !u!1 &547342177
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 110919057}
+  - component: {fileID: 886714830}
+  m_Layer: 0
+  m_Name: Give Movie Poster
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &110919057
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547342177}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 489855760}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &886714830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547342177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82d649ea25a900847a5ff33e72c9953b, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  go_to_next_node: 1
+  executed_from_load: 0
+  Action: 0
+  Item_Name: MoviePoster
 --- !u!1 &247437439
 GameObject:
   m_ObjectHideFlags: 0
@@ -5996,6 +6044,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1619724842}
+  - {fileID: 110919057}
   - {fileID: 241698607}
   m_Father: {fileID: 178533259}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10207,7 +10256,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroy_when_finished: 0
-  start_conversation_when_done: {fileID: 0}
+  start_conversation_when_done: {fileID: 1381011148}
   cur_node: 0
   active: 0
   finished_conversation: 0
@@ -27663,56 +27712,6 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
---- !u!1 &8213363608620233376
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8213363608620233377}
-  - component: {fileID: 8213363608620233382}
-  m_Layer: 0
-  m_Name: Set Background
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8213363608620233377
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8213363608620233376}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 8213363609173562754}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8213363608620233382
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8213363608620233376}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5176883eab49b6d4e9279aae31e3ee3a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  go_to_next_node: 1
-  executed_from_load: 0
-  sprite: {fileID: 21300000, guid: 990f47bf881fcf6498703fcfa1fa6e98, type: 3}
-  set_foreground: 0
-  fade_out: 0
-  fade_in: 0
 --- !u!4 &8213363608658280584
 Transform:
   m_ObjectHideFlags: 0
@@ -29127,7 +29126,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 8213363608620233377}
   - {fileID: 8213363609971252054}
   - {fileID: 8213363609897872794}
   - {fileID: 8213363609293403720}

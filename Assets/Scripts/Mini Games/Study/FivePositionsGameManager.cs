@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using VNEngine;
+using FMODUnity;
 
 [System.Serializable]
 public class QuestionAnswerPair
@@ -100,8 +101,8 @@ public class FivePositionsGameManager : MonoBehaviour
         [System.Serializable]
         public class PhoneBlock
         {
-            public TextMeshProUGUI currentGradeText; // "EXAM GRADE: A"
-            public TextMeshProUGUI previousExamText; // e.g. "A-" (blank if none taken yet)
+            public TextMeshProUGUI currentGradeText; // "Midterm Exam: A" / "Final Exam: A"
+            public TextMeshProUGUI previousExamText; // e.g. "Midterm Exam: A-" (blank if none taken yet)
             public TextMeshProUGUI currentGpaText;   // "Projected GPA 3.9"
             public TextMeshProUGUI penaltyFlashText; // "GRADE AFFECTED\n-0.3"
         }
@@ -134,6 +135,7 @@ public class FivePositionsGameManager : MonoBehaviour
     public AudioClip incorrectClip;
     public GameObject boxSpritePrefab;
     public GameObject eraserPrefab;
+    public EventReference studyMusicEvent;
     [Header("Offsets")]
     public float spawnYOffset = 100f; // how far above each box the letter should spawn
     public float boxYOffset = 0f;         // Optional adjustment (e.g., -0.5f if needed)
@@ -332,6 +334,8 @@ public class FivePositionsGameManager : MonoBehaviour
 
     public void StartGame()
     {
+        FMODAudioManager.Instance?.PushMusic(studyMusicEvent);
+
         // Rules may not have been applied yet (e.g. GroupStudyManager starts without Initialize)
         ApplyModeRules(currentMode);
 
@@ -467,7 +471,8 @@ public class FivePositionsGameManager : MonoBehaviour
         SetText(examUI.notepad.progressText, BuildExamProgressLine());
 
         string letter = GradeCalculator.CurrentExamLetterGrade(strikesUsed, strikePool);
-        SetText(examUI.phone.currentGradeText, "EXAM GRADE: " + letter);
+        string examLabel = GradeCalculator.IsFinal(currentExamId) ? "Final Exam" : "Midterm Exam";
+        SetText(examUI.phone.currentGradeText, examLabel + ": " + letter);
         SetText(examUI.phone.previousExamText, GradeCalculator.PreviousExamLabel(currentExamId));
         SetText(examUI.phone.currentGpaText, "Projected GPA " + GradeCalculator.ProjectedGpa(currentExamId, strikesUsed, strikePool).ToString("0.0"));
     }
@@ -687,6 +692,47 @@ public class FivePositionsGameManager : MonoBehaviour
         return newLetter.GetComponent<LetterMovement>();
     }
 
+    /// <summary>True if `letter` is the correct answer for `boxIndex`'s position in the current word.</summary>
+    public bool IsCorrectLetterForBox(int boxIndex, char letter)
+    {
+        if (boxIndex < 0 || boxIndex >= targetLetters.Length) return false;
+        return letter == targetLetters[boxIndex];
+    }
+
+    /// <summary>
+    /// Called by LetterMovement.Erase() when the erased letter was actually the correct
+    /// answer for its box. Previously this was consequence-free (just a replacement letter
+    /// for the same word), which meant an eraser that never moves -- an AFK player, or
+    /// headless automation providing no input -- could park in front of a column and erase
+    /// every correct letter that column ever receives, leaving that box permanently unfilled
+    /// with no timer, strike, or word-cap progression able to end the round: a genuine
+    /// stuck-forever state. Erasing a correct letter is now penalized the same way a wrong
+    /// letter reaching the bottom is (time penalty in Solo, a strike in Group/Exam), and
+    /// additionally forces the current word to end immediately so the round can never stall.
+    /// </summary>
+    public void OnCorrectLetterErased(int boxIndex, LetterMovement erasedInstance)
+    {
+        if (gameIsOver) return;
+
+        // The erased letter may still be sitting in waitingLetters[boxIndex] (it was
+        // never "activated"/picked yet). Clear that slot now so the still-running
+        // spawnRoutine can't treat this fading-out letter as eligible and re-Activate() it.
+        if (erasedInstance != null && waitingLetters[boxIndex] == erasedInstance)
+            waitingLetters[boxIndex] = null;
+
+        if (timed)
+        {
+            ApplyTimePenalty();
+        }
+        else if (ApplyStrike())
+        {
+            StartCoroutine(StrikeOut());
+            return;
+        }
+
+        StartCoroutine(RestartGameRoutine());
+    }
+
     /// <summary>
     /// Spawns this column's next letter immediately (idle/parked, not yet counting down)
     /// so the player can see it well before it's ever chosen to drop. Called the instant
@@ -737,6 +783,7 @@ public class FivePositionsGameManager : MonoBehaviour
 
     private void StartNewRound()
     {
+        if (activeLetter != null) Destroy(activeLetter.gameObject);
         activeLetter = null;
         wordsAttempted++;
 
@@ -772,7 +819,11 @@ public class FivePositionsGameManager : MonoBehaviour
                     boxLetterDisplays[i].text = " ";
                 }
             }
-            for (int i = 0; i < waitingLetters.Length; i++) waitingLetters[i] = null;
+            for (int i = 0; i < waitingLetters.Length; i++)
+            {
+                if (waitingLetters[i] != null) Destroy(waitingLetters[i].gameObject);
+                waitingLetters[i] = null;
+            }
         }
         else
         {
@@ -920,8 +971,8 @@ public class FivePositionsGameManager : MonoBehaviour
         int left = StrikesLeft;
         if (gradeAtStake)
         {
-            float before = GradeCalculator.ExamHalfPoints(GradeCalculator.CurrentExamLetterGrade(strikesUsed - 1, strikePool));
-            float after = GradeCalculator.ExamHalfPoints(GradeCalculator.CurrentExamLetterGrade(strikesUsed, strikePool));
+            float before = GradeCalculator.ExamHalfPointsFromPercent(GradeCalculator.ExamPercent(strikesUsed - 1, strikePool));
+            float after = GradeCalculator.ExamHalfPointsFromPercent(GradeCalculator.ExamPercent(strikesUsed, strikePool));
             ShowFlash($"GRADE AFFECTED\n-{(before - after).ToString("0.0")}");
         }
         else
@@ -962,6 +1013,14 @@ public class FivePositionsGameManager : MonoBehaviour
     /// After a short delay, pause the timer, clear boxes, do a new countdown, then unpause.
     /// </summary>
     private IEnumerator RestartGameRoutine() {
+        // Stop the old spawn loop immediately so it can't keep running (and activating
+        // stale letters from the word we're leaving) during the delay below.
+        if (spawnRoutine != null)
+        {
+            StopCoroutine(spawnRoutine);
+            spawnRoutine = null;
+        }
+
         //half the time between spawns
         minSpawnInterval = Mathf.Max(minSpawnInterval * 0.9f, 0.3f); // limit how fast it gets
         maxSpawnInterval = Mathf.Max(maxSpawnInterval * 0.9f, 1f);
@@ -977,7 +1036,6 @@ public class FivePositionsGameManager : MonoBehaviour
 
             // Pause timer during the countdown
             isTimerPaused = true;
-            spawnRoutine = null;
             // Clear boxes
             for (int i = 0; i < 5; i++) {
                 if (boxLetterDisplays[i] != null) {
@@ -995,6 +1053,8 @@ public class FivePositionsGameManager : MonoBehaviour
     /// </summary>
     private IEnumerator EndGame()
     {
+        FMODAudioManager.Instance?.PopMusic();
+
         gameIsOver = true;
         activeLetter = null;
         if (spawnRoutine != null)
@@ -1007,9 +1067,8 @@ public class FivePositionsGameManager : MonoBehaviour
 
         if (currentMode == GameMode.Exam)
         {
-            // Exam result = the letter grade earned from strikes used against this exam's strike pool
-            string letterGrade = GradeCalculator.CurrentExamLetterGrade(strikesUsed, strikePool);
-            GradeCalculator.RecordExam(examId, letterGrade);
+            // Exam result = recorded against strikes used vs. this exam's strike pool
+            GradeCalculator.RecordExam(examId, strikesUsed, strikePool);
         }
         else
         {

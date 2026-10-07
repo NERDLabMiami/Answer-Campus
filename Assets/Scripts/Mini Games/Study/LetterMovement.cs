@@ -177,7 +177,12 @@ public class LetterMovement : MonoBehaviour {
     public void Erase() {
         if (isErasing) return;
         isErasing = true;
-        if (manager != null) manager.SpawnReplacementLetter(boxIndex, this);
+        if (manager != null) {
+            if (manager.IsCorrectLetterForBox(boxIndex, letterChar))
+                manager.OnCorrectLetterErased(boxIndex, this);
+            else
+                manager.SpawnReplacementLetter(boxIndex, this);
+        }
 //        audioSource.PlayOneShot(eraserClip);
         Collider2D col = GetComponent<Collider2D>();
         if (col != null) col.enabled = false;

@@ -28,7 +28,17 @@ public class MenuOptions : MonoBehaviour
 
     public void ResetProgress()
     {
+        // PlayerPrefs alone isn't enough: StatsManager is a static in-memory class, so any
+        // boolean stat set during a previous playthrough this session (e.g. a "seen this
+        // fallback already" flag) survives a PlayerPrefs wipe and leaks into the "new"
+        // game -- confirmed: Student Center then skips Orientation straight to its
+        // repeatable fallback, since whatever gates Orientation still reads as "seen".
+        // VNEngine.SaveManager also writes its own files straight to disk, entirely
+        // separate from PlayerPrefs, so those need clearing too for a genuinely fresh start.
+        StatsManager.Clear_All_Stats();
         PlayerPrefs.DeleteAll();
+        PlayerPrefs.Save();
+        SaveManager.DeleteAllSaves();
     }
 
     public void SaveCurrentScene()

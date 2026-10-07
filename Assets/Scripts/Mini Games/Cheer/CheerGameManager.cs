@@ -860,7 +860,17 @@ private void FinalizeQuarterScore(int totalCombos, int combosMade)
     {
         Debug.Log("Game Over - Final Routine Placeholder");
         RecordGameResult(weekNumber, won, homeScore, awayScore);
+        StatsManager.Set_Boolean_Stat("LastGame_Won", won);
         StatsManager.Set_Boolean_Stat("JustReturnedFromGame", true);
+
+        var allGames = FootballScheduler.GetAllGames();
+        int lastWeek = 0;
+        foreach (var g in allGames)
+            if (g.week > lastWeek) lastWeek = g.week;
+        var (wins, losses) = FootballScheduler.GetSeasonRecord();
+        bool perfectSeasonFinale = weekNumber == lastWeek && losses == 0 && wins > 0;
+        StatsManager.Set_Boolean_Stat("PerfectSeasonFinale", perfectSeasonFinale);
+
         SceneManager.LoadScene("Post Game");
     }
 

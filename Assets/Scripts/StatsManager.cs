@@ -347,7 +347,11 @@ namespace VNEngine
             if (Check_If_Physical_Item_Exists(item_name))
                 return;
 
-            GameObject item = GameObject.Instantiate(Resources.Load<GameObject>("Items/" + item_name));
+            GameObject prefab = Resources.Load<GameObject>("Items/" + item_name);
+            if (prefab == null)
+                return; // flag-only item: no physical collectible defined
+
+            GameObject item = GameObject.Instantiate(prefab);
             item.name = item_name;
             item.transform.SetParent(UIManager.ui_manager.item_grid.transform);
             item.transform.localScale = Vector3.one;

@@ -145,24 +145,12 @@ public class Calendar : MonoBehaviour
         if (_isRedirecting) return;
 
         int week = (int)StatsManager.Get_Numbered_Stat("Week");
-        var due = GameEvents.GetWeekPreview(week);
 
-        // Priority: Finals, Midterms, Football
-        EventInfo chosen = default;
-        bool hasChosen = false;
-
-        int idx = due.FindIndex(e => e.id == GameEvents.FinalsEventId);
-        if (idx >= 0 && !GameEvents.IsCustomEventCompleted(GameEvents.FinalsEventId))
-            { chosen = due[idx]; hasChosen = true; }
-
-        if (!hasChosen)
-        {
-            idx = due.FindIndex(e => e.id == GameEvents.MidtermsEventId);
-            if (idx >= 0 && !GameEvents.IsCustomEventCompleted(GameEvents.MidtermsEventId))
-                { chosen = due[idx]; hasChosen = true; }
-        }
-        
-        if (hasChosen && !string.IsNullOrEmpty(chosen.location))
+        // Overdue-aware (week <= current), not GetWeekPreview's exact-week match -- a story
+        // checkpoint's explicit week-jump can skip a scheduled exam week outright (confirmed:
+        // a "Set Week" node landing on week 15 skips week 14 entirely), and midterms/finals
+        // must still be un-skippable in that case.
+        if (GameEvents.TryFindOverdueRequiredEvent(week, out var chosen) && !string.IsNullOrEmpty(chosen.location))
         {
             _isRedirecting = true;
             HomeCutsceneController.Instance?.QueueRequiredRedirect(chosen.location);
@@ -214,7 +202,12 @@ public class Calendar : MonoBehaviour
     private static Character ParseBestFriendEnum(string rawValue)
     {
         // Normalize: lowercase, remove non-alphanumeric characters, then PascalCase it
-        string cleaned = Regex.Replace(rawValue, @"[^a-zA-Z0-9]", ""); // Remove symbols
+        string cleaned = Regex.Replace(rawValue ?? "", @"[^a-zA-Z0-9]", ""); // Remove symbols
+        if (string.IsNullOrEmpty(cleaned))
+        {
+            Debug.LogWarning("'Best Friend' stat was empty at semester end. Defaulting.");
+            return Character.NONE;
+        }
         cleaned = char.ToUpper(cleaned[0]) + cleaned.Substring(1).ToLower(); // Simple PascalCase
 
         if (Enum.TryParse(typeof(Character), cleaned, out var result))

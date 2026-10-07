@@ -65,3 +65,11 @@ MonoBehaviour:
     location: {fileID: 11400000, guid: 10c374189ea9e43938841b7044e774eb, type: 2}
     stage: 2
     unlockWeek: 15
+  - character: 9
+    location: {fileID: 11400000, guid: 61c4b036abc3d411c87452e400441761, type: 2}
+    stage: 1
+    unlockWeek: 7
+  - character: 9
+    location: {fileID: 11400000, guid: 13ecdb615fef44fa39beb0c740c54ec6, type: 2}
+    stage: 1
+    unlockWeek: 7

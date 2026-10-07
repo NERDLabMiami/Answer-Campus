@@ -34,7 +34,6 @@ public class FixedAspectCamera : MonoBehaviour
         }
         else
         {
-            Debug.Log($"Window is too wide, fixing");
             // Window is too wide: pillarbox left/right
             float scaleWidth = 1.0f / scaleHeight;
 

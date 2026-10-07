@@ -13,12 +13,15 @@ public class HomeObject : MonoBehaviour
         DayTimeOnly,
         FootballGameAfternoon,
         ClassAttended,
+        HasItem,
     }
 
     [Header("Condition")]
     public Condition condition;
     [Tooltip("Achievement name (without 'Achievement_' prefix). Used when condition = Achievement.")]
     public string achievementKey;
+    [Tooltip("Item name as passed to StatsManager.Add_Item. Used when condition = HasItem.")]
+    public string itemKey;
     [Tooltip("When set to anything other than Always, controls button interactability independently of visibility. Use on objects that are always visible once earned but only interactable under specific conditions (e.g. Mascot bobblehead).")]
     public Condition interactionCondition = Condition.Always;
 
@@ -67,8 +70,8 @@ public class HomeObject : MonoBehaviour
     {
         bool available = Evaluate(condition);
 
-        // Achievement objects must stay fully hidden until earned — player shouldn't know they exist
-        if (condition == Condition.Achievement && !available)
+        // Achievement/HasItem objects must stay fully hidden until earned — player shouldn't know they exist
+        if ((condition == Condition.Achievement || condition == Condition.HasItem) && !available)
         {
             gameObject.SetActive(false);
             return;
@@ -127,6 +130,8 @@ public class HomeObject : MonoBehaviour
                 return StatsManager.Get_Numbered_Stat("DayPhase") < 1f;
             case Condition.ClassAttended:
                 return StatsManager.Get_Boolean_Stat("ClassAttendedThisWeek");
+            case Condition.HasItem:
+                return StatsManager.Has_Item(itemKey);
             default:
                 return true;
         }

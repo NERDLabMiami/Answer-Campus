@@ -247,6 +247,18 @@ namespace VNEngine
             go.AddComponent<GateTraitsNode>();
         }
 
+// GameObject ▸ VN Engine ▸ Branching ▸ Gate Last Game Result
+        [MenuItem("GameObject/VN Engine/Branching/Gate Last Game Result", false, 0)]
+        private static void GateLastGameResult(MenuCommand menuCommand)
+        {
+            GameObject go = new GameObject("Gate Last Game Result");
+            GameObjectUtility.SetParentAndAlign(go, menuCommand.context as GameObject);
+            Undo.RegisterCreatedObjectUndo(go, "Create " + go.name);
+            Selection.activeObject = go;
+
+            go.AddComponent<GateLastGameResultNode>();
+        }
+
 // GameObject ▸ VN Engine ▸ Branching ▸ Show Choice
         [MenuItem("GameObject/VN Engine/Branching/Show Choice", false, 0)]
         private static void ShowChoiceNode(MenuCommand menuCommand)

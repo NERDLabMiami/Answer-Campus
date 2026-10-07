@@ -6,22 +6,60 @@
   <component name="ChangeListManager">
     <list default="true" id="9996ada3-4319-4fb7-8fe3-ae48058a1aa4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Answer-Campus/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Answer-Campus/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/VNEngineEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/VNEngineEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/NotoColorEmoji-Regular Color.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/NotoColorEmoji-Regular Color.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MiniGames/Study/Default Challenge.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MiniGames/Study/Default Challenge.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MiniGames/Study/Study Game.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MiniGames/Study/Study Game.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Conversation Pieces/Simple Show Choices.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Conversation Pieces/Simple Show Choices.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Stages/Stage Route Index.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Stages/Stage Route Index.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Locations/Apartment.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Locations/Apartment.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Locations/Dining Hall.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Locations/Dining Hall.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Locations/Green.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Locations/Green.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Locations/Home.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Locations/Home.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Locations/Lecture Hall.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Locations/Lecture Hall.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Locations/Library.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Locations/Library.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Locations/Post Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Locations/Post Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Locations/Student Center.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Locations/Student Center.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Calendar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Calendar.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ClassroomRouterNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ClassroomRouterNode.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CutsceneOverlayController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CutsceneOverlayController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FMODAudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FMODAudioManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FixedAspectCamera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FixedAspectCamera.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameEvents.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameEvents.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/HomeCutsceneController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HomeCutsceneController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Docs/VNEngine Audit/Apartment.md" beforeDir="false" afterPath="$PROJECT_DIR$/Docs/VNEngine Audit/Apartment.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Docs/VNEngine Audit/Choice Migration/Library-editor-run.md" beforeDir="false" afterPath="$PROJECT_DIR$/Docs/VNEngine Audit/Choice Migration/Library-editor-run.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Docs/VNEngine Audit/Dining Hall.md" beforeDir="false" afterPath="$PROJECT_DIR$/Docs/VNEngine Audit/Dining Hall.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Docs/VNEngine Audit/Green.md" beforeDir="false" afterPath="$PROJECT_DIR$/Docs/VNEngine Audit/Green.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Docs/VNEngine Audit/Lecture Hall.md" beforeDir="false" afterPath="$PROJECT_DIR$/Docs/VNEngine Audit/Lecture Hall.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Docs/VNEngine Audit/Library.md" beforeDir="false" afterPath="$PROJECT_DIR$/Docs/VNEngine Audit/Library.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Docs/VNEngine Audit/Outside Class.md" beforeDir="false" afterPath="$PROJECT_DIR$/Docs/VNEngine Audit/Outside Class.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Docs/VNEngine Audit/Post Game.md" beforeDir="false" afterPath="$PROJECT_DIR$/Docs/VNEngine Audit/Post Game.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Docs/VNEngine Audit/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Docs/VNEngine Audit/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Docs/VNEngine Audit/Shuttle.md" beforeDir="false" afterPath="$PROJECT_DIR$/Docs/VNEngine Audit/Shuttle.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Docs/VNEngine Audit/StatKeyLint.md" beforeDir="false" afterPath="$PROJECT_DIR$/Docs/VNEngine Audit/StatKeyLint.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tools/audit_vn_conversations.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tools/audit_vn_conversations.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HomeObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HomeObject.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MenuOptions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MenuOptions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Mini Games/Cheer/CheerGameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Mini Games/Cheer/CheerGameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Mini Games/Study/FivePositionsGameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Mini Games/Study/FivePositionsGameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Mini Games/Study/GradeCalculator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Mini Games/Study/GradeCalculator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Mini Games/Study/LetterMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Mini Games/Study/LetterMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Nodes/ShowChoiceNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Nodes/ShowChoiceNode.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SaveLoad/SaveManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SaveLoad/SaveManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SaveLoad/SaveSlotController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SaveLoad/SaveSlotController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SaveProgress.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SaveProgress.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StageRouteIndex.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StageRouteIndex.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StatsManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StatsManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FMODProject2.03.09/.cache/buildrecords/Desktop/AMB.br" beforeDir="false" afterPath="$PROJECT_DIR$/FMODProject2.03.09/.cache/buildrecords/Desktop/AMB.br" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FMODProject2.03.09/.cache/buildrecords/Desktop/MX.br" beforeDir="false" afterPath="$PROJECT_DIR$/FMODProject2.03.09/.cache/buildrecords/Desktop/MX.br" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FMODProject2.03.09/.cache/buildrecords/Desktop/Master.br" beforeDir="false" afterPath="$PROJECT_DIR$/FMODProject2.03.09/.cache/buildrecords/Desktop/Master.br" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FMODProject2.03.09/.cache/fsbcache/Desktop/070FB9EE.fobj" beforeDir="false" afterPath="$PROJECT_DIR$/FMODProject2.03.09/.cache/fsbcache/Desktop/070FB9EE.fobj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FMODProject2.03.09/.cache/fsbcache/Desktop/4DA99523.fobj" beforeDir="false" afterPath="$PROJECT_DIR$/FMODProject2.03.09/.cache/fsbcache/Desktop/4DA99523.fobj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FMODProject2.03.09/.cache/fsbcache/Desktop/56A45A5B.fobj" beforeDir="false" afterPath="$PROJECT_DIR$/FMODProject2.03.09/.cache/fsbcache/Desktop/56A45A5B.fobj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FMODProject2.03.09/.cache/fsbcache/Desktop/ADE84E12.fobj" beforeDir="false" afterPath="$PROJECT_DIR$/FMODProject2.03.09/.cache/fsbcache/Desktop/ADE84E12.fobj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FMODProject2.03.09/.cache/fsbcache/Desktop/BEF74D71.fobj" beforeDir="false" afterPath="$PROJECT_DIR$/FMODProject2.03.09/.cache/fsbcache/Desktop/BEF74D71.fobj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FMODProject2.03.09/.cache/fsbcache/Desktop/E7E3DFF4.fobj" beforeDir="false" afterPath="$PROJECT_DIR$/FMODProject2.03.09/.cache/fsbcache/Desktop/E7E3DFF4.fobj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FMODProject2.03.09/.cache/fsbcache/Desktop/E7F0700D.fobj" beforeDir="false" afterPath="$PROJECT_DIR$/FMODProject2.03.09/.cache/fsbcache/Desktop/E7F0700D.fobj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FMODProject2.03.09/.cache/fsbcache/Desktop/F669A20C.fobj" beforeDir="false" afterPath="$PROJECT_DIR$/FMODProject2.03.09/.cache/fsbcache/Desktop/F669A20C.fobj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FMODProject2.03.09/.cache/{b8022c5a-86b6-4629-a5c7-c9fb27b112b2}.pdc" beforeDir="false" afterPath="$PROJECT_DIR$/FMODProject2.03.09/.cache/{b8022c5a-86b6-4629-a5c7-c9fb27b112b2}.pdc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FMODProject2.03.09/Build/Desktop/AMB.bank" beforeDir="false" afterPath="$PROJECT_DIR$/FMODProject2.03.09/Build/Desktop/AMB.bank" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FMODProject2.03.09/Build/Desktop/MX.bank" beforeDir="false" afterPath="$PROJECT_DIR$/FMODProject2.03.09/Build/Desktop/MX.bank" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FMODProject2.03.09/Build/Desktop/Master.bank" beforeDir="false" afterPath="$PROJECT_DIR$/FMODProject2.03.09/Build/Desktop/Master.bank" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FMODProject2.03.09/Build/Desktop/Master.strings.bank" beforeDir="false" afterPath="$PROJECT_DIR$/FMODProject2.03.09/Build/Desktop/Master.strings.bank" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fmod_editor.log" beforeDir="false" afterPath="$PROJECT_DIR$/fmod_editor.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +166,7 @@
       <workItem from="1782418213467" duration="179926000" />
       <workItem from="1790355769469" duration="8146000" />
       <workItem from="1790633392743" duration="16907000" />
-      <workItem from="1790721562968" duration="86791000" />
+      <workItem from="1790721562968" duration="163264000" />
     </task>
     <servers />
   </component>
