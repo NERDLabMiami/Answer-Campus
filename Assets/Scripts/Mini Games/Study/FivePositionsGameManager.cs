@@ -33,6 +33,7 @@ public class FivePositionsGameManager : MonoBehaviour
     private int wordCap;      // 0 = unlimited
     private bool gradeAtStake;
     private string currentExamId = "";
+    private bool wordStrikeCharged; // caps strikes at one per word, regardless of how many wrong letters land for it
 
     public StudyQuestionLoader questionLoader;
 
@@ -786,6 +787,7 @@ public class FivePositionsGameManager : MonoBehaviour
         if (activeLetter != null) Destroy(activeLetter.gameObject);
         activeLetter = null;
         wordsAttempted++;
+        wordStrikeCharged = false;
 
         if (wordCap > 0 && wordsAttempted > wordCap)
         {
@@ -919,10 +921,13 @@ public class FivePositionsGameManager : MonoBehaviour
             if (timed) {
                 ApplyTimePenalty();
             }
-            else if (ApplyStrike()) {
-                if (letterObj != null) Destroy(letterObj);
-                StartCoroutine(StrikeOut());
-                return;
+            else if (!wordStrikeCharged) {
+                wordStrikeCharged = true;
+                if (ApplyStrike()) {
+                    if (letterObj != null) Destroy(letterObj);
+                    StartCoroutine(StrikeOut());
+                    return;
+                }
             }
 
             // Not struck out: let the letter play its miss animation (red/bounce/fade)

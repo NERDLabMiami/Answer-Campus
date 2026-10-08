@@ -150,6 +150,7 @@ GameObject:
   - component: {fileID: 4256422815928349394}
   - component: {fileID: 2520710471856427015}
   - component: {fileID: 1583010642400725956}
+  - component: {fileID: 8789899526851729726}
   m_Layer: 5
   m_Name: Quick Reply Button
   m_TagString: Untagged
@@ -236,7 +237,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.6156863, g: 0.30588236, b: 0.8666667, a: 0.4392157}
+    m_NormalColor: {r: 0.45570543, g: 0.249644, b: 0.6226415, a: 1}
     m_HighlightedColor: {r: 1, g: 0.79607844, b: 0.019607844, a: 1}
     m_PressedColor: {r: 1, g: 0.87932074, b: 0.4198113, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -274,3 +275,18 @@ MonoBehaviour:
   button: {fileID: 2520710471856427015}
   label: {fileID: 3831133534494853489}
   icon: {fileID: 4256422815928349394}
+--- !u!114 &8789899526851729726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6603393653193782846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Shadow
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 2, y: -2}
+  m_UseGraphicAlpha: 1

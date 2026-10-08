@@ -84,7 +84,13 @@ namespace VNEngine
                     EditorGUILayout.LabelField("<b>Bold</b>", g);
                     EditorGUILayout.EndHorizontal();
                     EditorStyles.textField.wordWrap = true;
-                    node.text = EditorGUILayout.TextArea(node.text);
+                    EditorGUI.BeginChangeCheck();
+                    string newText = EditorGUILayout.TextArea(node.text);
+                    if (EditorGUI.EndChangeCheck())
+                    {
+                        node.text = newText;
+                        VNNodeEditorGUI.MarkDirtyIfChanged(node, true);
+                    }
                     break;
                 case Dialogue_Source.Localized_Text_From_CSV:
                     EditorGUILayout.HelpBox("You must assign a Localized_Dialogue_CSV to the DialogueCanvas/SceneManager to use localized text", MessageType.Info);

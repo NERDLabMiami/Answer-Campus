@@ -2578,6 +2578,7 @@ Transform:
   m_Children:
   - {fileID: 1147971679}
   - {fileID: 679551996}
+  - {fileID: 139132935}
   - {fileID: 316818005}
   - {fileID: 664136375}
   - {fileID: 2028299023}
@@ -4085,6 +4086,60 @@ MonoBehaviour:
   cur_node: 0
   active: 0
   finished_conversation: 0
+--- !u!1 &139132934
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 139132935}
+  - component: {fileID: 139132936}
+  m_Layer: 0
+  m_Name: Change Actor Image (9)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &139132935
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139132934}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -472.5, y: -265.78125, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 91132977}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &139132936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139132934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44973f879676fe646a5d712c3f31e15a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  go_to_next_node: 1
+  executed_from_load: 0
+  actor_name_from: 0
+  actor_name: Leilani
+  new_image: {fileID: 21300000, guid: b3c8a8fea65b38347a6181091d4bcea2, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
+  fade_in_new_image: 0
+  lighten_actor: 0
+  bring_actor_to_front: 0
 --- !u!1 &140154074
 GameObject:
   m_ObjectHideFlags: 0
@@ -17856,6 +17911,60 @@ MonoBehaviour:
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
+--- !u!1 &530260296
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 530260297}
+  - component: {fileID: 530260298}
+  m_Layer: 0
+  m_Name: Change Actor Image (12)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &530260297
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 530260296}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -472.5, y: -265.78125, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 865371935}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &530260298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 530260296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44973f879676fe646a5d712c3f31e15a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  go_to_next_node: 1
+  executed_from_load: 0
+  actor_name_from: 0
+  actor_name: Professor Blanche
+  new_image: {fileID: 21300000, guid: 8924711cf5f4a704899db7c2dc93127d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
+  fade_in_new_image: 0
+  lighten_actor: 0
+  bring_actor_to_front: 0
 --- !u!1 &530949318
 GameObject:
   m_ObjectHideFlags: 0
@@ -21222,7 +21331,7 @@ PrefabInstance:
     - target: {fileID: 3660970706817432856, guid: c1a93db3362e44a4aa9d2342f37f4b6e, type: 3}
       propertyPath: image
       value: 
-      objectReference: {fileID: 21300000, guid: 094359e5e6c5d9e46aed16539d13e574, type: 3}
+      objectReference: {fileID: 21300000, guid: 03f06a81b5c5d944fb91e51c14bddf51, type: 3}
     - target: {fileID: 3660970706817432856, guid: c1a93db3362e44a4aa9d2342f37f4b6e, type: 3}
       propertyPath: caption_text
       value: The campus map allows you to navigate around campus. It's now available
@@ -21500,6 +21609,60 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Professor Blanche
   new_image: {fileID: 21300000, guid: 8924711cf5f4a704899db7c2dc93127d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
+  fade_in_new_image: 0
+  lighten_actor: 0
+  bring_actor_to_front: 0
+--- !u!1 &622537256
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 622537257}
+  - component: {fileID: 622537258}
+  m_Layer: 0
+  m_Name: Change Actor Image (11)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &622537257
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 622537256}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -472.5, y: -265.78125, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 865371935}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &622537258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 622537256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44973f879676fe646a5d712c3f31e15a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  go_to_next_node: 1
+  executed_from_load: 0
+  actor_name_from: 0
+  actor_name: Professor Blanche
+  new_image: {fileID: 21300000, guid: 4e4bb958f8373e54ea1fa5a0b13142c7, type: 3}
   alt_idle_sprite: {fileID: 0}
   idle_frame_interval: 3
   fade_in_new_image: 0
@@ -25512,6 +25675,60 @@ MonoBehaviour:
   includeTraitSnapshot: 1
   hideDialogueUI: 1
   traitRegistry: {fileID: 11400000, guid: 6b89a2d11a3454fb68d0952517d6298a, type: 2}
+--- !u!1 &737878886
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 737878887}
+  - component: {fileID: 737878888}
+  m_Layer: 0
+  m_Name: Change Actor Image (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &737878887
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737878886}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -472.5, y: -265.78125, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1550306325}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &737878888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737878886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44973f879676fe646a5d712c3f31e15a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  go_to_next_node: 1
+  executed_from_load: 0
+  actor_name_from: 0
+  actor_name: Professor Blanche
+  new_image: {fileID: 21300000, guid: 75fa20bb22eebc3429081baf24c967cd, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
+  fade_in_new_image: 0
+  lighten_actor: 0
+  bring_actor_to_front: 0
 --- !u!1 &757708088
 GameObject:
   m_ObjectHideFlags: 0
@@ -28691,7 +28908,9 @@ Transform:
   - {fileID: 1646107616}
   - {fileID: 283029747}
   - {fileID: 1691588457}
+  - {fileID: 622537257}
   - {fileID: 1014475830}
+  - {fileID: 530260297}
   - {fileID: 1015527700}
   m_Father: {fileID: 457831268}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -32406,7 +32625,7 @@ PrefabInstance:
     - target: {fileID: 3660970706817432856, guid: c1a93db3362e44a4aa9d2342f37f4b6e, type: 3}
       propertyPath: image
       value: 
-      objectReference: {fileID: 21300000, guid: 094359e5e6c5d9e46aed16539d13e574, type: 3}
+      objectReference: {fileID: 21300000, guid: 03f06a81b5c5d944fb91e51c14bddf51, type: 3}
     - target: {fileID: 3660970706817432856, guid: c1a93db3362e44a4aa9d2342f37f4b6e, type: 3}
       propertyPath: caption_text
       value: The campus map allows you to navigate around campus. It's now available
@@ -37401,6 +37620,60 @@ MonoBehaviour:
   fade_in_time: 0.1
   destination: 3
   custom_position: {fileID: 4909160718463724324}
+--- !u!1 &1139751585
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1139751586}
+  - component: {fileID: 1139751587}
+  m_Layer: 0
+  m_Name: Change Actor Image (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1139751586
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139751585}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -472.5, y: -265.78125, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1233671188}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1139751587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139751585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44973f879676fe646a5d712c3f31e15a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  go_to_next_node: 1
+  executed_from_load: 0
+  actor_name_from: 0
+  actor_name: Leilani
+  new_image: {fileID: 21300000, guid: da364da1e4e30b749beb09dbc6af1ca2, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
+  fade_in_new_image: 0
+  lighten_actor: 0
+  bring_actor_to_front: 0
 --- !u!1 &1139919556
 GameObject:
   m_ObjectHideFlags: 0
@@ -37502,6 +37775,60 @@ MonoBehaviour:
   actor_name_from: 0
   actor_name: Leilani
   new_image: {fileID: 21300000, guid: 461cc3d8d0b3ed34f876ab0713865708, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
+  fade_in_new_image: 0
+  lighten_actor: 0
+  bring_actor_to_front: 0
+--- !u!1 &1148999784
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1148999785}
+  - component: {fileID: 1148999786}
+  m_Layer: 0
+  m_Name: Change Actor Image (8)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1148999785
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1148999784}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -472.5, y: -265.78125, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2005466471}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1148999786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1148999784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44973f879676fe646a5d712c3f31e15a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  go_to_next_node: 1
+  executed_from_load: 0
+  actor_name_from: 0
+  actor_name: Professor Blanche
+  new_image: {fileID: 21300000, guid: 7352e1374b0d13a41b44565039240836, type: 3}
   alt_idle_sprite: {fileID: 0}
   idle_frame_interval: 3
   fade_in_new_image: 0
@@ -38663,6 +38990,60 @@ MonoBehaviour:
   includeTraitSnapshot: 1
   hideDialogueUI: 1
   traitRegistry: {fileID: 11400000, guid: 6b89a2d11a3454fb68d0952517d6298a, type: 2}
+--- !u!1 &1182870070
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1182870071}
+  - component: {fileID: 1182870072}
+  m_Layer: 0
+  m_Name: Change Actor Image (7)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1182870071
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1182870070}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -472.5, y: -265.78125, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2005466471}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1182870072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1182870070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44973f879676fe646a5d712c3f31e15a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  go_to_next_node: 1
+  executed_from_load: 0
+  actor_name_from: 0
+  actor_name: Professor Blanche
+  new_image: {fileID: 21300000, guid: 4e4bb958f8373e54ea1fa5a0b13142c7, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
+  fade_in_new_image: 0
+  lighten_actor: 0
+  bring_actor_to_front: 0
 --- !u!1001 &1187522013
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39510,6 +39891,60 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
+--- !u!1 &1212441049
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1212441050}
+  - component: {fileID: 1212441051}
+  m_Layer: 0
+  m_Name: Change Actor Image (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1212441050
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1212441049}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -472.5, y: -265.78125, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1550306325}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1212441051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1212441049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44973f879676fe646a5d712c3f31e15a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  go_to_next_node: 1
+  executed_from_load: 0
+  actor_name_from: 0
+  actor_name: Professor Blanche
+  new_image: {fileID: 21300000, guid: 4e4bb958f8373e54ea1fa5a0b13142c7, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
+  fade_in_new_image: 0
+  lighten_actor: 0
+  bring_actor_to_front: 0
 --- !u!1 &1213760630
 GameObject:
   m_ObjectHideFlags: 0
@@ -40109,7 +40544,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1652116177}
   - {fileID: 1553753498}
+  - {fileID: 1139751586}
   - {fileID: 1023162592}
   - {fileID: 616990736}
   - {fileID: 1523318149}
@@ -42429,7 +42866,7 @@ MonoBehaviour:
   actor_name: Professor Blanche
   actor_name_from: 0
   entrance_type: 1
-  fade_in_time: 0.1
+  fade_in_time: 0
   destination: 3
   custom_position: {fileID: 4909160718463724324}
 --- !u!1 &1298219890
@@ -42879,6 +43316,60 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5275582187492880113, guid: c87e9d001b140b24e93b21ae3617e89b, type: 3}
   m_PrefabInstance: {fileID: 1321877354}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1325417374
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1325417375}
+  - component: {fileID: 1325417376}
+  m_Layer: 0
+  m_Name: Change Actor Image (13)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1325417375
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325417374}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -472.5, y: -265.78125, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1698236181}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1325417376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325417374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44973f879676fe646a5d712c3f31e15a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  go_to_next_node: 1
+  executed_from_load: 0
+  actor_name_from: 0
+  actor_name: Professor Blanche
+  new_image: {fileID: 21300000, guid: 08546d42c5bfce74aa5f4550671f9a0d, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
+  fade_in_new_image: 0
+  lighten_actor: 0
+  bring_actor_to_front: 0
 --- !u!1 &1327982344
 GameObject:
   m_ObjectHideFlags: 0
@@ -48754,7 +49245,9 @@ Transform:
   - {fileID: 1853326877}
   - {fileID: 1314606846}
   - {fileID: 1880183302}
+  - {fileID: 1212441050}
   - {fileID: 735279316}
+  - {fileID: 737878887}
   - {fileID: 566585680}
   - {fileID: 2049868614}
   m_Father: {fileID: 457831268}
@@ -51570,6 +52063,60 @@ MonoBehaviour:
   fade_in_new_image: 0
   lighten_actor: 0
   bring_actor_to_front: 0
+--- !u!1 &1652116176
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1652116177}
+  - component: {fileID: 1652116178}
+  m_Layer: 0
+  m_Name: Change Actor Image (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1652116177
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1652116176}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -472.5, y: -265.78125, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1233671188}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1652116178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1652116176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44973f879676fe646a5d712c3f31e15a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  go_to_next_node: 1
+  executed_from_load: 0
+  actor_name_from: 0
+  actor_name: Leilani
+  new_image: {fileID: 21300000, guid: b3c8a8fea65b38347a6181091d4bcea2, type: 3}
+  alt_idle_sprite: {fileID: 0}
+  idle_frame_interval: 3
+  fade_in_new_image: 0
+  lighten_actor: 0
+  bring_actor_to_front: 0
 --- !u!1 &1652666519
 GameObject:
   m_ObjectHideFlags: 0
@@ -53431,6 +53978,7 @@ Transform:
   - {fileID: 1540908227}
   - {fileID: 1132031535}
   - {fileID: 757708089}
+  - {fileID: 1325417375}
   - {fileID: 53161821}
   m_Father: {fileID: 457831268}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -55145,7 +55693,7 @@ PrefabInstance:
     - target: {fileID: 3660970706817432856, guid: c1a93db3362e44a4aa9d2342f37f4b6e, type: 3}
       propertyPath: image
       value: 
-      objectReference: {fileID: 21300000, guid: 094359e5e6c5d9e46aed16539d13e574, type: 3}
+      objectReference: {fileID: 21300000, guid: 03f06a81b5c5d944fb91e51c14bddf51, type: 3}
     - target: {fileID: 3660970706817432856, guid: c1a93db3362e44a4aa9d2342f37f4b6e, type: 3}
       propertyPath: caption_text
       value: The campus map allows you to navigate around campus. It's now available
@@ -58374,6 +58922,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4611927580146391923, guid: e31b2cd2dafdc49129455683f491ef13, type: 3}
+      propertyPath: m_fontSize
+      value: 320
+      objectReference: {fileID: 0}
+    - target: {fileID: 4611927580146391923, guid: e31b2cd2dafdc49129455683f491ef13, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 320
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -61336,7 +61892,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7053660882281012505, guid: 055d54775d5803f47a39dc9b66c29a8f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -80.000015
+      value: -80
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -61655,7 +62211,9 @@ Transform:
   - {fileID: 1759049245}
   - {fileID: 1335578071}
   - {fileID: 497278111}
+  - {fileID: 1182870071}
   - {fileID: 2048539470}
+  - {fileID: 1148999785}
   - {fileID: 526063754}
   m_Father: {fileID: 457831268}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -62072,7 +62630,7 @@ PrefabInstance:
     - target: {fileID: 3660970706817432856, guid: c1a93db3362e44a4aa9d2342f37f4b6e, type: 3}
       propertyPath: image
       value: 
-      objectReference: {fileID: 21300000, guid: 094359e5e6c5d9e46aed16539d13e574, type: 3}
+      objectReference: {fileID: 21300000, guid: 03f06a81b5c5d944fb91e51c14bddf51, type: 3}
     - target: {fileID: 3660970706817432856, guid: c1a93db3362e44a4aa9d2342f37f4b6e, type: 3}
       propertyPath: caption_text
       value: The campus map allows you to navigate around campus. It's now available

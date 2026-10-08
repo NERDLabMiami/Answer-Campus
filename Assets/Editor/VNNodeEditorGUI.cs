@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEditor;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 using VNEngine;
 
@@ -9,6 +10,17 @@ using VNEngine;
 // per-node-type editors that used to copy-paste this GUI logic independently.
 public static class VNNodeEditorGUI
 {
+    // Call once per OnInspectorGUI when fields were written directly onto the target
+    // (not via SerializedProperty), which doesn't dirty the object/scene on its own.
+    // Unity's Save Scene silently skips scenes it doesn't think are dirty, so without
+    // this, edits made through these editors can be "saved" and still lost on next load.
+    public static void MarkDirtyIfChanged(Node node, bool changed)
+    {
+        if (!changed) return;
+        EditorUtility.SetDirty(node);
+        EditorSceneManager.MarkSceneDirty(node.gameObject.scene);
+    }
+
     // ---- Label widths -----------------------------------------------------
     // A small, named set replacing the ad-hoc EditorGUIUtility.labelWidth magic
     // numbers that used to be scattered (and inconsistent) across node editors.

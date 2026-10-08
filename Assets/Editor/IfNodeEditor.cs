@@ -12,6 +12,8 @@ namespace VNEngine
 
         override public void OnInspectorGUI()
         {
+            EditorGUI.BeginChangeCheck();
+
             default_label_width = EditorGUIUtility.labelWidth;
 
             var if_node = target as IfNode;
@@ -95,6 +97,8 @@ namespace VNEngine
                     if_node.Continue_Conversation = EditorGUILayout.Toggle("Continue Conversation After? ", if_node.Continue_Conversation);
                     break;
             }
+
+            VNNodeEditorGUI.MarkDirtyIfChanged(if_node, EditorGUI.EndChangeCheck());
         }
     }
 }

@@ -15505,7 +15505,7 @@ MonoBehaviour:
   sprite: {fileID: 21300000, guid: 2dc9d0fe3a9e4584898f8f0a09a11a02, type: 3}
   set_foreground: 0
   fade_out: 0
-  fade_in: 0
+  fade_in: 1
 --- !u!1001 &550241207
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24074,6 +24074,57 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
+--- !u!1 &812439402
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 812439403}
+  - component: {fileID: 812439404}
+  m_Layer: 0
+  m_Name: Fade out to Black
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &812439403
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 812439402}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1888920571}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &812439404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 812439402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14efe4bb02d1ee841ab94338a44f1406, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  go_to_next_node: 1
+  executed_from_load: 0
+  sprite: {fileID: 21300000, guid: d30161e14a6229e40a96f4b6288e4eeb, type: 3}
+  set_foreground: 1
+  fade_out: 0
+  fade_in: 1
+  wait_for_all_fading: 1
 --- !u!1 &814080805
 GameObject:
   m_ObjectHideFlags: 0
@@ -43923,7 +43974,7 @@ MonoBehaviour:
   Logic: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   Is_Condition_Met: 0
   Action: 0
-  Conversation_To_Switch_To: {fileID: 772113837}
+  Conversation_To_Switch_To: {fileID: 1888920572}
   Node_To_Switch_To: {fileID: 0}
   Continue_Conversation: 1
   Custom_Actions:
@@ -57420,6 +57471,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 812439403}
   - {fileID: 542976819}
   - {fileID: 1127879666}
   - {fileID: 1970769605}

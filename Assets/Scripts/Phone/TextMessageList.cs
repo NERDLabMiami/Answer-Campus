@@ -69,34 +69,55 @@ public static class TextThreads
     }
 
 
-    public static void SendPlayerResponse(Character to, QuickReply reply)
+    public static TextMessage SendPlayerResponse(Character to, TextMessage repliedTo, QuickReply reply)
     {
         var all = GetAll();
 
         // Player bubble uses the emoji + themed response text as the outgoing message.
         var playerMsg = new TextMessage(to, reply.ComposePlayerMessage(), location: null);
-        playerMsg.unixTime = Now();
+        // Anchored to the message being replied to, not wall-clock time -- guarantees this
+        // reply (and, via AppendNpcReply's own anchor, its NPC follow-up) always sorts
+        // immediately after repliedTo regardless of how much real time passes before the
+        // player gets around to answering, or what other independent message gets delivered
+        // elsewhere in the meantime. Stamping with the real current time here let an
+        // unrelated later-delivered message sort BETWEEN repliedTo and this reply whenever it
+        // was stamped (via its own real-time NodeMessage delivery) before the player actually
+        // tapped this reply -- scrambling the thread order (see
+        // TextThreadPanel.ReplyWithTypingDelay).
+        playerMsg.unixTime = repliedTo.unixTime + 1;
         playerMsg.isPlayer = true;
         playerMsg.quickReplies = null;
         all.Add(playerMsg);
 
-        // Clear quick replies on the most recent NPC message for this thread.
-        var lastNpcMsg = all.LastOrDefault(m => !m.isPlayer && m.from == to && m.quickReplies != null && m.quickReplies.Count > 0);
-        if (lastNpcMsg != null) lastNpcMsg.quickReplies = null;
+        // Clear quick replies on the EXACT NPC message the player just answered -- not
+        // whichever NPC message happens to be last in the thread, which broke once two
+        // independent NodeMessage beats could both have unanswered quick replies open at
+        // once (see TextThreadPanel.RenderQuickReplies). `all` here is a fresh deserialize
+        // from PlayerPrefs, so `repliedTo` (read earlier via GetThread) won't be
+        // reference-equal to anything in it -- match by value instead (sender + timestamp
+        // + body round-trip through PlayerPrefs reliably, unlike object identity).
+        var stored = all.FirstOrDefault(m =>
+            !m.isPlayer && m.from == to && m.unixTime == repliedTo.unixTime && m.body == repliedTo.body);
+        if (stored != null) stored.quickReplies = null;
 
         SaveAll(all);
+        return playerMsg;
     }
 
     // Appends an NPC follow-up message on its own, so callers can delay it
     // (e.g. a "typing..." pause) instead of writing it atomically with the
-    // player's message.
-    public static void AppendNpcReply(Character to, string body)
+    // player's message. Stamped relative to anchorUnixTime (the reply it belongs to),
+    // not wall-clock time -- this method only runs after a real typing-indicator delay,
+    // so stamping with the real current time let an unrelated message delivered elsewhere
+    // during that delay get an earlier timestamp than a follow-up that was logically
+    // triggered first, sorting it out of order (see TextThreadPanel.ReplyWithTypingDelay).
+    public static void AppendNpcReply(Character to, string body, long anchorUnixTime)
     {
         if (string.IsNullOrWhiteSpace(body)) return;
 
         var all = GetAll();
         var npcMsg = new TextMessage(to, body, location: null);
-        npcMsg.unixTime = Now();
+        npcMsg.unixTime = anchorUnixTime + 1;
         npcMsg.isPlayer = false;
         npcMsg.quickReplies = null;
         all.Add(npcMsg);
@@ -121,8 +142,6 @@ public static class TextThreads
         if (changed) SaveAll(all);
     }
 
-    static long Now() => DateTimeOffset.UtcNow.ToUnixTimeSeconds();
-
     const string ReadKey = "lastReadMessages";
 
     // Unread = unlocked NPC messages newer than this character's last-read marker.
@@ -141,9 +160,14 @@ public static class TextThreads
         return thread.Count(m => !m.isPlayer && m.unixTime > lastRead && (m.unlockWeek <= 0 || week >= m.unlockWeek));
     }
 
-    public static void MarkRead(Character who)
+    // visibleThread lets a caller that only rendered a truncated view of the thread (e.g.
+    // TextThreadPanel holding back a newer message behind an older unanswered one) mark read
+    // only up to what the player actually saw, instead of a message getting silently marked
+    // read before it's ever shown - which would suppress its notification once it finally
+    // renders. Omit it to mark the whole thread read (e.g. a simple "opened this thread" signal).
+    public static void MarkRead(Character who, List<TextMessage> visibleThread = null)
     {
-        var thread = GetThread(who);
+        var thread = visibleThread ?? GetThread(who);
         long upto = thread.Count > 0 ? thread[thread.Count - 1].unixTime : DateTimeOffset.UtcNow.ToUnixTimeSeconds();
 
         var markers = PlayerPrefsExtra.GetList<CharacterReadMarker>(ReadKey, new List<CharacterReadMarker>());

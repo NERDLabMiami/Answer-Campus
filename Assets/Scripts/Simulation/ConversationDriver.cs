@@ -1,6 +1,7 @@
 #if UNITY_EDITOR
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -36,6 +37,29 @@ namespace AnswerCampus.Simulation
         public List<ChoiceAlternative> Alternatives = new List<ChoiceAlternative>();
     }
 
+    // One possible branch of a Gate*Node (AnswerCampus's state-driven branching nodes under
+    // Assets/Scripts/Nodes/Gate*.cs, e.g. "is contact" / "not contact", or a specific
+    // GateAffinityNode tier). Id is only meaningful within the GateEncounter that produced it.
+    public class GateBranch
+    {
+        public int Id;
+        public string Label;
+    }
+
+    // One Gate*Node encounter during a run -- the gate equivalent of ChoiceEncounter. Unlike a
+    // ShowChoiceNode, a gate's branch is decided purely from game/save state (no player input,
+    // no visible panel), so this is recorded via Node.OnBeforeNodeRuns (ConversationManager.cs)
+    // rather than by watching UI, and "alternatives" are the branches NOT naturally taken.
+    public class GateEncounter
+    {
+        public int EncounterIndex;
+        public string GateType;
+        public string ConversationName;
+        public int TakenBranchId;
+        public string TakenBranchLabel;
+        public List<GateBranch> Alternatives = new List<GateBranch>();
+    }
+
     public static class ConversationDriver
     {
         public static bool LastDriveSucceeded { get; private set; }
@@ -62,6 +86,16 @@ namespace AnswerCampus.Simulation
         public static List<int> AllChosenIndices { get; private set; }
         private static int _encounterCounter;
 
+        // Gate*Node scripting/recording -- same shape as the choice fields above, keyed by
+        // their own encounter counter since gates and choices are independent event streams.
+        // ScriptedGateOutcomes maps a gate encounter index to the GateBranch.Id to force once;
+        // every other gate encounter in the run evaluates its real condition normally.
+        public static Dictionary<int, int> ScriptedGateOutcomes { get; private set; }
+        public static List<GateEncounter> GateRecording { get; private set; }
+        public static string LastGateForcingMismatch { get; private set; }
+        private static int _gateEncounterCounter;
+        private static bool _gateHookSubscribed;
+
         // Tracks how many times each distinct choice point has been landed on within this
         // run, keyed by content (conversation name + the visible choice texts) rather than
         // object/GetEntityId() identity -- a repeatable prompt (e.g. Library's "Group
@@ -81,13 +115,475 @@ namespace AnswerCampus.Simulation
         // force those exact choice indices at the first N ShowChoiceNode encounters (by the
         // same global order every run naturally hits them in, given deterministic replay up
         // to that point), falling back to the default policy for every encounter after that.
-        public static void BeginNewRun(List<int> scriptedChoices)
+        public static void BeginNewRun(List<int> scriptedChoices, Dictionary<int, int> scriptedGateOutcomes = null)
         {
             ScriptedChoices = scriptedChoices;
             Recording = new List<ChoiceEncounter>();
             AllChosenIndices = new List<int>();
             _encounterCounter = 0;
             _nodeVisitCounts = new Dictionary<string, int>();
+
+            ScriptedGateOutcomes = scriptedGateOutcomes;
+            GateRecording = new List<GateEncounter>();
+            LastGateForcingMismatch = null;
+            _gateEncounterCounter = 0;
+            EnsureGateHookSubscribed();
+        }
+
+        // Subscribes exactly once per domain lifetime. Play Mode has no domain reload between
+        // the many runs PathExplorer drives within one test, so subscribing in BeginNewRun
+        // directly would stack up a duplicate invocation per prior run.
+        private static void EnsureGateHookSubscribed()
+        {
+            if (_gateHookSubscribed) return;
+            _gateHookSubscribed = true;
+            ConversationManager.OnBeforeNodeRuns += HandleBeforeNodeRuns;
+        }
+
+        // Observes (and sometimes fully replaces) every node right before it runs. Returns
+        // true to skip the node's real Run_Node() entirely -- used only for NodeLaunchGroupStudy
+        // (see BypassGroupStudy). For the six Gate*Node types (Assets/Scripts/Nodes/Gate*.cs),
+        // records a GateEncounter and, if ScriptedGateOutcomes names this encounter, mutates
+        // the backing game state right now so the node's own Run_Node() -- which still runs
+        // normally afterward -- naturally evaluates to the forced branch. No-op (false) for
+        // every other node type (dialogue, choices, etc. are handled elsewhere/normally).
+        private static bool HandleBeforeNodeRuns(Node node)
+        {
+            if (node is NodeLaunchGroupStudy launchNode)
+                return BypassGroupStudy(launchNode);
+
+            var branchSet = DescribeGate(node);
+            if (branchSet == null) return false;
+
+            int encounterIndex = _gateEncounterCounter++;
+            var cm = node.GetComponentInParent<ConversationManager>();
+            string conversationName = cm != null ? cm.name : "<unknown>";
+
+            if (ScriptedGateOutcomes != null && ScriptedGateOutcomes.TryGetValue(encounterIndex, out int forcedId))
+            {
+                ForceGateBranch(node, forcedId);
+                var afterForcing = DescribeGate(node);
+                if (afterForcing != null && afterForcing.TakenId != forcedId)
+                {
+                    // Known limitation (see PathExploration.md's own caveat text): forcing a
+                    // GateAffinityNode branch can be overridden by an earlier same-character
+                    // branch under first-match-wins semantics. Report the mismatch rather than
+                    // silently mis-attributing whatever branch actually ran.
+                    LastGateForcingMismatch =
+                        $"Encounter {encounterIndex} ({branchSet.GateType} in '{conversationName}'): intended to " +
+                        $"force branch {forcedId} ('{branchSet.AllBranches.FirstOrDefault(a => a.Id == forcedId)?.Label}') " +
+                        $"but the node will take branch {afterForcing.TakenId} ('{afterForcing.TakenLabel}') instead.";
+                }
+                if (afterForcing != null) branchSet = afterForcing;
+            }
+
+            var entry = new GateEncounter
+            {
+                EncounterIndex = encounterIndex,
+                GateType = branchSet.GateType,
+                ConversationName = conversationName,
+                TakenBranchId = branchSet.TakenId,
+                TakenBranchLabel = branchSet.TakenLabel,
+            };
+            foreach (var b in branchSet.AllBranches)
+                if (b.Id != branchSet.TakenId)
+                    entry.Alternatives.Add(b);
+
+            if (GateRecording != null) GateRecording.Add(entry);
+            return false;
+        }
+
+        // NodeLaunchGroupStudy (Assets/Scripts/Nodes/NodeLaunchGroupStudy.cs) hands off to
+        // GroupStudyManager/FivePositionsGameManager -- a real, input-driven minigame (falling
+        // letters, a player-moved eraser) with no way for this automation to play it. Confirmed
+        // to leave ConversationDriver's drive loop parked indefinitely: the node sets
+        // go_to_next_node=false and the conversation only resumes when the minigame's own
+        // EndGame() coroutine finishes, which needs real wall-clock gameplay. Mirrors
+        // HomeHubPolicy's football bypass: skip the real minigame entirely, apply its Group-mode
+        // completion stats directly, and jump straight to whatever conversation it would have
+        // resumed into.
+        private static bool BypassGroupStudy(NodeLaunchGroupStudy launchNode)
+        {
+            var groupStudyManager = launchNode.groupStudyManager ?? Object.FindAnyObjectByType<GroupStudyManager>();
+            if (groupStudyManager == null) return false; // let the real node log its own "no manager" error
+
+            ConversationManager endConversation = launchNode.endGroupStudyConversation
+                ?? groupStudyManager.conversationManager
+                ?? groupStudyManager.gameManager?.conversationManager;
+
+            // Deterministic, not UnityEngine.Random -- same reasoning as HomeHubPolicy's
+            // football bypass: a path-exploration divergence run reaching this call after a
+            // different number of prior choices could get a different outcome purely from
+            // RNG drift, contaminating the comparison.
+            const float simulatedLongestStreak = 3f;
+            StatsManager.Set_Numbered_Stat("GroupStudyLongestStreak", simulatedLongestStreak);
+            StatsManager.Set_String_Stat("StudyGameScore", simulatedLongestStreak.ToString());
+
+            VNSceneManager.scene_manager.Show_UI(true);
+            if (endConversation != null)
+                endConversation.Start_Conversation();
+            else
+                Debug.LogWarning("[ConversationDriver] BypassGroupStudy: no end conversation resolved; leaving conversation parked.");
+
+            return true;
+        }
+
+        // Read-only peek at which branch a Gate*Node's own condition logic currently takes --
+        // duplicated per gate type the same way MeetsRequirements/Compare below duplicate
+        // ShowChoiceNode's private logic, since each Gate*Node's evaluation is private to it.
+        // Returns null for a node this explorer doesn't track, or (GateGameNode only) one
+        // configured with no real alternate branch (FootballCheckType.None).
+        private class GateBranchSet
+        {
+            public string GateType;
+            public int TakenId;
+            public string TakenLabel;
+            public List<GateBranch> AllBranches = new List<GateBranch>();
+        }
+
+        private static GateBranchSet DescribeGate(Node node)
+        {
+            switch (node)
+            {
+                case GateContactNode gcn:
+                {
+                    bool isContact = Friend.IsFriend(gcn.character);
+                    var set = new GateBranchSet { GateType = "GateContactNode" };
+                    set.AllBranches.Add(new GateBranch { Id = 0, Label = "is contact" });
+                    set.AllBranches.Add(new GateBranch { Id = 1, Label = "not contact" });
+                    set.TakenId = isContact ? 0 : 1;
+                    set.TakenLabel = isContact ? "is contact" : "not contact";
+                    return set;
+                }
+
+                case GateLastGameResultNode _:
+                {
+                    bool won = StatsManager.Get_Boolean_Stat("LastGame_Won");
+                    var set = new GateBranchSet { GateType = "GateLastGameResultNode" };
+                    set.AllBranches.Add(new GateBranch { Id = 0, Label = "won" });
+                    set.AllBranches.Add(new GateBranch { Id = 1, Label = "lost" });
+                    set.TakenId = won ? 0 : 1;
+                    set.TakenLabel = won ? "won" : "lost";
+                    return set;
+                }
+
+                case GateAffinityNode gan:
+                {
+                    var set = new GateBranchSet { GateType = "GateAffinityNode" };
+                    int takenId = -1;
+                    for (int i = 0; i < gan.branches.Count; i++)
+                    {
+                        var b = gan.branches[i];
+                        if (b == null || b.character == Character.NONE) continue;
+                        set.AllBranches.Add(new GateBranch
+                        {
+                            Id = i,
+                            Label = $"branch[{i}]: {b.character}_affinity {b.compare} {b.threshold}",
+                        });
+                        if (takenId < 0)
+                        {
+                            float current = StatsManager.Get_Numbered_Stat(b.character.ToString() + "_affinity");
+                            if (Compare(current, b.compare, b.threshold))
+                                takenId = i;
+                        }
+                    }
+                    int fallbackId = gan.branches.Count;
+                    set.AllBranches.Add(new GateBranch { Id = fallbackId, Label = "fallback" });
+                    set.TakenId = takenId >= 0 ? takenId : fallbackId;
+                    set.TakenLabel = set.AllBranches.First(b => b.Id == set.TakenId).Label;
+                    return set;
+                }
+
+                case GateTraitsNode gtn:
+                {
+                    bool passed = true;
+                    foreach (var req in gtn.traitRequirements)
+                    {
+                        float current = StatsManager.Get_Numbered_Stat(req.ResolveKey());
+                        if (!Compare(current, req.compare, req.value)) { passed = false; break; }
+                    }
+                    var set = new GateBranchSet { GateType = "GateTraitsNode" };
+                    set.AllBranches.Add(new GateBranch { Id = 0, Label = "requirements met" });
+                    if (gtn.traitRequirements != null && gtn.traitRequirements.Count > 0)
+                        set.AllBranches.Add(new GateBranch { Id = 1, Label = "requirements not met" });
+                    set.TakenId = passed ? 0 : 1;
+                    set.TakenLabel = passed ? "requirements met" : "requirements not met";
+                    return set;
+                }
+
+                case GateEventsNode gen:
+                {
+                    bool passed = true;
+                    if (gen.eventRequirements != null)
+                    {
+                        foreach (var req in gen.eventRequirements)
+                        {
+                            if (req == null || string.IsNullOrEmpty(req.key)) continue;
+                            bool completed = GameEvents.IsCustomEventCompleted(req.key);
+                            if (req.check == EventCheckType.Completed && !completed) { passed = false; break; }
+                            if (req.check == EventCheckType.NotCompleted && completed) { passed = false; break; }
+                        }
+                    }
+                    var set = new GateBranchSet { GateType = "GateEventsNode" };
+                    set.AllBranches.Add(new GateBranch { Id = 0, Label = "requirements met" });
+                    if (gen.eventRequirements != null && gen.eventRequirements.Count > 0)
+                        set.AllBranches.Add(new GateBranch { Id = 1, Label = "requirements not met" });
+                    set.TakenId = passed ? 0 : 1;
+                    set.TakenLabel = passed ? "requirements met" : "requirements not met";
+                    return set;
+                }
+
+                case GateGameNode ggn:
+                {
+                    if (ggn.footballRequirement.check == FootballCheckType.None) return null;
+                    bool passed = EvaluateFootballRequirementPeek(ggn.footballRequirement);
+                    var set = new GateBranchSet { GateType = "GateGameNode" };
+                    set.AllBranches.Add(new GateBranch { Id = 0, Label = "requirement met" });
+                    set.AllBranches.Add(new GateBranch { Id = 1, Label = "requirement not met" });
+                    set.TakenId = passed ? 0 : 1;
+                    set.TakenLabel = passed ? "requirement met" : "requirement not met";
+                    return set;
+                }
+
+                default:
+                    return null;
+            }
+        }
+
+        // Mirrors GateGameNode.EvaluateFootballRequirement/GetFootballRecord exactly (both
+        // private there) -- same duplication pattern as MeetsRequirements/Compare below.
+        private static bool EvaluateFootballRequirementPeek(FootballRequirement req)
+        {
+            switch (req.check)
+            {
+                case FootballCheckType.None:
+                    return true;
+                case FootballCheckType.IsWinningRecord:
+                {
+                    var r = GetFootballRecordPeek();
+                    return r.wins > r.losses;
+                }
+                case FootballCheckType.WinsAtLeast:
+                {
+                    var r = GetFootballRecordPeek();
+                    return r.wins >= Mathf.RoundToInt(req.threshold);
+                }
+                case FootballCheckType.WinRateAtLeast:
+                {
+                    var r = GetFootballRecordPeek();
+                    return r.played > 0 && r.winRate >= req.threshold;
+                }
+                default:
+                    return true;
+            }
+        }
+
+        private static (int wins, int losses, int played, float winRate) GetFootballRecordPeek()
+        {
+            string json = StatsManager.Get_String_Stat("FootballSchedule");
+            if (string.IsNullOrEmpty(json)) return (0, 0, 0, 0f);
+
+            FootballGameListWrapper wrapper = null;
+            try { wrapper = JsonUtility.FromJson<FootballGameListWrapper>(json); }
+            catch { /* ignore */ }
+
+            if (wrapper?.games == null || wrapper.games.Count == 0)
+                return (0, 0, 0, 0f);
+
+            int wins = wrapper.games.Count(g => g.played && g.won);
+            int losses = wrapper.games.Count(g => g.played && !g.won);
+            int played = wins + losses;
+            float winRate = played > 0 ? (float)wins / played : 0f;
+
+            return (wins, losses, played, winRate);
+        }
+
+        // Mutates whatever backing state a Gate*Node reads so its Run_Node(), running a
+        // moment later in the same synchronous call chain, takes the given branch id.
+        private static void ForceGateBranch(Node node, int branchId)
+        {
+            switch (node)
+            {
+                case GateContactNode gcn:
+                    StatsManager.Set_Boolean_Stat(gcn.character.ToString() + "_is_friend", branchId == 0);
+                    break;
+
+                case GateLastGameResultNode _:
+                    StatsManager.Set_Boolean_Stat("LastGame_Won", branchId == 0);
+                    break;
+
+                case GateAffinityNode gan:
+                    ForceAffinityBranch(gan, branchId);
+                    break;
+
+                case GateTraitsNode gtn:
+                    ForceTraitsBranch(gtn, branchId);
+                    break;
+
+                case GateEventsNode gen:
+                    ForceEventsBranch(gen, branchId);
+                    break;
+
+                case GateGameNode ggn:
+                    ForceFootballBranch(ggn, branchId);
+                    break;
+            }
+        }
+
+        private static void ForceAffinityBranch(GateAffinityNode gan, int branchId)
+        {
+            int fallbackId = gan.branches.Count;
+            if (branchId == fallbackId)
+            {
+                var characters = new HashSet<Character>();
+                foreach (var b in gan.branches)
+                    if (b != null && b.character != Character.NONE) characters.Add(b.character);
+                foreach (var c in characters)
+                    StatsManager.Set_Numbered_Stat(c.ToString() + "_affinity", ValueViolatingAll(gan.branches, c));
+                return;
+            }
+
+            if (branchId < 0 || branchId >= gan.branches.Count) return;
+            var target = gan.branches[branchId];
+            if (target == null || target.character == Character.NONE) return;
+            StatsManager.Set_Numbered_Stat(target.character.ToString() + "_affinity",
+                ValueSatisfying(target.compare, target.threshold));
+        }
+
+        private static void ForceTraitsBranch(GateTraitsNode gtn, int branchId)
+        {
+            if (gtn.traitRequirements == null || gtn.traitRequirements.Count == 0) return;
+
+            if (branchId == 0)
+            {
+                foreach (var req in gtn.traitRequirements)
+                    StatsManager.Set_Numbered_Stat(req.ResolveKey(), ValueSatisfying(req.compare, req.value));
+            }
+            else
+            {
+                // EvaluateTraitRequirements() short-circuits on the first failing requirement,
+                // so failing just this one is sufficient regardless of the rest.
+                var first = gtn.traitRequirements[0];
+                StatsManager.Set_Numbered_Stat(first.ResolveKey(), ValueViolatingSingle(first.compare, first.value));
+            }
+        }
+
+        private static void ForceEventsBranch(GateEventsNode gen, int branchId)
+        {
+            if (gen.eventRequirements == null || gen.eventRequirements.Count == 0) return;
+
+            if (branchId == 0)
+            {
+                foreach (var req in gen.eventRequirements)
+                {
+                    if (req == null || string.IsNullOrEmpty(req.key)) continue;
+                    GameEvents.MarkCustomEventCompleted(req.key, req.check == EventCheckType.Completed);
+                }
+            }
+            else
+            {
+                var req = gen.eventRequirements.FirstOrDefault(r => r != null && !string.IsNullOrEmpty(r.key));
+                if (req != null)
+                    GameEvents.MarkCustomEventCompleted(req.key, req.check != EventCheckType.Completed);
+            }
+        }
+
+        private static void ForceFootballBranch(GateGameNode ggn, int branchId)
+        {
+            bool forceMet = branchId == 0;
+            var req = ggn.footballRequirement;
+            var wrapper = new FootballGameListWrapper();
+
+            switch (req.check)
+            {
+                case FootballCheckType.IsWinningRecord:
+                    AddFootballGames(wrapper, forceMet ? 2 : 0, forceMet ? 0 : 2);
+                    break;
+
+                case FootballCheckType.WinsAtLeast:
+                {
+                    int neededWins = Mathf.Max(0, Mathf.RoundToInt(req.threshold));
+                    int wins = forceMet ? neededWins : Mathf.Max(0, neededWins - 1);
+                    AddFootballGames(wrapper, wins, 0);
+                    break;
+                }
+
+                case FootballCheckType.WinRateAtLeast:
+                {
+                    const int totalGames = 4;
+                    int wins = 0;
+                    for (int w = 0; w <= totalGames; w++)
+                    {
+                        bool meets = (float)w / totalGames >= req.threshold;
+                        if (meets == forceMet) { wins = w; break; }
+                    }
+                    AddFootballGames(wrapper, wins, totalGames - wins);
+                    break;
+                }
+
+                default:
+                    return;
+            }
+
+            StatsManager.Set_String_Stat("FootballSchedule", JsonUtility.ToJson(wrapper));
+        }
+
+        private static void AddFootballGames(FootballGameListWrapper wrapper, int wins, int losses)
+        {
+            int week = 3;
+            for (int i = 0; i < wins; i++)
+                wrapper.games.Add(new FootballGame { week = week++, opponent = new FootballTeam("Rival", "Mascot"), played = true, won = true });
+            for (int i = 0; i < losses; i++)
+                wrapper.games.Add(new FootballGame { week = week++, opponent = new FootballTeam("Rival", "Mascot"), played = true, won = false });
+        }
+
+        private static float ValueSatisfying(NumberCompare op, float threshold)
+        {
+            switch (op)
+            {
+                case NumberCompare.GreaterThan: return threshold + 1f;
+                case NumberCompare.LessThan: return threshold - 1f;
+                default: return threshold; // GreaterOrEqual / LessOrEqual / Equal
+            }
+        }
+
+        private static float ValueViolatingSingle(NumberCompare op, float threshold)
+        {
+            switch (op)
+            {
+                case NumberCompare.GreaterThan:
+                case NumberCompare.GreaterOrEqual:
+                    return threshold - 1f;
+                case NumberCompare.LessThan:
+                case NumberCompare.LessOrEqual:
+                    return threshold + 1f;
+                default: // Equal
+                    return threshold + 1f;
+            }
+        }
+
+        // Picks a value failing every branch authored for one character in a GateAffinityNode
+        // (used to force the "fallback" branch). Assumes authored tiers for a given character
+        // share one comparison direction (documented as "top-to-bottom, first match wins" --
+        // i.e. descending GreaterOrEqual tiers is the expected authoring shape); a character
+        // mixing Greater* and Less* branches is a known limitation surfaced via
+        // LastGateForcingMismatch rather than solved generically here.
+        private static float ValueViolatingAll(List<AffinityBranch> branches, Character character)
+        {
+            float? minGreaterThreshold = null;
+            float? maxLessThreshold = null;
+            foreach (var b in branches)
+            {
+                if (b == null || b.character != character) continue;
+                if (b.compare == NumberCompare.GreaterThan || b.compare == NumberCompare.GreaterOrEqual || b.compare == NumberCompare.Equal)
+                    minGreaterThreshold = minGreaterThreshold.HasValue ? Mathf.Min(minGreaterThreshold.Value, b.threshold) : b.threshold;
+                if (b.compare == NumberCompare.LessThan || b.compare == NumberCompare.LessOrEqual)
+                    maxLessThreshold = maxLessThreshold.HasValue ? Mathf.Max(maxLessThreshold.Value, b.threshold) : b.threshold;
+            }
+
+            if (minGreaterThreshold.HasValue) return minGreaterThreshold.Value - 1f;
+            if (maxLessThreshold.HasValue) return maxLessThreshold.Value + 1f;
+            return 0f;
         }
 
         // Steps the active conversation until the active scene becomes targetScene, or

@@ -57,9 +57,9 @@ namespace AnswerCampus.Simulation
         // Runs one full playthrough, catching any exception so a single bad run (baseline
         // or a path-exploration divergence) reports as "error" instead of crashing whatever
         // is iterating over many of these in sequence.
-        internal static IEnumerator RunBodySafely(List<string> trace, List<int> scriptedChoices = null)
+        internal static IEnumerator RunBodySafely(List<string> trace, List<int> scriptedChoices = null, Dictionary<int, int> scriptedGateOutcomes = null)
         {
-            IEnumerator body = RunBody(trace, scriptedChoices);
+            IEnumerator body = RunBody(trace, scriptedChoices, scriptedGateOutcomes);
             bool moved = true;
             while (moved)
             {
@@ -77,7 +77,7 @@ namespace AnswerCampus.Simulation
             }
         }
 
-        internal static IEnumerator RunBody(List<string> trace, List<int> scriptedChoices = null)
+        internal static IEnumerator RunBody(List<string> trace, List<int> scriptedChoices = null, Dictionary<int, int> scriptedGateOutcomes = null)
         {
             // The real game's own ending content legitimately loads "Main" (the main menu)
             // after its closing cutscene -- a different terminal scene than every other
@@ -95,7 +95,7 @@ namespace AnswerCampus.Simulation
                 return true;
             }
 
-            ConversationDriver.BeginNewRun(scriptedChoices);
+            ConversationDriver.BeginNewRun(scriptedChoices, scriptedGateOutcomes);
             HomeHubPolicy.ResetForNewRun();
             SimStateReset.ResetAll();
 

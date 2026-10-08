@@ -37,6 +37,13 @@ public class TextThreadPanel : MonoBehaviour
     // reinstantiating the whole thread (which caused a visible scroll jump).
     private readonly List<GameObject> renderedBubbles = new List<GameObject>();
 
+    // Hard guard set for the entire duration of ReplyWithTypingDelay: no quick-reply button
+    // can be shown while a reply exchange is actively resolving, regardless of what any render
+    // pass's message list contains. Without this, quick-reply buttons for a different,
+    // already-delivered-but-held-back message could surface mid-exchange (before its own
+    // bubble ever renders) and be tapped, re-triggering a reply to an already-answered message.
+    private bool _resolvingReply;
+
     public void Show(Character other)
     {
         current = other;
@@ -68,26 +75,57 @@ public class TextThreadPanel : MonoBehaviour
     private void RebuildAll()
     {
         ClearBubbles();
-        var msgs = TextThreads.GetThread(current);
+        var msgs = EffectiveThread(current);
         foreach (var m in msgs)
             renderedBubbles.Add(CreateBubble(m));
         FinishRenderPass(msgs);
     }
 
-    // Instantiates only the messages not yet on screen, leaving existing bubbles
-    // untouched so the ScrollRect's content doesn't shrink-then-regrow.
-    private void AppendNewMessages()
+    // Instantiates only the messages in `msgs` not yet on screen, leaving existing bubbles
+    // untouched so the ScrollRect's content doesn't shrink-then-regrow. Takes the list
+    // explicitly (rather than recomputing it) so a caller mid-reply-exchange (see
+    // ReplyWithTypingDelay) can cap exactly how far this reveals.
+    private void AppendNewMessages(List<TextMessage> msgs)
     {
-        var msgs = TextThreads.GetThread(current);
         for (int i = renderedBubbles.Count; i < msgs.Count; i++)
             renderedBubbles.Add(CreateBubble(msgs[i]));
         FinishRenderPass(msgs);
     }
 
+    // Holds the rendered thread at the first unanswered, unlocked NPC quick-reply message.
+    // Later messages from this character still exist in storage with their real timestamps
+    // (nothing here touches TextThreads' data), they just aren't shown yet - so the player
+    // always resolves replies in the order the conversations actually happened, instead of
+    // a newer message (from an unrelated conversation elsewhere) ever being visible/
+    // answerable before an older one still awaiting a reply.
+    //
+    // Callers mid-reply-exchange (see ReplyWithTypingDelay) must NOT re-derive their reveal
+    // list by re-scanning this with a position count: a message delivered earlier in real
+    // time at a different location, but still held back pending its own reply, can sort
+    // chronologically BETWEEN repliedTo and the player's brand-new reply (its timestamp
+    // predates this exchange even though it was discovered by the player after). A count-
+    // based cap would then land on THAT message instead of this exchange's own player-reply/
+    // follow-up. Build the reveal list explicitly from what's already known there instead.
+    private static List<TextMessage> EffectiveThread(Character who)
+    {
+        var all = TextThreads.GetThread(who);
+        int week = Mathf.RoundToInt(StatsManager.Get_Numbered_Stat("Week"));
+
+        for (int i = 0; i < all.Count; i++)
+        {
+            var m = all[i];
+            if (!m.isPlayer && m.quickReplies != null && m.quickReplies.Count > 0 &&
+                (m.unlockWeek <= 0 || week >= m.unlockWeek))
+                return all.GetRange(0, i + 1);
+        }
+
+        return all;
+    }
+
     private void FinishRenderPass(List<TextMessage> msgs)
     {
         RenderQuickReplies(msgs);
-        if (current != Character.NONE) TextThreads.MarkRead(current);
+        if (current != Character.NONE) TextThreads.MarkRead(current, msgs);
         ScrollToBottom();
     }
 
@@ -133,20 +171,39 @@ public class TextThreadPanel : MonoBehaviour
     {
         foreach (Transform c in quickReplyRoot) Destroy(c.gameObject);
 
+        // See _resolvingReply's own comment: no buttons while a reply exchange is in flight,
+        // independent of what msgs contains.
+        if (_resolvingReply)
+        {
+            quickReplyRoot.gameObject.SetActive(false);
+            return;
+        }
+
+        TextMessage pendingMessage = null;
         QuickReply[] pending = null;
         string pendingTargetScene = null;
 
         foreach (var m in msgs)
         {
-            // If this NPC message offers quick replies that are now unlocked, remember them.
+            // If this NPC message offers quick replies that are now unlocked, resolve it.
             // unlockWeek=0 means immediately available; otherwise wait until that week.
             if (!m.isPlayer && m.quickReplies != null && m.quickReplies.Count > 0)
             {
                 int week = Mathf.RoundToInt(StatsManager.Get_Numbered_Stat("Week"));
                 if (m.unlockWeek <= 0 || week >= m.unlockWeek)
                 {
+                    // Oldest unanswered message wins -- msgs is ordered ascending by
+                    // unixTime (TextThreads.GetThread), so the FIRST match here is the
+                    // earliest-arrived message still awaiting a reply. Two independent
+                    // NodeMessage beats (e.g. one fired from an Apartment conversation,
+                    // another from a Lecture Hall conversation) can each land in this
+                    // shared thread with unanswered quick replies at the same time;
+                    // always resolving the older one first keeps replies in the order
+                    // messages actually arrived instead of whichever was most recent.
+                    pendingMessage = m;
                     pending = m.quickReplies.ToArray();
                     pendingTargetScene = m.locationForTimingOnly ? null : m.location;
+                    break;
                 }
             }
         }
@@ -165,7 +222,7 @@ public class TextThreadPanel : MonoBehaviour
                     // "advance_day": play the reply out, then advance to next week morning and reload Home.
                     if (IsSpecialPayload(qr.payload, "advance_day"))
                     {
-                        StartCoroutine(ReplyWithTypingDelay(qr, advanceDayAfter: true));
+                        StartCoroutine(ReplyWithTypingDelay(pendingMessage, qr, advanceDayAfter: true));
                         return;
                     }
 
@@ -176,7 +233,7 @@ public class TextThreadPanel : MonoBehaviour
                         ? pendingTargetScene
                         : null;
 
-                    StartCoroutine(ReplyWithTypingDelay(qr, targetSceneAfter: targetScene));
+                    StartCoroutine(ReplyWithTypingDelay(pendingMessage, qr, targetSceneAfter: targetScene));
                 });
             }
             quickReplyRoot.gameObject.SetActive(true);
@@ -264,61 +321,111 @@ public class TextThreadPanel : MonoBehaviour
         if (handle.layoutElement != null) handle.layoutElement.preferredHeight = handle.originalPreferredHeight;
     }
 
-    private IEnumerator ReplyWithTypingDelay(QuickReply qr, string targetSceneAfter = null, bool advanceDayAfter = false)
+    private IEnumerator ReplyWithTypingDelay(TextMessage repliedTo, QuickReply qr, string targetSceneAfter = null, bool advanceDayAfter = false)
     {
-        TextThreads.SendPlayerResponse(current, qr);
-        AppendNewMessages(); // shows the player's bubble; scrolls down once
-
-        if (!string.IsNullOrWhiteSpace(qr.npcResponse))
+        // Set for the ENTIRE exchange (through the optional leaving-thread fade/navigate at
+        // the end) so RenderQuickReplies can never show a button -- for any message, for any
+        // reason -- until this whole coroutine has finished and the player triggers a genuine
+        // fresh render. try/finally (no catch) containing yield return is legal in an iterator
+        // method; this guarantees the flag can't be left stuck true by an early return.
+        _resolvingReply = true;
+        try
         {
-            var typing = ShowTypingIndicator();
-            ScrollToBottom();
+            // Snapshot exactly what's visible right now, by reference, before SendPlayerResponse
+            // clears repliedTo's quickReplies. Everything revealed below is built by explicitly
+            // extending THIS list with the exact messages this exchange adds -- not by re-scanning
+            // the full thread with a position count, which breaks once another message exists
+            // that was delivered earlier in real time (e.g. at a different location, visited
+            // before the player got around to replying here) but is still held back pending its
+            // own reply: that message can sort chronologically BETWEEN repliedTo and the player's
+            // new reply, so a count-based cap can land on IT instead of this exchange's own
+            // messages. See EffectiveThread's own comment.
+            var visibleBeforeReply = EffectiveThread(current);
 
-            yield return new WaitForSeconds(typingDelaySeconds);
+            TextMessage playerMsg = TextThreads.SendPlayerResponse(current, repliedTo, qr);
+            var afterPlayerReply = new List<TextMessage>(visibleBeforeReply) { playerMsg };
+            AppendNewMessages(afterPlayerReply); // shows the player's bubble; scrolls down once
 
-            TextThreads.AppendNpcReply(current, qr.npcResponse);
-
-            // Morph the "..." bubble into the real reply in place, instead of tearing
-            // down and rebuilding the whole thread - avoids a second scroll jump and
-            // matches how modern messaging apps resolve a typing indicator.
-            ResolveTypingIndicator(typing, qr.npcResponse);
-            renderedBubbles.Add(typing.go);
-            FinishRenderPass(TextThreads.GetThread(current));
-        }
-
-        bool leavingThread = advanceDayAfter || !string.IsNullOrWhiteSpace(targetSceneAfter);
-        if (leavingThread)
-        {
-            yield return new WaitForSeconds(postReplyHoldSeconds);
-
-            // Inlined rather than a nested `yield return someCoroutine()` call: Hide()
-            // deactivates `root`, and a GameObject going inactive kills any coroutine
-            // waiting to *resume* on it - including an outer coroutine paused on a
-            // nested yield. Keeping the fade inline (and calling Hide() only after
-            // everything else below has already run) avoids that trap.
-            if (canvasGroup != null)
+            if (!string.IsNullOrWhiteSpace(qr.npcResponse))
             {
-                canvasGroup.interactable = false;
-                canvasGroup.blocksRaycasts = false;
+                var typing = ShowTypingIndicator();
+                ScrollToBottom();
 
-                float startAlpha = canvasGroup.alpha;
-                float t = 0f;
-                while (t < fadeOutSeconds)
+                yield return new WaitForSeconds(typingDelaySeconds);
+
+                // Anchored to the player's reply, not wall-clock time when this delayed append
+                // actually executes -- guarantees this follow-up always sorts immediately after
+                // the reply it belongs to, even if an unrelated NodeMessage elsewhere gets
+                // delivered (and timestamped) during the typing-indicator delay.
+                TextThreads.AppendNpcReply(current, qr.npcResponse, playerMsg.unixTime);
+
+                // Morph the "..." bubble into the real reply in place, instead of tearing
+                // down and rebuilding the whole thread - avoids a second scroll jump and
+                // matches how modern messaging apps resolve a typing indicator.
+                ResolveTypingIndicator(typing, qr.npcResponse);
+                renderedBubbles.Add(typing.go);
+
+                // Mirrors exactly what AppendNpcReply just wrote to storage, for the same reason
+                // afterPlayerReply was built explicitly above.
+                var npcFollowup = new TextMessage(current, qr.npcResponse, location: null)
                 {
-                    t += Time.deltaTime;
-                    canvasGroup.alpha = Mathf.Lerp(startAlpha, 0f, t / fadeOutSeconds);
-                    yield return null;
-                }
-                canvasGroup.alpha = 0f;
+                    isPlayer = false,
+                    unixTime = playerMsg.unixTime + 1,
+                };
+                FinishRenderPass(new List<TextMessage>(afterPlayerReply) { npcFollowup });
             }
 
-            // Fire the transition before Hide() deactivates this GameObject.
-            if (advanceDayAfter)
-                AdvanceToNextMorning();
-            else
-                HomeCutsceneController.NavigateOut(targetSceneAfter);
+            bool leavingThread = advanceDayAfter || !string.IsNullOrWhiteSpace(targetSceneAfter);
+            if (leavingThread)
+            {
+                yield return new WaitForSeconds(postReplyHoldSeconds);
 
-            Hide();
+                // Inlined rather than a nested `yield return someCoroutine()` call: Hide()
+                // deactivates `root`, and a GameObject going inactive kills any coroutine
+                // waiting to *resume* on it - including an outer coroutine paused on a
+                // nested yield. Keeping the fade inline (and calling Hide() only after
+                // everything else below has already run) avoids that trap.
+                if (canvasGroup != null)
+                {
+                    canvasGroup.interactable = false;
+                    canvasGroup.blocksRaycasts = false;
+
+                    float startAlpha = canvasGroup.alpha;
+                    float t = 0f;
+                    while (t < fadeOutSeconds)
+                    {
+                        t += Time.deltaTime;
+                        canvasGroup.alpha = Mathf.Lerp(startAlpha, 0f, t / fadeOutSeconds);
+                        yield return null;
+                    }
+                    canvasGroup.alpha = 0f;
+                }
+
+                // Fire the transition before Hide() deactivates this GameObject.
+                if (advanceDayAfter)
+                    AdvanceToNextMorning();
+                else
+                    HomeCutsceneController.NavigateOut(targetSceneAfter);
+
+                Hide();
+            }
+            else
+            {
+                // This exchange is fully resolved and we're staying in the phone - continue
+                // the conversation naturally instead of requiring a manual close/reopen to
+                // see what's next. Must clear the guard BEFORE this render pass (the `finally`
+                // below runs too late for this call) so RenderQuickReplies is actually allowed
+                // to show the next message's buttons if EffectiveThread's natural, uncapped
+                // scan now finds one newly eligible (guaranteed to sort correctly, since every
+                // timestamp in this exchange is anchored to repliedTo, not wall-clock time).
+                // If nothing new is eligible, this is a harmless no-op.
+                _resolvingReply = false;
+                AppendNewMessages(EffectiveThread(current));
+            }
+        }
+        finally
+        {
+            _resolvingReply = false;
         }
     }
 

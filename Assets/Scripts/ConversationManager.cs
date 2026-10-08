@@ -18,6 +18,17 @@ namespace VNEngine
         [HideInInspector]
         public bool finished_conversation = false;
 
+        // Fires immediately before a node's Run_Node() executes (unlike UIManager.
+        // OnNodeCompleted, which fires after). No subscribers in normal gameplay --
+        // exists so editor-only tooling (Assets/Scripts/Simulation/ConversationDriver.cs)
+        // can observe/override state right before a silent, state-driven branch node
+        // (e.g. a Gate*Node) evaluates its condition, since Run_Node() always runs
+        // synchronously within the same call stack as the node becoming current. Return
+        // true if the subscriber fully handled this node itself and Run_Node() should be
+        // skipped entirely (e.g. bypassing a real-input minigame no automation can play);
+        // false (the common case) lets Run_Node() execute normally afterward.
+        public static System.Func<Node, bool> OnBeforeNodeRuns;
+
 
         void Start()
         {
@@ -78,7 +89,11 @@ namespace VNEngine
         public void Start_Node()
         {
             if (cur_node < all_nodes.Length)
-                all_nodes[cur_node].Run_Node();
+            {
+                bool handled = OnBeforeNodeRuns != null && OnBeforeNodeRuns(all_nodes[cur_node]);
+                if (!handled)
+                    all_nodes[cur_node].Run_Node();
+            }
         }
         public void Go_Back_One_Node()
         {

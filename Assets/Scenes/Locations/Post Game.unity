@@ -1759,6 +1759,38 @@ MonoBehaviour:
   fade_in_new_image: 1
   lighten_actor: 0
   bring_actor_to_front: 0
+--- !u!1 &228745466
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 234422840}
+  - component: {fileID: 309011755}
+  m_Layer: 0
+  m_Name: Pennant Check
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &234422840
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 228745466}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 282285651}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &245259133
 GameObject:
   m_ObjectHideFlags: 0
@@ -2347,273 +2379,6 @@ MonoBehaviour:
   cur_node: 0
   active: 0
   finished_conversation: 0
---- !u!1 &228745466
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 234422840}
-  - component: {fileID: 309011755}
-  m_Layer: 0
-  m_Name: Pennant Check
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &234422840
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 228745466}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 282285651}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &309011755
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 228745466}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d48bce613dd309642bef2c04df045b6a, type: 3}
-  m_Name:
-  m_EditorClassIdentifier: Assembly-CSharp::VNEngine.IfNode
-  go_to_next_node: 1
-  executed_from_load: 0
-  Number_Of_Conditions: 1
-  Conditions: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
-  Stat_Name:
-  - PerfectSeasonFinale
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  Bool_Compare_Value: 01000000000000000000
-  Float_Compare_Value:
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  String_Compare_Value:
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  String_Is: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
-  Float_Stat_Is: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
-  Check_Null_Object:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  Check_Active_Object:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  Logic: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
-  Is_Condition_Met: 0
-  Action: 0
-  Conversation_To_Switch_To: {fileID: 657073410}
-  Node_To_Switch_To: {fileID: 0}
-  Continue_Conversation: 1
-  Custom_Actions:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!1 &379846018
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 545151058}
-  - component: {fileID: 657073410}
-  m_Layer: 0
-  m_Name: Award Pennant
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &545151058
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 379846018}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 881071727}
-  - {fileID: 929299262}
-  m_Father: {fileID: 561909551}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &657073410
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 379846018}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7598fdb9cbb025c4293438a58006c68f, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
-  destroy_when_finished: 0
-  start_conversation_when_done: {fileID: 282285652}
-  cur_node: 0
-  active: 0
-  finished_conversation: 0
---- !u!1 &757503666
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 881071727}
-  - component: {fileID: 899758506}
-  m_Layer: 0
-  m_Name: Give Pennant
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &881071727
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 757503666}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 545151058}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &899758506
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 757503666}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82d649ea25a900847a5ff33e72c9953b, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
-  go_to_next_node: 1
-  executed_from_load: 0
-  Action: 0
-  Item_Name: Pennant
---- !u!1 &921071285
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 929299262}
-  - component: {fileID: 929721535}
-  m_Layer: 0
-  m_Name: Clear Perfect Season Flag
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &929299262
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 921071285}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 545151058}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &929721535
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 921071285}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b537df8b41db71745ae8383c66199796, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
-  go_to_next_node: 1
-  executed_from_load: 0
-  print_all_stats_to_console: 0
-  stat_type: 2
-  stat_name: PerfectSeasonFinale
-  set_number_to: 0
-  modify_number_amount: 0
-  set_bool_to: 0
-  set_string_to:
 --- !u!1 &285222491
 GameObject:
   m_ObjectHideFlags: 0
@@ -2720,6 +2485,80 @@ MonoBehaviour:
   fade_in_time: 0.1
   destination: 3
   custom_position: {fileID: 1450658869}
+--- !u!114 &309011755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 228745466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d48bce613dd309642bef2c04df045b6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VNEngine.IfNode
+  go_to_next_node: 1
+  executed_from_load: 0
+  Number_Of_Conditions: 1
+  Conditions: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+  Stat_Name:
+  - PerfectSeasonFinale
+  Bool_Compare_Value: 01000000000000000000
+  Float_Compare_Value:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  String_Compare_Value:
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  String_Is: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+  Float_Stat_Is: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+  Check_Null_Object:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  Check_Active_Object:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  Logic: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+  Is_Condition_Met: 0
+  Action: 0
+  Conversation_To_Switch_To: {fileID: 657073410}
+  Node_To_Switch_To: {fileID: 0}
+  Continue_Conversation: 1
+  Custom_Actions:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &310160513
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3100,6 +2939,23 @@ MonoBehaviour:
   set_foreground: 0
   fade_out: 0
   fade_in: 0
+--- !u!1 &379846018
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 545151058}
+  - component: {fileID: 657073410}
+  m_Layer: 0
+  m_Name: Award Pennant
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1001 &399253406
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3907,6 +3763,23 @@ MonoBehaviour:
   cur_node: 0
   active: 0
   finished_conversation: 0
+--- !u!4 &545151058
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 379846018}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 881071727}
+  - {fileID: 929299262}
+  m_Father: {fileID: 561909551}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &545672247
 GameObject:
   m_ObjectHideFlags: 0
@@ -4616,6 +4489,23 @@ MonoBehaviour:
   set_foreground: 0
   fade_out: 0
   fade_in: 0
+--- !u!114 &657073410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 379846018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7598fdb9cbb025c4293438a58006c68f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroy_when_finished: 0
+  start_conversation_when_done: {fileID: 282285652}
+  cur_node: 0
+  active: 0
+  finished_conversation: 0
 --- !u!1 &663442761
 GameObject:
   m_ObjectHideFlags: 0
@@ -5292,6 +5182,23 @@ Transform:
   - {fileID: 370270996}
   m_Father: {fileID: 561909551}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &757503666
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 881071727}
+  - component: {fileID: 899758506}
+  m_Layer: 0
+  m_Name: Give Pennant
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &764872185
 GameObject:
   m_ObjectHideFlags: 0
@@ -6763,6 +6670,21 @@ MonoBehaviour:
   done_printing: 0
   no_voice_playing: 0
   done_voice_clip: 0
+--- !u!4 &881071727
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 757503666}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 545151058}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &888958109
 GameObject:
   m_ObjectHideFlags: 0
@@ -6813,6 +6735,22 @@ MonoBehaviour:
   set_foreground: 0
   fade_out: 0
   fade_in: 0
+--- !u!114 &899758506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 757503666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82d649ea25a900847a5ff33e72c9953b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  go_to_next_node: 1
+  executed_from_load: 0
+  Action: 0
+  Item_Name: Pennant
 --- !u!1 &904175064
 GameObject:
   m_ObjectHideFlags: 0
@@ -6987,6 +6925,23 @@ MonoBehaviour:
   fade_in_new_image: 1
   lighten_actor: 0
   bring_actor_to_front: 0
+--- !u!1 &921071285
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 929299262}
+  - component: {fileID: 929721535}
+  m_Layer: 0
+  m_Name: Clear Perfect Season Flag
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &927080087
 GameObject:
   m_ObjectHideFlags: 0
@@ -7066,6 +7021,42 @@ MonoBehaviour:
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
   m_ScrollDeltaPerTick: 6
+--- !u!4 &929299262
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 921071285}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 545151058}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &929721535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 921071285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b537df8b41db71745ae8383c66199796, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  go_to_next_node: 1
+  executed_from_load: 0
+  print_all_stats_to_console: 0
+  stat_type: 2
+  stat_name: PerfectSeasonFinale
+  set_number_to: 0
+  modify_number_amount: 0
+  set_bool_to: 0
+  set_string_to: 
 --- !u!1 &952354090
 GameObject:
   m_ObjectHideFlags: 0

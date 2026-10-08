@@ -100,9 +100,12 @@ public class FriendsView : MonoBehaviour
     private void ShowThread(Character who)
     {
         if (listRoot) listRoot.gameObject.SetActive(false);
+        // threadPanel.Show(who) already marks read correctly, up to whatever it actually
+        // rendered (TextThreadPanel.RebuildAll -> FinishRenderPass) - a second, unscoped
+        // MarkRead(who) here would re-mark the FULL thread read regardless of what's shown,
+        // undoing that held-back-message consistency.
         if (threadPanel)   threadPanel.Show(who);
         headerText.text = who.ToString();
-        TextThreads.MarkRead(who);
     }
     public void HideThread() { if (threadPanel) threadPanel.Hide(); }
 }

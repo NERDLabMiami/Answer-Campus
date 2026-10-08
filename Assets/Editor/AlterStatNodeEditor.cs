@@ -9,6 +9,8 @@ namespace VNEngine
     {
         override public void OnInspectorGUI()
         {
+            EditorGUI.BeginChangeCheck();
+
             var myScript = target as AlterStatNode;
 
             myScript.stat_type = (Stat_Type)EditorGUILayout.EnumPopup("Stat Type ", myScript.stat_type);
@@ -35,6 +37,8 @@ namespace VNEngine
 
             myScript.print_all_stats_to_console = EditorGUILayout.Toggle("Print Stats to console ", myScript.print_all_stats_to_console);
             EditorGUILayout.HelpBox("Stats are used to record values. They can used by If Then Nodes.\n(Right click, VN Engine/If Then)", MessageType.Info);
+
+            VNNodeEditorGUI.MarkDirtyIfChanged(myScript, EditorGUI.EndChangeCheck());
         }
     }
 }

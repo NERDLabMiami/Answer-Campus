@@ -6,6 +6,8 @@ public class ModifyAffinityNodeEditor : Editor
 {
     public override void OnInspectorGUI()
     {
+        EditorGUI.BeginChangeCheck();
+
         var myScript = target as ModifyAffinityNode;
 
         VNNodeEditorGUI.DrawCategoryBanner(VNNodeEditorGUI.NodeCategory.DataStats);
@@ -18,5 +20,7 @@ public class ModifyAffinityNodeEditor : Editor
 
         if (myScript.character == Character.NONE)
             EditorGUILayout.HelpBox("Select a character — NONE will do nothing when this node runs.", MessageType.Warning);
+
+        VNNodeEditorGUI.MarkDirtyIfChanged(myScript, EditorGUI.EndChangeCheck());
     }
 }

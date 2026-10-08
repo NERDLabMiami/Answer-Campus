@@ -234,7 +234,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 20, y: 0}
-  m_SizeDelta: {x: -40, y: 0}
+  m_SizeDelta: {x: -40, y: -85.67001}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &2516306
 MonoBehaviour:
@@ -309,7 +309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.39607844}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.09803922}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1475,8 +1475,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1791172065}
   m_HandleRect: {fileID: 1791172064}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.6713594
+  m_Value: 0
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -4902,6 +4902,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HomeObject
   condition: 1
   achievementKey: mascot
+  itemKey: 
   interactionCondition: 4
   displayName: Game Time Bobble Head
   disableRatherThanHide: 1
@@ -6151,7 +6152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HomeObject
   condition: 6
-  achievementKey:
+  achievementKey: 
   itemKey: Pennant
   interactionCondition: 0
   displayName: Perfect Season Pennant
@@ -7724,6 +7725,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HomeObject
   condition: 0
   achievementKey: lamp
+  itemKey: 
   interactionCondition: 0
   displayName: Lamp
   disableRatherThanHide: 0
@@ -10564,7 +10566,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6320754, g: 0.6320754, b: 0.6320754, a: 0.392}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -11906,6 +11908,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HomeObject
   condition: 0
   achievementKey: clock
+  itemKey: 
   interactionCondition: 0
   displayName: Alarm Clock
   disableRatherThanHide: 0
@@ -12436,7 +12439,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 20, y: 0}
-  m_SizeDelta: {x: -40, y: 444}
+  m_SizeDelta: {x: -40, y: 165}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1175430927
 MonoBehaviour:
@@ -12477,7 +12480,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.39607844}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.105882354}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -16850,7 +16853,7 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 2096624013}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.32864058}
+  m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
@@ -17254,6 +17257,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HomeObject
   condition: 1
   achievementKey: map
+  itemKey: 
   interactionCondition: 0
   displayName: Campus Map
   disableRatherThanHide: 0
@@ -17425,7 +17429,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HomeObject
   condition: 6
-  achievementKey:
+  achievementKey: 
   itemKey: MoviePoster
   interactionCondition: 0
   displayName: Violent Tales Movie Poster
@@ -18414,6 +18418,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HomeObject
   condition: 0
   achievementKey: calendar
+  itemKey: 
   interactionCondition: 0
   displayName: Calendar
   disableRatherThanHide: 0
@@ -19750,6 +19755,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HomeObject
   condition: 0
   achievementKey: laptop
+  itemKey: 
   interactionCondition: 0
   displayName: Laptop
   disableRatherThanHide: 0

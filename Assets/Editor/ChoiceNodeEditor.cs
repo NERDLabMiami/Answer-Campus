@@ -12,6 +12,8 @@ namespace VNEngine
 
         override public void OnInspectorGUI()
         {
+            EditorGUI.BeginChangeCheck();
+
             default_label_width = EditorGUIUtility.labelWidth;
 
             var choices = target as ChoiceNode;
@@ -134,6 +136,8 @@ namespace VNEngine
             EditorGUIUtility.labelWidth = default_label_width;
             serializedObject.ApplyModifiedProperties();
             base.OnInspectorGUI();
+
+            VNNodeEditorGUI.MarkDirtyIfChanged(choices, EditorGUI.EndChangeCheck());
         }
     }
 }
