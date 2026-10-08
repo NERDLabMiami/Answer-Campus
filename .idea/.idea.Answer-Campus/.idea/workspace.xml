@@ -6,30 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="9996ada3-4319-4fb7-8fe3-ae48058a1aa4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Answer-Campus/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Answer-Campus/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/AlterStatNodeEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/AlterStatNodeEditor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/ChoiceNodeEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/ChoiceNodeEditor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/DialogueNodeEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/DialogueNodeEditor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/IfNodeEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/IfNodeEditor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/ModifyAffinityNodeEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/ModifyAffinityNodeEditor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/VNNodeEditorGUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/VNNodeEditorGUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Player Response Bubble.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Player Response Bubble.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Quick Reply Button.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Quick Reply Button.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Locations/Apartment.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Locations/Apartment.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Locations/Green.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Locations/Green.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Locations/Home.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Locations/Home.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Locations/Dining Hall.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Locations/Dining Hall.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Locations/Lecture Hall.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Locations/Lecture Hall.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Locations/Library.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Locations/Library.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Locations/Post Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Locations/Post Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Locations/Student Center.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Locations/Student Center.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ConversationManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ConversationManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Phone/FriendsView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Phone/FriendsView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Phone/TextMessageList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Phone/TextMessageList.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Phone/TextThreadPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Phone/TextThreadPanel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Simulation/ConversationDriver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Simulation/ConversationDriver.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Simulation/PathExplorer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Simulation/PathExplorer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Simulation/PlaythroughSimRunner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Simulation/PlaythroughSimRunner.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Docs/VNEngine Audit/PathExploration.md" beforeDir="false" afterPath="$PROJECT_DIR$/Docs/VNEngine Audit/PathExploration.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Docs/VNEngine Audit/PlaythroughSimulation.md" beforeDir="false" afterPath="$PROJECT_DIR$/Docs/VNEngine Audit/PlaythroughSimulation.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +117,7 @@
       <workItem from="1782418213467" duration="179926000" />
       <workItem from="1790355769469" duration="8146000" />
       <workItem from="1790633392743" duration="16907000" />
-      <workItem from="1790721562968" duration="188684000" />
+      <workItem from="1790721562968" duration="191437000" />
     </task>
     <servers />
   </component>

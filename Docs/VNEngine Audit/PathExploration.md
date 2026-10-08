@@ -15,9 +15,7 @@ Found **62** choice divergence points (104 alternatives) and **4** gate encounte
 
 ## Divergence results
 
-| Kind | Encounter | Conversation | Baseline | Alternative tried | Verdict | Detail |
-|---|---|---|---|---|---|---|
-| Gate | 0 | Finish Studying with Beau (GateTraitsNode) | requirements not met | requirements met | reached_ending | [Visit 26] After action 'Go to class (Lecture Hall)': reached Main Menu via the game's own ending content instead of Home. |
+_None run yet._
 
 ## Baseline trace
 

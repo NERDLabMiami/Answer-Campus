@@ -602,6 +602,7 @@ namespace AnswerCampus.Simulation
             LastReachedMainMenu = false;
             float idleStartTime = Time.realtimeSinceStartup;
             int lastKnownCurNode = -1;
+            ConversationManager lastKnownConversation = null;
             bool triedQuitToHomeRecovery = false;
 
             while (true)
@@ -652,13 +653,18 @@ namespace AnswerCampus.Simulation
                     // Not a choice -- mash "continue" to fast-forward/advance dialogue and
                     // any other node that responds to Button_Pressed(). Harmless for node
                     // types that ignore it (e.g. ShowChoiceNode.Button_Pressed() is a no-op).
+                    // Deliberately NOT treated as progress by itself -- calling this on a node
+                    // that ignores it (or that finished Run_Node() with go_to_next_node=false
+                    // and is waiting on something this driver can't trigger) must still let the
+                    // idle timeout below fire. Real progress is judged solely by whether
+                    // cur_node/the active conversation actually changed.
                     cm.Button_Pressed();
-                    madeProgress = true;
                 }
 
-                if (cm != null && cm.cur_node != lastKnownCurNode)
+                if (cm != lastKnownConversation || (cm != null && cm.cur_node != lastKnownCurNode))
                 {
-                    lastKnownCurNode = cm.cur_node;
+                    lastKnownConversation = cm;
+                    lastKnownCurNode = cm != null ? cm.cur_node : -1;
                     madeProgress = true;
                 }
 
