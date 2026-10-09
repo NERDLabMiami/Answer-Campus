@@ -6,11 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="9996ada3-4319-4fb7-8fe3-ae48058a1aa4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Answer-Campus/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Answer-Campus/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Locations/Dining Hall.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Locations/Dining Hall.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Locations/Lecture Hall.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Locations/Lecture Hall.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Locations/Post Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Locations/Post Game.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Simulation/ConversationDriver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Simulation/ConversationDriver.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Docs/VNEngine Audit/PathExploration.md" beforeDir="false" afterPath="$PROJECT_DIR$/Docs/VNEngine Audit/PathExploration.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/VNEngine Audit/PlaythroughSimulation.md" beforeDir="false" afterPath="$PROJECT_DIR$/Docs/VNEngine Audit/PlaythroughSimulation.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +115,7 @@
       <workItem from="1782418213467" duration="179926000" />
       <workItem from="1790355769469" duration="8146000" />
       <workItem from="1790633392743" duration="16907000" />
-      <workItem from="1790721562968" duration="191437000" />
+      <workItem from="1790721562968" duration="197209000" />
     </task>
     <servers />
   </component>

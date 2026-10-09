@@ -152,6 +152,9 @@ namespace AnswerCampus.Simulation
             if (node is NodeLaunchGroupStudy launchNode)
                 return BypassGroupStudy(launchNode);
 
+            if (node is NodeLaunchExam examNode)
+                return BypassExam(examNode);
+
             var branchSet = DescribeGate(node);
             if (branchSet == null) return false;
 
@@ -224,6 +227,39 @@ namespace AnswerCampus.Simulation
                 endConversation.Start_Conversation();
             else
                 Debug.LogWarning("[ConversationDriver] BypassGroupStudy: no end conversation resolved; leaving conversation parked.");
+
+            return true;
+        }
+
+        // NodeLaunchExam (Assets/Scripts/Nodes/NodeLaunchExam.cs) is the exam counterpart of
+        // NodeLaunchGroupStudy -- it hands off to FivePositionsGameManager (same real,
+        // input-driven minigame), sets go_to_next_node=false, and only resumes via
+        // FivePositionsGameManager.EndGame() calling VNSceneManager.scene_manager
+        // .Start_Conversation(pendingEndConversation) once the minigame finishes. Left
+        // unbypassed, every week-6+ "Go to class" visit parks here forever: with
+        // DriveUntilSceneIs's stuck-detector now able to actually notice (see the
+        // madeProgress fix above), that surfaces as an endless Quit-to-Home-recover-and-retry
+        // loop at the same exam gate instead of a silent hang -- still never making it past
+        // the exam to any later content. Mirrors BypassGroupStudy: skip the real minigame,
+        // record a deterministic (perfect, zero-strike) exam result via GradeCalculator, and
+        // jump straight to the conversation the minigame would have resumed into.
+        private static bool BypassExam(NodeLaunchExam launchNode)
+        {
+            string examId = launchNode.examId;
+            if (!string.IsNullOrEmpty(examId))
+                StatsManager.Set_String_Stat("CurrentExamId", examId);
+
+            // Deterministic, not UnityEngine.Random -- same reasoning as BypassGroupStudy: a
+            // path-exploration divergence run reaching this call after a different number of
+            // prior choices should get the same grade, not RNG-drift contamination.
+            int strikePool = launchNode.challengeProfile != null ? launchNode.challengeProfile.examStrikePool : 4;
+            GradeCalculator.RecordExam(examId, 0, strikePool);
+
+            VNSceneManager.scene_manager.Show_UI(true);
+            if (launchNode.endExamConversation != null)
+                launchNode.endExamConversation.Start_Conversation();
+            else
+                Debug.LogWarning("[ConversationDriver] BypassExam: no end conversation resolved; leaving conversation parked.");
 
             return true;
         }
