@@ -36,15 +36,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Locations/Shuttle.unity
     guid: 70d32f8f27df4fc41924ed61586fa349
   - enabled: 1
-    path: Assets/Scenes/Cutscene.unity
-    guid: 843dd3afc44fe104db0ecf888a45d1bf
-  - enabled: 1
-    path: Assets/Scenes/Corkboard.unity
-    guid: a1ffe95de50f2a140aee3f07a04a4c49
-  - enabled: 1
-    path: Assets/Scenes/Commercial.unity
-    guid: 6e15bd339009a2c44b50303019d615df
-  - enabled: 1
     path: Assets/Scenes/Mini Games/Study.unity
     guid: 767841b43f7553d4eb217c0c0e751307
   - enabled: 1
@@ -53,5 +44,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Locations/Post Game.unity
     guid: 6a4583b6c1bc04f00825e222bf87e98e
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: afbbc6e3d5dab44c096198ed936f3fdc
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: dcc23ec7e2b63483393f2d3cdbef381f, type: 2}

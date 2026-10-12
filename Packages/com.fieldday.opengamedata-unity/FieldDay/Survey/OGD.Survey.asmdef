@@ -1,0 +1,24 @@
+{
+    "name": "OGD.Survey",
+    "rootNamespace": "",
+    "references": [
+        "OGD.Log",
+        "Unity.TextMeshPro",
+        "UnityEngine.UI"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.unity.textmeshpro",
+            "expression": "1.0.0",
+            "define": "USING_TEXTMESHPRO"
+        }
+    ],
+    "noEngineReferences": false
+}

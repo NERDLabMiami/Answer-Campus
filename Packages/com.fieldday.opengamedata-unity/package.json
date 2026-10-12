@@ -1,0 +1,10 @@
+{
+  "name": "com.fieldday.opengamedata-unity",
+  "displayName": "opengamedata-unity",
+  "version": "1.0.15",
+  "unity": "2018.4",
+  "publishConfig": {
+    "registry": "https://package.openupm.com"
+  },
+  "_fingerprint": "543d3ab14ada639f4310cd889b3dff0e594e9fc6"
+}
